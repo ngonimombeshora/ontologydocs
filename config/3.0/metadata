@@ -1,0 +1,40 @@
+
+abstract=This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.
+
+The copyright on the constituent parts (classes, properties, named individuals) of the REC Metadata Module are held by their original authors (see their respective namespaces and the several rdfs:isDefinedBy and dc:source declarations on the Metadata Module ontology as a whole). These parts may have different licenses. The composition of these constituent parts into a joint ontology module are copyright RealEstateCore consortium, under CC-BY license.
+ontologyTitle=RealEstateCore Metadata Module
+ontologyPrefix=metadata
+ontologyNamespaceURI=https://w3id.org/rec/metadata/
+ontologyName=RealEstateCore Metadata Module
+thisVersionURI=https://w3id.org/rec/metadata/3.0/
+latestVersionURI=
+previousVersionURI=
+dateOfRelease=2019-03-24
+ontologyRevisionNumber=3.0
+licenseURI=http://creativecommons.org/licenses/by/3.0/
+licenseName=http://creativecommons.org/licenses/by/3.0/
+licenseIconURL=null
+citeAs=RealEstateCore Metadata Module.Revision: 3.0.https://w3id.org/rec/metadata/3.0/
+DOI=
+status=Ontology Specification
+backwardsCompatibleWith=
+publisher=RealEstateCore Consortium
+publisherURI=https://www.realestatecore.io
+publisherInstitution=null
+publisherInstitutionURI=null
+authors=
+authorsURI=
+authorsInstitution=
+authorsInstitutionURI=
+contributors=Karl Hammar;Erik Wallin
+contributorsURI=mailto:karl@karlhammar.com;mailto:erik@klipsk.io
+contributorsInstitution=Jönköping University;Klipsk AB
+contributorsInstitutionURI=https://ju.se;https://klipsk.io
+importedOntologyNames=
+importedOntologyURIs=
+extendedOntologyNames=
+extendedOntologyURIs=
+RDFXMLSerialization=ontology.xml
+TurtleSerialization=ontology.ttl
+N3Serialization=ontology.nt
+JSONLDSerialization=ontology.json
