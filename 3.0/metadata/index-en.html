@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/rec/metadata/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/rec/metadata/","name":"RealEstateCore Metadata Module", "headline":"This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.", "datePublished":"2019-03-24", "version":"3.0", "license":"http://creativecommons.org/licenses/by/3.0/", "contributor":[{"@type":"Person","name":"Karl Hammar","url":"mailto:karl@karlhammar.com"},{"@type":"Person","name":"Erik Wallin","url":"mailto:erik@klipsk.io"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,18 +40,18 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+      $("#abstract").load("sections/abstract-en.html");
+      $("#introduction").load("sections/introduction-en.html");
+      $("#overview").load("sections/overview-en.html");
+      $("#crossref").load("sections/crossref-en.html", null, loadHash);
     });
-    </script> 
-  </head> 
+    </script>
+  </head>
 
 <body>
 <div class="container">
