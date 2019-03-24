@@ -1,7 +1,7 @@
 # RealEstateCore Documentation
 
-This site contains [https://github.com/dgarijo/Widoco](WIDOCO)-generated documentation for the REC ontology suite.
+This site contains [WIDOCO](https://github.com/dgarijo/Widoco)-generated documentation for the REC ontology suite.
 
-* [2.2/](v2.2)
-* [2.3/](v2.3)
-* [3.0/](v3.0)
+* [v2.2](2.2/)
+* [v2.3](2.3/)
+* [v3.0](3.0/)
