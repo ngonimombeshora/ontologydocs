@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>RealEstateCore</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/rec/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/rec/","name":"RealEstateCore", "headline":"Document describing the ontology https://w3id.org/rec/", "datePublished":"2019-03-12", "version":"2.3", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Erik Oskar Wallin","url":"mailto:erik@klipsk.io"},{"@type":"Person","name":"Karl Hammar","url":"mailto:karl.hammar@ju.se"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+		}
+		t = t.replace(' back to ToC','');
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119807023-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119807023-2');
+</script>
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>RealEstateCore</h1>
+<h2>Release  2019-03-12</h2>
+<img src="http://git.realestatecore.io/img/RealEstateCore_LOGO_cmyk_black_small.png" alt="" /><br>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/rec/core/2.3/">https://w3id.org/rec/core/2.3/</a></dd>
+<dt>Revision:</dt>
+<dd>2.3</dd>
+<dt>Authors:</dt>
+<dd><a href="mailto:erik@klipsk.io">Erik Oskar Wallin</a>, (<a href="https://klipsk.io">Klipsk AB</a>)</dd><dd><a href="mailto:karl.hammar@ju.se">Karl Hammar</a>, (<a href="https://www.ju.se">School of Engineering, Jönköping University</a>)</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="http://www.realestatecore.io">RealEstateCore Consortium</a>, (<a href="http://www.realestatecore.io">RealEstateCore Consortium</a>)</dd>
+<dt>Download serialization:</dt><dd><span><a href="core.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="core.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="core.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT%20License-blue.svg" alt="https://opensource.org/licenses/MIT" /></a>
+<a href="https://opensource.org/licenses/MIT" rel="license" target="_blank">
+<img src="http://git.realestatecore.io/img/mit.jpg" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#ontology" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Actuation Model</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+
+</div>
+</body>
+</html>

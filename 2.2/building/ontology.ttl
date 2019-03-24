@@ -1,0 +1,428 @@
+@prefix : <http://w3id.org/rec/building/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/rec/building/> .
+
+<http://w3id.org/rec/building/> rdf:type owl:Ontology ;
+                                 owl:versionIRI <http://w3id.org/rec/building/2.2/> ;
+                                 owl:imports <http://w3id.org/rec/core/2.2/> ;
+                                 rdfs:seeAlso "See also the RealEstateCore’s homepage at http://realestatecore.io/ for latest version and more information."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://w3id.org/rec/core/comparableCoClass
+<http://w3id.org/rec/core/comparableCoClass> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/rec/core/comparableFi2
+<http://w3id.org/rec/core/comparableFi2> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/rec/building/Atrium
+:Atrium rdf:type owl:Class ;
+        rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+        rdfs:label "Atrium"@en .
+
+
+###  http://w3id.org/rec/building/Auditorium
+:Auditorium rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+            <http://w3id.org/rec/core/comparableCoClass> "BEB"@en ;
+            <http://w3id.org/rec/core/comparableFi2> """20.20-12
+22.22-04"""@en ;
+            rdfs:label "Auditorium"@en .
+
+
+###  http://w3id.org/rec/building/BackOffice
+:BackOffice rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+            rdfs:label "BackOffice"@en .
+
+
+###  http://w3id.org/rec/building/Bathroom
+:Bathroom rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+          <http://w3id.org/rec/core/comparableCoClass> "ABA"@en ;
+          <http://w3id.org/rec/core/comparableFi2> """25.25-03
+25.25-05"""@en ;
+          rdfs:label "Bathroom"@en .
+
+
+###  http://w3id.org/rec/building/Bedroom
+:Bedroom rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+         <http://w3id.org/rec/core/comparableCoClass> "AAA"@en ;
+         rdfs:label "Bedroom"@en .
+
+
+###  http://w3id.org/rec/building/BicycleGarage
+:BicycleGarage rdf:type owl:Class ;
+               rdfs:subClassOf :Garage ;
+               rdfs:label "BicycleGarage"@en .
+
+
+###  http://w3id.org/rec/building/Cinema
+:Cinema rdf:type owl:Class ;
+        rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+        <http://w3id.org/rec/core/comparableCoClass> "BEB"@en ;
+        <http://w3id.org/rec/core/comparableFi2> "22.22-04"@en ;
+        rdfs:label "Cinema"@en .
+
+
+###  http://w3id.org/rec/building/Classroom
+:Classroom rdf:type owl:Class ;
+           rdfs:subClassOf :EducationalRoom ;
+           rdfs:label "Classroom"@en .
+
+
+###  http://w3id.org/rec/building/CleaningRoom
+:CleaningRoom rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+              rdfs:label "CleaningRoom"@en .
+
+
+###  http://w3id.org/rec/building/CloakRoom
+:CloakRoom rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+           <http://w3id.org/rec/core/comparableCoClass> "EAA"@en ;
+           <http://w3id.org/rec/core/comparableFi2> "23.23-08"@en ;
+           rdfs:label "CloakRoom"@en .
+
+
+###  http://w3id.org/rec/building/ConferenceRoom
+:ConferenceRoom rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                <http://w3id.org/rec/core/comparableCoClass> "BAB"@en ;
+                <http://w3id.org/rec/core/comparableFi2> "20.20-03"@en ;
+                rdfs:label "ConferenceRoom"@en .
+
+
+###  http://w3id.org/rec/building/ConversationRoom
+:ConversationRoom rdf:type owl:Class ;
+                  rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                  <http://w3id.org/rec/core/comparableCoClass> "BAH"@en ;
+                  <http://w3id.org/rec/core/comparableFi2> "20.20-04"@en ;
+                  rdfs:label "ConversationRoom"@en .
+
+
+###  http://w3id.org/rec/building/CookingRoom
+:CookingRoom rdf:type owl:Class ;
+             rdfs:subClassOf :FoodHandlingRoom ;
+             <http://w3id.org/rec/core/comparableCoClass> "BBA"@en ;
+             <http://w3id.org/rec/core/comparableFi2> "25.25-09"@en ;
+             rdfs:label "CookingRoom"@en .
+
+
+###  http://w3id.org/rec/building/CopyingRoom
+:CopyingRoom rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+             <http://w3id.org/rec/core/comparableCoClass> "BBG"@en ;
+             <http://w3id.org/rec/core/comparableFi2> "20.20-06"@en .
+
+
+###  http://w3id.org/rec/building/DiningRoom
+:DiningRoom rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+            <http://w3id.org/rec/core/comparableCoClass> "BEA"@en ;
+            <http://w3id.org/rec/core/comparableFi2> "20.20-08"@en ;
+            rdfs:label "DiningRoom"@en .
+
+
+###  http://w3id.org/rec/building/DisabledToilet
+:DisabledToilet rdf:type owl:Class ;
+                rdfs:subClassOf :PersonalHygiene ;
+                rdfs:label "DisabledToilet"@en ;
+                rdfs:seeAlso "HWC"@en ,
+                             "RWC"@en .
+
+
+###  http://w3id.org/rec/building/DressingRoom
+:DressingRoom rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+              <http://w3id.org/rec/core/comparableCoClass> "ABD"@en ;
+              <http://w3id.org/rec/core/comparableFi2> "28.28-06"@en ;
+              rdfs:label "DressingRoom"@en .
+
+
+###  http://w3id.org/rec/building/EducationalRoom
+:EducationalRoom rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                 rdfs:label "EducationalRoom"@en .
+
+
+###  http://w3id.org/rec/building/ElectricityRoom
+:ElectricityRoom rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                 rdfs:label "ElectricityRoom"@en .
+
+
+###  http://w3id.org/rec/building/ElevatorRoom
+:ElevatorRoom rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+              <http://w3id.org/rec/core/comparableFi2> "26.26-09"@en ;
+              rdfs:label "ElevatorRoom"@en .
+
+
+###  http://w3id.org/rec/building/ElevatorShaft
+:ElevatorShaft rdf:type owl:Class ;
+               rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+               <http://w3id.org/rec/core/comparableCoClass> "EAE"@en ;
+               <http://w3id.org/rec/core/comparableFi2> "26.26-09"@en ;
+               rdfs:label "ElevatorShaft"@en .
+
+
+###  http://w3id.org/rec/building/Entrance
+:Entrance rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+          <http://w3id.org/rec/core/comparableCoClass> "EAA"@en ;
+          rdfs:label "Entrance"@en .
+
+
+###  http://w3id.org/rec/building/ExerciseRoom
+:ExerciseRoom rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+              <http://w3id.org/rec/core/comparableCoClass> "BDB"@en ;
+              <http://w3id.org/rec/core/comparableFi2> "20.20-14"@en ;
+              rdfs:label "ExerciseRoom"@en .
+
+
+###  http://w3id.org/rec/building/FoodHandlingRoom
+:FoodHandlingRoom rdf:type owl:Class ;
+                  rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                  rdfs:label "FoodHandlingRoom"@en .
+
+
+###  http://w3id.org/rec/building/Garage
+:Garage rdf:type owl:Class ;
+        rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+        <http://w3id.org/rec/core/comparableCoClass> "CBD"@en ;
+        rdfs:label "Garage"@en .
+
+
+###  http://w3id.org/rec/building/Hallway
+:Hallway rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+         <http://w3id.org/rec/core/comparableCoClass> "EAC"@en ;
+         <http://w3id.org/rec/core/comparableFi2> "23.23-03"@en ;
+         rdfs:label "Hallway"@en .
+
+
+###  http://w3id.org/rec/building/Laboratory
+:Laboratory rdf:type owl:Class ;
+            rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+            rdfs:label "Laboratory"@en .
+
+
+###  http://w3id.org/rec/building/LaundryRoom
+:LaundryRoom rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+             <http://w3id.org/rec/core/comparableCoClass> "BAG"@en ;
+             <http://w3id.org/rec/core/comparableFi2> "25.25-15"@en ;
+             rdfs:label "LaundryRoom"@en .
+
+
+###  http://w3id.org/rec/building/Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+         <http://w3id.org/rec/core/comparableCoClass> "CAD"@en ;
+         <http://w3id.org/rec/core/comparableFi2> "20.20-11"@en ;
+         rdfs:label "Library"@en .
+
+
+###  http://w3id.org/rec/building/MainEntrance
+:MainEntrance rdf:type owl:Class ;
+              rdfs:subClassOf :Entrance ;
+              <http://w3id.org/rec/core/comparableCoClass> "EAA"@en ;
+              <http://w3id.org/rec/core/comparableFi2> "23.23-01"@en ;
+              rdfs:label "MainEntrance"@en .
+
+
+###  http://w3id.org/rec/building/Office
+:Office rdf:type owl:Class ;
+        rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+        <http://w3id.org/rec/core/comparableCoClass> "BAA"@en ;
+        rdfs:label "Office"@en .
+
+
+###  http://w3id.org/rec/building/OfficeLandscape
+:OfficeLandscape rdf:type owl:Class ;
+                 rdfs:subClassOf :Office ;
+                 <http://w3id.org/rec/core/comparableCoClass> "BAA"@en ;
+                 <http://w3id.org/rec/core/comparableFi2> "20.20-02"@en ;
+                 rdfs:label "OfficeLandscape"@en .
+
+
+###  http://w3id.org/rec/building/OfficeRoom
+:OfficeRoom rdf:type owl:Class ;
+            rdfs:subClassOf :Office ;
+            <http://w3id.org/rec/core/comparableCoClass> "BAA"@en ;
+            <http://w3id.org/rec/core/comparableFi2> "20.20-01"@en ;
+            rdfs:label "OfficeRoom"@en .
+
+
+###  http://w3id.org/rec/building/ParkingSlotCold
+:ParkingSlotCold rdf:type owl:Class ;
+                 rdfs:subClassOf :Garage ;
+                 <http://w3id.org/rec/core/comparableCoClass> "CBD"@en ;
+                 rdfs:label "ParkingSlotCold"@en .
+
+
+###  http://w3id.org/rec/building/ParkingSlotWarm
+:ParkingSlotWarm rdf:type owl:Class ;
+                 rdfs:subClassOf :Garage ;
+                 <http://w3id.org/rec/core/comparableCoClass> "CBD"@en ;
+                 rdfs:label "ParkingSlotWarm"@en .
+
+
+###  http://w3id.org/rec/building/Pentry
+:Pentry rdf:type owl:Class ;
+        rdfs:subClassOf :FoodHandlingRoom ;
+        rdfs:label "Pentry"@en .
+
+
+###  http://w3id.org/rec/building/PersonalHygiene
+:PersonalHygiene rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                 rdfs:label "PersonalHygiene"@en .
+
+
+###  http://w3id.org/rec/building/PhoneBooth
+:PhoneBooth rdf:type owl:Class ;
+            rdfs:subClassOf :Office ;
+            rdfs:label "PhoneBooth"@en .
+
+
+###  http://w3id.org/rec/building/Reception
+:Reception rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+           <http://w3id.org/rec/core/comparableCoClass> "BAC"@en ;
+           <http://w3id.org/rec/core/comparableFi2> "20.20-05"@en ;
+           rdfs:label "Reception"@en .
+
+
+###  http://w3id.org/rec/building/RestingPlace
+:RestingPlace rdf:type owl:Class ;
+              rdfs:subClassOf :Office ;
+              <http://w3id.org/rec/core/comparableCoClass> "AAA"@en ;
+              <http://w3id.org/rec/core/comparableFi2> "20.20-09"@en ;
+              rdfs:label "RestingPlace"@en .
+
+
+###  http://w3id.org/rec/building/Sauna
+:Sauna rdf:type owl:Class ;
+       rdfs:subClassOf :PersonalHygiene ;
+       <http://w3id.org/rec/core/comparableCoClass> "ABF"@en ;
+       <http://w3id.org/rec/core/comparableFi2> "25.25-06"@en ;
+       rdfs:label "Sauna"@en .
+
+
+###  http://w3id.org/rec/building/ServiceEntrance
+:ServiceEntrance rdf:type owl:Class ;
+                 rdfs:subClassOf :Entrance ;
+                 <http://w3id.org/rec/core/comparableFi2> "23.23-01"@en ;
+                 rdfs:label "ServiceEntrance"@en .
+
+
+###  http://w3id.org/rec/building/ServiceShaft
+:ServiceShaft rdf:type owl:Class ;
+              rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+              rdfs:label "ServiceShaft"@en .
+
+
+###  http://w3id.org/rec/building/ShelterRoom
+:ShelterRoom rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+             <http://w3id.org/rec/core/comparableCoClass> "ACA"@en ;
+             <http://w3id.org/rec/core/comparableFi2> "24.24-01"@en ;
+             rdfs:label "ShelterRoom"@en .
+
+
+###  http://w3id.org/rec/building/ShowerRoom
+:ShowerRoom rdf:type owl:Class ;
+            rdfs:subClassOf :PersonalHygiene ;
+            <http://w3id.org/rec/core/comparableCoClass> "ABE"@en ;
+            <http://w3id.org/rec/core/comparableFi2> "25.25-04"@en ;
+            rdfs:label "ShowerRoom"@en .
+
+
+###  http://w3id.org/rec/building/Stairwell
+:Stairwell rdf:type owl:Class ;
+           rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+           <http://w3id.org/rec/core/comparableCoClass> "EAD"@en ;
+           <http://w3id.org/rec/core/comparableFi2> "23.23-04"@en ;
+           rdfs:label "Stairwell"@en .
+
+
+###  http://w3id.org/rec/building/Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+         <http://w3id.org/rec/core/comparableCoClass> "C"@en ;
+         <http://w3id.org/rec/core/comparableFi2> "28.28-03"@en ;
+         rdfs:label "Storage"@en .
+
+
+###  http://w3id.org/rec/building/TelecommunicationRoom
+:TelecommunicationRoom rdf:type owl:Class ;
+                       rdfs:subClassOf :UtilitiesRoom ;
+                       <http://w3id.org/rec/core/comparableCoClass> "DAB"@en ;
+                       <http://w3id.org/rec/core/comparableFi2> """26.26-06
+26.26-07"""@en ;
+                       rdfs:label "TelecommunicationRoom"@en .
+
+
+###  http://w3id.org/rec/building/Theater
+:Theater rdf:type owl:Class ;
+         rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+         <http://w3id.org/rec/core/comparableCoClass> """BDD
+BEB"""@en ;
+         <http://w3id.org/rec/core/comparableFi2> "22.22-04"@en ;
+         rdfs:label "Theater"@en .
+
+
+###  http://w3id.org/rec/building/Toilet
+:Toilet rdf:type owl:Class ;
+        rdfs:subClassOf :PersonalHygiene ;
+        <http://w3id.org/rec/core/comparableCoClass> "ABB"@en ;
+        <http://w3id.org/rec/core/comparableFi2> "25.25-01"@en ;
+        rdfs:label "Toilet"@en .
+
+
+###  http://w3id.org/rec/building/UtilitiesRoom
+:UtilitiesRoom rdf:type owl:Class ;
+               rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+               <http://w3id.org/rec/core/comparableCoClass> "DA"@en ;
+               <http://w3id.org/rec/core/comparableFi2> "26.26-"@en ;
+               rdfs:label "UtilitiesRoom"@en .
+
+
+###  http://w3id.org/rec/building/WasteManagementRoom
+:WasteManagementRoom rdf:type owl:Class ;
+                     rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+                     <http://w3id.org/rec/core/comparableCoClass> "CAA"@en ;
+                     <http://w3id.org/rec/core/comparableFi2> "28.28-10"@en ;
+                     rdfs:label "WasteManagementRoom"@en ;
+                     rdfs:seeAlso "Recycling room"@en .
+
+
+###  http://w3id.org/rec/building/Workshop
+:Workshop rdf:type owl:Class ;
+          rdfs:subClassOf <http://w3id.org/rec/core/Room> ;
+          <http://w3id.org/rec/core/comparableCoClass> "BBC"@en ;
+          <http://w3id.org/rec/core/comparableFi2> "27.27-11"@en ;
+          rdfs:label "Workshop"@en .
+
+
+###  http://w3id.org/rec/core/Room
+<http://w3id.org/rec/core/Room> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

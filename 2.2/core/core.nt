@@ -1,0 +1,1519 @@
+<http://w3id.org/rec/core/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/rec/core/> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/rec/core/2.2/> .
+<http://w3id.org/rec/core/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "See also the RealEstateCore\u2019s homepage at http://realestatecore.io/ for latest version and more information."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rec/core/comparableBIP
+<http://w3id.org/rec/core/comparableBIP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableBIP> <http://www.w3.org/2000/01/rdf-schema#label> "comparableBIP"@en .
+# 
+# http://w3id.org/rec/core/comparableBIPTypeId
+<http://w3id.org/rec/core/comparableBIPTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableBIPTypeId> <http://www.w3.org/2000/01/rdf-schema#label> "comparableBIPTypeId"@en .
+# 
+# http://w3id.org/rec/core/comparableBelok
+<http://w3id.org/rec/core/comparableBelok> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableBelok> <http://www.w3.org/2000/01/rdf-schema#label> "comparableBelok"@en .
+# 
+# http://w3id.org/rec/core/comparableCoClass
+<http://w3id.org/rec/core/comparableCoClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableCoClass> <http://www.w3.org/2000/01/rdf-schema#label> "comparableCoClass"@en .
+# 
+# http://w3id.org/rec/core/comparableFi2
+<http://w3id.org/rec/core/comparableFi2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableFi2> <http://www.w3.org/2000/01/rdf-schema#comment> "comparableFi2"@en .
+# 
+# http://w3id.org/rec/core/comparableHaystack
+<http://w3id.org/rec/core/comparableHaystack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableHaystack> <http://www.w3.org/2000/01/rdf-schema#label> "comparableHaystack"@en .
+# 
+# http://w3id.org/rec/core/comparableIFC
+<http://w3id.org/rec/core/comparableIFC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableIFC> <http://www.w3.org/2000/01/rdf-schema#label> "comparableIFC"@en .
+# 
+# http://w3id.org/rec/core/comparableIPSO
+<http://w3id.org/rec/core/comparableIPSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableIPSO> <http://www.w3.org/2000/01/rdf-schema#label> "comparableIPSO"@en .
+# 
+# http://w3id.org/rec/core/comparableIPSOObject
+<http://w3id.org/rec/core/comparableIPSOObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableIPSOObject> <http://www.w3.org/2000/01/rdf-schema#label> "comparableIPSOObject"@en .
+# 
+# http://w3id.org/rec/core/comparableIPSOObjectId
+<http://w3id.org/rec/core/comparableIPSOObjectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/comparableIPSOObjectId> <http://www.w3.org/2000/01/rdf-schema#label> "comparableIPSOObjectId"@en .
+# 
+# http://w3id.org/rec/core/exampleOfUse
+<http://w3id.org/rec/core/exampleOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/exampleOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "exampleOfUse"@en .
+# 
+# http://w3id.org/rec/core/unitSign
+<http://w3id.org/rec/core/unitSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rec/core/unitSign> <http://www.w3.org/2000/01/rdf-schema#label> "unitSign"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rec/core/belongsTo
+<http://w3id.org/rec/core/belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/BuildingStructure> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Land> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/RealEstate> .
+<http://w3id.org/rec/core/belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongsTo"@en .
+# 
+# http://w3id.org/rec/core/hasActuatableProperty
+<http://w3id.org/rec/core/hasActuatableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Actuator> .
+<http://w3id.org/rec/core/hasActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/ActuatableProperty> .
+<http://w3id.org/rec/core/hasActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasActuatableProperty"@en .
+# 
+# http://w3id.org/rec/core/hasBuildingStructure
+<http://w3id.org/rec/core/hasBuildingStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasBuildingStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://w3id.org/rec/core/hasBuildingStructure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/RealEstate> .
+<http://w3id.org/rec/core/hasBuildingStructure> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/BuildingStructure> .
+<http://w3id.org/rec/core/hasBuildingStructure> <http://www.w3.org/2000/01/rdf-schema#label> "hasBuildingStructure"@en .
+# 
+# http://w3id.org/rec/core/hasBuildingStructureComponent
+<http://w3id.org/rec/core/hasBuildingStructureComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasBuildingStructureComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/BuildingStructure> .
+<http://w3id.org/rec/core/hasBuildingStructureComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/hasBuildingStructureComponent> <http://www.w3.org/2000/01/rdf-schema#label> "hasBuildingStructureComponent"@en .
+# 
+# http://w3id.org/rec/core/hasGeoReferenceOrigo
+<http://w3id.org/rec/core/hasGeoReferenceOrigo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasGeoReferenceOrigo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/BuildingStructure> .
+<http://w3id.org/rec/core/hasGeoReferenceOrigo> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/GeoReferenceOrigo> .
+<http://w3id.org/rec/core/hasGeoReferenceOrigo> <http://www.w3.org/2000/01/rdf-schema#label> "hasGeoReferenceOrigo"@en .
+# 
+# http://w3id.org/rec/core/hasMeasurmentUnit
+<http://w3id.org/rec/core/hasMeasurmentUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasMeasurmentUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuation> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuator> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Observation> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Sensor> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/hasMeasurmentUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/hasMeasurmentUnit> <http://www.w3.org/2000/01/rdf-schema#label> "hasMeasurementUnit"@en .
+# 
+# http://w3id.org/rec/core/hasPlacementContext
+<http://w3id.org/rec/core/hasPlacementContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasPlacementContext> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuation> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuator> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Observation> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Sensor> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/hasPlacementContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/hasPlacementContext> <http://www.w3.org/2000/01/rdf-schema#label> "hasPlacementContext"@en .
+# 
+# http://w3id.org/rec/core/hasQuantityKind
+<http://w3id.org/rec/core/hasQuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuation> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuator> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Observation> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Sensor> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#label> "hasQuantityKind"@en .
+# 
+# http://w3id.org/rec/core/hasStoreyLevel
+<http://w3id.org/rec/core/hasStoreyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/hasStoreyLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/BuildingStructure> .
+<http://w3id.org/rec/core/hasStoreyLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/StoreyLevel> .
+<http://w3id.org/rec/core/hasStoreyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "hasStoreyLevel"@en .
+# 
+# http://w3id.org/rec/core/isLocatedIn
+<http://w3id.org/rec/core/isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuator> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/BuildingStructureComponent> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Device> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Sensor> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/StoreyLevel> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/BuildingStructure> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/BuildingStructureComponent> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Land> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Location> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Premises> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/RealEstate> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/StoreyLevel> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An object that can describe its place by using [object-UUID] locatedIn \n[myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc."@en .
+<http://w3id.org/rec/core/isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "isLocatedIn"@en .
+# 
+# http://w3id.org/rec/core/isPartOf
+<http://w3id.org/rec/core/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/StoreyLevel> .
+<http://w3id.org/rec/core/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf"@en .
+# 
+# http://w3id.org/rec/core/isPartOfDevice
+<http://w3id.org/rec/core/isPartOfDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/isPartOfDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/DeviceComponent> .
+<http://w3id.org/rec/core/isPartOfDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/Device> .
+<http://w3id.org/rec/core/isPartOfDevice> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOfDevice"@en .
+# 
+# http://w3id.org/rec/core/makesActuation
+<http://w3id.org/rec/core/makesActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/makesActuation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Actuator> .
+<http://w3id.org/rec/core/makesActuation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/Actuation> .
+<http://w3id.org/rec/core/makesActuation> <http://www.w3.org/2000/01/rdf-schema#label> "makesActuation"@en .
+# 
+# http://w3id.org/rec/core/makesException
+<http://w3id.org/rec/core/makesException> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/makesException> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://w3id.org/rec/core/makesException> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Sensor> .
+# 
+# http://w3id.org/rec/core/makesObservation
+<http://w3id.org/rec/core/makesObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/makesObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Sensor> .
+<http://w3id.org/rec/core/makesObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/Observation> .
+<http://w3id.org/rec/core/makesObservation> <http://www.w3.org/2000/01/rdf-schema#label> "makesObservation"@en .
+# 
+# http://w3id.org/rec/core/partOfPremises
+<http://w3id.org/rec/core/partOfPremises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/partOfPremises> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/BuildingStructure> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/BuildingStructureComponent> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Room> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/partOfPremises> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/Premises> .
+# 
+# http://w3id.org/rec/core/servedBy
+<http://w3id.org/rec/core/servedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/servedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Device> .
+<http://w3id.org/rec/core/servedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/Device> .
+<http://w3id.org/rec/core/servedBy> <http://www.w3.org/2000/01/rdf-schema#label> "servedBy"@en .
+# 
+# http://w3id.org/rec/core/serves
+<http://w3id.org/rec/core/serves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rec/core/serves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Device> .
+<http://w3id.org/rec/core/serves> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rec/core/Device> .
+<http://w3id.org/rec/core/serves> <http://www.w3.org/2000/01/rdf-schema#label> "serves"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rec/core/hasAliasID
+<http://w3id.org/rec/core/hasAliasID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasAliasID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasAuxiliaryData> .
+<http://w3id.org/rec/core/hasAliasID> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to map an Id in an external system to an instance (e.g. an UUID)."@en .
+<http://w3id.org/rec/core/hasAliasID> <http://www.w3.org/2000/01/rdf-schema#label> "hasAliasID"@en .
+# 
+# http://w3id.org/rec/core/hasAuxiliaryData
+<http://w3id.org/rec/core/hasAuxiliaryData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasAuxiliaryData> <http://www.w3.org/2000/01/rdf-schema#comment> "Cognitive clustering for humans."@en .
+<http://w3id.org/rec/core/hasAuxiliaryData> <http://www.w3.org/2000/01/rdf-schema#comment> "hasAuxiliaryData"@en .
+# 
+# http://w3id.org/rec/core/hasComment
+<http://w3id.org/rec/core/hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasComment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasAuxiliaryData> .
+<http://w3id.org/rec/core/hasComment> <http://www.w3.org/2000/01/rdf-schema#comment> "Extra information about an object that is of a more exceptional character (compared to Description). E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\""@en .
+<http://w3id.org/rec/core/hasComment> <http://www.w3.org/2000/01/rdf-schema#label> "hasComment"@en .
+# 
+# http://w3id.org/rec/core/hasCreatedTime
+<http://w3id.org/rec/core/hasCreatedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasCreatedTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasCreatedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasCreatedTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasCreatedTime"@en .
+# 
+# http://w3id.org/rec/core/hasDeletedTime
+<http://w3id.org/rec/core/hasDeletedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasDeletedTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasDeletedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasDeletedTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasDeletedTime"@en .
+# 
+# http://w3id.org/rec/core/hasDuration
+<http://w3id.org/rec/core/hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/rec/core/hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Measured in ms (milli seconds)"@en .
+<http://w3id.org/rec/core/hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "hasDuration"@en .
+# 
+# http://w3id.org/rec/core/hasGeoReferenceBearing
+<http://w3id.org/rec/core/hasGeoReferenceBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasGeoReferenceBearing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/GeoReferenceOrigo> .
+<http://w3id.org/rec/core/hasGeoReferenceBearing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://w3id.org/rec/core/hasGeoReferenceBearing> <http://www.w3.org/2000/01/rdf-schema#comment> "The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).\n\nBearings are never greater than 90\u00B0.\nBearings are based on true north."@en .
+<http://w3id.org/rec/core/hasGeoReferenceBearing> <http://www.w3.org/2000/01/rdf-schema#label> "hasGeoReferenceBearing"@en .
+# 
+# http://w3id.org/rec/core/hasLittera
+<http://w3id.org/rec/core/hasLittera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasLittera> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasAuxiliaryData> .
+<http://w3id.org/rec/core/hasLittera> <http://www.w3.org/2000/01/rdf-schema#comment> "Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room."@en .
+<http://w3id.org/rec/core/hasLittera> <http://www.w3.org/2000/01/rdf-schema#label> "hasLittera"@en .
+# 
+# http://w3id.org/rec/core/hasObservationTime
+<http://w3id.org/rec/core/hasObservationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasObservationTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasObservationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/hasObservationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasObservationTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasObservationTime"@en .
+# 
+# http://w3id.org/rec/core/hasPointInTime
+<http://w3id.org/rec/core/hasPointInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasPointInTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasPointInTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasPointInTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasPointInTime"@en .
+# 
+# http://w3id.org/rec/core/hasPopularName
+<http://w3id.org/rec/core/hasPopularName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasPopularName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasAuxiliaryData> .
+<http://w3id.org/rec/core/hasPopularName> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-readable-friendly name."@en .
+<http://w3id.org/rec/core/hasPopularName> <http://www.w3.org/2000/01/rdf-schema#label> "hasPopularName"@en .
+# 
+# http://w3id.org/rec/core/hasProcessedTime
+<http://w3id.org/rec/core/hasProcessedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasProcessedTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasProcessedTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Observation> .
+<http://w3id.org/rec/core/hasProcessedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasProcessedTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Time when an object or result was processed in a system."@en .
+<http://w3id.org/rec/core/hasProcessedTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasProcessedTime"@en .
+# 
+# http://w3id.org/rec/core/hasReadTime
+<http://w3id.org/rec/core/hasReadTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasReadTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasReadTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/hasReadTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasReadTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasReadTime"@en .
+# 
+# http://w3id.org/rec/core/hasSource
+<http://w3id.org/rec/core/hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasSource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasAuxiliaryData> .
+<http://w3id.org/rec/core/hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Used for information about a source system or data."@en .
+<http://w3id.org/rec/core/hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "hasSource"@en .
+# 
+# http://w3id.org/rec/core/hasStartTime
+<http://w3id.org/rec/core/hasStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasStartTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasStartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/hasStartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasStartTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasStartTime"@en .
+# 
+# http://w3id.org/rec/core/hasStopTime
+<http://w3id.org/rec/core/hasStopTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasStopTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasStopTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/hasStopTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasStopTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasStopTime"@en .
+# 
+# http://w3id.org/rec/core/hasTime
+<http://w3id.org/rec/core/hasTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Cognitive clustering for humans."@en .
+<http://w3id.org/rec/core/hasTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a specific point in time.\n\nTime format ISO8601:\n\nComplete date, hour, minutes, seconds, and decimal fraction of second\n\n      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)\n\nWhere:\n     YYYY = 4 numbers for year.\n     MM = 2 numbers for month (01=January, etc.)\n     DD = 2 numbers for day of month (01 till 31)\n     hh = 2 numbers for hour (00 till 23) (am/pm not allowed)\n     mm = 2 numbers for minutes (00 till 59)\n     ss = 2 numbers for second (00 till 59)\n     s = 1 or more numbers represent a decimal fraction of second\n\nTZD  = time zone designator (Z or +hh:mm or -hh:mm)\nTime is expressed in UTC (Coordinated Universal Time), with designated UTC  (\"Z\") for GMT."@en .
+<http://w3id.org/rec/core/hasTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasTime"@en .
+# 
+# http://w3id.org/rec/core/hasUpdatedTime
+<http://w3id.org/rec/core/hasUpdatedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasUpdatedTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3id.org/rec/core/hasTime> .
+<http://w3id.org/rec/core/hasUpdatedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/rec/core/hasUpdatedTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasUpdatedTime"@en .
+# 
+# http://w3id.org/rec/core/hasValue
+<http://w3id.org/rec/core/hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid37 <http://www.w3.org/2002/07/owl#unionOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Actuation> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rec/core/Observation> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rec/core/hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://w3id.org/rec/core/isLocatedAt
+<http://w3id.org/rec/core/isLocatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/isLocatedAt> <http://w3id.org/rec/core/comparableHaystack> "geoCoord"@en .
+<http://w3id.org/rec/core/isLocatedAt> <http://w3id.org/rec/core/comparableIPSOObjectId> "Altitude: 3321\nLocation: 3336\nLatitude: 5513\nLongitude: 5514 \nAltitude: 5515"@en .
+<http://w3id.org/rec/core/isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "An object that has an exact point (expressed in WGS84 in decimal degrees as (latitude,longitude,altitude)."@en .
+<http://w3id.org/rec/core/isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#label> "isLocatedAt"@en .
+# 
+# http://w3id.org/rec/core/isLocatedAtLocalCoordinates
+<http://w3id.org/rec/core/isLocatedAtLocalCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rec/core/isLocatedAtLocalCoordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Literal value in meter (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo."@en .
+<http://w3id.org/rec/core/isLocatedAtLocalCoordinates> <http://www.w3.org/2000/01/rdf-schema#label> "isLocatedAtLocalCoordinates"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rec/core/ActuatableProperty
+<http://w3id.org/rec/core/ActuatableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/ActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of what kind of input the Actuator accepts."@en .
+<http://w3id.org/rec/core/ActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "ActuatableProperty"@en .
+# 
+# http://w3id.org/rec/core/Actuation
+<http://w3id.org/rec/core/Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/Actuation> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of changing the state of something."@en .
+<http://w3id.org/rec/core/Actuation> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation"@en .
+# 
+# http://w3id.org/rec/core/Actuator
+<http://w3id.org/rec/core/Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/DeviceComponent> .
+<http://w3id.org/rec/core/Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuator is a component that is responsible for moving and controlling a mechanism or system."@en .
+<http://w3id.org/rec/core/Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@en .
+# 
+# http://w3id.org/rec/core/Agent
+<http://w3id.org/rec/core/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "The human or machine that consumes or acts upon an object or data."@en .
+<http://w3id.org/rec/core/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+# 
+# http://w3id.org/rec/core/BuildingStructure
+<http://w3id.org/rec/core/BuildingStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/BuildingStructure> <http://w3id.org/rec/core/comparableHaystack> "site"@en .
+<http://w3id.org/rec/core/BuildingStructure> <http://w3id.org/rec/core/comparableIFC> "ifcBuilding"@en .
+<http://w3id.org/rec/core/BuildingStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Confined building structure."@en .
+<http://w3id.org/rec/core/BuildingStructure> <http://www.w3.org/2000/01/rdf-schema#label> "BuildingStructure"@en .
+# 
+# http://w3id.org/rec/core/BuildingStructureComponent
+<http://w3id.org/rec/core/BuildingStructureComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/BuildingStructureComponent> <http://w3id.org/rec/core/comparableIFC> "ifcSpace"@en .
+<http://w3id.org/rec/core/BuildingStructureComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The parts that makes up a building structure (BuildingStructure). E.g. Room, Facade, RoofInner, etc."@en .
+<http://w3id.org/rec/core/BuildingStructureComponent> <http://www.w3.org/2000/01/rdf-schema#label> "BuildingStructureComponent"@en .
+# 
+# http://w3id.org/rec/core/Device
+<http://w3id.org/rec/core/Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Device> <http://w3id.org/rec/core/comparableHaystack> "device,equip"@en .
+<http://w3id.org/rec/core/Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s)."@en .
+<http://w3id.org/rec/core/Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+# 
+# http://w3id.org/rec/core/DeviceComponent
+<http://w3id.org/rec/core/DeviceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/DeviceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "DeviceComponent"@en .
+# 
+# http://w3id.org/rec/core/Duration
+<http://w3id.org/rec/core/Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration"@en .
+# 
+# http://w3id.org/rec/core/Event
+<http://w3id.org/rec/core/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Cognitive clustering for humans."@en .
+<http://w3id.org/rec/core/Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://w3id.org/rec/core/Exception
+<http://w3id.org/rec/core/Exception> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Exception> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/Exception> <http://www.w3.org/2000/01/rdf-schema#comment> "Failed attempt or unexpected result when tried to do something (e.g. read a Sensor)."@en .
+<http://w3id.org/rec/core/Exception> <http://www.w3.org/2000/01/rdf-schema#label> "Exception"@en .
+# 
+# http://w3id.org/rec/core/Facade
+<http://w3id.org/rec/core/Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Facade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/Facade> <http://www.w3.org/2000/01/rdf-schema#label> "Facade"@en .
+# 
+# http://w3id.org/rec/core/Floor
+<http://w3id.org/rec/core/Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Floor"@en .
+# 
+# http://w3id.org/rec/core/GeoReferenceOrigo
+<http://w3id.org/rec/core/GeoReferenceOrigo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/GeoReferenceOrigo> <http://www.w3.org/2000/01/rdf-schema#comment> "A fixed point for e.g. a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for LocalCoordinates."@en .
+<http://w3id.org/rec/core/GeoReferenceOrigo> <http://www.w3.org/2000/01/rdf-schema#label> "GeoReferenceOrigo"@en .
+# 
+# http://w3id.org/rec/core/Land
+<http://w3id.org/rec/core/Land> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Land> <http://www.w3.org/2000/01/rdf-schema#comment> "The land where one or more buildings are situated."@en .
+<http://w3id.org/rec/core/Land> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@en .
+# 
+# http://w3id.org/rec/core/Location
+<http://w3id.org/rec/core/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Location has a PopularName and isLocatedAt a geographical point.\n\nE.g. Defining Stockholm as a Location:\nLocationUUID isA Location\nLocationUUID hasPopularName \"Stockholm\"\nLocationUUID isLocatedAt (59.333683,18.068579,0)"@en .
+<http://w3id.org/rec/core/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+# 
+# http://w3id.org/rec/core/MeasurementUnit
+<http://w3id.org/rec/core/MeasurementUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/MeasurementUnit> <http://w3id.org/rec/core/comparableHaystack> "unit"@en .
+<http://w3id.org/rec/core/MeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.\n\nExceptions to SI:\nExpress temperature in Celcius,\nEnergy in Watt hour (Wh),\nAngle i degrees (360 degress = 1 revolution)"@en .
+<http://w3id.org/rec/core/MeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#label> "MeasurementUnit"@en .
+<http://w3id.org/rec/core/MeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.qudt.org/"@en .
+# 
+# http://w3id.org/rec/core/Observation
+<http://w3id.org/rec/core/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/Event> .
+<http://w3id.org/rec/core/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation of a phenomena. Made by a Sensor. Used with hasValue."@en .
+<http://w3id.org/rec/core/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+# 
+# http://w3id.org/rec/core/PlacementContext
+<http://w3id.org/rec/core/PlacementContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/PlacementContext> <http://www.w3.org/2000/01/rdf-schema#comment> "In what context or media that the Sensor or Actuator is operating in."@en .
+<http://w3id.org/rec/core/PlacementContext> <http://www.w3.org/2000/01/rdf-schema#label> "PlacementContext"@en .
+# 
+# http://w3id.org/rec/core/PowerSource
+<http://w3id.org/rec/core/PowerSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/PowerSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/DeviceComponent> .
+# 
+# http://w3id.org/rec/core/Premises
+<http://w3id.org/rec/core/Premises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Premises> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of Rooms or other spaces or objects that are leased to a tenant."@en .
+<http://w3id.org/rec/core/Premises> <http://www.w3.org/2000/01/rdf-schema#label> "Premises"@en .
+# 
+# http://w3id.org/rec/core/QuantityKind
+<http://w3id.org/rec/core/QuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the value observed by a Sensor or the value set by an Actuator"@en .
+<http://w3id.org/rec/core/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#label> "QuantityKind"@en .
+# 
+# http://w3id.org/rec/core/RealEstate
+<http://w3id.org/rec/core/RealEstate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/RealEstate> <http://w3id.org/rec/core/comparableIFC> "site"@en .
+<http://w3id.org/rec/core/RealEstate> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal entity. Land + buildings"@en .
+<http://w3id.org/rec/core/RealEstate> <http://www.w3.org/2000/01/rdf-schema#label> "RealEstate"@en .
+# 
+# http://w3id.org/rec/core/RoofInner
+<http://w3id.org/rec/core/RoofInner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/RoofInner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/RoofInner> <http://www.w3.org/2000/01/rdf-schema#label> "RoofInner"@en .
+# 
+# http://w3id.org/rec/core/RoofOuter
+<http://w3id.org/rec/core/RoofOuter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/RoofOuter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/RoofOuter> <http://www.w3.org/2000/01/rdf-schema#label> "RoofOuter"@en .
+# 
+# http://w3id.org/rec/core/Room
+<http://w3id.org/rec/core/Room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Room> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/Room> <http://w3id.org/rec/core/comparableBIP> "SpaceName, SpaceNumber, SpaceType"@en .
+<http://w3id.org/rec/core/Room> <http://w3id.org/rec/core/comparableIFC> "ifcSpaceType"@en .
+<http://w3id.org/rec/core/Room> <http://www.w3.org/2000/01/rdf-schema#comment> "Confined space by walls or other line of separation"@en .
+<http://w3id.org/rec/core/Room> <http://www.w3.org/2000/01/rdf-schema#label> "Room"@en .
+# 
+# http://w3id.org/rec/core/Sensor
+<http://w3id.org/rec/core/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/DeviceComponent> .
+<http://w3id.org/rec/core/Sensor> <http://w3id.org/rec/core/comparableHaystack> "sensor"@en .
+<http://w3id.org/rec/core/Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."@en .
+<http://w3id.org/rec/core/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+# 
+# http://w3id.org/rec/core/Slab
+<http://w3id.org/rec/core/Slab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Slab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/Slab> <http://www.w3.org/2000/01/rdf-schema#label> "Slab"@en .
+# 
+# http://w3id.org/rec/core/StoreyLevel
+<http://w3id.org/rec/core/StoreyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/StoreyLevel> <http://w3id.org/rec/core/comparableBIP> "StoreyName"@en .
+<http://w3id.org/rec/core/StoreyLevel> <http://w3id.org/rec/core/comparableIFC> "ifcBuildingStorey"@en .
+<http://w3id.org/rec/core/StoreyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The level of storey, a.k.a. floorplan"@en .
+<http://w3id.org/rec/core/StoreyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "StoreyLevel"@en .
+# 
+# http://w3id.org/rec/core/VirtualComponent
+<http://w3id.org/rec/core/VirtualComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/VirtualComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/VirtualComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-physical component. Belongs to a BuildingStructure. One BuildingStructure may have zero, one, or many VirtualComponents. E.g a temperature value from an external service for the area of a building."@en .
+<http://w3id.org/rec/core/VirtualComponent> <http://www.w3.org/2000/01/rdf-schema#label> "RoomFoodHandling"@en .
+# 
+# http://w3id.org/rec/core/Wall
+<http://w3id.org/rec/core/Wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/Wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/Wall> <http://www.w3.org/2000/01/rdf-schema#label> "Wall"@en .
+# 
+# http://w3id.org/rec/core/WallInner
+<http://w3id.org/rec/core/WallInner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rec/core/WallInner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rec/core/BuildingStructureComponent> .
+<http://w3id.org/rec/core/WallInner> <http://www.w3.org/2000/01/rdf-schema#label> "WallInner"@en .
+# 
+# http://w3id.org/rec/device/DeviceFunction
+<http://w3id.org/rec/device/DeviceFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rec/core/ActiveEnergyL1
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://w3id.org/rec/core/comparableBIPTypeId> "MQxx, VMM8xx, VMM1xx"@en .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://w3id.org/rec/core/comparableBelok> "11"@en .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://w3id.org/rec/core/comparableCoClass> "BHC, BHB"@en .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://w3id.org/rec/core/comparableHaystack> "active,energy,phase"@en .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://w3id.org/rec/core/comparableIPSOObjectId> "5805, 3331"@en .
+<http://w3id.org/rec/core/ActiveEnergyL1> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveEnergyL1"@en .
+# 
+# http://w3id.org/rec/core/ActiveEnergyL2
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://w3id.org/rec/core/comparableBIPTypeId> "MQxx, VMM8xx, VMM1xx"@en .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://w3id.org/rec/core/comparableBelok> "11"@en .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://w3id.org/rec/core/comparableCoClass> "BHC, BHB"@en .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://w3id.org/rec/core/comparableHaystack> "active,energy,phase"@en .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://w3id.org/rec/core/comparableIPSOObjectId> "5805, 3331"@en .
+<http://w3id.org/rec/core/ActiveEnergyL2> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveEnergyL2"@en .
+# 
+# http://w3id.org/rec/core/ActiveEnergyL3
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://w3id.org/rec/core/comparableBIPTypeId> "MQxx, VMM8xx, VMM1xx"@en .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://w3id.org/rec/core/comparableBelok> "11"@en .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://w3id.org/rec/core/comparableCoClass> "BHC, BHB"@en .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://w3id.org/rec/core/comparableHaystack> "active,energy,phase"@en .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://w3id.org/rec/core/comparableIPSOObjectId> "5805, 3331"@en .
+<http://w3id.org/rec/core/ActiveEnergyL3> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveEnergyL3"@en .
+# 
+# http://w3id.org/rec/core/ActiveEnergyTotal
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://w3id.org/rec/core/comparableBelok> "11"@en .
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://w3id.org/rec/core/comparableCoClass> "BHC, BHB"@en .
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://w3id.org/rec/core/comparableHaystack> "active,energy"@en .
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://w3id.org/rec/core/comparableIPSOObjectId> "5805, 3331"@en .
+<http://w3id.org/rec/core/ActiveEnergyTotal> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveEnergyTotal"@en .
+# 
+# http://w3id.org/rec/core/ActivePowerL1
+<http://w3id.org/rec/core/ActivePowerL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActivePowerL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActivePowerL1> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ActivePowerL1> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ActivePowerL1> <http://w3id.org/rec/core/comparableHaystack> "active,power,phase"@en .
+<http://w3id.org/rec/core/ActivePowerL1> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ActivePowerL1> <http://www.w3.org/2000/01/rdf-schema#label> "ActivePowerL1"@en .
+# 
+# http://w3id.org/rec/core/ActivePowerL2
+<http://w3id.org/rec/core/ActivePowerL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActivePowerL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActivePowerL2> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ActivePowerL2> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ActivePowerL2> <http://w3id.org/rec/core/comparableHaystack> "active,power,phase"@en .
+<http://w3id.org/rec/core/ActivePowerL2> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ActivePowerL2> <http://www.w3.org/2000/01/rdf-schema#label> "ActivePowerL1"@en .
+# 
+# http://w3id.org/rec/core/ActivePowerL3
+<http://w3id.org/rec/core/ActivePowerL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActivePowerL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActivePowerL3> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ActivePowerL3> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ActivePowerL3> <http://w3id.org/rec/core/comparableHaystack> "active,power,phase"@en .
+<http://w3id.org/rec/core/ActivePowerL3> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ActivePowerL3> <http://www.w3.org/2000/01/rdf-schema#label> "ActivePowerL3"@en .
+# 
+# http://w3id.org/rec/core/ActivePowerTotal
+<http://w3id.org/rec/core/ActivePowerTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ActivePowerTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ActivePowerTotal> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ActivePowerTotal> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ActivePowerTotal> <http://w3id.org/rec/core/comparableHaystack> "active,power"@en .
+<http://w3id.org/rec/core/ActivePowerTotal> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ActivePowerTotal> <http://www.w3.org/2000/01/rdf-schema#label> "ActivePowerTotal"@en .
+# 
+# http://w3id.org/rec/core/AirHandlingUnit
+<http://w3id.org/rec/core/AirHandlingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/AirHandlingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/AirHandlingUnit> <http://w3id.org/rec/core/comparableHaystack> "ahu,air"@en .
+<http://w3id.org/rec/core/AirHandlingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "AirHandlingUnit"@en .
+# 
+# http://w3id.org/rec/core/AlarmMajor
+<http://w3id.org/rec/core/AlarmMajor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/AlarmMajor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/AlarmMajor> <http://www.w3.org/2000/01/rdf-schema#comment> "Danger for property"@en .
+<http://w3id.org/rec/core/AlarmMajor> <http://www.w3.org/2000/01/rdf-schema#label> "AlarmMajor"@en .
+# 
+# http://w3id.org/rec/core/AlarmMinor
+<http://w3id.org/rec/core/AlarmMinor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/AlarmMinor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/AlarmMinor> <http://www.w3.org/2000/01/rdf-schema#comment> "Notifications"@en .
+<http://w3id.org/rec/core/AlarmMinor> <http://www.w3.org/2000/01/rdf-schema#label> "AlarmMinor"@en .
+# 
+# http://w3id.org/rec/core/AlarmSevere
+<http://w3id.org/rec/core/AlarmSevere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/AlarmSevere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/AlarmSevere> <http://w3id.org/rec/core/comparableBIP> "H1B1xx, H1B4xx, H1B5xx, H1B9xx, H1B6xx, H1B3xx, H1B7xx\nH1B2xx, H1B9xx"@en .
+<http://w3id.org/rec/core/AlarmSevere> <http://www.w3.org/2000/01/rdf-schema#comment> "Danger for life and property"@en .
+<http://w3id.org/rec/core/AlarmSevere> <http://www.w3.org/2000/01/rdf-schema#label> "AlarmSevere"@en .
+# 
+# http://w3id.org/rec/core/Ampere
+<http://w3id.org/rec/core/Ampere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Ampere> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Ampere> <http://w3id.org/rec/core/unitSign> "A"@en .
+<http://w3id.org/rec/core/Ampere> <http://www.w3.org/2000/01/rdf-schema#comment> "Ampere. Current in a circuit."@en .
+<http://w3id.org/rec/core/Ampere> <http://www.w3.org/2000/01/rdf-schema#label> "Ampere"@en .
+# 
+# http://w3id.org/rec/core/Angle
+<http://w3id.org/rec/core/Angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Angle> <http://w3id.org/rec/core/comparableHaystack> "angle"@en .
+<http://w3id.org/rec/core/Angle> <http://w3id.org/rec/core/comparableIPSOObjectId> "3332"@en .
+<http://w3id.org/rec/core/Angle> <http://www.w3.org/2000/01/rdf-schema#label> "Angle"@en .
+# 
+# http://w3id.org/rec/core/Area
+<http://w3id.org/rec/core/Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Area> <http://w3id.org/rec/core/comparableHaystack> "area"@en .
+<http://w3id.org/rec/core/Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area"@en .
+# 
+# http://w3id.org/rec/core/Battery
+<http://w3id.org/rec/core/Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PowerSource> .
+<http://w3id.org/rec/core/Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery"@en .
+# 
+# http://w3id.org/rec/core/Binary
+<http://w3id.org/rec/core/Binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Binary> <http://w3id.org/rec/core/comparableBelok> "1"@en .
+<http://w3id.org/rec/core/Binary> <http://w3id.org/rec/core/comparableIPSOObjectId> "5550,5850"@en .
+<http://w3id.org/rec/core/Binary> <http://www.w3.org/2000/01/rdf-schema#label> "Binary"@en .
+# 
+# http://w3id.org/rec/core/Boiler
+<http://w3id.org/rec/core/Boiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Boiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Boiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler"@en .
+# 
+# http://w3id.org/rec/core/CO
+<http://w3id.org/rec/core/CO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/CO> <http://w3id.org/rec/core/comparableHaystack> "co"@en .
+<http://w3id.org/rec/core/CO> <http://www.w3.org/2000/01/rdf-schema#label> "CO"@en .
+# 
+# http://w3id.org/rec/core/CO2
+<http://w3id.org/rec/core/CO2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CO2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/CO2> <http://w3id.org/rec/core/comparableHaystack> "co2"@en .
+<http://w3id.org/rec/core/CO2> <http://www.w3.org/2000/01/rdf-schema#label> "CO2"@en .
+# 
+# http://w3id.org/rec/core/Celcius
+<http://w3id.org/rec/core/Celcius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Celcius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Celcius> <http://w3id.org/rec/core/unitSign> "C"@en .
+<http://w3id.org/rec/core/Celcius> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature in Celsius degress. Note that correct SI Unit is Kelvin."@en .
+<http://w3id.org/rec/core/Celcius> <http://www.w3.org/2000/01/rdf-schema#label> "Celcius"@en .
+# 
+# http://w3id.org/rec/core/Chiller
+<http://w3id.org/rec/core/Chiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Chiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Chiller> <http://w3id.org/rec/core/comparableHaystack> "chiller"@en .
+<http://w3id.org/rec/core/Chiller> <http://www.w3.org/2000/01/rdf-schema#label> "Chiller"@en .
+# 
+# http://w3id.org/rec/core/CirculationAir
+<http://w3id.org/rec/core/CirculationAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CirculationAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/CirculationAir> <http://www.w3.org/2000/01/rdf-schema#label> "CirculationAir"@en .
+# 
+# http://w3id.org/rec/core/Coil
+<http://w3id.org/rec/core/Coil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Coil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Coil> <http://www.w3.org/2000/01/rdf-schema#label> "Coil"@en .
+# 
+# http://w3id.org/rec/core/ColdWaterFlow
+<http://w3id.org/rec/core/ColdWaterFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ColdWaterFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ColdWaterFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MT2xx, PPA2xx, SHG2xx, RT2xx"@en .
+<http://w3id.org/rec/core/ColdWaterFlow> <http://w3id.org/rec/core/comparableBelok> "53"@en .
+<http://w3id.org/rec/core/ColdWaterFlow> <http://w3id.org/rec/core/comparableHaystack> "domestic,water"@en .
+<http://w3id.org/rec/core/ColdWaterFlow> <http://www.w3.org/2000/01/rdf-schema#label> "ColdWaterFlow"@en .
+# 
+# http://w3id.org/rec/core/ColdWaterReturn
+<http://w3id.org/rec/core/ColdWaterReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ColdWaterReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ColdWaterReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MT2xx, PPA2xx"@en .
+<http://w3id.org/rec/core/ColdWaterReturn> <http://w3id.org/rec/core/comparableBelok> "54"@en .
+<http://w3id.org/rec/core/ColdWaterReturn> <http://w3id.org/rec/core/comparableHaystack> "domestic,water,leaving"@en .
+<http://w3id.org/rec/core/ColdWaterReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/ColdWaterReturn> <http://www.w3.org/2000/01/rdf-schema#label> "ColdWaterReturn"@en .
+# 
+# http://w3id.org/rec/core/CommunicationBus
+<http://w3id.org/rec/core/CommunicationBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CommunicationBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PowerSource> .
+<http://w3id.org/rec/core/CommunicationBus> <http://www.w3.org/2000/01/rdf-schema#label> "CommunicationBus"@en .
+# 
+# http://w3id.org/rec/core/Compressor
+<http://w3id.org/rec/core/Compressor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Compressor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Compressor> <http://www.w3.org/2000/01/rdf-schema#label> "Compressor"@en .
+# 
+# http://w3id.org/rec/core/Concentration
+<http://w3id.org/rec/core/Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Concentration> <http://w3id.org/rec/core/comparableBIPTypeId> "GQ0-9xx/y/z"@en .
+<http://w3id.org/rec/core/Concentration> <http://w3id.org/rec/core/comparableBelok> "09"@en .
+<http://w3id.org/rec/core/Concentration> <http://w3id.org/rec/core/comparableCoClass> "BQ"@en .
+<http://w3id.org/rec/core/Concentration> <http://w3id.org/rec/core/comparableIPSOObjectId> "3325"@en .
+<http://w3id.org/rec/core/Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "Concentration"@en .
+# 
+# http://w3id.org/rec/core/Condenser
+<http://w3id.org/rec/core/Condenser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Condenser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Condenser> <http://w3id.org/rec/core/comparableHaystack> "condenser"@en .
+<http://w3id.org/rec/core/Condenser> <http://www.w3.org/2000/01/rdf-schema#label> "Condenser"@en .
+# 
+# http://w3id.org/rec/core/Control
+<http://w3id.org/rec/core/Control> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Control> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Control> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that controls Actuators (can also collect data)."@en .
+<http://w3id.org/rec/core/Control> <http://www.w3.org/2000/01/rdf-schema#label> "Control"@en .
+# 
+# http://w3id.org/rec/core/Cos_phi
+<http://w3id.org/rec/core/Cos_phi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Cos_phi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Cos_phi> <http://w3id.org/rec/core/unitSign> "cos-phi"@en .
+<http://w3id.org/rec/core/Cos_phi> <http://www.w3.org/2000/01/rdf-schema#comment> "The angle between two electrical phases."@en .
+<http://w3id.org/rec/core/Cos_phi> <http://www.w3.org/2000/01/rdf-schema#label> "Cos_phi"@en .
+# 
+# http://w3id.org/rec/core/Cubic_meter
+<http://w3id.org/rec/core/Cubic_meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Cubic_meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Cubic_meter> <http://w3id.org/rec/core/unitSign> "m3"@en .
+<http://w3id.org/rec/core/Cubic_meter> <http://www.w3.org/2000/01/rdf-schema#comment> "Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3)."@en .
+<http://w3id.org/rec/core/Cubic_meter> <http://www.w3.org/2000/01/rdf-schema#label> "Volume"@en .
+# 
+# http://w3id.org/rec/core/Current
+<http://w3id.org/rec/core/Current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Current> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Current> <http://w3id.org/rec/core/comparableCoClass> "BC"@en .
+<http://w3id.org/rec/core/Current> <http://w3id.org/rec/core/comparableHaystack> "current"@en .
+<http://w3id.org/rec/core/Current> <http://w3id.org/rec/core/comparableIPSOObjectId> "3317"@en .
+<http://w3id.org/rec/core/Current> <http://www.w3.org/2000/01/rdf-schema#label> "Current"@en .
+# 
+# http://w3id.org/rec/core/CurrentL1
+<http://w3id.org/rec/core/CurrentL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CurrentL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/CurrentL1> <http://w3id.org/rec/core/comparableCoClass> "BC"@en .
+<http://w3id.org/rec/core/CurrentL1> <http://w3id.org/rec/core/comparableHaystack> "current,phase"@en .
+<http://w3id.org/rec/core/CurrentL1> <http://w3id.org/rec/core/comparableIPSOObjectId> "3317"@en .
+<http://w3id.org/rec/core/CurrentL1> <http://www.w3.org/2000/01/rdf-schema#label> "CurrentL1"@en .
+# 
+# http://w3id.org/rec/core/CurrentL2
+<http://w3id.org/rec/core/CurrentL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CurrentL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/CurrentL2> <http://w3id.org/rec/core/comparableCoClass> "BC"@en .
+<http://w3id.org/rec/core/CurrentL2> <http://w3id.org/rec/core/comparableHaystack> "current,phase"@en .
+<http://w3id.org/rec/core/CurrentL2> <http://w3id.org/rec/core/comparableIPSOObjectId> "3317"@en .
+<http://w3id.org/rec/core/CurrentL2> <http://www.w3.org/2000/01/rdf-schema#label> "CurrentL2"@en .
+# 
+# http://w3id.org/rec/core/CurrentL3
+<http://w3id.org/rec/core/CurrentL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/CurrentL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/CurrentL3> <http://w3id.org/rec/core/comparableCoClass> "BC"@en .
+<http://w3id.org/rec/core/CurrentL3> <http://w3id.org/rec/core/comparableHaystack> "current,phase"@en .
+<http://w3id.org/rec/core/CurrentL3> <http://w3id.org/rec/core/comparableIPSOObjectId> "3317"@en .
+<http://w3id.org/rec/core/CurrentL3> <http://www.w3.org/2000/01/rdf-schema#label> "CurrentL3"@en .
+# 
+# http://w3id.org/rec/core/Damper
+<http://w3id.org/rec/core/Damper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Damper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Damper> <http://w3id.org/rec/core/comparableHaystack> "damper"@en .
+<http://w3id.org/rec/core/Damper> <http://www.w3.org/2000/01/rdf-schema#label> "Damper"@en .
+# 
+# http://w3id.org/rec/core/DataAquisition
+<http://w3id.org/rec/core/DataAquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/DataAquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/DataAquisition> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that collects data"@en .
+<http://w3id.org/rec/core/DataAquisition> <http://www.w3.org/2000/01/rdf-schema#label> "DataAqusition"@en .
+# 
+# http://w3id.org/rec/core/DataCommunicationGateway
+<http://w3id.org/rec/core/DataCommunicationGateway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/DataCommunicationGateway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/DataCommunicationGateway> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that acts as a broker (could be a switch or gateway)"@en .
+<http://w3id.org/rec/core/DataCommunicationGateway> <http://www.w3.org/2000/01/rdf-schema#label> "DataCommunicationGateway"@en .
+# 
+# http://w3id.org/rec/core/Decibel
+<http://w3id.org/rec/core/Decibel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Decibel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Decibel> <http://w3id.org/rec/core/unitSign> "db"@en .
+<http://w3id.org/rec/core/Decibel> <http://www.w3.org/2000/01/rdf-schema#comment> "Sound level"@en .
+<http://w3id.org/rec/core/Decibel> <http://www.w3.org/2000/01/rdf-schema#label> "Decibel"@en .
+# 
+# http://w3id.org/rec/core/DistrictCoolingFlow
+<http://w3id.org/rec/core/DistrictCoolingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/DistrictCoolingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/DistrictCoolingFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN5xx"@en .
+<http://w3id.org/rec/core/DistrictCoolingFlow> <http://w3id.org/rec/core/comparableBelok> "31"@en .
+<http://w3id.org/rec/core/DistrictCoolingFlow> <http://www.w3.org/2000/01/rdf-schema#label> "DistrictCoolingFlow"@en .
+# 
+# http://w3id.org/rec/core/DistrictCoolingReturn
+<http://w3id.org/rec/core/DistrictCoolingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/DistrictCoolingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/DistrictCoolingReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN5xx"@en .
+<http://w3id.org/rec/core/DistrictCoolingReturn> <http://w3id.org/rec/core/comparableBelok> "32"@en .
+<http://w3id.org/rec/core/DistrictCoolingReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/DistrictCoolingReturn> <http://www.w3.org/2000/01/rdf-schema#label> "DistrictCoolingReturn"@en .
+# 
+# http://w3id.org/rec/core/DistrictHeatingFlow
+<http://w3id.org/rec/core/DistrictHeatingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/DistrictHeatingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/DistrictHeatingFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN6xx, PV6xx"@en .
+<http://w3id.org/rec/core/DistrictHeatingFlow> <http://w3id.org/rec/core/comparableBelok> "21"@en .
+<http://w3id.org/rec/core/DistrictHeatingFlow> <http://w3id.org/rec/core/comparableBelok> "33"@en .
+<http://w3id.org/rec/core/DistrictHeatingFlow> <http://www.w3.org/2000/01/rdf-schema#label> "DistrictHeatingFlow"@en .
+# 
+# http://w3id.org/rec/core/DistrictHeatingReturn
+<http://w3id.org/rec/core/DistrictHeatingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/DistrictHeatingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/DistrictHeatingReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN6xx, PV6xx"@en .
+<http://w3id.org/rec/core/DistrictHeatingReturn> <http://w3id.org/rec/core/comparableBelok> "22"@en .
+<http://w3id.org/rec/core/DistrictHeatingReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/DistrictHeatingReturn> <http://www.w3.org/2000/01/rdf-schema#label> "DistrictHeatingReturn"@en .
+# 
+# http://w3id.org/rec/core/ElectricalGridIntake
+<http://w3id.org/rec/core/ElectricalGridIntake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ElectricalGridIntake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ElectricalGridIntake> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricalGridIntake"@en .
+# 
+# http://w3id.org/rec/core/ElectricalGridInternal
+<http://w3id.org/rec/core/ElectricalGridInternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ElectricalGridInternal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ElectricalGridInternal> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricalGridInternal"@en .
+# 
+# http://w3id.org/rec/core/ElectricalGridLocalProduction
+<http://w3id.org/rec/core/ElectricalGridLocalProduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ElectricalGridLocalProduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ElectricalGridLocalProduction> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricalGridLocalProduction"@en .
+# 
+# http://w3id.org/rec/core/ElectricalGridTenant
+<http://w3id.org/rec/core/ElectricalGridTenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ElectricalGridTenant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ElectricalGridTenant> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricalGridTenant"@en .
+# 
+# http://w3id.org/rec/core/Elevator
+<http://w3id.org/rec/core/Elevator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Elevator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Elevator> <http://www.w3.org/2000/01/rdf-schema#label> "Elevator"@en .
+# 
+# http://w3id.org/rec/core/EnergyTotal
+<http://w3id.org/rec/core/EnergyTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/EnergyTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/EnergyTotal> <http://w3id.org/rec/core/comparableBelok> "11"@en .
+<http://w3id.org/rec/core/EnergyTotal> <http://w3id.org/rec/core/comparableCoClass> "BHC, BHB"@en .
+<http://w3id.org/rec/core/EnergyTotal> <http://w3id.org/rec/core/comparableIPSOObjectId> "5805, 3331"@en .
+<http://w3id.org/rec/core/EnergyTotal> <http://www.w3.org/2000/01/rdf-schema#comment> "Total energy (not specified as Active or Reactive, used for e.g. district heating)."@en .
+# 
+# http://w3id.org/rec/core/Escalator
+<http://w3id.org/rec/core/Escalator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Escalator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Escalator> <http://www.w3.org/2000/01/rdf-schema#label> "Escalator"@en .
+# 
+# http://w3id.org/rec/core/ExhaustAir
+<http://w3id.org/rec/core/ExhaustAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ExhaustAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ExhaustAir> <http://w3id.org/rec/core/comparableBIPTypeId> "FF"@en .
+<http://w3id.org/rec/core/ExhaustAir> <http://w3id.org/rec/core/comparableBelok> "03"@en .
+<http://w3id.org/rec/core/ExhaustAir> <http://www.w3.org/2000/01/rdf-schema#label> "ExhaustAir"@en .
+# 
+# http://w3id.org/rec/core/ExtractAir
+<http://w3id.org/rec/core/ExtractAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ExtractAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/ExtractAir> <http://w3id.org/rec/core/comparableBIPTypeId> "OF"@en .
+<http://w3id.org/rec/core/ExtractAir> <http://w3id.org/rec/core/comparableBelok> "05"@en .
+<http://w3id.org/rec/core/ExtractAir> <http://www.w3.org/2000/01/rdf-schema#label> "ExtractAir"@en .
+# 
+# http://w3id.org/rec/core/Fahrenheit
+<http://w3id.org/rec/core/Fahrenheit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Fahrenheit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Fahrenheit> <http://w3id.org/rec/core/unitSign> "F"@en .
+<http://w3id.org/rec/core/Fahrenheit> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature in Fahrenheit degress."@en .
+<http://w3id.org/rec/core/Fahrenheit> <http://www.w3.org/2000/01/rdf-schema#label> "Fahrenheit"@en .
+# 
+# http://w3id.org/rec/core/Fan
+<http://w3id.org/rec/core/Fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Fan> <http://w3id.org/rec/core/comparableHaystack> "fan"@en .
+<http://w3id.org/rec/core/Fan> <http://www.w3.org/2000/01/rdf-schema#label> "Fan"@en .
+# 
+# http://w3id.org/rec/core/Filter
+<http://w3id.org/rec/core/Filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Filter> <http://w3id.org/rec/core/comparableHaystack> "filter"@en .
+<http://w3id.org/rec/core/Filter> <http://www.w3.org/2000/01/rdf-schema#label> "Filter"@en .
+# 
+# http://w3id.org/rec/core/Flow
+<http://w3id.org/rec/core/Flow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Flow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Flow> <http://w3id.org/rec/core/comparableBIP> "MF1xx, GF1-9xx/y"@en .
+<http://w3id.org/rec/core/Flow> <http://w3id.org/rec/core/comparableBelok> "04"@en .
+<http://w3id.org/rec/core/Flow> <http://w3id.org/rec/core/comparableCoClass> "BF"@en .
+<http://w3id.org/rec/core/Flow> <http://w3id.org/rec/core/comparableHaystack> "flow"@en .
+<http://w3id.org/rec/core/Flow> <http://www.w3.org/2000/01/rdf-schema#label> "Flow"@en .
+# 
+# http://w3id.org/rec/core/Heater
+<http://w3id.org/rec/core/Heater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Heater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Heater> <http://w3id.org/rec/core/comparableHaystack> "heater"@en .
+<http://w3id.org/rec/core/Heater> <http://www.w3.org/2000/01/rdf-schema#label> "Heater"@en .
+# 
+# http://w3id.org/rec/core/Hertz
+<http://w3id.org/rec/core/Hertz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Hertz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Hertz> <http://w3id.org/rec/core/unitSign> "Hz"@en .
+<http://w3id.org/rec/core/Hertz> <http://www.w3.org/2000/01/rdf-schema#comment> "One cycle per second."@en .
+<http://w3id.org/rec/core/Hertz> <http://www.w3.org/2000/01/rdf-schema#label> "Hertz"@en .
+# 
+# http://w3id.org/rec/core/HotWaterFlow
+<http://w3id.org/rec/core/HotWaterFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/HotWaterFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/HotWaterFlow> <http://w3id.org/rec/core/comparableBelok> "51"@en .
+<http://w3id.org/rec/core/HotWaterFlow> <http://www.w3.org/2000/01/rdf-schema#label> "HotWaterFlow"@en .
+# 
+# http://w3id.org/rec/core/HotWaterReturn
+<http://w3id.org/rec/core/HotWaterReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/HotWaterReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/HotWaterReturn> <http://w3id.org/rec/core/comparableBelok> "52"@en .
+<http://w3id.org/rec/core/HotWaterReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/HotWaterReturn> <http://www.w3.org/2000/01/rdf-schema#label> "HotWaterReturn"@en .
+# 
+# http://w3id.org/rec/core/Humidity
+<http://w3id.org/rec/core/Humidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Humidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Humidity> <http://w3id.org/rec/core/comparableBIPTypeId> "GM1-9xx/y"@en .
+<http://w3id.org/rec/core/Humidity> <http://w3id.org/rec/core/comparableBelok> "03"@en .
+<http://w3id.org/rec/core/Humidity> <http://w3id.org/rec/core/comparableHaystack> "humidity"@en .
+<http://w3id.org/rec/core/Humidity> <http://w3id.org/rec/core/comparableIPSOObjectId> "3304"@en .
+<http://w3id.org/rec/core/Humidity> <http://www.w3.org/2000/01/rdf-schema#label> "Humidity"@en .
+<http://w3id.org/rec/core/Humidity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Humidity"@en .
+# 
+# http://w3id.org/rec/core/Hwrc
+<http://w3id.org/rec/core/Hwrc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Hwrc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/Hwrc> <http://w3id.org/rec/core/comparableBIPTypeId> "PCV6xx"@en .
+<http://w3id.org/rec/core/Hwrc> <http://w3id.org/rec/core/comparableBelok> "55"@en .
+<http://w3id.org/rec/core/Hwrc> <http://www.w3.org/2000/01/rdf-schema#label> "Hwrc"@en .
+# 
+# http://w3id.org/rec/core/Illuminance
+<http://w3id.org/rec/core/Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Illuminance> <http://w3id.org/rec/core/comparableBIPTypeId> "GRN1-9xx"@en .
+<http://w3id.org/rec/core/Illuminance> <http://w3id.org/rec/core/comparableHaystack> "irradiance"@en .
+<http://w3id.org/rec/core/Illuminance> <http://w3id.org/rec/core/comparableIPSOObjectId> "3301"@en .
+<http://w3id.org/rec/core/Illuminance> <http://www.w3.org/2000/01/rdf-schema#label> "Illuminance"@en .
+# 
+# http://w3id.org/rec/core/Kelvin
+<http://w3id.org/rec/core/Kelvin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Kelvin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Kelvin> <http://w3id.org/rec/core/unitSign> "K"@en .
+<http://w3id.org/rec/core/Kelvin> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature in Kelvin degrees"@en .
+<http://w3id.org/rec/core/Kelvin> <http://www.w3.org/2000/01/rdf-schema#label> "Kelvin"@en .
+# 
+# http://w3id.org/rec/core/Kilogram
+<http://w3id.org/rec/core/Kilogram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Kilogram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Kilogram> <http://w3id.org/rec/core/unitSign> "kg"@en .
+<http://w3id.org/rec/core/Kilogram> <http://www.w3.org/2000/01/rdf-schema#comment> "Mass."@en .
+<http://w3id.org/rec/core/Kilogram> <http://www.w3.org/2000/01/rdf-schema#label> "Kilogram"@en .
+# 
+# http://w3id.org/rec/core/Lenght
+<http://w3id.org/rec/core/Lenght> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Lenght> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Lenght> <http://www.w3.org/2000/01/rdf-schema#label> "Lenght"@en .
+# 
+# http://w3id.org/rec/core/Level
+<http://w3id.org/rec/core/Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Level> <http://w3id.org/rec/core/comparableBIPTypeId> "GL1-9xx"@en .
+<http://w3id.org/rec/core/Level> <http://w3id.org/rec/core/comparableBelok> "05"@en .
+<http://w3id.org/rec/core/Level> <http://w3id.org/rec/core/comparableCoClass> "BG, BL"@en .
+<http://w3id.org/rec/core/Level> <http://w3id.org/rec/core/comparableHaystack> "level"@en .
+<http://w3id.org/rec/core/Level> <http://w3id.org/rec/core/comparableIPSOObjectId> "3319, 3330"@en .
+<http://w3id.org/rec/core/Level> <http://www.w3.org/2000/01/rdf-schema#label> "Level"@en .
+# 
+# http://w3id.org/rec/core/Liter_per_second
+<http://w3id.org/rec/core/Liter_per_second> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Liter_per_second> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Liter_per_second> <http://w3id.org/rec/core/unitSign> "l/s"@en .
+<http://w3id.org/rec/core/Liter_per_second> <http://www.w3.org/2000/01/rdf-schema#comment> "Flow"@en .
+<http://w3id.org/rec/core/Liter_per_second> <http://www.w3.org/2000/01/rdf-schema#label> "Liter_per_second"@en .
+# 
+# http://w3id.org/rec/core/Lumen
+<http://w3id.org/rec/core/Lumen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Lumen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Lumen> <http://w3id.org/rec/core/comparableHaystack> "lightLevel"@en .
+<http://w3id.org/rec/core/Lumen> <http://w3id.org/rec/core/unitSign> "Emitted light"@en .
+<http://w3id.org/rec/core/Lumen> <http://w3id.org/rec/core/unitSign> "lm"@en .
+<http://w3id.org/rec/core/Lumen> <http://www.w3.org/2000/01/rdf-schema#label> "Lumen"@en .
+# 
+# http://w3id.org/rec/core/Lux
+<http://w3id.org/rec/core/Lux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Lux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Lux> <http://w3id.org/rec/core/comparableHaystack> "lightLevel"@en .
+<http://w3id.org/rec/core/Lux> <http://w3id.org/rec/core/unitSign> "lx"@en .
+<http://w3id.org/rec/core/Lux> <http://www.w3.org/2000/01/rdf-schema#comment> "Light intensity in a specific area."@en .
+<http://w3id.org/rec/core/Lux> <http://www.w3.org/2000/01/rdf-schema#label> "Lux"@en .
+# 
+# http://w3id.org/rec/core/Meter
+<http://w3id.org/rec/core/Meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Meter> <http://w3id.org/rec/core/unitSign> "m"@en .
+<http://w3id.org/rec/core/Meter> <http://www.w3.org/2000/01/rdf-schema#comment> "Lenght."@en .
+<http://w3id.org/rec/core/Meter> <http://www.w3.org/2000/01/rdf-schema#label> "Meter"@en .
+# 
+# http://w3id.org/rec/core/Number
+<http://w3id.org/rec/core/Number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Number> <http://w3id.org/rec/core/comparableBelok> "6"@en .
+<http://w3id.org/rec/core/Number> <http://w3id.org/rec/core/comparableIPSOObjectId> "5851,5650"@en .
+<http://w3id.org/rec/core/Number> <http://www.w3.org/2000/01/rdf-schema#label> "Number"@en .
+# 
+# http://w3id.org/rec/core/OutdoorAir
+<http://w3id.org/rec/core/OutdoorAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/OutdoorAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/OutdoorAir> <http://w3id.org/rec/core/comparableBIPTypeId> "AF"@en .
+<http://w3id.org/rec/core/OutdoorAir> <http://w3id.org/rec/core/comparableBelok> "04"@en .
+<http://w3id.org/rec/core/OutdoorAir> <http://w3id.org/rec/core/comparableHaystack> "outside"@en .
+<http://w3id.org/rec/core/OutdoorAir> <http://www.w3.org/2000/01/rdf-schema#label> "OutdoorAir"@en .
+# 
+# http://w3id.org/rec/core/Parts_per_million
+<http://w3id.org/rec/core/Parts_per_million> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Parts_per_million> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Parts_per_million> <http://w3id.org/rec/core/unitSign> "ppm"@en .
+<http://w3id.org/rec/core/Parts_per_million> <http://www.w3.org/2000/01/rdf-schema#comment> "Measurement for concentration"@en .
+<http://w3id.org/rec/core/Parts_per_million> <http://www.w3.org/2000/01/rdf-schema#label> "Parts_per_million"@en .
+# 
+# http://w3id.org/rec/core/Pascal
+<http://w3id.org/rec/core/Pascal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Pascal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Pascal> <http://w3id.org/rec/core/comparableHaystack> "barometric"@en .
+<http://w3id.org/rec/core/Pascal> <http://w3id.org/rec/core/unitSign> "Pa"@en .
+<http://w3id.org/rec/core/Pascal> <http://www.w3.org/2000/01/rdf-schema#comment> "The pascal is the SI derived unit of pressure used to quantify internal pressure, stress. It is defined as one newton per square metre."@en .
+<http://w3id.org/rec/core/Pascal> <http://www.w3.org/2000/01/rdf-schema#label> "Pascal"@en .
+<http://w3id.org/rec/core/Pascal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "In Haystack: barometric is described as \"Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.\""@en .
+# 
+# http://w3id.org/rec/core/Percentage
+<http://w3id.org/rec/core/Percentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Percentage> <http://w3id.org/rec/core/comparableBelok> "6"@en .
+<http://w3id.org/rec/core/Percentage> <http://w3id.org/rec/core/comparableIPSOObjectId> "5851,5650"@en .
+<http://w3id.org/rec/core/Percentage> <http://www.w3.org/2000/01/rdf-schema#label> "Percentage"@en .
+# 
+# http://w3id.org/rec/core/PowerFactorL1
+<http://w3id.org/rec/core/PowerFactorL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PowerFactorL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/PowerFactorL1> <http://w3id.org/rec/core/comparableHaystack> "pf,phase"@en .
+<http://w3id.org/rec/core/PowerFactorL1> <http://w3id.org/rec/core/comparableIPSOObjectId> "5820"@en .
+<http://w3id.org/rec/core/PowerFactorL1> <http://www.w3.org/2000/01/rdf-schema#label> "PowerFactorL1"@en .
+# 
+# http://w3id.org/rec/core/PowerFactorL2
+<http://w3id.org/rec/core/PowerFactorL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PowerFactorL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/PowerFactorL2> <http://w3id.org/rec/core/comparableHaystack> "pf,phase"@en .
+<http://w3id.org/rec/core/PowerFactorL2> <http://w3id.org/rec/core/comparableIPSOObjectId> "5820"@en .
+<http://w3id.org/rec/core/PowerFactorL2> <http://www.w3.org/2000/01/rdf-schema#label> "PowerFactorL2"@en .
+# 
+# http://w3id.org/rec/core/PowerFactorL3
+<http://w3id.org/rec/core/PowerFactorL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PowerFactorL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/PowerFactorL3> <http://w3id.org/rec/core/comparableHaystack> "pf,phase"@en .
+<http://w3id.org/rec/core/PowerFactorL3> <http://w3id.org/rec/core/comparableIPSOObjectId> "5820"@en .
+<http://w3id.org/rec/core/PowerFactorL3> <http://www.w3.org/2000/01/rdf-schema#label> "PowerFactorL3"@en .
+# 
+# http://w3id.org/rec/core/PowerFrequency
+<http://w3id.org/rec/core/PowerFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PowerFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/PowerFrequency> <http://w3id.org/rec/core/comparableHaystack> "freq"@en .
+<http://w3id.org/rec/core/PowerFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "PowerFrequency"@en .
+# 
+# http://w3id.org/rec/core/Power_factor
+<http://w3id.org/rec/core/Power_factor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Power_factor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Power_factor> <http://w3id.org/rec/core/comparableHaystack> "pf"@en .
+<http://w3id.org/rec/core/Power_factor> <http://w3id.org/rec/core/unitSign> "pf"@en .
+<http://w3id.org/rec/core/Power_factor> <http://www.w3.org/2000/01/rdf-schema#comment> "The power factor of an AC electrical power system is defined as the ratio of the real power flowing to the load to the apparent power in the circuit, and is a dimensionless number in the closed interval of \u22121 to 1."@en .
+<http://w3id.org/rec/core/Power_factor> <http://www.w3.org/2000/01/rdf-schema#label> "Power_factor"@en .
+# 
+# http://w3id.org/rec/core/Presence
+<http://w3id.org/rec/core/Presence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Presence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Presence> <http://w3id.org/rec/core/comparableBIPTypeId> "GN1-9xx, GRN1-9xx"@en .
+<http://w3id.org/rec/core/Presence> <http://w3id.org/rec/core/comparableBelok> "14"@en .
+<http://w3id.org/rec/core/Presence> <http://w3id.org/rec/core/comparableHaystack> "occupied"@en .
+<http://w3id.org/rec/core/Presence> <http://w3id.org/rec/core/comparableIPSOObjectId> "3302"@en .
+<http://w3id.org/rec/core/Presence> <http://www.w3.org/2000/01/rdf-schema#label> "Presence"@en .
+# 
+# http://w3id.org/rec/core/Pressure
+<http://w3id.org/rec/core/Pressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Pressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Pressure> <http://w3id.org/rec/core/comparableBIPTypeId> "GP0-9xx/y, MAN5-6xx"@en .
+<http://w3id.org/rec/core/Pressure> <http://w3id.org/rec/core/comparableBelok> "02"@en .
+<http://w3id.org/rec/core/Pressure> <http://w3id.org/rec/core/comparableHaystack> "pressure"@en .
+<http://w3id.org/rec/core/Pressure> <http://w3id.org/rec/core/comparableIPSOObjectId> "3323"@en .
+<http://w3id.org/rec/core/Pressure> <http://www.w3.org/2000/01/rdf-schema#label> "Pressure"@en .
+<http://w3id.org/rec/core/Pressure> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Pressure"@en .
+<http://w3id.org/rec/core/Pressure> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Tryck"@se .
+# 
+# http://w3id.org/rec/core/PrimaryCoolingFlow
+<http://w3id.org/rec/core/PrimaryCoolingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PrimaryCoolingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/PrimaryCoolingFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN5xx, RDV5xx, SHG5xx"@en .
+<http://w3id.org/rec/core/PrimaryCoolingFlow> <http://w3id.org/rec/core/comparableBelok> "33"@en .
+<http://w3id.org/rec/core/PrimaryCoolingFlow> <http://www.w3.org/2000/01/rdf-schema#label> "PrimaryCoolingFlow"@en .
+# 
+# http://w3id.org/rec/core/PrimaryCoolingReturn
+<http://w3id.org/rec/core/PrimaryCoolingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PrimaryCoolingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/PrimaryCoolingReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN5xx"@en .
+<http://w3id.org/rec/core/PrimaryCoolingReturn> <http://w3id.org/rec/core/comparableBelok> "34"@en .
+<http://w3id.org/rec/core/PrimaryCoolingReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/PrimaryCoolingReturn> <http://www.w3.org/2000/01/rdf-schema#label> "PrimaryCoolingReturn"@en .
+# 
+# http://w3id.org/rec/core/PrimaryHeatingFlow
+<http://w3id.org/rec/core/PrimaryHeatingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PrimaryHeatingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/PrimaryHeatingFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN6xx, PV6xx, SHG6xx"@en .
+<http://w3id.org/rec/core/PrimaryHeatingFlow> <http://w3id.org/rec/core/comparableBelok> "23"@en .
+<http://w3id.org/rec/core/PrimaryHeatingFlow> <http://www.w3.org/2000/01/rdf-schema#label> "PrimaryHeatingFlow"@en .
+# 
+# http://w3id.org/rec/core/PrimaryHeatingReturn
+<http://w3id.org/rec/core/PrimaryHeatingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/PrimaryHeatingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/PrimaryHeatingReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN6xx, PV6xx"@en .
+<http://w3id.org/rec/core/PrimaryHeatingReturn> <http://w3id.org/rec/core/comparableBelok> "24"@en .
+<http://w3id.org/rec/core/PrimaryHeatingReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/PrimaryHeatingReturn> <http://www.w3.org/2000/01/rdf-schema#label> "PrimaryHeatingReturn"@en .
+# 
+# http://w3id.org/rec/core/Pump
+<http://w3id.org/rec/core/Pump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Pump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Pump> <http://w3id.org/rec/core/comparableHaystack> "pump"@en .
+<http://w3id.org/rec/core/Pump> <http://www.w3.org/2000/01/rdf-schema#label> "Pump"@en .
+# 
+# http://w3id.org/rec/core/Radiation
+<http://w3id.org/rec/core/Radiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Radiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Radiation> <http://w3id.org/rec/core/comparableBIPTypeId> "GR0-9xx"@en .
+<http://w3id.org/rec/core/Radiation> <http://w3id.org/rec/core/comparableBelok> "10"@en .
+<http://w3id.org/rec/core/Radiation> <http://w3id.org/rec/core/comparableCoClass> "BR"@en .
+<http://w3id.org/rec/core/Radiation> <http://www.w3.org/2000/01/rdf-schema#label> "Radiation"@en .
+# 
+# http://w3id.org/rec/core/ReactivePowerL1
+<http://w3id.org/rec/core/ReactivePowerL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://w3id.org/rec/core/comparableHaystack> "reactive,power,phase"@en .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://www.w3.org/2000/01/rdf-schema#label> "ReactivePowerL1"@en .
+<http://w3id.org/rec/core/ReactivePowerL1> <http://www.w3.org/2000/01/rdf-schema#label> "reactive,power"@en .
+# 
+# http://w3id.org/rec/core/ReactivePowerL2
+<http://w3id.org/rec/core/ReactivePowerL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ReactivePowerL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ReactivePowerL2> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ReactivePowerL2> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ReactivePowerL2> <http://w3id.org/rec/core/comparableHaystack> "reactive,power,phase"@en .
+<http://w3id.org/rec/core/ReactivePowerL2> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ReactivePowerL2> <http://www.w3.org/2000/01/rdf-schema#label> "ReactivePowerL2"@en .
+# 
+# http://w3id.org/rec/core/ReactivePowerL3
+<http://w3id.org/rec/core/ReactivePowerL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ReactivePowerL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ReactivePowerL3> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ReactivePowerL3> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ReactivePowerL3> <http://w3id.org/rec/core/comparableHaystack> "reactive,power,phase"@en .
+<http://w3id.org/rec/core/ReactivePowerL3> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ReactivePowerL3> <http://www.w3.org/2000/01/rdf-schema#label> "ReactivePowerL3"@en .
+# 
+# http://w3id.org/rec/core/ReactivePowerTotal
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://w3id.org/rec/core/comparableBelok> "12"@en .
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://w3id.org/rec/core/comparableCoClass> "BJ"@en .
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://w3id.org/rec/core/comparableHaystack> "reactive,power"@en .
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://w3id.org/rec/core/comparableIPSOObjectId> "5800, 3328"@en .
+<http://w3id.org/rec/core/ReactivePowerTotal> <http://www.w3.org/2000/01/rdf-schema#label> "ReactivePowerTotal"@en .
+# 
+# http://w3id.org/rec/core/RecyclingEnergyFlow
+<http://w3id.org/rec/core/RecyclingEnergyFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/RecyclingEnergyFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/RecyclingEnergyFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "PVA5xx"@en .
+<http://w3id.org/rec/core/RecyclingEnergyFlow> <http://w3id.org/rec/core/comparableBelok> "41"@en .
+<http://w3id.org/rec/core/RecyclingEnergyFlow> <http://w3id.org/rec/core/comparableHaystack> "circ"@en .
+<http://w3id.org/rec/core/RecyclingEnergyFlow> <http://www.w3.org/2000/01/rdf-schema#label> "RecyclingEnergyFlow"@en .
+# 
+# http://w3id.org/rec/core/RecyclingEnergyReturn
+<http://w3id.org/rec/core/RecyclingEnergyReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/RecyclingEnergyReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/RecyclingEnergyReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "PVA5xx"@en .
+<http://w3id.org/rec/core/RecyclingEnergyReturn> <http://w3id.org/rec/core/comparableBelok> "42"@en .
+<http://w3id.org/rec/core/RecyclingEnergyReturn> <http://w3id.org/rec/core/comparableHaystack> "circ,leaving"@en .
+<http://w3id.org/rec/core/RecyclingEnergyReturn> <http://www.w3.org/2000/01/rdf-schema#label> "RecyclingEnergyReturn"@en .
+# 
+# http://w3id.org/rec/core/Relative_humidity
+<http://w3id.org/rec/core/Relative_humidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Relative_humidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Relative_humidity> <http://w3id.org/rec/core/unitSign> "RH"@en .
+<http://w3id.org/rec/core/Relative_humidity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature."@en .
+<http://w3id.org/rec/core/Relative_humidity> <http://www.w3.org/2000/01/rdf-schema#label> "Realative_humidity"@en .
+# 
+# http://w3id.org/rec/core/Revolutions_per_minute
+<http://w3id.org/rec/core/Revolutions_per_minute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Revolutions_per_minute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Revolutions_per_minute> <http://w3id.org/rec/core/unitSign> "rpm"@en .
+<http://w3id.org/rec/core/Revolutions_per_minute> <http://www.w3.org/2000/01/rdf-schema#label> "Revoultions_per_minute"@en .
+# 
+# http://w3id.org/rec/core/RotationSpeed
+<http://w3id.org/rec/core/RotationSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/RotationSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/RotationSpeed> <http://w3id.org/rec/core/comparableBelok> "08"@en .
+<http://w3id.org/rec/core/RotationSpeed> <http://w3id.org/rec/core/comparableCoClass> "BSE, BSF"@en .
+<http://w3id.org/rec/core/RotationSpeed> <http://w3id.org/rec/core/comparableIPSOObjectId> "3346"@en .
+<http://w3id.org/rec/core/RotationSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "RotationSpeed"@en .
+# 
+# http://w3id.org/rec/core/Second
+<http://w3id.org/rec/core/Second> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Second> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Second> <http://w3id.org/rec/core/unitSign> "s"@en .
+<http://w3id.org/rec/core/Second> <http://www.w3.org/2000/01/rdf-schema#comment> "The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom."@en .
+<http://w3id.org/rec/core/Second> <http://www.w3.org/2000/01/rdf-schema#label> "Second"@en .
+# 
+# http://w3id.org/rec/core/SecondaryCoolingFlow
+<http://w3id.org/rec/core/SecondaryCoolingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SecondaryCoolingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SecondaryCoolingFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN5xx, SHG5xx, RDV7xx"@en .
+<http://w3id.org/rec/core/SecondaryCoolingFlow> <http://w3id.org/rec/core/comparableBelok> "36"@en .
+<http://w3id.org/rec/core/SecondaryCoolingFlow> <http://www.w3.org/2000/01/rdf-schema#label> "SecondaryCoolingFlow"@en .
+# 
+# http://w3id.org/rec/core/SecondaryCoolingReturn
+<http://w3id.org/rec/core/SecondaryCoolingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SecondaryCoolingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SecondaryCoolingReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN5xx"@en .
+<http://w3id.org/rec/core/SecondaryCoolingReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/SecondaryCoolingReturn> <http://www.w3.org/2000/01/rdf-schema#label> "SecondaryCoolingReturn"@en .
+# 
+# http://w3id.org/rec/core/SecondaryHeatingFlow
+<http://w3id.org/rec/core/SecondaryHeatingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SecondaryHeatingFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SecondaryHeatingFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx"@en .
+<http://w3id.org/rec/core/SecondaryHeatingFlow> <http://w3id.org/rec/core/comparableBelok> "25"@en .
+<http://w3id.org/rec/core/SecondaryHeatingFlow> <http://www.w3.org/2000/01/rdf-schema#label> "SecondaryHeatingFlow"@en .
+# 
+# http://w3id.org/rec/core/SecondaryHeatingReturn
+<http://w3id.org/rec/core/SecondaryHeatingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SecondaryHeatingReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SecondaryHeatingReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MAN6xx, PV6xx"@en .
+<http://w3id.org/rec/core/SecondaryHeatingReturn> <http://w3id.org/rec/core/comparableBelok> "26"@en .
+<http://w3id.org/rec/core/SecondaryHeatingReturn> <http://w3id.org/rec/core/comparableHaystack> "leaving"@en .
+<http://w3id.org/rec/core/SecondaryHeatingReturn> <http://www.w3.org/2000/01/rdf-schema#label> "SecondaryHeatingReturn"@en .
+# 
+# http://w3id.org/rec/core/Sound
+<http://w3id.org/rec/core/Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Sound> <http://w3id.org/rec/core/comparableBelok> "13"@en .
+<http://w3id.org/rec/core/Sound> <http://w3id.org/rec/core/comparableIPSOObjectId> "3324"@en .
+<http://w3id.org/rec/core/Sound> <http://www.w3.org/2000/01/rdf-schema#label> "Sound"@en .
+# 
+# http://w3id.org/rec/core/Square_meter
+<http://w3id.org/rec/core/Square_meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Square_meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Square_meter> <http://w3id.org/rec/core/unitSign> "m2"@en .
+<http://w3id.org/rec/core/Square_meter> <http://www.w3.org/2000/01/rdf-schema#comment> "Area unit. It is the area of a square whose sides measure exactly one metre."@en .
+<http://w3id.org/rec/core/Square_meter> <http://www.w3.org/2000/01/rdf-schema#label> "Area"@en .
+# 
+# http://w3id.org/rec/core/SteamFlow
+<http://w3id.org/rec/core/SteamFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SteamFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SteamFlow> <http://w3id.org/rec/core/comparableBIPTypeId> "MT2xx"@en .
+<http://w3id.org/rec/core/SteamFlow> <http://w3id.org/rec/core/comparableBelok> "71"@en .
+<http://w3id.org/rec/core/SteamFlow> <http://www.w3.org/2000/01/rdf-schema#label> "SteamFlow"@en .
+# 
+# http://w3id.org/rec/core/SteamReturn
+<http://w3id.org/rec/core/SteamReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SteamReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SteamReturn> <http://w3id.org/rec/core/comparableBIPTypeId> "MT2xx"@en .
+<http://w3id.org/rec/core/SteamReturn> <http://w3id.org/rec/core/comparableBelok> "72"@en .
+<http://w3id.org/rec/core/SteamReturn> <http://www.w3.org/2000/01/rdf-schema#label> "SteamReturn"@en .
+# 
+# http://w3id.org/rec/core/SupplyAir
+<http://w3id.org/rec/core/SupplyAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/SupplyAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/SupplyAir> <http://w3id.org/rec/core/comparableBIPTypeId> "TF"@en .
+<http://w3id.org/rec/core/SupplyAir> <http://w3id.org/rec/core/comparableBelok> "02"@en .
+<http://w3id.org/rec/core/SupplyAir> <http://www.w3.org/2000/01/rdf-schema#label> "SupplyAir"@en .
+# 
+# http://w3id.org/rec/core/TVOC
+<http://w3id.org/rec/core/TVOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/TVOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/TVOC> <http://www.w3.org/2000/01/rdf-schema#label> "TVOC"@en .
+# 
+# http://w3id.org/rec/core/Temperature
+<http://w3id.org/rec/core/Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Temperature> <http://w3id.org/rec/core/comparableBIPTypeId> "GT0-9xx/yy, MT2-6xx"@en .
+<http://w3id.org/rec/core/Temperature> <http://w3id.org/rec/core/comparableBelok> "01"@en .
+<http://w3id.org/rec/core/Temperature> <http://w3id.org/rec/core/comparableHaystack> "temp"@en .
+<http://w3id.org/rec/core/Temperature> <http://w3id.org/rec/core/comparableIPSOObjectId> "3303"@en .
+<http://w3id.org/rec/core/Temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature"@en .
+<http://w3id.org/rec/core/Temperature> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Temperature"@en .
+# 
+# http://w3id.org/rec/core/Thermostat
+<http://w3id.org/rec/core/Thermostat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Thermostat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Thermostat> <http://www.w3.org/2000/01/rdf-schema#label> "Thermostat"@en .
+# 
+# http://w3id.org/rec/core/Valve
+<http://w3id.org/rec/core/Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/device/DeviceFunction> .
+<http://w3id.org/rec/core/Valve> <http://w3id.org/rec/core/comparableHaystack> "valve"@en .
+<http://w3id.org/rec/core/Valve> <http://www.w3.org/2000/01/rdf-schema#label> "Valve"@en .
+# 
+# http://w3id.org/rec/core/Velocity
+<http://w3id.org/rec/core/Velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Velocity> <http://w3id.org/rec/core/comparableBelok> "07"@en .
+<http://w3id.org/rec/core/Velocity> <http://w3id.org/rec/core/comparableCoClass> "BSD"@en .
+<http://w3id.org/rec/core/Velocity> <http://w3id.org/rec/core/comparableCoClass> "GS0-9xx/y"@en .
+<http://w3id.org/rec/core/Velocity> <http://w3id.org/rec/core/comparableIPSOObjectId> "5517"@en .
+<http://w3id.org/rec/core/Velocity> <http://www.w3.org/2000/01/rdf-schema#label> "Velocity"@en .
+# 
+# http://w3id.org/rec/core/Volt
+<http://w3id.org/rec/core/Volt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Volt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Volt> <http://w3id.org/rec/core/comparableIPSOObjectId> "3316"@en .
+<http://w3id.org/rec/core/Volt> <http://w3id.org/rec/core/unitSign> "V"@en .
+<http://w3id.org/rec/core/Volt> <http://www.w3.org/2000/01/rdf-schema#comment> "Voltage, electric potential difference, is the difference in electric potential between two points."@en .
+<http://w3id.org/rec/core/Volt> <http://www.w3.org/2000/01/rdf-schema#label> "Volt"@en .
+# 
+# http://w3id.org/rec/core/Voltage
+<http://w3id.org/rec/core/Voltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Voltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Voltage> <http://w3id.org/rec/core/comparableCoClass> "BA"@en .
+<http://w3id.org/rec/core/Voltage> <http://w3id.org/rec/core/comparableHaystack> "volt"@en .
+<http://w3id.org/rec/core/Voltage> <http://w3id.org/rec/core/comparableIPSOObjectId> "3316"@en .
+<http://w3id.org/rec/core/Voltage> <http://www.w3.org/2000/01/rdf-schema#label> "Voltage"@en .
+# 
+# http://w3id.org/rec/core/VoltageL1
+<http://w3id.org/rec/core/VoltageL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/VoltageL1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/VoltageL1> <http://w3id.org/rec/core/comparableCoClass> "BA"@en .
+<http://w3id.org/rec/core/VoltageL1> <http://w3id.org/rec/core/comparableHaystack> "volt"@en .
+<http://w3id.org/rec/core/VoltageL1> <http://w3id.org/rec/core/comparableIPSOObjectId> "3316"@en .
+<http://w3id.org/rec/core/VoltageL1> <http://www.w3.org/2000/01/rdf-schema#label> "VoltageL1"@en .
+# 
+# http://w3id.org/rec/core/VoltageL2
+<http://w3id.org/rec/core/VoltageL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/VoltageL2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/VoltageL2> <http://w3id.org/rec/core/comparableCoClass> "BA"@en .
+<http://w3id.org/rec/core/VoltageL2> <http://w3id.org/rec/core/comparableHaystack> "volt"@en .
+<http://w3id.org/rec/core/VoltageL2> <http://w3id.org/rec/core/comparableIPSOObjectId> "3316"@en .
+<http://w3id.org/rec/core/VoltageL2> <http://www.w3.org/2000/01/rdf-schema#label> "VoltageL2"@en .
+# 
+# http://w3id.org/rec/core/VoltageL3
+<http://w3id.org/rec/core/VoltageL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/VoltageL3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/VoltageL3> <http://w3id.org/rec/core/comparableCoClass> "BA"@en .
+<http://w3id.org/rec/core/VoltageL3> <http://w3id.org/rec/core/comparableHaystack> "volt"@en .
+<http://w3id.org/rec/core/VoltageL3> <http://w3id.org/rec/core/comparableIPSOObjectId> "3316"@en .
+<http://w3id.org/rec/core/VoltageL3> <http://www.w3.org/2000/01/rdf-schema#label> "VoltageL3"@en .
+# 
+# http://w3id.org/rec/core/Volume
+<http://w3id.org/rec/core/Volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/QuantityKind> .
+<http://w3id.org/rec/core/Volume> <http://w3id.org/rec/core/comparableHaystack> "volume"@en .
+<http://w3id.org/rec/core/Volume> <http://www.w3.org/2000/01/rdf-schema#label> "Volume"@en .
+# 
+# http://w3id.org/rec/core/WasteWater
+<http://w3id.org/rec/core/WasteWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/WasteWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/PlacementContext> .
+<http://w3id.org/rec/core/WasteWater> <http://w3id.org/rec/core/comparableBIPTypeId> "MT3xx"@en .
+<http://w3id.org/rec/core/WasteWater> <http://w3id.org/rec/core/comparableBelok> "81"@en .
+<http://w3id.org/rec/core/WasteWater> <http://www.w3.org/2000/01/rdf-schema#label> "WasteWater"@en .
+# 
+# http://w3id.org/rec/core/Watt
+<http://w3id.org/rec/core/Watt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Watt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Watt> <http://w3id.org/rec/core/unitSign> "W"@en .
+<http://w3id.org/rec/core/Watt> <http://www.w3.org/2000/01/rdf-schema#comment> "This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters."@en .
+<http://w3id.org/rec/core/Watt> <http://www.w3.org/2000/01/rdf-schema#label> "Watt"@en .
+# 
+# http://w3id.org/rec/core/Watt_hour
+<http://w3id.org/rec/core/Watt_hour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rec/core/Watt_hour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rec/core/MeasurementUnit> .
+<http://w3id.org/rec/core/Watt_hour> <http://w3id.org/rec/core/unitSign> "Wh"@en .
+<http://w3id.org/rec/core/Watt_hour> <http://www.w3.org/2000/01/rdf-schema#comment> "Enery. Watthour."@en .
+<http://w3id.org/rec/core/Watt_hour> <http://www.w3.org/2000/01/rdf-schema#label> "Watt_hour"@en .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
