@@ -4,5 +4,3 @@
 * [Core](core/)
 * [Building](building/)
 * [Device](device/)
-
-x
