@@ -6,3 +6,4 @@
 * [Agents](agents/)
 * [Building](building/)
 * [Device](device/)
+* [Lease](lease/)
