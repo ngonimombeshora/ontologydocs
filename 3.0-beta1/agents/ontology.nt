@@ -1,0 +1,103 @@
+<https://w3id.org/rec/agents/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/agents/3.0-beta1/> .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rec/core/3.0-beta1/> .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/creator> "Karl Hammar" .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/description> "This REC model covers basic types of agents (people, organizations, groups), structurally aligned with FOAF."@en .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/elements/1.1/title> "RealEstateCore Agents Module" .
+<https://w3id.org/rec/agents/> <http://purl.org/dc/terms/modified> "2019-03-25" .
+<https://w3id.org/rec/agents/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "agents" .
+<https://w3id.org/rec/agents/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/agents/3.0-beta1/" .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/rec/> .
+<https://w3id.org/rec/agents/> <http://www.w3.org/2002/07/owl#versionInfo> "3.0-beta1" .
+<https://w3id.org/rec/agents/> <https://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/agents/account
+<https://w3id.org/rec/agents/account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/agents/account> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/core/Agent> .
+# 
+# https://w3id.org/rec/agents/image
+<https://w3id.org/rec/agents/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/agents/image> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+# 
+# https://w3id.org/rec/agents/logo
+<https://w3id.org/rec/agents/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/agents/logo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Organization> .
+# 
+# https://w3id.org/rec/agents/member
+<https://w3id.org/rec/agents/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/rec/agents/member> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Group> .
+<https://w3id.org/rec/agents/member> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/rec/core/Agent> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/agents/familyName
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/familyName> <http://www.w3.org/2000/01/rdf-schema#label> "family name"@en .
+# 
+# https://w3id.org/rec/agents/firstName
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/firstName> <http://www.w3.org/2000/01/rdf-schema#label> "first name"@en .
+# 
+# https://w3id.org/rec/agents/gender
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/rec/agents/gender> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+# 
+# https://w3id.org/rec/agents/givenName
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/givenName> <http://www.w3.org/2000/01/rdf-schema#label> "given name"@en .
+# 
+# https://w3id.org/rec/agents/lastName
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/rec/agents/name> .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/agents/Person> .
+<https://w3id.org/rec/agents/lastName> <http://www.w3.org/2000/01/rdf-schema#label> "last name"@en .
+# 
+# https://w3id.org/rec/agents/name
+<https://w3id.org/rec/agents/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rec/agents/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rec/core/Agent> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/rec/agents/Group
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Agent> .
+# 
+# https://w3id.org/rec/agents/Organization
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Agent> .
+# 
+# https://w3id.org/rec/agents/Person
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/rec/agents/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rec/core/Agent> .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
