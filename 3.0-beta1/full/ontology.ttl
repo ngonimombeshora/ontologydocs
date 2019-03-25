@@ -1,0 +1,2051 @@
+@prefix : <https://w3id.org/rec/full/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/full/> .
+
+<https://w3id.org/rec/full/> rdf:type owl:Ontology ;
+                              owl:versionIRI <https://w3id.org/rec/full/3.0-beta1/> ;
+                              owl:imports <https://w3id.org/rec/agents/3.0-beta1/> ,
+                                          <https://w3id.org/rec/building/3.0-beta1/> ,
+                                          <https://w3id.org/rec/device/3.0-beta1/> ,
+                                          <https://w3id.org/rec/lease/3.0-beta1/> ;
+                              <http://purl.org/dc/elements/1.1/creator> "Erik Wallin" ,
+                                                                        "Karl Hammar" ;
+                              <http://purl.org/dc/elements/1.1/description> "This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules."@en ;
+                              <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                              <http://purl.org/dc/elements/1.1/title> "RealEstateCore Full" ;
+                              <http://purl.org/dc/terms/modified> "2019-03-25" ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "rec" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/full/3.0-beta1/" ;
+                              rdfs:comment """Version 3.0-beta1 is a major refactoring of REC:
+
+* Properties have been defined as being single-domain and single-range
+* Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties
+** This has required refactoring of the relations Building <-> BuildingComponent and Device <-> DeviceComponent (the latter is removed)
+* Class naming has been simplified
+* Module boundaries have been clarified and three modules (lease, metadata, agents) have been added"""@en ;
+                              owl:versionInfo "3.0-beta1" ;
+                              <https://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/rec/building/comparableBIP
+<https://w3id.org/rec/building/comparableBIP> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/building/comparableCoClass
+<https://w3id.org/rec/building/comparableCoClass> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/building/comparableIFC
+<https://w3id.org/rec/building/comparableIFC> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/core/comparableCoClass
+<https://w3id.org/rec/core/comparableCoClass> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/core/comparableFi2
+<https://w3id.org/rec/core/comparableFi2> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/core/comparableHaystack
+<https://w3id.org/rec/core/comparableHaystack> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/device/comparableBIPTypeId
+<https://w3id.org/rec/device/comparableBIPTypeId> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/device/comparableBelok
+<https://w3id.org/rec/device/comparableBelok> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/device/comparableHaystack
+<https://w3id.org/rec/device/comparableHaystack> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/rec/agents/account
+<https://w3id.org/rec/agents/account> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/rec/core/Agent> .
+
+
+###  https://w3id.org/rec/agents/image
+<https://w3id.org/rec/agents/image> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://w3id.org/rec/agents/Person> .
+
+
+###  https://w3id.org/rec/agents/logo
+<https://w3id.org/rec/agents/logo> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/rec/agents/Organization> .
+
+
+###  https://w3id.org/rec/agents/member
+<https://w3id.org/rec/agents/member> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/rec/agents/Group> ;
+                                     rdfs:range <https://w3id.org/rec/core/Agent> .
+
+
+###  https://w3id.org/rec/device/devicePlacementContext
+<https://w3id.org/rec/device/devicePlacementContext> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <https://w3id.org/rec/device/hasPlacementContext> ;
+                                                     rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                     rdfs:range <https://w3id.org/rec/device/PlacementContext> .
+
+
+###  https://w3id.org/rec/device/eventPlacementContext
+<https://w3id.org/rec/device/eventPlacementContext> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <https://w3id.org/rec/device/hasPlacementContext> ;
+                                                    rdfs:domain <https://w3id.org/rec/core/Event> ;
+                                                    rdfs:range <https://w3id.org/rec/device/PlacementContext> .
+
+
+###  https://w3id.org/rec/device/hasActuationInterface
+<https://w3id.org/rec/device/hasActuationInterface> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/rec/device/Actuator> ;
+                                                    rdfs:range <https://w3id.org/rec/device/ActuationInterface> .
+
+
+###  https://w3id.org/rec/device/hasDeviceCommunication
+<https://w3id.org/rec/device/hasDeviceCommunication> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                     rdfs:range <https://w3id.org/rec/device/DeviceCommunication> ;
+                                                     rdfs:comment "hasDeviceCommunication" .
+
+
+###  https://w3id.org/rec/device/hasDeviceFunctionType
+<https://w3id.org/rec/device/hasDeviceFunctionType> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                    rdfs:range <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                                    rdfs:label "hasDeviceFunction"@en .
+
+
+###  https://w3id.org/rec/device/hasKNXConfiguration
+<https://w3id.org/rec/device/hasKNXConfiguration> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasKNXDataPointType
+<https://w3id.org/rec/device/hasKNXDataPointType> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <https://w3id.org/rec/device/hasKNXConfiguration> ;
+                                                  rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                  rdfs:range <https://w3id.org/rec/device/KNXDataPointType> ;
+                                                  rdfs:label "hsKNXDataPointType"@en .
+
+
+###  https://w3id.org/rec/device/hasModbusConfiguration
+<https://w3id.org/rec/device/hasModbusConfiguration> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasModbusDataType
+<https://w3id.org/rec/device/hasModbusDataType> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/rec/device/hasModbusConfiguration> ;
+                                                rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                rdfs:range <https://w3id.org/rec/device/ModbusDataType> ;
+                                                rdfs:label "hasModbusDataType"@en .
+
+
+###  https://w3id.org/rec/device/hasModbusFunctionCode
+<https://w3id.org/rec/device/hasModbusFunctionCode> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <https://w3id.org/rec/device/hasModbusConfiguration> ;
+                                                    rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                    rdfs:range <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                                    rdfs:label "hasModbusFunctionCode"@en .
+
+
+###  https://w3id.org/rec/device/hasPlacementContext
+<https://w3id.org/rec/device/hasPlacementContext> rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "Placement context"@en .
+
+
+###  https://w3id.org/rec/device/makesActuation
+<https://w3id.org/rec/device/makesActuation> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/rec/core/generatesEvent> ;
+                                             rdfs:domain <https://w3id.org/rec/device/Actuator> ;
+                                             rdfs:range <https://w3id.org/rec/device/Actuation> .
+
+
+###  https://w3id.org/rec/device/makesException
+<https://w3id.org/rec/device/makesException> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/rec/core/generatesEvent> ;
+                                             rdfs:domain <https://w3id.org/rec/device/Sensor> ;
+                                             rdfs:range <https://w3id.org/rec/device/Exception> .
+
+
+###  https://w3id.org/rec/device/makesObservation
+<https://w3id.org/rec/device/makesObservation> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/rec/core/generatesEvent> ;
+                                               rdfs:domain <https://w3id.org/rec/device/Sensor> ;
+                                               rdfs:range <https://w3id.org/rec/device/Observation> .
+
+
+###  https://w3id.org/rec/lease/buildingIsPartOfPremises
+<https://w3id.org/rec/lease/buildingIsPartOfPremises> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <https://w3id.org/rec/lease/isPartOfPremises> ;
+                                                      rdfs:domain <https://w3id.org/rec/core/Building> ;
+                                                      rdfs:range <https://w3id.org/rec/lease/Premises> .
+
+
+###  https://w3id.org/rec/lease/coversLeasable
+<https://w3id.org/rec/lease/coversLeasable> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/rec/lease/LeaseContract> ;
+                                            rdfs:range <https://w3id.org/rec/lease/Leasable> .
+
+
+###  https://w3id.org/rec/lease/isPartOfPremises
+<https://w3id.org/rec/lease/isPartOfPremises> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/rec/core/isPartOf> ;
+                                              rdfs:range <https://w3id.org/rec/lease/Premises> .
+
+
+###  https://w3id.org/rec/lease/leasedBy
+<https://w3id.org/rec/lease/leasedBy> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/rec/lease/LeaseContract> ;
+                                      rdfs:range <https://w3id.org/rec/core/Agent> ;
+                                      rdfs:comment "The agent leasing some leasable object."@en ;
+                                      rdfs:label "Leased by"@en .
+
+
+###  https://w3id.org/rec/lease/premisesIncludes
+<https://w3id.org/rec/lease/premisesIncludes> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/rec/core/hasPart> ;
+                                              rdfs:domain <https://w3id.org/rec/lease/Premises> .
+
+
+###  https://w3id.org/rec/lease/premisesIncludesBuilding
+<https://w3id.org/rec/lease/premisesIncludesBuilding> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <https://w3id.org/rec/lease/premisesIncludes> ;
+                                                      rdfs:domain <https://w3id.org/rec/lease/Premises> ;
+                                                      rdfs:range <https://w3id.org/rec/core/Building> .
+
+
+###  https://w3id.org/rec/lease/premisesIncludesRoom
+<https://w3id.org/rec/lease/premisesIncludesRoom> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <https://w3id.org/rec/lease/premisesIncludes> ;
+                                                  rdfs:domain <https://w3id.org/rec/lease/Premises> ;
+                                                  rdfs:range <https://w3id.org/rec/core/Room> .
+
+
+###  https://w3id.org/rec/lease/roomIsPartOfPremises
+<https://w3id.org/rec/lease/roomIsPartOfPremises> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <https://w3id.org/rec/lease/isPartOfPremises> ;
+                                                  rdfs:domain <https://w3id.org/rec/core/Room> ;
+                                                  rdfs:range <https://w3id.org/rec/lease/Premises> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/rec/agents/familyName
+<https://w3id.org/rec/agents/familyName> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf <https://w3id.org/rec/agents/name> ;
+                                         rdfs:domain <https://w3id.org/rec/agents/Person> ;
+                                         rdfs:label "family name"@en .
+
+
+###  https://w3id.org/rec/agents/firstName
+<https://w3id.org/rec/agents/firstName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/rec/agents/name> ;
+                                        rdfs:domain <https://w3id.org/rec/agents/Person> ;
+                                        rdfs:label "first name"@en .
+
+
+###  https://w3id.org/rec/agents/gender
+<https://w3id.org/rec/agents/gender> rdf:type owl:DatatypeProperty ,
+                                              owl:FunctionalProperty ;
+                                     rdfs:domain <https://w3id.org/rec/agents/Person> .
+
+
+###  https://w3id.org/rec/agents/givenName
+<https://w3id.org/rec/agents/givenName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/rec/agents/name> ;
+                                        rdfs:domain <https://w3id.org/rec/agents/Person> ;
+                                        rdfs:label "given name"@en .
+
+
+###  https://w3id.org/rec/agents/lastName
+<https://w3id.org/rec/agents/lastName> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf <https://w3id.org/rec/agents/name> ;
+                                       rdfs:domain <https://w3id.org/rec/agents/Person> ;
+                                       rdfs:label "last name"@en .
+
+
+###  https://w3id.org/rec/agents/name
+<https://w3id.org/rec/agents/name> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://w3id.org/rec/core/Agent> .
+
+
+###  https://w3id.org/rec/device/actuationCommand
+<https://w3id.org/rec/device/actuationCommand> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://w3id.org/rec/device/Actuation> ;
+                                               rdfs:comment "actuationCommand is the event of the system [e.g. a digital twin] responsible for sending the actuation to the actuator"@en ;
+                                               rdfs:label "actuationCommand"@en .
+
+
+###  https://w3id.org/rec/device/actuationRequest
+<https://w3id.org/rec/device/actuationRequest> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://w3id.org/rec/device/Actuation> ;
+                                               rdfs:comment "actuationRequest is the incoming request to perform an actuation [to the digital twin]"@en ;
+                                               rdfs:label "actuationRequest"@en .
+
+
+###  https://w3id.org/rec/device/actuationResponse
+<https://w3id.org/rec/device/actuationResponse> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://w3id.org/rec/device/Actuation> ;
+                                                rdfs:comment "actuationResponse is the value returned from an actuation as a reponse"@en ;
+                                                rdfs:label "actuationResponse"@en .
+
+
+###  https://w3id.org/rec/device/hasActuationCommandTime
+<https://w3id.org/rec/device/hasActuationCommandTime> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf <https://w3id.org/rec/device/hasTime> ;
+                                                      rdfs:domain <https://w3id.org/rec/device/Actuation> ;
+                                                      rdfs:comment "The time stamp for the event of the underlying system intiating the actuation command."@en ;
+                                                      rdfs:label "hasActuationCommandTime"@en .
+
+
+###  https://w3id.org/rec/device/hasActuationRequestTime
+<https://w3id.org/rec/device/hasActuationRequestTime> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf <https://w3id.org/rec/device/hasTime> ;
+                                                      rdfs:domain <https://w3id.org/rec/device/Actuation> ;
+                                                      rdfs:comment "The time stamp for when a request for an actuation arrived."@en ;
+                                                      rdfs:label "hasActuationRequestTime"@en .
+
+
+###  https://w3id.org/rec/device/hasActuationResponseTime
+<https://w3id.org/rec/device/hasActuationResponseTime> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf <https://w3id.org/rec/device/hasTime> ;
+                                                       rdfs:domain <https://w3id.org/rec/device/Actuation> ;
+                                                       rdfs:comment "The time stamp for a possible response from actuation process."@en ;
+                                                       rdfs:label "hasActuationResponseTime"@en .
+
+
+###  https://w3id.org/rec/device/hasGeneralCommunicationConfiguration
+<https://w3id.org/rec/device/hasGeneralCommunicationConfiguration> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                                   rdfs:comment "Cognitive clustering for humans."@en ;
+                                                                   rdfs:label "hasGeneralCommunicationConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/hasIPAddress
+<https://w3id.org/rec/device/hasIPAddress> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/rec/device/hasGeneralCommunicationConfiguration> ;
+                                           rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                           rdfs:label "hasIPAddress"@en .
+
+
+###  https://w3id.org/rec/device/hasIPAddressPort
+<https://w3id.org/rec/device/hasIPAddressPort> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/rec/device/hasGeneralCommunicationConfiguration> ;
+                                               rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                               rdfs:range xsd:integer ;
+                                               rdfs:label "hasIPAddressPort"@en .
+
+
+###  https://w3id.org/rec/device/hasKNXAttribute
+<https://w3id.org/rec/device/hasKNXAttribute> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasKNXDeviceId
+<https://w3id.org/rec/device/hasKNXDeviceId> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/rec/device/hasKNXAttribute> ;
+                                             rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                             rdfs:range xsd:string .
+
+
+###  https://w3id.org/rec/device/hasKNXDevicePort
+<https://w3id.org/rec/device/hasKNXDevicePort> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/rec/device/hasKNXAttribute> ;
+                                               rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                               rdfs:range xsd:integer .
+
+
+###  https://w3id.org/rec/device/hasKNXGroupAddress
+<https://w3id.org/rec/device/hasKNXGroupAddress> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/rec/device/hasKNXAttribute> ;
+                                                 rdfs:label "hasKNXGroupAddress"@en .
+
+
+###  https://w3id.org/rec/device/hasLocalEndpointId
+<https://w3id.org/rec/device/hasLocalEndpointId> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/rec/device/hasGeneralCommunicationConfiguration> ;
+                                                 rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                 rdfs:label "hasLocalEndpointId"@en .
+
+
+###  https://w3id.org/rec/device/hasLoraConfiguration
+<https://w3id.org/rec/device/hasLoraConfiguration> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                   rdfs:comment "Cognitive clustering for humans."@en ;
+                                                   rdfs:label "hasLoraConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/hasLoraDevEUI
+<https://w3id.org/rec/device/hasLoraDevEUI> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf <https://w3id.org/rec/device/hasLoraConfiguration> ;
+                                            rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                            rdfs:range xsd:integer ;
+                                            rdfs:label "hasLoraDevEUI"@en .
+
+
+###  https://w3id.org/rec/device/hasModbusAttribute
+<https://w3id.org/rec/device/hasModbusAttribute> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasModbusNodeId
+<https://w3id.org/rec/device/hasModbusNodeId> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/rec/device/hasModbusAttribute> ;
+                                              rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                              rdfs:range xsd:integer .
+
+
+###  https://w3id.org/rec/device/hasModbusRegister
+<https://w3id.org/rec/device/hasModbusRegister> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/rec/device/hasModbusAttribute> ;
+                                                rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                                rdfs:range xsd:integer .
+
+
+###  https://w3id.org/rec/device/hasModbusRegisterLength
+<https://w3id.org/rec/device/hasModbusRegisterLength> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf <https://w3id.org/rec/device/hasModbusAttribute> ;
+                                                      rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasOffset
+<https://w3id.org/rec/device/hasOffset> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf <https://w3id.org/rec/device/hasGeneralCommunicationConfiguration> ;
+                                        rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                        rdfs:range xsd:double ;
+                                        rdfs:label "hasOffset"@en .
+
+
+###  https://w3id.org/rec/device/hasProcessedTime
+<https://w3id.org/rec/device/hasProcessedTime> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/rec/core/hasTime> ;
+                                               rdfs:domain <https://w3id.org/rec/device/Observation> ;
+                                               rdfs:range xsd:dateTime ;
+                                               rdfs:comment "Time when an object or result was processed in a system."@en ;
+                                               rdfs:label "hasProcessedTime"@en .
+
+
+###  https://w3id.org/rec/device/hasScaleFactor
+<https://w3id.org/rec/device/hasScaleFactor> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/rec/device/hasGeneralCommunicationConfiguration> ;
+                                             rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                             rdfs:range xsd:double ;
+                                             rdfs:label "hasScaleFactor"@en .
+
+
+###  https://w3id.org/rec/device/hasTime
+<https://w3id.org/rec/device/hasTime> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/rec/agents/Group
+<https://w3id.org/rec/agents/Group> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/rec/core/Agent> .
+
+
+###  https://w3id.org/rec/agents/Organization
+<https://w3id.org/rec/agents/Organization> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Agent> .
+
+
+###  https://w3id.org/rec/agents/Person
+<https://w3id.org/rec/agents/Person> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/rec/core/Agent> .
+
+
+###  https://w3id.org/rec/building/Atrium
+<https://w3id.org/rec/building/Atrium> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                       rdfs:label "Atrium"@en ;
+                                       <https://w3id.org/rec/core/comparableCoClass> "UTAAB"@en .
+
+
+###  https://w3id.org/rec/building/Auditorium
+<https://w3id.org/rec/building/Auditorium> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                           rdfs:label "Auditorium"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTBEB"@en ;
+                                           <https://w3id.org/rec/core/comparableFi2> """20.20-12
+22.22-04"""@en .
+
+
+###  https://w3id.org/rec/building/BackOffice
+<https://w3id.org/rec/building/BackOffice> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                           rdfs:label "BackOffice"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTBBE"@en .
+
+
+###  https://w3id.org/rec/building/Balcony
+<https://w3id.org/rec/building/Balcony> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                        rdfs:label "Balcony"@en .
+
+
+###  https://w3id.org/rec/building/BarRoom
+<https://w3id.org/rec/building/BarRoom> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/building/FoodHandlingRoom> ;
+                                        rdfs:label "BarRoom"@en .
+
+
+###  https://w3id.org/rec/building/Bathroom
+<https://w3id.org/rec/building/Bathroom> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                         rdfs:label "Bathroom"@en ;
+                                         <https://w3id.org/rec/core/comparableCoClass> "UTABA"@en ;
+                                         <https://w3id.org/rec/core/comparableFi2> """25.25-03
+25.25-05"""@en .
+
+
+###  https://w3id.org/rec/building/Bedroom
+<https://w3id.org/rec/building/Bedroom> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                        rdfs:label "Bedroom"@en ;
+                                        <https://w3id.org/rec/core/comparableCoClass> "UTAAA"@en .
+
+
+###  https://w3id.org/rec/building/BicycleGarage
+<https://w3id.org/rec/building/BicycleGarage> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/building/Garage> ;
+                                              rdfs:label "BicycleGarage"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTCBD"@en .
+
+
+###  https://w3id.org/rec/building/Cabinet
+<https://w3id.org/rec/building/Cabinet> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/building/UtilitiesRoom> ;
+                                        rdfs:label "Cabinet"@en .
+
+
+###  https://w3id.org/rec/building/Cinema
+<https://w3id.org/rec/building/Cinema> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                       rdfs:label "Cinema"@en ;
+                                       <https://w3id.org/rec/core/comparableCoClass> "UTBEB"@en ;
+                                       <https://w3id.org/rec/core/comparableFi2> "22.22-04"@en .
+
+
+###  https://w3id.org/rec/building/Classroom
+<https://w3id.org/rec/building/Classroom> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/building/EducationalRoom> ;
+                                          rdfs:label "Classroom"@en ;
+                                          <https://w3id.org/rec/core/comparableCoClass> "UTBAE"@en .
+
+
+###  https://w3id.org/rec/building/CleaningRoom
+<https://w3id.org/rec/building/CleaningRoom> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                             rdfs:label "CleaningRoom"@en ;
+                                             <https://w3id.org/rec/core/comparableCoClass> "UTBAG"@en .
+
+
+###  https://w3id.org/rec/building/ClimateControlRoom
+<https://w3id.org/rec/building/ClimateControlRoom> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/rec/building/UtilitiesRoom> ;
+                                                   rdfs:label "ClimateControlRoom"@en ;
+                                                   <https://w3id.org/rec/core/comparableCoClass> "UTDAD"@en .
+
+
+###  https://w3id.org/rec/building/CloakRoom
+<https://w3id.org/rec/building/CloakRoom> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                          rdfs:label "CloakRoom"@en ;
+                                          <https://w3id.org/rec/core/comparableCoClass> "UTEAA"@en ;
+                                          <https://w3id.org/rec/core/comparableFi2> "23.23-08"@en .
+
+
+###  https://w3id.org/rec/building/CoffeeRoom
+<https://w3id.org/rec/building/CoffeeRoom> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/building/FoodHandlingRoom> ;
+                                           rdfs:label "CoffeeRoom"@en .
+
+
+###  https://w3id.org/rec/building/ConferenceRoom
+<https://w3id.org/rec/building/ConferenceRoom> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                               rdfs:label "ConferenceRoom"@en ;
+                                               <https://w3id.org/rec/core/comparableCoClass> "UTBAB"@en ;
+                                               <https://w3id.org/rec/core/comparableFi2> "20.20-03"@en .
+
+
+###  https://w3id.org/rec/building/ConversationRoom
+<https://w3id.org/rec/building/ConversationRoom> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                                 rdfs:label "ConversationRoom"@en ;
+                                                 <https://w3id.org/rec/core/comparableCoClass> "UTBAH"@en ;
+                                                 <https://w3id.org/rec/core/comparableFi2> "20.20-04"@en .
+
+
+###  https://w3id.org/rec/building/CookingRoom
+<https://w3id.org/rec/building/CookingRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/building/FoodHandlingRoom> ;
+                                            rdfs:label "CookingRoom"@en ;
+                                            <https://w3id.org/rec/core/comparableCoClass> "UTBBA"@en ;
+                                            <https://w3id.org/rec/core/comparableFi2> "25.25-09"@en .
+
+
+###  https://w3id.org/rec/building/CopyingRoom
+<https://w3id.org/rec/building/CopyingRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                            rdfs:label "CopyingRoom"@en ;
+                                            <https://w3id.org/rec/core/comparableCoClass> "UTBB"@en ;
+                                            <https://w3id.org/rec/core/comparableFi2> "20.20-06"@en .
+
+
+###  https://w3id.org/rec/building/DataServerRoom
+<https://w3id.org/rec/building/DataServerRoom> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/building/UtilitiesRoom> ;
+                                               rdfs:label "DataServerRoom"@en ;
+                                               <https://w3id.org/rec/core/comparableCoClass> "UTDAB"@en .
+
+
+###  https://w3id.org/rec/building/DiningRoom
+<https://w3id.org/rec/building/DiningRoom> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/building/FoodHandlingRoom> ;
+                                           rdfs:label "DiningRoom"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTBEA"@en ;
+                                           <https://w3id.org/rec/core/comparableFi2> "20.20-08"@en .
+
+
+###  https://w3id.org/rec/building/DisabledToilet
+<https://w3id.org/rec/building/DisabledToilet> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/building/PersonalHygiene> ;
+                                               rdfs:label "DisabledToilet"@en ;
+                                               rdfs:seeAlso "HWC"@en ,
+                                                            "RWC"@en ;
+                                               <https://w3id.org/rec/core/comparableCoClass> "UTABB"@en .
+
+
+###  https://w3id.org/rec/building/DishingRoom
+<https://w3id.org/rec/building/DishingRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/building/FoodHandlingRoom> ;
+                                            rdfs:label "DishingRoom"@en .
+
+
+###  https://w3id.org/rec/building/DressingRoom
+<https://w3id.org/rec/building/DressingRoom> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                             rdfs:label "DressingRoom"@en ;
+                                             <https://w3id.org/rec/core/comparableCoClass> "UTABD"@en ;
+                                             <https://w3id.org/rec/core/comparableFi2> "28.28-06"@en .
+
+
+###  https://w3id.org/rec/building/EducationalRoom
+<https://w3id.org/rec/building/EducationalRoom> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                                rdfs:label "EducationalRoom"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTBAE"@en .
+
+
+###  https://w3id.org/rec/building/ElectricityRoom
+<https://w3id.org/rec/building/ElectricityRoom> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/building/UtilitiesRoom> ;
+                                                rdfs:label "ElectricityRoom"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTDAA"@en .
+
+
+###  https://w3id.org/rec/building/ElevatorRoom
+<https://w3id.org/rec/building/ElevatorRoom> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                             rdfs:label "ElevatorRoom"@en ;
+                                             <https://w3id.org/rec/core/comparableCoClass> "UTEAE"@en ;
+                                             <https://w3id.org/rec/core/comparableFi2> "26.26-09"@en .
+
+
+###  https://w3id.org/rec/building/ElevatorShaft
+<https://w3id.org/rec/building/ElevatorShaft> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                              rdfs:label "ElevatorShaft"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTEAE"@en ;
+                                              <https://w3id.org/rec/core/comparableFi2> "26.26-09"@en .
+
+
+###  https://w3id.org/rec/building/Entrance
+<https://w3id.org/rec/building/Entrance> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                         rdfs:label "Entrance"@en ;
+                                         <https://w3id.org/rec/core/comparableCoClass> "UTEAA"@en .
+
+
+###  https://w3id.org/rec/building/ExerciseRoom
+<https://w3id.org/rec/building/ExerciseRoom> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                             rdfs:label "ExerciseRoom"@en ;
+                                             <https://w3id.org/rec/core/comparableCoClass> "UTBDB"@en ;
+                                             <https://w3id.org/rec/core/comparableFi2> "20.20-14"@en .
+
+
+###  https://w3id.org/rec/building/ExhibitionRoom
+<https://w3id.org/rec/building/ExhibitionRoom> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                               rdfs:label "ExhibitionRoom"@en ;
+                                               <https://w3id.org/rec/core/comparableCoClass> "UTBEC"@en .
+
+
+###  https://w3id.org/rec/building/Facade
+<https://w3id.org/rec/building/Facade> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                       rdfs:label "Facade"@en ;
+                                       <https://w3id.org/rec/building/comparableCoClass> "FSB"@en .
+
+
+###  https://w3id.org/rec/building/FittingRoom
+<https://w3id.org/rec/building/FittingRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/building/RetailRoom> ;
+                                            rdfs:label "FittingRoom"@en .
+
+
+###  https://w3id.org/rec/building/Floor
+<https://w3id.org/rec/building/Floor> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                      rdfs:label "Floor"@en .
+
+
+###  https://w3id.org/rec/building/FoodHandlingRoom
+<https://w3id.org/rec/building/FoodHandlingRoom> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                                 rdfs:label "FoodHandlingRoom"@en ;
+                                                 <https://w3id.org/rec/core/comparableCoClass> "UTBBA"@en ;
+                                                 <https://w3id.org/rec/core/comparableFi2> "25.25-09"@en .
+
+
+###  https://w3id.org/rec/building/Garage
+<https://w3id.org/rec/building/Garage> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                       rdfs:label "Garage"@en ;
+                                       <https://w3id.org/rec/core/comparableCoClass> "UTCBD"@en .
+
+
+###  https://w3id.org/rec/building/GroupRoom
+<https://w3id.org/rec/building/GroupRoom> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/building/EducationalRoom> ;
+                                          rdfs:label "GroupRoom"@en ;
+                                          <https://w3id.org/rec/core/comparableCoClass> "UTBAE"@en .
+
+
+###  https://w3id.org/rec/building/Hallway
+<https://w3id.org/rec/building/Hallway> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                        rdfs:label "Hallway"@en ;
+                                        <https://w3id.org/rec/core/comparableCoClass> "UTEAC"@en ;
+                                        <https://w3id.org/rec/core/comparableFi2> "23.23-03"@en .
+
+
+###  https://w3id.org/rec/building/Laboratory
+<https://w3id.org/rec/building/Laboratory> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                           rdfs:label "Laboratory"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTBC"@en .
+
+
+###  https://w3id.org/rec/building/LaboratoryDry
+<https://w3id.org/rec/building/LaboratoryDry> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/building/Laboratory> ;
+                                              rdfs:comment "A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm."@en ;
+                                              rdfs:label "LaboratoryDry"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTBC"@en .
+
+
+###  https://w3id.org/rec/building/LaboratoryWet
+<https://w3id.org/rec/building/LaboratoryWet> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/building/Laboratory> ;
+                                              rdfs:comment "A LaboratoryWet is a type of laboratory where it is necessary to handle various types of chemicals and potential \"wet\" hazards, so the room has to be carefully designed, constructed, and controlled to avoid spillage and contamination."@en ;
+                                              rdfs:label "LaboratoryWet"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTBC"@en .
+
+
+###  https://w3id.org/rec/building/LaundryRoom
+<https://w3id.org/rec/building/LaundryRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                            rdfs:label "LaundryRoom"@en ;
+                                            <https://w3id.org/rec/core/comparableCoClass> "UTBAG"@en ;
+                                            <https://w3id.org/rec/core/comparableFi2> "25.25-15"@en .
+
+
+###  https://w3id.org/rec/building/Library
+<https://w3id.org/rec/building/Library> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                        rdfs:label "Library"@en ;
+                                        <https://w3id.org/rec/core/comparableCoClass> "UTCAD"@en ;
+                                        <https://w3id.org/rec/core/comparableFi2> "20.20-11"@en .
+
+
+###  https://w3id.org/rec/building/LivingRoom
+<https://w3id.org/rec/building/LivingRoom> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                           rdfs:label "LivingRoom"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTAAB"@en .
+
+
+###  https://w3id.org/rec/building/MainEntrance
+<https://w3id.org/rec/building/MainEntrance> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/building/Entrance> ;
+                                             rdfs:label "MainEntrance"@en ;
+                                             <https://w3id.org/rec/core/comparableCoClass> "UTEAA"@en ;
+                                             <https://w3id.org/rec/core/comparableFi2> "23.23-01"@en .
+
+
+###  https://w3id.org/rec/building/Office
+<https://w3id.org/rec/building/Office> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                       rdfs:label "Office"@en ;
+                                       <https://w3id.org/rec/core/comparableCoClass> "UTBAA"@en .
+
+
+###  https://w3id.org/rec/building/OfficeLandscape
+<https://w3id.org/rec/building/OfficeLandscape> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/building/Office> ;
+                                                rdfs:label "OfficeLandscape"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTBAA"@en ;
+                                                <https://w3id.org/rec/core/comparableFi2> "20.20-02"@en .
+
+
+###  https://w3id.org/rec/building/OfficeRoom
+<https://w3id.org/rec/building/OfficeRoom> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/building/Office> ;
+                                           rdfs:label "OfficeRoom"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTBAA"@en ;
+                                           <https://w3id.org/rec/core/comparableFi2> "20.20-01"@en .
+
+
+###  https://w3id.org/rec/building/ParkingSlotCold
+<https://w3id.org/rec/building/ParkingSlotCold> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/building/Garage> ;
+                                                rdfs:label "ParkingSlotCold"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTCBD"@en .
+
+
+###  https://w3id.org/rec/building/ParkingSlotWarm
+<https://w3id.org/rec/building/ParkingSlotWarm> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/building/Garage> ;
+                                                rdfs:label "ParkingSlotWarm"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTCBD"@en .
+
+
+###  https://w3id.org/rec/building/Pentry
+<https://w3id.org/rec/building/Pentry> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/building/FoodHandlingRoom> ;
+                                       rdfs:label "Pentry"@en ;
+                                       <https://w3id.org/rec/core/comparableCoClass> "UTBBA"@en ;
+                                       <https://w3id.org/rec/core/comparableFi2> "25.25-09"@en .
+
+
+###  https://w3id.org/rec/building/PersonalHygiene
+<https://w3id.org/rec/building/PersonalHygiene> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                                rdfs:label "PersonalHygiene"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTAB"@en .
+
+
+###  https://w3id.org/rec/building/PhoneBooth
+<https://w3id.org/rec/building/PhoneBooth> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/building/Office> ;
+                                           rdfs:label "PhoneBooth"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTBAB"@en .
+
+
+###  https://w3id.org/rec/building/Reception
+<https://w3id.org/rec/building/Reception> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                          rdfs:label "Reception"@en ;
+                                          <https://w3id.org/rec/core/comparableCoClass> "UTBAC"@en ;
+                                          <https://w3id.org/rec/core/comparableFi2> "20.20-05"@en .
+
+
+###  https://w3id.org/rec/building/RecordingRoom
+<https://w3id.org/rec/building/RecordingRoom> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                              rdfs:comment "Room for making audio and/or video recordings. A.ka. studio."@en ;
+                                              rdfs:label "RecordingRoom"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTBAM"@en .
+
+
+###  https://w3id.org/rec/building/RecreationalRoom
+<https://w3id.org/rec/building/RecreationalRoom> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                                 rdfs:label "RecreationalRoom"@en ;
+                                                 <https://w3id.org/rec/core/comparableCoClass> "UTBE"@en .
+
+
+###  https://w3id.org/rec/building/RestingRoom
+<https://w3id.org/rec/building/RestingRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                            rdfs:label "RestingRoom"@en ;
+                                            <https://w3id.org/rec/core/comparableCoClass> "UTAAA"@en ;
+                                            <https://w3id.org/rec/core/comparableFi2> "20.20-09"@en .
+
+
+###  https://w3id.org/rec/building/RetailRoom
+<https://w3id.org/rec/building/RetailRoom> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                           rdfs:label "RetailRoom"@en .
+
+
+###  https://w3id.org/rec/building/RoofInner
+<https://w3id.org/rec/building/RoofInner> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                          rdfs:label "Roof, inner"@en .
+
+
+###  https://w3id.org/rec/building/RoofOuter
+<https://w3id.org/rec/building/RoofOuter> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                          rdfs:label "Roof, outer"@en ;
+                                          <https://w3id.org/rec/building/comparableCoClass> "FSD"@en .
+
+
+###  https://w3id.org/rec/building/Sauna
+<https://w3id.org/rec/building/Sauna> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/rec/building/PersonalHygiene> ;
+                                      rdfs:label "Sauna"@en ;
+                                      <https://w3id.org/rec/core/comparableCoClass> "UTABF"@en ;
+                                      <https://w3id.org/rec/core/comparableFi2> "25.25-06"@en .
+
+
+###  https://w3id.org/rec/building/ServiceEntrance
+<https://w3id.org/rec/building/ServiceEntrance> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/building/Entrance> ;
+                                                rdfs:label "ServiceEntrance"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "UTEAA"@en ;
+                                                <https://w3id.org/rec/core/comparableFi2> "23.23-01"@en .
+
+
+###  https://w3id.org/rec/building/ServiceShaft
+<https://w3id.org/rec/building/ServiceShaft> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                             rdfs:label "ServiceShaft"@en ;
+                                             <https://w3id.org/rec/core/comparableCoClass> "UTEA"@en .
+
+
+###  https://w3id.org/rec/building/Shelter
+<https://w3id.org/rec/building/Shelter> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                        rdfs:label "Shelter"@en ;
+                                        <https://w3id.org/rec/core/comparableCoClass> "UTACA"@en ;
+                                        <https://w3id.org/rec/core/comparableFi2> "24.24-01"@en .
+
+
+###  https://w3id.org/rec/building/ShelterGasLock
+<https://w3id.org/rec/building/ShelterGasLock> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/building/Shelter> ;
+                                               rdfs:label "ShelterGasLock"@en ;
+                                               <https://w3id.org/rec/core/comparableCoClass> "UTACA"@en .
+
+
+###  https://w3id.org/rec/building/ShelterRoom
+<https://w3id.org/rec/building/ShelterRoom> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/building/Shelter> ;
+                                            rdfs:label "ShelterRoom"@en ;
+                                            <https://w3id.org/rec/core/comparableCoClass> "UTACA"@en .
+
+
+###  https://w3id.org/rec/building/ShowerRoom
+<https://w3id.org/rec/building/ShowerRoom> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/building/PersonalHygiene> ;
+                                           rdfs:label "ShowerRoom"@en ;
+                                           <https://w3id.org/rec/core/comparableCoClass> "UTABE"@en ;
+                                           <https://w3id.org/rec/core/comparableFi2> "25.25-04"@en .
+
+
+###  https://w3id.org/rec/building/Slab
+<https://w3id.org/rec/building/Slab> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                     rdfs:label "Slab"@en ;
+                                     <https://w3id.org/rec/building/comparableCoClass> "FSC"@en .
+
+
+###  https://w3id.org/rec/building/SmallStudyRoom
+<https://w3id.org/rec/building/SmallStudyRoom> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/building/EducationalRoom> ;
+                                               rdfs:label "SmallStudyRoom"@en ;
+                                               <https://w3id.org/rec/core/comparableCoClass> "UTBAF"@en .
+
+
+###  https://w3id.org/rec/building/StaffRoom
+<https://w3id.org/rec/building/StaffRoom> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                          rdfs:comment "Room for staff to take breaks."@en ;
+                                          rdfs:label "StaffRoom"@en ;
+                                          <https://w3id.org/rec/core/comparableCoClass> "UTAAB"@en .
+
+
+###  https://w3id.org/rec/building/Stairwell
+<https://w3id.org/rec/building/Stairwell> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                          rdfs:label "Stairwell"@en ;
+                                          <https://w3id.org/rec/core/comparableCoClass> "UTEAD"@en ;
+                                          <https://w3id.org/rec/core/comparableFi2> "23.23-04"@en .
+
+
+###  https://w3id.org/rec/building/Storage
+<https://w3id.org/rec/building/Storage> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                        rdfs:label "Storage"@en ;
+                                        <https://w3id.org/rec/core/comparableCoClass> "UTC"@en ;
+                                        <https://w3id.org/rec/core/comparableFi2> "28.28-03"@en .
+
+
+###  https://w3id.org/rec/building/StoreyLevel
+<https://w3id.org/rec/building/StoreyLevel> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                            rdfs:comment "The level of storey, a.k.a. floorplan"@en ;
+                                            rdfs:label "Storey level"@en ;
+                                            <https://w3id.org/rec/building/comparableBIP> "StoreyName"@en ;
+                                            <https://w3id.org/rec/building/comparableIFC> "ifcBuildingStorey"@en .
+
+
+###  https://w3id.org/rec/building/TelecommunicationRoom
+<https://w3id.org/rec/building/TelecommunicationRoom> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/rec/building/UtilitiesRoom> ;
+                                                      rdfs:label "TelecommunicationRoom"@en ;
+                                                      <https://w3id.org/rec/core/comparableCoClass> "UTDAB"@en ;
+                                                      <https://w3id.org/rec/core/comparableFi2> """26.26-06
+26.26-07"""@en .
+
+
+###  https://w3id.org/rec/building/Terrace
+<https://w3id.org/rec/building/Terrace> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                        rdfs:label "Terrace"@en .
+
+
+###  https://w3id.org/rec/building/Theater
+<https://w3id.org/rec/building/Theater> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                        rdfs:label "Theater"@en ;
+                                        <https://w3id.org/rec/core/comparableCoClass> "UTBDD"@en ;
+                                        <https://w3id.org/rec/core/comparableFi2> "22.22-04"@en .
+
+
+###  https://w3id.org/rec/building/Toilet
+<https://w3id.org/rec/building/Toilet> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/building/PersonalHygiene> ;
+                                       rdfs:label "Toilet"@en ;
+                                       <https://w3id.org/rec/core/comparableCoClass> "UTABB"@en ;
+                                       <https://w3id.org/rec/core/comparableFi2> "25.25-01"@en .
+
+
+###  https://w3id.org/rec/building/TreatmentRoom
+<https://w3id.org/rec/building/TreatmentRoom> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                              rdfs:comment "For e.g. medical or other treatment or consultation."@en ;
+                                              rdfs:label "TreatmentRoom"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTBAH"@en .
+
+
+###  https://w3id.org/rec/building/TreatmentWaitingRoom
+<https://w3id.org/rec/building/TreatmentWaitingRoom> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/rec/building/TreatmentRoom> ;
+                                                     rdfs:label "TreatmentWaitingRoom"@en ;
+                                                     <https://w3id.org/rec/core/comparableCoClass> "UTAAC"@en .
+
+
+###  https://w3id.org/rec/building/UtilitiesRoom
+<https://w3id.org/rec/building/UtilitiesRoom> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                              rdfs:label "UtilitiesRoom"@en ;
+                                              <https://w3id.org/rec/core/comparableCoClass> "UTDA"@en ;
+                                              <https://w3id.org/rec/core/comparableFi2> "26.26-"@en .
+
+
+###  https://w3id.org/rec/building/VirtualBuilding
+<https://w3id.org/rec/building/VirtualBuilding> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/core/Building> ;
+                                                rdfs:comment "A non-physical Building. Belongs to a RealEstate."@en ;
+                                                rdfs:label "Virtual building"@en .
+
+
+###  https://w3id.org/rec/building/VirtualBuildingComponent
+<https://w3id.org/rec/building/VirtualBuildingComponent> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                                         rdfs:comment "A non-physical component. Belongs to a Building . One Building may have zero, one, or many Virtual components. E.g a temperature value from an external service for the area of a building."@en ;
+                                                         rdfs:label "Virtual building component"@en .
+
+
+###  https://w3id.org/rec/building/Wall
+<https://w3id.org/rec/building/Wall> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/rec/core/BuildingComponent> ;
+                                     rdfs:label "Wall"@en ;
+                                     <https://w3id.org/rec/building/comparableCoClass> "FSB"@en .
+
+
+###  https://w3id.org/rec/building/WallInner
+<https://w3id.org/rec/building/WallInner> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/building/Wall> ;
+                                          rdfs:label "Inner wall"@en ;
+                                          <https://w3id.org/rec/building/comparableCoClass> "FSB"@en .
+
+
+###  https://w3id.org/rec/building/WasteManagementRoom
+<https://w3id.org/rec/building/WasteManagementRoom> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                                    rdfs:label "WasteManagementRoom"@en ;
+                                                    rdfs:seeAlso "Recycling room"@en ;
+                                                    <https://w3id.org/rec/core/comparableCoClass> "UTCAA"@en ;
+                                                    <https://w3id.org/rec/core/comparableFi2> "28.28-10"@en .
+
+
+###  https://w3id.org/rec/building/Workshop
+<https://w3id.org/rec/building/Workshop> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/rec/core/Room> ;
+                                         rdfs:label "Workshop"@en ;
+                                         <https://w3id.org/rec/core/comparableCoClass> "UTBB"@en ;
+                                         <https://w3id.org/rec/core/comparableFi2> "27.27-11"@en .
+
+
+###  https://w3id.org/rec/core/Room
+<https://w3id.org/rec/core/Room> rdf:type owl:Class ;
+                                 <https://w3id.org/rec/core/comparableCoClass> "UT"@en .
+
+
+###  https://w3id.org/rec/device/Actuation
+<https://w3id.org/rec/device/Actuation> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/device/DeviceEvents> ;
+                                        rdfs:comment "The act of changing the state of something."@en ;
+                                        rdfs:label "Actuation"@en .
+
+
+###  https://w3id.org/rec/device/ActuationInterface
+<https://w3id.org/rec/device/ActuationInterface> rdf:type owl:Class ;
+                                                 rdfs:comment "A description of what kind of input the Actuator accepts."@en ;
+                                                 rdfs:label "Actuation interface"@en .
+
+
+###  https://w3id.org/rec/device/Actuator
+<https://w3id.org/rec/device/Actuator> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/rec/core/Device> ;
+                                       rdfs:comment "An actuator is a component that is responsible for moving and controlling a mechanism or system."@en ;
+                                       rdfs:label "Actuator"@en .
+
+
+###  https://w3id.org/rec/device/BACnetConfiguration
+<https://w3id.org/rec/device/BACnetConfiguration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                  rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                  rdfs:label "BACnetConfiguration" .
+
+
+###  https://w3id.org/rec/device/CommunicationConfiguration
+<https://w3id.org/rec/device/CommunicationConfiguration> rdf:type owl:Class ;
+                                                         rdfs:label "CommunicationConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/DeviceCommunication
+<https://w3id.org/rec/device/DeviceCommunication> rdf:type owl:Class ;
+                                                  rdfs:comment "Type of communiaction bus for the Device."@en ;
+                                                  rdfs:label "DeviceCommunication"@en .
+
+
+###  https://w3id.org/rec/device/DeviceEvents
+<https://w3id.org/rec/device/DeviceEvents> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/core/Event> .
+
+
+###  https://w3id.org/rec/device/DeviceFunctionType
+<https://w3id.org/rec/device/DeviceFunctionType> rdf:type owl:Class ;
+                                                 rdfs:comment "The main function or purpose of a Device."@en ;
+                                                 rdfs:label "Device function type"@en .
+
+
+###  https://w3id.org/rec/device/Exception
+<https://w3id.org/rec/device/Exception> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/rec/device/DeviceEvents> ;
+                                        rdfs:comment "Failed attempt or unexpected result when tried to do something (e.g. read a Sensor)."@en ;
+                                        rdfs:label "Exception"@en .
+
+
+###  https://w3id.org/rec/device/KNXConfiguration
+<https://w3id.org/rec/device/KNXConfiguration> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                               rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                               rdfs:label "KNXConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/KNXDataPointType
+<https://w3id.org/rec/device/KNXDataPointType> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/rec/device/KNXConfiguration> ;
+                                               rdfs:label "KNXDataPointType"@en .
+
+
+###  https://w3id.org/rec/device/LoRaConfiguration
+<https://w3id.org/rec/device/LoRaConfiguration> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                rdfs:label "LoRaConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/MBusConfiguration
+<https://w3id.org/rec/device/MBusConfiguration> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                rdfs:label "MBusConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/ModbusConfiguration
+<https://w3id.org/rec/device/ModbusConfiguration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                  rdfs:label "ModbusConfiguration"@en ;
+                                                  rdfs:seeAlso "https://en.wikipedia.org/wiki/Modbus"@en .
+
+
+###  https://w3id.org/rec/device/ModbusDataType
+<https://w3id.org/rec/device/ModbusDataType> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/device/ModbusConfiguration> ;
+                                             rdfs:label "ModbusDataType"@en .
+
+
+###  https://w3id.org/rec/device/ModbusFunctionCode
+<https://w3id.org/rec/device/ModbusFunctionCode> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/rec/device/ModbusConfiguration> ;
+                                                 rdfs:label "ModbusTCPFunctionCode"@en .
+
+
+###  https://w3id.org/rec/device/ModbusRTUConfiguration
+<https://w3id.org/rec/device/ModbusRTUConfiguration> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                     rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                     rdfs:label "ModbusRTUConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/ModbusTCPConfiguration
+<https://w3id.org/rec/device/ModbusTCPConfiguration> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                     rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                     rdfs:label "ModbusTCPConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/OPC-DAConfiguration
+<https://w3id.org/rec/device/OPC-DAConfiguration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                  rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                  rdfs:label "OPC-DAConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/OPC-UAConfiguration
+<https://w3id.org/rec/device/OPC-UAConfiguration> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/rec/device/CommunicationConfiguration> ;
+                                                  rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                                                  rdfs:label "OPC-UAConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/Observation
+<https://w3id.org/rec/device/Observation> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/device/DeviceEvents> ;
+                                          rdfs:comment "Observation of a phenomena. Made by a Sensor. Used with hasValue."@en ;
+                                          rdfs:label "Observation"@en .
+
+
+###  https://w3id.org/rec/device/PlacementContext
+<https://w3id.org/rec/device/PlacementContext> rdf:type owl:Class ;
+                                               rdfs:comment "Description of the context or media that a sensor or actuator is operating within."@en ;
+                                               rdfs:label "Placement context"@en .
+
+
+###  https://w3id.org/rec/device/PowerSource
+<https://w3id.org/rec/device/PowerSource> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/rec/core/Device> ;
+                                          rdfs:comment "The power source for the device."@en ;
+                                          rdfs:label "Power source"@en .
+
+
+###  https://w3id.org/rec/device/Sensor
+<https://w3id.org/rec/device/Sensor> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/rec/core/Device> ;
+                                     rdfs:comment "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."@en ;
+                                     rdfs:label "Sensor"@en ;
+                                     <https://w3id.org/rec/core/comparableHaystack> "sensor"@en .
+
+
+###  https://w3id.org/rec/lease/CoffeePremises
+<https://w3id.org/rec/lease/CoffeePremises> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                            rdfs:label "CoffeePremises"@en .
+
+
+###  https://w3id.org/rec/lease/EducationalPremises
+<https://w3id.org/rec/lease/EducationalPremises> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                                 rdfs:label "EducationalPremises"@en ;
+                                                 <https://w3id.org/rec/core/comparableCoClass> "BVAH"@en .
+
+
+###  https://w3id.org/rec/lease/GaragePremises
+<https://w3id.org/rec/lease/GaragePremises> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                            rdfs:label "GaragePremises"@en .
+
+
+###  https://w3id.org/rec/lease/HotelPremises
+<https://w3id.org/rec/lease/HotelPremises> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                           rdfs:label "HotelPremises"@en .
+
+
+###  https://w3id.org/rec/lease/LaboratoryPremises
+<https://w3id.org/rec/lease/LaboratoryPremises> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                                rdfs:label "LaboratoryPremises"@en ;
+                                                <https://w3id.org/rec/core/comparableCoClass> "BVAEC"@en .
+
+
+###  https://w3id.org/rec/lease/Leasable
+<https://w3id.org/rec/lease/Leasable> rdf:type owl:Class ;
+                                      rdfs:comment "Things that can be leased (e.g., buildings, rooms, equipment, etc.)."@en ;
+                                      rdfs:label "Leasable"@en .
+
+
+###  https://w3id.org/rec/lease/LeaseContract
+<https://w3id.org/rec/lease/LeaseContract> rdf:type owl:Class ;
+                                           rdfs:comment "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."@en ;
+                                           rdfs:label "Lease contract"@en .
+
+
+###  https://w3id.org/rec/lease/LightIndustryPremises
+<https://w3id.org/rec/lease/LightIndustryPremises> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                                   rdfs:label "LightIndustryPremises"@en .
+
+
+###  https://w3id.org/rec/lease/OfficePremises
+<https://w3id.org/rec/lease/OfficePremises> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                            rdfs:label "OfficePremises"@en ;
+                                            <https://w3id.org/rec/core/comparableCoClass> "BVAEA"@en .
+
+
+###  https://w3id.org/rec/lease/Premises
+<https://w3id.org/rec/lease/Premises> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/rec/lease/Leasable> ;
+                                      rdfs:label "Premises"@en .
+
+
+###  https://w3id.org/rec/lease/ResidentialPremises
+<https://w3id.org/rec/lease/ResidentialPremises> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                                 rdfs:label "ResidentialPremises"@en ;
+                                                 <https://w3id.org/rec/core/comparableCoClass> "BVAA"@en .
+
+
+###  https://w3id.org/rec/lease/RestaurantPremises
+<https://w3id.org/rec/lease/RestaurantPremises> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                                rdfs:label "RestaurantPremises"@en .
+
+
+###  https://w3id.org/rec/lease/RetailPremises
+<https://w3id.org/rec/lease/RetailPremises> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                            rdfs:label "RetailPremises"@en .
+
+
+###  https://w3id.org/rec/lease/StoragePremises
+<https://w3id.org/rec/lease/StoragePremises> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/rec/lease/Premises> ;
+                                             rdfs:label "StoragePremises"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/rec/device/AirDiffuser
+<https://w3id.org/rec/device/AirDiffuser> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                          rdfs:label "AirDiffuser"@en .
+
+
+###  https://w3id.org/rec/device/AirHandlingUnit
+<https://w3id.org/rec/device/AirHandlingUnit> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                              rdfs:label "AirHandlingUnit"@en ;
+                                              <https://w3id.org/rec/device/comparableHaystack> "ahu,air"@en .
+
+
+###  https://w3id.org/rec/device/BACnet
+<https://w3id.org/rec/device/BACnet> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceCommunication> ;
+                                     rdfs:label "BACnet"@en .
+
+
+###  https://w3id.org/rec/device/Battery
+<https://w3id.org/rec/device/Battery> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/rec/device/PowerSource> .
+
+
+###  https://w3id.org/rec/device/Boiler
+<https://w3id.org/rec/device/Boiler> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                     rdfs:label "Boiler"@en .
+
+
+###  https://w3id.org/rec/device/Chiller
+<https://w3id.org/rec/device/Chiller> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                      rdfs:label "Chiller"@en ;
+                                      <https://w3id.org/rec/device/comparableHaystack> "chiller"@en .
+
+
+###  https://w3id.org/rec/device/CirculationAir
+<https://w3id.org/rec/device/CirculationAir> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/rec/device/PlacementContext> ;
+                                             rdfs:label "CirculationAir"@en .
+
+
+###  https://w3id.org/rec/device/Coil
+<https://w3id.org/rec/device/Coil> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                   rdfs:label "Coil"@en .
+
+
+###  https://w3id.org/rec/device/ColdWaterFlow
+<https://w3id.org/rec/device/ColdWaterFlow> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/rec/device/PlacementContext> ;
+                                            rdfs:label "ColdWaterFlow"@en ;
+                                            <https://w3id.org/rec/device/comparableBIPTypeId> "MT2xx, PPA2xx, SHG2xx, RT2xx"@en ;
+                                            <https://w3id.org/rec/device/comparableBelok> "--------53"@en ;
+                                            <https://w3id.org/rec/device/comparableHaystack> "domestic,water"@en .
+
+
+###  https://w3id.org/rec/device/ColdWaterReturn
+<https://w3id.org/rec/device/ColdWaterReturn> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/rec/device/PlacementContext> ;
+                                              rdfs:label "ColdWaterReturn"@en ;
+                                              <https://w3id.org/rec/device/comparableBIPTypeId> "MT2xx, PPA2xx"@en ;
+                                              <https://w3id.org/rec/device/comparableBelok> "--------54"@en ;
+                                              <https://w3id.org/rec/device/comparableHaystack> "domestic,water,leaving"@en ,
+                                                                                               "leaving"@en .
+
+
+###  https://w3id.org/rec/device/CommunicationBusPowerSource
+<https://w3id.org/rec/device/CommunicationBusPowerSource> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/rec/device/PowerSource> .
+
+
+###  https://w3id.org/rec/device/Compressor
+<https://w3id.org/rec/device/Compressor> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                         rdfs:label "Compressor"@en .
+
+
+###  https://w3id.org/rec/device/Condenser
+<https://w3id.org/rec/device/Condenser> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                        rdfs:label "Condenser"@en ;
+                                        <https://w3id.org/rec/device/comparableHaystack> "condenser"@en .
+
+
+###  https://w3id.org/rec/device/Control
+<https://w3id.org/rec/device/Control> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                      rdfs:comment "Device that controls Actuators (can also collect data)."@en ;
+                                      rdfs:label "Control"@en .
+
+
+###  https://w3id.org/rec/device/Damper
+<https://w3id.org/rec/device/Damper> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                     rdfs:label "Damper"@en ;
+                                     <https://w3id.org/rec/device/comparableHaystack> "damper"@en .
+
+
+###  https://w3id.org/rec/device/DataAcquisition
+<https://w3id.org/rec/device/DataAcquisition> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                              rdfs:comment "Device that collects data"@en ;
+                                              rdfs:label "DataAcquisition"@en .
+
+
+###  https://w3id.org/rec/device/DataCommunicationGateway
+<https://w3id.org/rec/device/DataCommunicationGateway> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                                       rdfs:comment "Device that acts as a broker (could be a switch or gateway)"@en ;
+                                                       rdfs:label "DataCommunicationGateway"@en .
+
+
+###  https://w3id.org/rec/device/DistrictCoolingFlow
+<https://w3id.org/rec/device/DistrictCoolingFlow> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/rec/device/PlacementContext> ;
+                                                  rdfs:label "DistrictCoolingFlow"@en ;
+                                                  <https://w3id.org/rec/device/comparableBIPTypeId> "MAN5xx"@en ;
+                                                  <https://w3id.org/rec/device/comparableBelok> "--------31"@en .
+
+
+###  https://w3id.org/rec/device/DistrictCoolingReturn
+<https://w3id.org/rec/device/DistrictCoolingReturn> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/rec/device/PlacementContext> ;
+                                                    rdfs:label "DistrictCoolingReturn"@en ;
+                                                    <https://w3id.org/rec/device/comparableBIPTypeId> "MAN5xx"@en ;
+                                                    <https://w3id.org/rec/device/comparableBelok> "--------32"@en ;
+                                                    <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/DistrictHeatingFlow
+<https://w3id.org/rec/device/DistrictHeatingFlow> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/rec/device/PlacementContext> ;
+                                                  rdfs:label "DistrictHeatingFlow"@en ;
+                                                  <https://w3id.org/rec/device/comparableBIPTypeId> "MAN6xx, PV6xx"@en ;
+                                                  <https://w3id.org/rec/device/comparableBelok> "--------21"@en .
+
+
+###  https://w3id.org/rec/device/DistrictHeatingReturn
+<https://w3id.org/rec/device/DistrictHeatingReturn> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/rec/device/PlacementContext> ;
+                                                    rdfs:label "DistrictHeatingReturn"@en ;
+                                                    <https://w3id.org/rec/device/comparableBIPTypeId> "MAN6xx, PV6xx"@en ;
+                                                    <https://w3id.org/rec/device/comparableBelok> "--------22"@en ;
+                                                    <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridIntake
+<https://w3id.org/rec/device/ElectricalGridIntake> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                                   rdfs:label "ElectricalGridIntake"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridInternal
+<https://w3id.org/rec/device/ElectricalGridInternal> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/rec/device/PlacementContext> ;
+                                                     rdfs:label "ElectricalGridInternal"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridLocalProduction
+<https://w3id.org/rec/device/ElectricalGridLocalProduction> rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/rec/device/PlacementContext> ;
+                                                            rdfs:label "ElectricalGridLocalProduction"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridTenant
+<https://w3id.org/rec/device/ElectricalGridTenant> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                                   rdfs:label "ElectricalGridTenant"@en .
+
+
+###  https://w3id.org/rec/device/Elevator
+<https://w3id.org/rec/device/Elevator> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                       rdfs:label "Elevator"@en .
+
+
+###  https://w3id.org/rec/device/Escalator
+<https://w3id.org/rec/device/Escalator> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                        rdfs:label "Escalator"@en .
+
+
+###  https://w3id.org/rec/device/ExhaustAir
+<https://w3id.org/rec/device/ExhaustAir> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/PlacementContext> ;
+                                         rdfs:label "ExhaustAir"@en ;
+                                         <https://w3id.org/rec/device/comparableBIPTypeId> "FF"@en ;
+                                         <https://w3id.org/rec/device/comparableBelok> "--------03"@en .
+
+
+###  https://w3id.org/rec/device/ExtractAir
+<https://w3id.org/rec/device/ExtractAir> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/PlacementContext> ;
+                                         rdfs:label "ExtractAir"@en ;
+                                         <https://w3id.org/rec/device/comparableBIPTypeId> "OF"@en ;
+                                         <https://w3id.org/rec/device/comparableBelok> "--------05"@en .
+
+
+###  https://w3id.org/rec/device/Fan
+<https://w3id.org/rec/device/Fan> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                  rdfs:label "Fan"@en ;
+                                  <https://w3id.org/rec/device/comparableHaystack> "fan"@en .
+
+
+###  https://w3id.org/rec/device/Filter
+<https://w3id.org/rec/device/Filter> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                     rdfs:label "Filter"@en ;
+                                     <https://w3id.org/rec/device/comparableHaystack> "filter"@en .
+
+
+###  https://w3id.org/rec/device/Fixed_length_string
+<https://w3id.org/rec/device/Fixed_length_string> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/rec/device/ModbusDataType> ;
+                                                  rdfs:label "Fixed length string"@en .
+
+
+###  https://w3id.org/rec/device/Heater
+<https://w3id.org/rec/device/Heater> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                     rdfs:label "Heater"@en ;
+                                     <https://w3id.org/rec/device/comparableHaystack> "heater"@en .
+
+
+###  https://w3id.org/rec/device/HotWaterFlow
+<https://w3id.org/rec/device/HotWaterFlow> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/rec/device/PlacementContext> ;
+                                           rdfs:label "HotWaterFlow"@en ;
+                                           <https://w3id.org/rec/device/comparableBelok> "--------51"@en .
+
+
+###  https://w3id.org/rec/device/HotWaterReturn
+<https://w3id.org/rec/device/HotWaterReturn> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/rec/device/PlacementContext> ;
+                                             rdfs:label "HotWaterReturn"@en ;
+                                             <https://w3id.org/rec/device/comparableBelok> "--------52"@en ;
+                                             <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/Hwrc
+<https://w3id.org/rec/device/Hwrc> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                   rdfs:label "Hwrc"@en ;
+                                   <https://w3id.org/rec/device/comparableBIPTypeId> "PCV6xx"@en ;
+                                   <https://w3id.org/rec/device/comparableBelok> "--------55"@en .
+
+
+###  https://w3id.org/rec/device/IP
+<https://w3id.org/rec/device/IP> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/rec/device/DeviceCommunication> ;
+                                 rdfs:label "IP"@en .
+
+
+###  https://w3id.org/rec/device/IndoorAir
+<https://w3id.org/rec/device/IndoorAir> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/PlacementContext> ;
+                                        rdfs:label "IndoorAir"@en .
+
+
+###  https://w3id.org/rec/device/KNX
+<https://w3id.org/rec/device/KNX> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/rec/device/DeviceCommunication> ;
+                                  rdfs:label "KNX"@en .
+
+
+###  https://w3id.org/rec/device/LoRa
+<https://w3id.org/rec/device/LoRa> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/rec/device/DeviceCommunication> ;
+                                   rdfs:label "LoRa"@en .
+
+
+###  https://w3id.org/rec/device/MBus
+<https://w3id.org/rec/device/MBus> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/rec/device/DeviceCommunication> ;
+                                   rdfs:label "MBus"@en .
+
+
+###  https://w3id.org/rec/device/ModbusRTU
+<https://w3id.org/rec/device/ModbusRTU> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/DeviceCommunication> ;
+                                        rdfs:label "ModbusRTU"@en .
+
+
+###  https://w3id.org/rec/device/ModbusTCP
+<https://w3id.org/rec/device/ModbusTCP> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/DeviceCommunication> ;
+                                        rdfs:label "ModbusTCP"@en .
+
+
+###  https://w3id.org/rec/device/OPC-DA
+<https://w3id.org/rec/device/OPC-DA> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceCommunication> ;
+                                     rdfs:label "OPC-DA"@en .
+
+
+###  https://w3id.org/rec/device/OPC-UA
+<https://w3id.org/rec/device/OPC-UA> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/rec/device/DeviceCommunication> ;
+                                     rdfs:label "OPC-UA"@en .
+
+
+###  https://w3id.org/rec/device/OutdoorAir
+<https://w3id.org/rec/device/OutdoorAir> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/PlacementContext> ;
+                                         rdfs:label "OutdoorAir"@en ;
+                                         <https://w3id.org/rec/device/comparableBIPTypeId> "AF"@en ;
+                                         <https://w3id.org/rec/device/comparableBelok> "--------01"@en ;
+                                         <https://w3id.org/rec/device/comparableHaystack> "outside"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryCoolingFlow
+<https://w3id.org/rec/device/PrimaryCoolingFlow> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/rec/device/PlacementContext> ;
+                                                 rdfs:label "PrimaryCoolingFlow"@en ;
+                                                 <https://w3id.org/rec/device/comparableBIPTypeId> "MAN5xx, RDV5xx, SHG5xx"@en ;
+                                                 <https://w3id.org/rec/device/comparableBelok> "--------33"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryCoolingReturn
+<https://w3id.org/rec/device/PrimaryCoolingReturn> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                                   rdfs:label "PrimaryCoolingReturn"@en ;
+                                                   <https://w3id.org/rec/device/comparableBIPTypeId> "MAN5xx"@en ;
+                                                   <https://w3id.org/rec/device/comparableBelok> "--------34"@en ;
+                                                   <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryHeatingFlow
+<https://w3id.org/rec/device/PrimaryHeatingFlow> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/rec/device/PlacementContext> ;
+                                                 rdfs:label "PrimaryHeatingFlow"@en ;
+                                                 <https://w3id.org/rec/device/comparableBIPTypeId> "MAN6xx, PV6xx, SHG6xx"@en ;
+                                                 <https://w3id.org/rec/device/comparableBelok> "--------23"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryHeatingReturn
+<https://w3id.org/rec/device/PrimaryHeatingReturn> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                                   rdfs:label "PrimaryHeatingReturn"@en ;
+                                                   <https://w3id.org/rec/device/comparableBIPTypeId> "MAN6xx, PV6xx"@en ;
+                                                   <https://w3id.org/rec/device/comparableBelok> "--------24"@en ;
+                                                   <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/Pump
+<https://w3id.org/rec/device/Pump> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                   rdfs:label "Pump"@en ;
+                                   <https://w3id.org/rec/device/comparableHaystack> "pump"@en .
+
+
+###  https://w3id.org/rec/device/RecyclingEnergyFlow
+<https://w3id.org/rec/device/RecyclingEnergyFlow> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/rec/device/PlacementContext> ;
+                                                  rdfs:label "RecyclingEnergyFlow"@en ;
+                                                  <https://w3id.org/rec/device/comparableBIPTypeId> "PVA5xx"@en ;
+                                                  <https://w3id.org/rec/device/comparableBelok> "--------41"@en ;
+                                                  <https://w3id.org/rec/device/comparableHaystack> "circ"@en .
+
+
+###  https://w3id.org/rec/device/RecyclingEnergyReturn
+<https://w3id.org/rec/device/RecyclingEnergyReturn> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/rec/device/PlacementContext> ;
+                                                    rdfs:label "RecyclingEnergyReturn"@en ;
+                                                    <https://w3id.org/rec/device/comparableBIPTypeId> "PVA5xx"@en ;
+                                                    <https://w3id.org/rec/device/comparableBelok> "--------42"@en ;
+                                                    <https://w3id.org/rec/device/comparableHaystack> "circ,leaving"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryCoolingFlow
+<https://w3id.org/rec/device/SecondaryCoolingFlow> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                                   rdfs:label "SecondaryCoolingFlow"@en ;
+                                                   <https://w3id.org/rec/device/comparableBIPTypeId> "MAN5xx, SHG5xx, RDV7xx"@en ;
+                                                   <https://w3id.org/rec/device/comparableBelok> "--------35"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryCoolingReturn
+<https://w3id.org/rec/device/SecondaryCoolingReturn> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/rec/device/PlacementContext> ;
+                                                     rdfs:label "SecondaryCoolingReturn"@en ;
+                                                     <https://w3id.org/rec/device/comparableBIPTypeId> "MAN5xx"@en ;
+                                                     <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryHeatingFlow
+<https://w3id.org/rec/device/SecondaryHeatingFlow> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/PlacementContext> ;
+                                                   rdfs:label "SecondaryHeatingFlow"@en ;
+                                                   <https://w3id.org/rec/device/comparableBIPTypeId> "MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx"@en ;
+                                                   <https://w3id.org/rec/device/comparableBelok> "--------25"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryHeatingReturn
+<https://w3id.org/rec/device/SecondaryHeatingReturn> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/rec/device/PlacementContext> ;
+                                                     rdfs:label "SecondaryHeatingReturn"@en ;
+                                                     <https://w3id.org/rec/device/comparableBIPTypeId> "MAN6xx, PV6xx"@en ;
+                                                     <https://w3id.org/rec/device/comparableBelok> "--------26"@en ;
+                                                     <https://w3id.org/rec/device/comparableHaystack> "leaving"@en .
+
+
+###  https://w3id.org/rec/device/SteamFlow
+<https://w3id.org/rec/device/SteamFlow> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/PlacementContext> ;
+                                        rdfs:label "SteamFlow"@en ;
+                                        <https://w3id.org/rec/device/comparableBIPTypeId> "MT2xx"@en ;
+                                        <https://w3id.org/rec/device/comparableBelok> "--------71"@en .
+
+
+###  https://w3id.org/rec/device/SteamReturn
+<https://w3id.org/rec/device/SteamReturn> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/rec/device/PlacementContext> ;
+                                          rdfs:label "SteamReturn"@en ;
+                                          <https://w3id.org/rec/device/comparableBIPTypeId> "MT2xx"@en ;
+                                          <https://w3id.org/rec/device/comparableBelok> "--------72"@en .
+
+
+###  https://w3id.org/rec/device/SupplyAir
+<https://w3id.org/rec/device/SupplyAir> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/rec/device/PlacementContext> ;
+                                        rdfs:label "SupplyAir"@en ;
+                                        <https://w3id.org/rec/device/comparableBIPTypeId> "TF"@en ;
+                                        <https://w3id.org/rec/device/comparableBelok> "--------02"@en .
+
+
+###  https://w3id.org/rec/device/Thermostat
+<https://w3id.org/rec/device/Thermostat> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                         rdfs:label "Thermostat"@en .
+
+
+###  https://w3id.org/rec/device/Valve
+<https://w3id.org/rec/device/Valve> rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/rec/device/DeviceFunctionType> ;
+                                    rdfs:label "Valve"@en ;
+                                    <https://w3id.org/rec/device/comparableHaystack> "valve"@en .
+
+
+###  https://w3id.org/rec/device/Variable_length_string
+<https://w3id.org/rec/device/Variable_length_string> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/rec/device/ModbusDataType> ;
+                                                     rdfs:label "Variable length string"@en .
+
+
+###  https://w3id.org/rec/device/WasteWater
+<https://w3id.org/rec/device/WasteWater> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/PlacementContext> ;
+                                         rdfs:label "WasteWater"@en ;
+                                         <https://w3id.org/rec/device/comparableBIPTypeId> "MT3xx"@en ;
+                                         <https://w3id.org/rec/device/comparableBelok> "--------81"@en .
+
+
+###  https://w3id.org/rec/device/1
+<https://w3id.org/rec/device/1> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                rdfs:comment "Read coil"@en ;
+                                rdfs:label "1"@en .
+
+
+###  https://w3id.org/rec/device/1_byte
+<https://w3id.org/rec/device/1_byte> rdf:type owl:NamedIndividual ;
+                                     rdfs:label "1 byte"@en .
+
+
+###  https://w3id.org/rec/device/1.yyy
+<https://w3id.org/rec/device/1.yyy> rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/rec/device/KNXDataPointType> ;
+                                    rdfs:comment "Boolean, like switching, move up/down, step"@en ;
+                                    rdfs:label "1.yyy"@en .
+
+
+###  https://w3id.org/rec/device/15
+<https://w3id.org/rec/device/15> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                 rdfs:comment "Write Multiple Coils"@en ;
+                                 rdfs:label "15"@en .
+
+
+###  https://w3id.org/rec/device/16
+<https://w3id.org/rec/device/16> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                 rdfs:comment "Write Multiple Holding Registers"@en ;
+                                 rdfs:label "16"@en .
+
+
+###  https://w3id.org/rec/device/2
+<https://w3id.org/rec/device/2> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                rdfs:comment "Read Discrete Input"@en ;
+                                rdfs:label "2"@en .
+
+
+###  https://w3id.org/rec/device/2_byte
+<https://w3id.org/rec/device/2_byte> rdf:type owl:NamedIndividual ;
+                                     rdfs:label "2 byte"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_BCD
+<https://w3id.org/rec/device/2_byte_BCD> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/ModbusDataType> ;
+                                         rdfs:label "2 byte BCD"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_signed_integer
+<https://w3id.org/rec/device/2_byte_signed_integer> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/rec/device/ModbusDataType> ;
+                                                    rdfs:label "2 byte signed integer"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_signed_integer_swapped
+<https://w3id.org/rec/device/2_byte_signed_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/rec/device/ModbusDataType> ;
+                                                            rdfs:label "2 byte signed integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_unsigned_integer
+<https://w3id.org/rec/device/2_byte_unsigned_integer> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/rec/device/ModbusDataType> ;
+                                                      rdfs:label "2 byte unsigned integer"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_unsigned_integer_swapped
+<https://w3id.org/rec/device/2_byte_unsigned_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/rec/device/ModbusDataType> ;
+                                                              rdfs:label "2 byte unsigned integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/3
+<https://w3id.org/rec/device/3> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                rdfs:comment "Read Holding Registers"@en ;
+                                rdfs:label "3"@en .
+
+
+###  https://w3id.org/rec/device/4
+<https://w3id.org/rec/device/4> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                rdfs:comment "Read Input Registers"@en ;
+                                rdfs:label "4"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_BCD
+<https://w3id.org/rec/device/4_byte_BCD> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/rec/device/ModbusDataType> ;
+                                         rdfs:label "4 byte BCD"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_BCD_swapped
+<https://w3id.org/rec/device/4_byte_BCD_swapped> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/rec/device/ModbusDataType> ;
+                                                 rdfs:label "4 byte BCD swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_float
+<https://w3id.org/rec/device/4_byte_float> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/rec/device/ModbusDataType> ;
+                                           rdfs:label "4 byte float"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_float_BCD
+<https://w3id.org/rec/device/4_byte_float_BCD> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/rec/device/ModbusDataType> ;
+                                               rdfs:label "4 byte float BCD"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_float_swapped
+<https://w3id.org/rec/device/4_byte_float_swapped> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/ModbusDataType> ;
+                                                   rdfs:label "4 byte float swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_signed_integer
+<https://w3id.org/rec/device/4_byte_signed_integer> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/rec/device/ModbusDataType> ;
+                                                    rdfs:label "4 byte signed integer"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_signed_integer_swapped
+<https://w3id.org/rec/device/4_byte_signed_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/rec/device/ModbusDataType> ;
+                                                            rdfs:label "4 byte signed integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words
+<https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words> rdf:type owl:NamedIndividual ,
+                                                                                     <https://w3id.org/rec/device/ModbusDataType> ;
+                                                                            rdfs:label "4 byte signed integer swapped bytes and words"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_unsigned_integer
+<https://w3id.org/rec/device/4_byte_unsigned_integer> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/rec/device/ModbusDataType> ;
+                                                      rdfs:label "4 byte unsigned integer"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_unsigned_integer_swapped
+<https://w3id.org/rec/device/4_byte_unsigned_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/rec/device/ModbusDataType> ;
+                                                              rdfs:label "4 byte unsigned integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words
+<https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words> rdf:type owl:NamedIndividual ,
+                                                                                       <https://w3id.org/rec/device/ModbusDataType> ;
+                                                                              rdfs:label "4 byte unsigned integer swapped bytes and words"@en .
+
+
+###  https://w3id.org/rec/device/5
+<https://w3id.org/rec/device/5> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                rdfs:comment "Write Single Coil"@en ;
+                                rdfs:label "5"@en .
+
+
+###  https://w3id.org/rec/device/6
+<https://w3id.org/rec/device/6> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/rec/device/ModbusFunctionCode> ;
+                                rdfs:comment "Write Single Holding Register"@en ;
+                                rdfs:label "6"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_float
+<https://w3id.org/rec/device/8_byte_float> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/rec/device/ModbusDataType> ;
+                                           rdfs:label "8 byte float"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_float_swapped
+<https://w3id.org/rec/device/8_byte_float_swapped> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/rec/device/ModbusDataType> ;
+                                                   rdfs:label "8 byte float swapped"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_signed_integer
+<https://w3id.org/rec/device/8_byte_signed_integer> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/rec/device/ModbusDataType> ;
+                                                    rdfs:label "8 byte signed integer"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_signed_integer_swapped
+<https://w3id.org/rec/device/8_byte_signed_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/rec/device/ModbusDataType> ;
+                                                            rdfs:label "8 byte signed integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_unsigned_integer
+<https://w3id.org/rec/device/8_byte_unsigned_integer> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/rec/device/ModbusDataType> ;
+                                                      rdfs:label "8 byte unsigned integer"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_unsigned_integer_swapped
+<https://w3id.org/rec/device/8_byte_unsigned_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/rec/device/ModbusDataType> ;
+                                                              rdfs:label "8 byte unsigned integer swapped"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/rec/core/Boiler> <https://w3id.org/rec/core/comparableHaystack> "boiler"@en .
+
+
+<https://w3id.org/rec/core/Coil> <https://w3id.org/rec/core/comparableHaystack> "coil"@en .
+
+
+<https://w3id.org/rec/core/SecondaryCoolingReturn> <https://w3id.org/rec/core/comparableCoClass> "--------36"@en .
+
+
+<https://w3id.org/rec/core/Sound> <https://w3id.org/rec/core/comparableCoClass> "KOBXA"@en .
+
+
+<https://w3id.org/rec/core/Temperature> <https://w3id.org/rec/core/comparableCoClass> "KOBTB"@en .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
