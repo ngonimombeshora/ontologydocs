@@ -1,6 +1,6 @@
 <https://w3id.org/rec/metadata/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/rec/metadata/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/metadata/3.0/> .
-<https://w3id.org/rec/metadata/> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://w3id.org/rec/metadata/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/rec/metadata/3.0-beta1/> .
+<https://w3id.org/rec/metadata/> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0-beta1/> .
 <https://w3id.org/rec/metadata/> <http://purl.org/dc/elements/1.1/contributor> "Erik Wallin" .
 <https://w3id.org/rec/metadata/> <http://purl.org/dc/elements/1.1/contributor> "Karl Hammar" .
 <https://w3id.org/rec/metadata/> <http://purl.org/dc/elements/1.1/description> "This is a translation of various metadata schemas into OWL annotation properties. The metadata schemas themselves have not been developed by the RealEstateCore Consortium; rather, we simply collate them into one OWL file for stand-alone reuse within the REC ontology suite.\n\nThe copyright on the constituent parts (classes, properties, named individuals) of the REC Metadata Module are held by their original authors (see their respective namespaces and the several rdfs:isDefinedBy and dc:source declarations on the Metadata Module ontology as a whole). These parts may have different licenses. The composition of these constituent parts into a joint ontology module are copyright RealEstateCore consortium, under CC-BY license."@en .
@@ -10,10 +10,10 @@
 <https://w3id.org/rec/metadata/> <http://purl.org/dc/elements/1.1/title> "RealEstateCore Metadata Module" .
 <https://w3id.org/rec/metadata/> <http://purl.org/dc/terms/modified> "2019-03-24" .
 <https://w3id.org/rec/metadata/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "metadata" .
-<https://w3id.org/rec/metadata/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/metadata/3.0/" .
+<https://w3id.org/rec/metadata/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/metadata/3.0-beta1/" .
 <https://w3id.org/rec/metadata/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
 <https://w3id.org/rec/metadata/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann/> .
-<https://w3id.org/rec/metadata/> <http://www.w3.org/2002/07/owl#versionInfo> "3.0" .
+<https://w3id.org/rec/metadata/> <http://www.w3.org/2002/07/owl#versionInfo> "3.0-beta1" .
 # 
 # 
 # #################################################################

@@ -1,4 +1,4 @@
-# RealEstateCore v3.0
+# RealEstateCore v3.0-beta1
 
 **Modules:**
 * [Metadata](metadata/)

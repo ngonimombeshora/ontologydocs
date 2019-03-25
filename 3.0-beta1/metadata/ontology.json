@@ -251,7 +251,7 @@
   "@id" : "https://w3id.org/rec/metadata/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://creativecommons.org/ns#license" : [ {
-    "@id" : "http://creativecommons.org/licenses/by/3.0/"
+    "@id" : "http://creativecommons.org/licenses/by/3.0-beta1/"
   } ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Erik Wallin"
@@ -280,7 +280,7 @@
     "@value" : "metadata"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://w3id.org/rec/metadata/3.0/"
+    "@value" : "https://w3id.org/rec/metadata/3.0-beta1/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/"
@@ -288,9 +288,9 @@
     "@id" : "http://purl.org/vocab/vann/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/rec/metadata/3.0/"
+    "@id" : "https://w3id.org/rec/metadata/3.0-beta1/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "3.0"
+    "@value" : "3.0-beta1"
   } ]
 } ]
