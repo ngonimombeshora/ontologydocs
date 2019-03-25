@@ -3,3 +3,4 @@
 **Modules:**
 * [Metadata](metadata/)
 * [Core](core/)
+* [Agents](agents/)
