@@ -2,3 +2,4 @@
 
 **Modules:**
 * [Metadata](metadata/)
+* [Core](core/)
