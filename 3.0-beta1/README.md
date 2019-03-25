@@ -4,3 +4,4 @@
 * [Metadata](metadata/)
 * [Core](core/)
 * [Agents](agents/)
+* [Building](building/)
