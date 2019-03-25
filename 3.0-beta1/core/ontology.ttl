@@ -1,0 +1,1417 @@
+@prefix : <https://w3id.org/rec/core/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/core/> .
+
+<https://w3id.org/rec/core/> rdf:type owl:Ontology ;
+                              owl:versionIRI <https://w3id.org/rec/core/3.0-beta1/> ;
+                              owl:imports <https://w3id.org/rec/metadata/3.0-beta1/> ;
+                              <http://purl.org/dc/elements/1.1/creator> "Erik Wallin" ,
+                                                                        "Karl Hammar" ;
+                              <http://purl.org/dc/elements/1.1/description> "The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules."@en ;
+                              <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium (https://www.realestatecore.io/)" ;
+                              <http://purl.org/dc/elements/1.1/title> "RealEstateCore Core Module" ;
+                              <http://purl.org/dc/terms/modified> "2019-03-25" ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "core" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/core/3.0-beta1/" ;
+                              rdfs:seeAlso <https://realestatecore.io> ;
+                              owl:versionInfo "3.0-beta1" ;
+                              <https://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://creativecommons.org/ns#license
+<https://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/core/comparableBIP
+:comparableBIP rdf:type owl:AnnotationProperty ;
+               rdfs:label "comparableBIP"@en ;
+               rdfs:seeAlso "For detailed instructions see: http://www.bipkoder.se/#/"@en .
+
+
+###  https://w3id.org/rec/core/comparableBIPTypeId
+:comparableBIPTypeId rdf:type owl:AnnotationProperty ;
+                     rdfs:label "comparableBIPTypeId"@en ;
+                     rdfs:seeAlso "For detailed instructions see: http://www.bipkoder.se/#/"@en .
+
+
+###  https://w3id.org/rec/core/comparableBelok
+:comparableBelok rdf:type owl:AnnotationProperty ;
+                 rdfs:label "comparableBelok"@en ;
+                 rdfs:seeAlso "For detail of how to use Belok: http://belok.se/download/kravspecifikationer/Krav%20S%C3%96%20Bilaga%202%20-%20Objektsdefinitioner%20BELOK%20S%C3%96.pdf"@en .
+
+
+###  https://w3id.org/rec/core/comparableCoClass
+:comparableCoClass rdf:type owl:AnnotationProperty ;
+                   rdfs:label "comparableCoClass"@en ;
+                   rdfs:seeAlso "For detailed instructions on how to use see: https://coclass.byggtjanst.se/sv"@en .
+
+
+###  https://w3id.org/rec/core/comparableFi2
+:comparableFi2 rdf:type owl:AnnotationProperty ;
+               rdfs:label "comparableFi2"@en ;
+               rdfs:seeAlso "For detailed instructions see: http://www.bimalliance.se/verktyg-och-stoed/standarder/datamodell/fi2xml/"@en .
+
+
+###  https://w3id.org/rec/core/comparableHaystack
+:comparableHaystack rdf:type owl:AnnotationProperty ;
+                    rdfs:label "comparableHaystack"@en ;
+                    rdfs:seeAlso "For detaild descriptions of Haystack tags see: https://project-haystack.org/tag"@en .
+
+
+###  https://w3id.org/rec/core/comparableIFC
+:comparableIFC rdf:type owl:AnnotationProperty ;
+               rdfs:label "comparableIFC"@en ;
+               rdfs:seeAlso "For instructions of use see: https://en.wikipedia.org/wiki/Industry_Foundation_Classes"@en .
+
+
+###  https://w3id.org/rec/core/comparableIPSO
+:comparableIPSO rdf:type owl:AnnotationProperty ;
+                rdfs:label "comparableIPSO"@en ;
+                rdfs:seeAlso "For instructions see: https://ipso-alliance.github.io/pub/"@en .
+
+
+###  https://w3id.org/rec/core/comparableIPSOObject
+:comparableIPSOObject rdf:type owl:AnnotationProperty ;
+                      rdfs:label "comparableIPSOObject"@en ;
+                      rdfs:seeAlso "For instructions see: https://ipso-alliance.github.io/pub/"@en .
+
+
+###  https://w3id.org/rec/core/comparableIPSOObjectId
+:comparableIPSOObjectId rdf:type owl:AnnotationProperty ;
+                        rdfs:label "comparableIPSOObjectId"@en ;
+                        rdfs:seeAlso "For instructions see: https://ipso-alliance.github.io/pub/"@en .
+
+
+###  https://w3id.org/rec/core/exampleOfUse
+:exampleOfUse rdf:type owl:AnnotationProperty ;
+              rdfs:label "exampleOfUse"@en .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#gmlLiteral
+<http://www.opengis.net/ont/geosparql#gmlLiteral> rdf:type rdfs:Datatype ;
+                                                  rdfs:label "GML Literal"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype ;
+                                                  rdfs:label "Well-known Text Literal"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#defaultGeometry
+<http://www.opengis.net/ont/geosparql#defaultGeometry> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                       rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                       rdfs:label "defaultGeometry"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:label "hasGeometry"@en .
+
+
+###  https://w3id.org/rec/core/deviceMeasurementUnit
+:deviceMeasurementUnit rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasMeasurementUnit ;
+                       rdfs:domain :Device ;
+                       rdfs:range :MeasurementUnit .
+
+
+###  https://w3id.org/rec/core/deviceQuantityKind
+:deviceQuantityKind rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasQuantityKind ;
+                    rdfs:domain :Device ;
+                    rdfs:range :QuantityKind .
+
+
+###  https://w3id.org/rec/core/eventMeasurementUnit
+:eventMeasurementUnit rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasMeasurementUnit ;
+                      rdfs:domain :Event ;
+                      rdfs:range :MeasurementUnit .
+
+
+###  https://w3id.org/rec/core/eventQuantityKind
+:eventQuantityKind rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasQuantityKind ;
+                   rdfs:domain :Event ;
+                   rdfs:range :QuantityKind .
+
+
+###  https://w3id.org/rec/core/generatesEvent
+:generatesEvent rdf:type owl:ObjectProperty ;
+                rdfs:domain :Device ;
+                rdfs:range :Event .
+
+
+###  https://w3id.org/rec/core/hasBuildingComponent
+:hasBuildingComponent rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasPart ;
+                      owl:inverseOf :isPartOfBuilding ;
+                      rdfs:domain :Building ;
+                      rdfs:range :BuildingComponent .
+
+
+###  https://w3id.org/rec/core/hasBuildingSubComponent
+:hasBuildingSubComponent rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasPart ;
+                         owl:inverseOf :hasBuildingSuperComponent ;
+                         rdfs:domain :BuildingComponent ;
+                         rdfs:range :BuildingComponent .
+
+
+###  https://w3id.org/rec/core/hasBuildingSuperComponent
+:hasBuildingSuperComponent rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isPartOf ;
+                           rdfs:domain :BuildingComponent ;
+                           rdfs:range :BuildingComponent ;
+                           rdfs:comment "Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc."@en .
+
+
+###  https://w3id.org/rec/core/hasGeoReferenceOrigo
+:hasGeoReferenceOrigo rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Building ;
+                      rdfs:range :GeoReferenceOrigo ;
+                      rdfs:label "hasGeoReferenceOrigo"@en .
+
+
+###  https://w3id.org/rec/core/hasMeasurementUnit
+:hasMeasurementUnit rdf:type owl:ObjectProperty ;
+                    rdfs:range :MeasurementUnit ;
+                    rdfs:label "hasMeasurementUnit"@en .
+
+
+###  https://w3id.org/rec/core/hasMountedDevice
+:hasMountedDevice rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasPart ;
+                  owl:inverseOf :isLocatedInBuildingComponent ;
+                  rdfs:domain :BuildingComponent ;
+                  rdfs:range :Device .
+
+
+###  https://w3id.org/rec/core/hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isPartOf ;
+         rdf:type owl:TransitiveProperty ;
+         rdfs:comment "Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy."@en ;
+         rdfs:label "has part"@en .
+
+
+###  https://w3id.org/rec/core/hasQuantityKind
+:hasQuantityKind rdf:type owl:ObjectProperty ;
+                 rdfs:range :QuantityKind ;
+                 rdfs:label "hasQuantityKind"@en .
+
+
+###  https://w3id.org/rec/core/hasRealEstateComponent
+:hasRealEstateComponent rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasPart ;
+                        owl:inverseOf :isPartOfRealEstate ;
+                        rdfs:domain :RealEstate ;
+                        rdfs:range :RealEstateComponent .
+
+
+###  https://w3id.org/rec/core/hasSubDevice
+:hasSubDevice rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasPart ;
+              owl:inverseOf :hasSuperDevice ;
+              rdfs:domain :Device ;
+              rdfs:range :Device .
+
+
+###  https://w3id.org/rec/core/hasSuperDevice
+:hasSuperDevice rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :isPartOf ;
+                rdfs:domain :Device ;
+                rdfs:range :Device ;
+                rdfs:comment "A property that allows for nesting of devices within devices."@en ;
+                rdfs:label "isPartOfDevice"@en .
+
+
+###  https://w3id.org/rec/core/isLocatedInBuildingComponent
+:isLocatedInBuildingComponent rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :isPartOf ;
+                              rdfs:domain :Device ;
+                              rdfs:range :BuildingComponent ;
+                              rdfs:comment """An object that can describe its place by using [object-UUID] locatedIn
+[myOtherObject-UUID], where [myOtherObject-UUID] could be a Room, BuildingStructure, etc."""@en ;
+                              rdfs:label "isLocatedIn"@en .
+
+
+###  https://w3id.org/rec/core/isPartOf
+:isPartOf rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty ;
+          rdfs:comment "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."@en ;
+          rdfs:label "is part of"@en .
+
+
+###  https://w3id.org/rec/core/isPartOfBuilding
+:isPartOfBuilding rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isPartOf ;
+                  rdfs:domain :BuildingComponent ;
+                  rdfs:range :Building ;
+                  rdfs:comment "Indicates which building a given building component is part of. Note that the parthood hierarchy is transitive, so every building component does not necessarily need to be invidiually connected to a building or a real estate; this can be inferred through the more generic isPartOf property."@en .
+
+
+###  https://w3id.org/rec/core/isPartOfRealEstate
+:isPartOfRealEstate rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isPartOf ;
+                    rdfs:domain :RealEstateComponent ;
+                    rdfs:range :RealEstate ;
+                    rdfs:comment "Indicates that a building structure or a piece of land belongs to / is part of a given real estate."@en .
+
+
+###  https://w3id.org/rec/core/quantityKindMeasurementUnit
+:quantityKindMeasurementUnit rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :hasMeasurementUnit ;
+                             rdfs:domain :QuantityKind ;
+                             rdfs:range :MeasurementUnit .
+
+
+###  https://w3id.org/rec/core/serves
+:serves rdf:type owl:ObjectProperty ;
+        rdfs:domain :Device ;
+        rdfs:comment "For example an airtreatment device (Device) that serves several rooms (BuildingStructureComponent) or a full building (BuildingStructure). Can also be a Device (e.g. airtreatment device) serving another Device (e.g. air diffuser)."@en ;
+        rdfs:label "serves"@en .
+
+
+###  https://w3id.org/rec/core/servesBuilding
+:servesBuilding rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :serves ;
+                rdfs:domain :Device ;
+                rdfs:range :Building .
+
+
+###  https://w3id.org/rec/core/servesBuildingComponent
+:servesBuildingComponent rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :serves ;
+                         rdfs:domain :Device ;
+                         rdfs:range :BuildingComponent .
+
+
+###  https://w3id.org/rec/core/servesDevice
+:servesDevice rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :serves ;
+              rdfs:domain :Device ;
+              rdfs:range :Device .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#asGML
+<http://www.opengis.net/ont/geosparql#asGML> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             rdfs:range <http://www.opengis.net/ont/geosparql#gmlLiteral> ;
+                                             rdfs:label "asGML" .
+
+
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasSerialization> ;
+                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                             rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
+                                             rdfs:label "asWKT" .
+
+
+###  http://www.opengis.net/ont/geosparql#hasSerialization
+<http://www.opengis.net/ont/geosparql#hasSerialization> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:label "has serialization"@en .
+
+
+###  https://w3id.org/rec/core/hasAliasID
+:hasAliasID rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAuxiliaryData ;
+            rdfs:comment "Used to map an Id in an external system to an instance (e.g. an UUID)."@en ;
+            rdfs:label "hasAliasID"@en .
+
+
+###  https://w3id.org/rec/core/hasAuxiliaryData
+:hasAuxiliaryData rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Cognitive clustering for humans."@en ;
+                  rdfs:label "hasAuxiliaryData"@en .
+
+
+###  https://w3id.org/rec/core/hasCity
+:hasCity rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :hasLocationRelatedData ;
+         rdfs:label "hasCity"@en .
+
+
+###  https://w3id.org/rec/core/hasComment
+:hasComment rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAuxiliaryData ;
+            rdfs:comment "Extra information about an object that is of a more exceptional character (compared to Description). E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\""@en ;
+            rdfs:label "hasComment"@en .
+
+
+###  https://w3id.org/rec/core/hasCountry
+:hasCountry rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasLocationRelatedData ;
+            rdfs:label "hasCountry"@en .
+
+
+###  https://w3id.org/rec/core/hasCreatedTime
+:hasCreatedTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "hasCreatedTime"@en .
+
+
+###  https://w3id.org/rec/core/hasDeletedTime
+:hasDeletedTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "hasDeletedTime"@en .
+
+
+###  https://w3id.org/rec/core/hasDuration
+:hasDuration rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasTime ;
+             rdfs:domain :Event ;
+             rdfs:range xsd:double ;
+             rdfs:comment """Measured in ms (milli seconds).
+Duration is defined as the length of time that something lasts."""@en ;
+             rdfs:label "hasDuration"@en .
+
+
+###  https://w3id.org/rec/core/hasGeoReferenceBearing
+:hasGeoReferenceBearing rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :GeoReferenceOrigo ;
+                        rdfs:range xsd:double ;
+                        rdfs:comment """The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).
+
+Bearings are never greater than 90°.
+Bearings are based on true north."""@en ;
+                        rdfs:label "hasGeoReferenceBearing"@en .
+
+
+###  https://w3id.org/rec/core/hasGeonames
+:hasGeonames rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasLocationRelatedData ;
+             rdfs:comment """Linking to https://www.geonames.org
+
+E.g. for Stockholm (Sweden):
+LocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html"""@en ;
+             rdfs:label "hasGeonames"@en .
+
+
+###  https://w3id.org/rec/core/hasLittera
+:hasLittera rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAuxiliaryData ;
+            rdfs:comment "Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room."@en ;
+            rdfs:label "hasLittera"@en .
+
+
+###  https://w3id.org/rec/core/hasLocationRelatedData
+:hasLocationRelatedData rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Cognitive clustering for humans."@en ;
+                        rdfs:label "hasLocationRelatedData"@en .
+
+
+###  https://w3id.org/rec/core/hasObservationTime
+:hasObservationTime rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasTime ;
+                    rdfs:domain :Event ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:label "hasObservationTime"@en .
+
+
+###  https://w3id.org/rec/core/hasPointInTime
+:hasPointInTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "hasPointInTime"@en .
+
+
+###  https://w3id.org/rec/core/hasPopularName
+:hasPopularName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasAuxiliaryData ;
+                rdfs:comment "Human-readable-friendly name."@en ;
+                rdfs:label "hasPopularName"@en .
+
+
+###  https://w3id.org/rec/core/hasPostalAddress
+:hasPostalAddress rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasLocationRelatedData ;
+                  rdfs:comment "Address used for postal delivery."@en ;
+                  rdfs:label "hasPostalAddress"@en .
+
+
+###  https://w3id.org/rec/core/hasReadTime
+:hasReadTime rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasTime ;
+             rdfs:domain :Event ;
+             rdfs:range xsd:dateTime ;
+             rdfs:label "hasReadTime"@en .
+
+
+###  https://w3id.org/rec/core/hasRegion
+:hasRegion rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasLocationRelatedData ;
+           rdfs:comment "Use this property to add [proprietary] regions."@en ;
+           rdfs:label "hasRegion"@en .
+
+
+###  https://w3id.org/rec/core/hasSource
+:hasSource rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasAuxiliaryData ;
+           rdfs:comment "Used for information about a source system or data."@en ;
+           rdfs:label "hasSource"@en .
+
+
+###  https://w3id.org/rec/core/hasStartTime
+:hasStartTime rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasTime ;
+              rdfs:domain :Event ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "hasStartTime"@en .
+
+
+###  https://w3id.org/rec/core/hasStopTime
+:hasStopTime rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasTime ;
+             rdfs:domain :Event ;
+             rdfs:range xsd:dateTime ;
+             rdfs:label "hasStopTime"@en .
+
+
+###  https://w3id.org/rec/core/hasSustainabilityCertification
+:hasSustainabilityCertification rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf :hasAuxiliaryData ;
+                                rdfs:label "hasSustainabilityCertification"@en .
+
+
+###  https://w3id.org/rec/core/hasTime
+:hasTime rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:comment """Cognitive clustering of time-related properties that can apply to time-indexed objects (i.e., events of various sorts).
+
+Certain time properties are given using xsd:DateTime, i.e., ISO8601 (see below), whereas others are given as ints or floats, depending on use case.
+
+Time format ISO8601:
+
+Complete date, hour, minutes, seconds, and decimal fraction of second
+
+      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
+
+Where:
+     YYYY = 4 numbers for year.
+     MM = 2 numbers for month (01=January, etc.)
+     DD = 2 numbers for day of month (01 till 31)
+     hh = 2 numbers for hour (00 till 23) (am/pm not allowed)
+     mm = 2 numbers for minutes (00 till 59)
+     ss = 2 numbers for second (00 till 59)
+     s = 1 or more numbers represent a decimal fraction of second
+
+TZD  = time zone designator (Z or +hh:mm or -hh:mm)
+Time is expressed in UTC (Coordinated Universal Time), with designated UTC  (\"Z\") for GMT."""@en ;
+         rdfs:label "hasTime"@en .
+
+
+###  https://w3id.org/rec/core/hasUpdatedTime
+:hasUpdatedTime rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasTime ;
+                rdfs:domain :Event ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "hasUpdatedTime"@en .
+
+
+###  https://w3id.org/rec/core/hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Event .
+
+
+###  https://w3id.org/rec/core/hasVistingAddress
+:hasVistingAddress rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasLocationRelatedData ;
+                   rdfs:comment "If a Location has multiple visiting addresses, then just add as many hasVistingAddress as needed."@en ;
+                   rdfs:label "hasVistingAddress"@en .
+
+
+###  https://w3id.org/rec/core/hasZipCode
+:hasZipCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasLocationRelatedData ;
+            rdfs:label "hasZipCode"@en .
+
+
+###  https://w3id.org/rec/core/isLocatedAt
+:isLocatedAt rdf:type owl:DatatypeProperty ;
+             rdfs:comment "An object that has an exact point (expressed in WGS84 in decimal degrees as (latitude,longitude,altitude)."@en ;
+             rdfs:label "isLocatedAt"@en ;
+             :comparableHaystack "geoCoord"@en ;
+             :comparableIPSOObjectId """Altitude: 3321
+Location: 3336
+Latitude: 5513
+Longitude: 5514
+Altitude: 5515"""@en .
+
+
+###  https://w3id.org/rec/core/isLocatedAtLocalCoordinates
+:isLocatedAtLocalCoordinates rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "Literal value in meter (x,y,z) in a local coordinate system that referes to GeoReferenceOrigo."@en ;
+                             rdfs:label "isLocatedAtLocalCoordinates"@en .
+
+
+###  https://w3id.org/rec/core/unitSign
+:unitSign rdf:type owl:DatatypeProperty ;
+          rdfs:label "unitSign"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:label "Geometry" .
+
+
+###  https://w3id.org/rec/core/Agent
+:Agent rdf:type owl:Class ;
+       rdfs:comment "The human or machine that consumes or acts upon an object or data."@en ;
+       rdfs:label "Agent"@en .
+
+
+###  https://w3id.org/rec/core/Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :RealEstateComponent ;
+          rdfs:comment "Confined building structure."@en ;
+          rdfs:label "Building"@en ;
+          :comparableCoClass "BV"@en ;
+          :comparableHaystack "site"@en ;
+          :comparableIFC "ifcBuilding"@en .
+
+
+###  https://w3id.org/rec/core/BuildingComponent
+:BuildingComponent rdf:type owl:Class ;
+                   rdfs:comment "The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc."@en ;
+                   rdfs:label "Building component"@en ;
+                   :comparableCoClass "UT"@en ;
+                   :comparableIFC "ifcSpace"@en .
+
+
+###  https://w3id.org/rec/core/Device
+:Device rdf:type owl:Class ;
+        rdfs:comment "A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device has one or more Sensor(s) and/or Actuator(s)."@en ;
+        rdfs:label "Device"@en ;
+        :comparableHaystack "device,equip"@en .
+
+
+###  https://w3id.org/rec/core/Event
+:Event rdf:type owl:Class ;
+       rdfs:comment "Cognitive clustering for humans."@en ;
+       rdfs:label "Event"@en .
+
+
+###  https://w3id.org/rec/core/GeoReferenceOrigo
+:GeoReferenceOrigo rdf:type owl:Class ;
+                   rdfs:comment "A fixed point for e.g. a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for LocalCoordinates."@en ;
+                   rdfs:label "GeoReferenceOrigo"@en .
+
+
+###  https://w3id.org/rec/core/Land
+:Land rdf:type owl:Class ;
+      rdfs:subClassOf :RealEstateComponent ;
+      rdfs:comment "The land where one or more buildings are situated."@en ;
+      rdfs:label "Land"@en .
+
+
+###  https://w3id.org/rec/core/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isLocatedInBuildingComponent ;
+                            owl:someValuesFrom :Location
+                          ] ;
+          rdfs:comment """A Location must have either a spatial relation to another location (e.g. \"contained in\"), a geographical coordinate representing its centre, or a pair of geographical coordintes representing it's outer boundaries (northwest/southeast)
+
+
+An instance of Location can have a PopularName and isLocatedAt a geographical point.
+
+E.g. Defining Stockholm as a Location:
+LocationUUID#1 isA Location
+LocationUUID#1 hasPopularName \"Stockholm\"
+LocationUUID#1 isLocatedAt (59.333683,18.068579,0)
+LocationUUID#1 isLocatedIn LocationUUID#2"""@en ;
+          rdfs:label "Location"@en .
+
+
+###  https://w3id.org/rec/core/MeasurementUnit
+:MeasurementUnit rdf:type owl:Class ;
+                 rdfs:comment """The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.
+
+Exceptions to SI:
+Express temperature in Celsius,
+Energy in Watt hour (Wh),
+Angle i degrees (360 degress = 1 revolution)
+MillimeterPerHour for Precipation"""@en ;
+                 rdfs:label "Measurement unit"@en ;
+                 rdfs:seeAlso "https://www.qudt.org/"@en ;
+                 :comparableHaystack "unit"@en .
+
+
+###  https://w3id.org/rec/core/QuantityKind
+:QuantityKind rdf:type owl:Class ;
+              rdfs:comment "Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT."@en ;
+              rdfs:label "Quantity kind"@en ;
+              rdfs:seeAlso <http://qudt.org/schema/qudt/QuantityKind> .
+
+
+###  https://w3id.org/rec/core/RealEstate
+:RealEstate rdf:type owl:Class ;
+            rdfs:comment "Legal entity. Land + buildings"@en ;
+            rdfs:label "Real estate"@en ;
+            :comparableCoClass "BX"@en ;
+            :comparableIFC "site"@en .
+
+
+###  https://w3id.org/rec/core/RealEstateComponent
+:RealEstateComponent rdf:type owl:Class ;
+                     rdfs:comment "Types of objects that can make up a piece of real estate, e.g., land and buildings."@en ;
+                     rdfs:label "Real estate component"@en .
+
+
+###  https://w3id.org/rec/core/Room
+:Room rdf:type owl:Class ;
+      rdfs:subClassOf :BuildingComponent .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/rec/core/ActiveEnergyL1
+:ActiveEnergyL1 rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                :hasMeasurementUnit :Watt ;
+                rdfs:label "ActiveEnergyL1"@en ;
+                :comparableBIPTypeId "MQxx, VMM8xx, VMM1xx"@en ;
+                :comparableBelok "11-------"@en ;
+                :comparableCoClass "KOBH"@en ;
+                :comparableHaystack "active,energy,phase"@en ;
+                :comparableIPSOObjectId "5805, 3331"@en .
+
+
+###  https://w3id.org/rec/core/ActiveEnergyL2
+:ActiveEnergyL2 rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                rdfs:label "ActiveEnergyL2"@en ;
+                :comparableBIPTypeId "MQxx, VMM8xx, VMM1xx"@en ;
+                :comparableBelok "11-------"@en ;
+                :comparableCoClass "KOBH"@en ;
+                :comparableHaystack "active,energy,phase"@en ;
+                :comparableIPSOObjectId "5805, 3331"@en .
+
+
+###  https://w3id.org/rec/core/ActiveEnergyL3
+:ActiveEnergyL3 rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                rdfs:label "ActiveEnergyL3"@en ;
+                :comparableBIPTypeId "MQxx, VMM8xx, VMM1xx"@en ;
+                :comparableBelok "11-------"@en ;
+                :comparableCoClass "KOBH"@en ;
+                :comparableHaystack "active,energy,phase"@en ;
+                :comparableIPSOObjectId "5805, 3331"@en .
+
+
+###  https://w3id.org/rec/core/ActiveEnergyTotal
+:ActiveEnergyTotal rdf:type owl:NamedIndividual ,
+                            :QuantityKind ;
+                   rdfs:label "ActiveEnergyTotal"@en ;
+                   :comparableBelok "11-----10"@en ;
+                   :comparableCoClass "KOBH"@en ;
+                   :comparableHaystack "active,energy"@en ;
+                   :comparableIPSOObjectId "5805, 3331"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerL1
+:ActivePowerL1 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "ActivePowerL1"@en ;
+               :comparableBelok "12-------"@en ;
+               :comparableCoClass "KOBJ"@en ;
+               :comparableHaystack "active,power,phase"@en ;
+               :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerL2
+:ActivePowerL2 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "ActivePowerL1"@en ;
+               :comparableBelok "12-------"@en ;
+               :comparableCoClass "KOBJ"@en ;
+               :comparableHaystack "active,power,phase"@en ;
+               :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerL3
+:ActivePowerL3 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "ActivePowerL3"@en ;
+               :comparableBelok "12-------"@en ;
+               :comparableCoClass "KOBJ"@en ;
+               :comparableHaystack "active,power,phase"@en ;
+               :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/ActivePowerTotal
+:ActivePowerTotal rdf:type owl:NamedIndividual ,
+                           :QuantityKind ;
+                  rdfs:label "ActivePowerTotal"@en ;
+                  :comparableBelok "12-----10"@en ;
+                  :comparableCoClass "KOBJ"@en ;
+                  :comparableHaystack "active,power"@en ;
+                  :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/AgentInteraction
+:AgentInteraction rdf:type owl:NamedIndividual ,
+                           :QuantityKind ;
+                  rdfs:comment "When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation."@en ;
+                  rdfs:label "AgentInteraction"@en .
+
+
+###  https://w3id.org/rec/core/AlarmMajor
+:AlarmMajor rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:comment "Danger for property"@en ;
+            rdfs:label "AlarmMajor"@en .
+
+
+###  https://w3id.org/rec/core/AlarmMinor
+:AlarmMinor rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:comment "Notifications"@en ;
+            rdfs:label "AlarmMinor"@en .
+
+
+###  https://w3id.org/rec/core/AlarmSevere
+:AlarmSevere rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:comment "Danger for life and property"@en ;
+             rdfs:label "AlarmSevere"@en ;
+             :comparableBIP """H1B1xx, H1B4xx, H1B5xx, H1B9xx, H1B6xx, H1B3xx, H1B7xx
+H1B2xx, H1B9xx"""@en .
+
+
+###  https://w3id.org/rec/core/Ampere
+:Ampere rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "A"@en ;
+        rdfs:comment "Ampere. Current in a circuit."@en ;
+        rdfs:label "Ampere"@en .
+
+
+###  https://w3id.org/rec/core/Angle
+:Angle rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Angle"@en ;
+       :comparableHaystack "angle"@en ;
+       :comparableIPSOObjectId "3332"@en .
+
+
+###  https://w3id.org/rec/core/Area
+:Area rdf:type owl:NamedIndividual ,
+               :QuantityKind ;
+      rdfs:label "Area"@en ;
+      :comparableHaystack "area"@en .
+
+
+###  https://w3id.org/rec/core/Binary
+:Binary rdf:type owl:NamedIndividual ;
+        rdfs:label "Binary"@en ;
+        :comparableIPSOObjectId "5550,5850"@en .
+
+
+###  https://w3id.org/rec/core/CO
+:CO rdf:type owl:NamedIndividual ,
+             :QuantityKind ;
+    rdfs:label "CO"@en ;
+    :comparableHaystack "co"@en .
+
+
+###  https://w3id.org/rec/core/CO2
+:CO2 rdf:type owl:NamedIndividual ,
+              :QuantityKind ;
+     rdfs:label "CO2"@en ;
+     :comparableHaystack "co2"@en .
+
+
+###  https://w3id.org/rec/core/Celsius
+:Celsius rdf:type owl:NamedIndividual ,
+                  :MeasurementUnit ;
+         :unitSign "C"@en ;
+         rdfs:comment "Temperature in Celsius degress. Note that correct SI Unit is Kelvin."@en ;
+         rdfs:label "Celsius"@en .
+
+
+###  https://w3id.org/rec/core/Concentration
+:Concentration rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "Concentration"@en ;
+               :comparableBIPTypeId "GQ0-9xx/y/z"@en ;
+               :comparableBelok "09--------"@en ;
+               :comparableCoClass "KOBQ"@en ;
+               :comparableIPSOObjectId "3325"@en .
+
+
+###  https://w3id.org/rec/core/CosPhi
+:CosPhi rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "cos-phi"@en ;
+        rdfs:comment "The angle between two electrical phases."@en ;
+        rdfs:label "CosPhi"@en .
+
+
+###  https://w3id.org/rec/core/CubicMeter
+:CubicMeter rdf:type owl:NamedIndividual ,
+                     :MeasurementUnit ;
+            :unitSign "m3"@en ;
+            rdfs:comment "Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3)."@en ;
+            rdfs:label "CubicMeter"@en .
+
+
+###  https://w3id.org/rec/core/Current
+:Current rdf:type owl:NamedIndividual ,
+                  :QuantityKind ;
+         rdfs:label "Current"@en ;
+         :comparableCoClass "KOBC"@en ;
+         :comparableHaystack "current"@en ;
+         :comparableIPSOObjectId "3317"@en .
+
+
+###  https://w3id.org/rec/core/CurrentL1
+:CurrentL1 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "CurrentL1"@en ;
+           :comparableCoClass "KOBC"@en ;
+           :comparableHaystack "current,phase"@en ;
+           :comparableIPSOObjectId "3317"@en .
+
+
+###  https://w3id.org/rec/core/CurrentL2
+:CurrentL2 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "CurrentL2"@en ;
+           :comparableCoClass "KOBC"@en ;
+           :comparableHaystack "current,phase"@en ;
+           :comparableIPSOObjectId "3317"@en .
+
+
+###  https://w3id.org/rec/core/CurrentL3
+:CurrentL3 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "CurrentL3"@en ;
+           :comparableCoClass "KOBC"@en ;
+           :comparableHaystack "current,phase"@en ;
+           :comparableIPSOObjectId "3317"@en .
+
+
+###  https://w3id.org/rec/core/Decibel
+:Decibel rdf:type owl:NamedIndividual ,
+                  :MeasurementUnit ;
+         :unitSign "db"@en ;
+         rdfs:comment "Sound level"@en ;
+         rdfs:label "Decibel"@en .
+
+
+###  https://w3id.org/rec/core/Degrees
+:Degrees rdf:type owl:NamedIndividual ,
+                  :MeasurementUnit ;
+         rdfs:label "Degrees"@en ;
+         :comparableCoClass "KOBGE"@en .
+
+
+###  https://w3id.org/rec/core/Efficiency
+:Efficiency rdf:type owl:NamedIndividual ,
+                     :QuantityKind ;
+            rdfs:label "Efficiency"@en .
+
+
+###  https://w3id.org/rec/core/EnergyTotal
+:EnergyTotal rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:comment "Total energy (not specified as Active or Reactive, used for e.g. district heating)."@en ;
+             rdfs:label "EnergyTotal"@en ;
+             :comparableBelok "11------10"@en ;
+             :comparableCoClass "KOBH"@en ;
+             :comparableIPSOObjectId "5805, 3331"@en .
+
+
+###  https://w3id.org/rec/core/Fahrenheit
+:Fahrenheit rdf:type owl:NamedIndividual ,
+                     :MeasurementUnit ;
+            :unitSign "F"@en ;
+            rdfs:comment "Temperature in Fahrenheit degress."@en ;
+            rdfs:label "Fahrenheit"@en .
+
+
+###  https://w3id.org/rec/core/Flow
+:Flow rdf:type owl:NamedIndividual ,
+               :QuantityKind ;
+      rdfs:label "Flow"@en ;
+      :comparableBIP "MF1xx, GF1-9xx/y"@en ;
+      :comparableBelok "04--------"@en ;
+      :comparableCoClass "KOBF"@en ;
+      :comparableHaystack "flow"@en .
+
+
+###  https://w3id.org/rec/core/GlobalIrradiance
+:GlobalIrradiance rdf:type owl:NamedIndividual ,
+                           :QuantityKind ;
+                  rdfs:label "GlobalIrradiance"@en ;
+                  rdfs:seeAlso "https://en.wikipedia.org/wiki/Solar_irradiance"@en .
+
+
+###  https://w3id.org/rec/core/Hertz
+:Hertz rdf:type owl:NamedIndividual ,
+                :MeasurementUnit ;
+       :unitSign "Hz"@en ;
+       rdfs:comment "One cycle per second."@en ;
+       rdfs:label "Hertz"@en .
+
+
+###  https://w3id.org/rec/core/Humidity
+:Humidity rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:label "Humidity"@en ;
+          rdfs:seeAlso "Humidity"@en ;
+          :comparableBIPTypeId "GM1-9xx/y"@en ;
+          :comparableBelok "03--------"@en ;
+          :comparableHaystack "humidity"@en ;
+          :comparableIPSOObjectId "3304"@en .
+
+
+###  https://w3id.org/rec/core/Illuminance
+:Illuminance rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:label "Illuminance"@en ;
+             :comparableBIPTypeId "GRN1-9xx"@en ;
+             :comparableHaystack "irradiance"@en ;
+             :comparableIPSOObjectId "3301"@en .
+
+
+###  https://w3id.org/rec/core/Integer
+:Integer rdf:type owl:NamedIndividual ;
+         rdfs:label "Integer"@en .
+
+
+###  https://w3id.org/rec/core/Kelvin
+:Kelvin rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "K"@en ;
+        rdfs:comment "Temperature in Kelvin degrees"@en ;
+        rdfs:label "Kelvin"@en .
+
+
+###  https://w3id.org/rec/core/Kilogram
+:Kilogram rdf:type owl:NamedIndividual ,
+                   :MeasurementUnit ;
+          :unitSign "kg"@en ;
+          rdfs:comment "Mass."@en ;
+          rdfs:label "Kilogram"@en .
+
+
+###  https://w3id.org/rec/core/Lenght
+:Lenght rdf:type owl:NamedIndividual ,
+                 :QuantityKind ;
+        rdfs:label "Lenght"@en .
+
+
+###  https://w3id.org/rec/core/Level
+:Level rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Level"@en ;
+       :comparableBIPTypeId "GL1-9xx"@en ;
+       :comparableBelok "05--------"@en ;
+       :comparableCoClass "KOBL"@en ;
+       :comparableHaystack "level"@en ;
+       :comparableIPSOObjectId "3319, 3330"@en .
+
+
+###  https://w3id.org/rec/core/LiterPerSecond
+:LiterPerSecond rdf:type owl:NamedIndividual ,
+                         :MeasurementUnit ;
+                :unitSign "l/s"@en ;
+                rdfs:comment "Flow"@en ;
+                rdfs:label "LiterPerSecond"@en .
+
+
+###  https://w3id.org/rec/core/Lumen
+:Lumen rdf:type owl:NamedIndividual ,
+                :MeasurementUnit ;
+       :unitSign "Emitted light"@en ,
+                 "lm"@en ;
+       rdfs:label "Lumen"@en ;
+       :comparableHaystack "lightLevel"@en .
+
+
+###  https://w3id.org/rec/core/Lux
+:Lux rdf:type owl:NamedIndividual ,
+              :MeasurementUnit ;
+     :unitSign "lx"@en ;
+     rdfs:comment "Light intensity in a specific area."@en ;
+     rdfs:label "Lux"@en ;
+     :comparableHaystack "lightLevel"@en .
+
+
+###  https://w3id.org/rec/core/Meter
+:Meter rdf:type owl:NamedIndividual ,
+                :MeasurementUnit ;
+       :unitSign "m"@en ;
+       rdfs:comment "Lenght."@en ;
+       rdfs:label "Meter"@en .
+
+
+###  https://w3id.org/rec/core/MeterPerSecond
+:MeterPerSecond rdf:type owl:NamedIndividual ,
+                         :MeasurementUnit ;
+                rdfs:label "MeterPerSecond"@en .
+
+
+###  https://w3id.org/rec/core/MillimeterPerHour
+:MillimeterPerHour rdf:type owl:NamedIndividual ,
+                            :MeasurementUnit ;
+                   rdfs:comment "For measuring Precipation"@en ;
+                   rdfs:label "MillimeterPerHour"@en .
+
+
+###  https://w3id.org/rec/core/Number
+:Number rdf:type owl:NamedIndividual ;
+        rdfs:label "Number"@en ;
+        :comparableIPSOObjectId "5851,5650"@en .
+
+
+###  https://w3id.org/rec/core/PartsPerMillion
+:PartsPerMillion rdf:type owl:NamedIndividual ,
+                          :MeasurementUnit ;
+                 :unitSign "ppm"@en ;
+                 rdfs:comment "Measurement for concentration"@en ;
+                 rdfs:label "PartsPerMillion"@en .
+
+
+###  https://w3id.org/rec/core/Pascal
+:Pascal rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "Pa"@en ;
+        rdfs:comment "The pascal is the SI derived unit of pressure used to quantify internal pressure, stress. It is defined as one newton per square metre."@en ;
+        rdfs:label "Pascal"@en ;
+        rdfs:seeAlso "In Haystack: barometric is described as \"Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.\""@en ;
+        :comparableHaystack "barometric"@en .
+
+
+###  https://w3id.org/rec/core/Percentage
+:Percentage rdf:type owl:NamedIndividual ;
+            rdfs:label "Percentage"@en ;
+            :comparableIPSOObjectId "5851,5650"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactor
+:PowerFactor rdf:type owl:NamedIndividual ,
+                      :MeasurementUnit ;
+             :unitSign "pf"@en ;
+             rdfs:comment "The power factor of an AC electrical power system is defined as the ratio of the real power flowing to the load to the apparent power in the circuit, and is a dimensionless number in the closed interval of −1 to 1."@en ;
+             rdfs:label "PowerFactor"@en ;
+             :comparableHaystack "pf"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactorL1
+:PowerFactorL1 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "PowerFactorL1"@en ;
+               :comparableHaystack "pf,phase"@en ;
+               :comparableIPSOObjectId "5820"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactorL2
+:PowerFactorL2 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "PowerFactorL2"@en ;
+               :comparableHaystack "pf,phase"@en ;
+               :comparableIPSOObjectId "5820"@en .
+
+
+###  https://w3id.org/rec/core/PowerFactorL3
+:PowerFactorL3 rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "PowerFactorL3"@en ;
+               :comparableHaystack "pf,phase"@en ;
+               :comparableIPSOObjectId "5820"@en .
+
+
+###  https://w3id.org/rec/core/PowerFrequency
+:PowerFrequency rdf:type owl:NamedIndividual ,
+                         :QuantityKind ;
+                rdfs:label "PowerFrequency"@en ;
+                :comparableHaystack "freq"@en .
+
+
+###  https://w3id.org/rec/core/Precipation
+:Precipation rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             rdfs:comment "Measured in MillimeterPerHour"@en ;
+             rdfs:label "Precipation"@en .
+
+
+###  https://w3id.org/rec/core/Presence
+:Presence rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:comment "Presence equivivalent"@en ;
+          rdfs:label "Presence"@en ;
+          :comparableBIPTypeId "GN1-9xx, GRN1-9xx"@en ;
+          :comparableBelok "14--------"@en ;
+          :comparableHaystack "occupied"@en ;
+          :comparableIPSOObjectId "3302"@en .
+
+
+###  https://w3id.org/rec/core/Pressure
+:Pressure rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:label "Pressure"@en ;
+          rdfs:seeAlso "Pressure"@en ,
+                       "Tryck"@se ;
+          :comparableBIPTypeId "GP0-9xx/y, MAN5-6xx"@en ;
+          :comparableBelok "02--------"@en ;
+          :comparableHaystack "pressure"@en ;
+          :comparableIPSOObjectId "3323"@en .
+
+
+###  https://w3id.org/rec/core/Radiation
+:Radiation rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "Radiation"@en ;
+           :comparableBIPTypeId "GR0-9xx"@en ;
+           :comparableBelok "10--------"@en ;
+           :comparableCoClass "KOBR"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerL1
+:ReactivePowerL1 rdf:type owl:NamedIndividual ,
+                          :QuantityKind ;
+                 rdfs:label "ReactivePowerL1"@en ,
+                            "reactive,power"@en ;
+                 :comparableBelok "12--------"@en ;
+                 :comparableCoClass "KOBJ"@en ;
+                 :comparableHaystack "reactive,power,phase"@en ;
+                 :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerL2
+:ReactivePowerL2 rdf:type owl:NamedIndividual ,
+                          :QuantityKind ;
+                 rdfs:label "ReactivePowerL2"@en ;
+                 :comparableBelok "12--------"@en ;
+                 :comparableCoClass "KOBJ"@en ;
+                 :comparableHaystack "reactive,power,phase"@en ;
+                 :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerL3
+:ReactivePowerL3 rdf:type owl:NamedIndividual ,
+                          :QuantityKind ;
+                 rdfs:label "ReactivePowerL3"@en ;
+                 :comparableBelok "12--------"@en ;
+                 :comparableCoClass "KOBJ"@en ;
+                 :comparableHaystack "reactive,power,phase"@en ;
+                 :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/ReactivePowerTotal
+:ReactivePowerTotal rdf:type owl:NamedIndividual ,
+                             :QuantityKind ;
+                    rdfs:label "ReactivePowerTotal"@en ;
+                    :comparableBelok "12------10"@en ;
+                    :comparableCoClass "KOBJ"@en ;
+                    :comparableHaystack "reactive,power"@en ;
+                    :comparableIPSOObjectId "5800, 3328"@en .
+
+
+###  https://w3id.org/rec/core/RelativeHumidity
+:RelativeHumidity rdf:type owl:NamedIndividual ,
+                           :MeasurementUnit ;
+                  :unitSign "RH"@en ;
+                  rdfs:comment "Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature."@en ;
+                  rdfs:label "RelativeHumidity"@en .
+
+
+###  https://w3id.org/rec/core/RevolutionsPerMinute
+:RevolutionsPerMinute rdf:type owl:NamedIndividual ,
+                               :MeasurementUnit ;
+                      :unitSign "rpm"@en ;
+                      rdfs:label "RevoultionsPerMinute"@en .
+
+
+###  https://w3id.org/rec/core/RotationSpeed
+:RotationSpeed rdf:type owl:NamedIndividual ,
+                        :QuantityKind ;
+               rdfs:label "RotationSpeed"@en ;
+               :comparableBelok "08--------"@en ;
+               :comparableCoClass "KOBSF"@en ;
+               :comparableIPSOObjectId "3346"@en .
+
+
+###  https://w3id.org/rec/core/Second
+:Second rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit ;
+        :unitSign "s"@en ;
+        rdfs:comment "The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom."@en ;
+        rdfs:label "Second"@en .
+
+
+###  https://w3id.org/rec/core/Sound
+:Sound rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Sound"@en ;
+       :comparableBelok "13--------"@en ;
+       :comparableIPSOObjectId "3324"@en .
+
+
+###  https://w3id.org/rec/core/Speed
+:Speed rdf:type owl:NamedIndividual ,
+                :QuantityKind ;
+       rdfs:label "Speed"@en ;
+       :comparableBelok "07--------"@en ;
+       :comparableCoClass "KOBSF"@en .
+
+
+###  https://w3id.org/rec/core/SquareMeter
+:SquareMeter rdf:type owl:NamedIndividual ,
+                      :MeasurementUnit ;
+             :unitSign "m2"@en ;
+             rdfs:comment "Area unit. It is the area of a square whose sides measure exactly one metre."@en ;
+             rdfs:label "SquareMeter"@en .
+
+
+###  https://w3id.org/rec/core/SunshineTimePerHour
+:SunshineTimePerHour rdf:type owl:NamedIndividual ,
+                              :QuantityKind ;
+                     rdfs:label "SunshineTimePerHour"@en .
+
+
+###  https://w3id.org/rec/core/TVOC
+:TVOC rdf:type owl:NamedIndividual ,
+               :QuantityKind ;
+      rdfs:label "TVOC"@en .
+
+
+###  https://w3id.org/rec/core/Temperature
+:Temperature rdf:type owl:NamedIndividual ,
+                      :QuantityKind ;
+             :hasMeasurementUnit :Celsius ,
+                                 :Kelvin ;
+             rdfs:label "Temperature"@en ;
+             rdfs:seeAlso "Temperature"@en ;
+             :comparableBIPTypeId "GT0-9xx/yy, MT2-6xx"@en ;
+             :comparableBelok "01--------"@en ;
+             :comparableHaystack "temp"@en ;
+             :comparableIPSOObjectId "3303"@en .
+
+
+###  https://w3id.org/rec/core/Velocity
+:Velocity rdf:type owl:NamedIndividual ,
+                   :QuantityKind ;
+          rdfs:label "Velocity"@en ;
+          :comparableBIPTypeId "GS0-9xx/y"@en ;
+          :comparableBelok "07--------"@en ;
+          :comparableCoClass "KOBSD"@en ;
+          :comparableIPSOObjectId "5517"@en .
+
+
+###  https://w3id.org/rec/core/Volt
+:Volt rdf:type owl:NamedIndividual ,
+               :MeasurementUnit ;
+      :unitSign "V"@en ;
+      rdfs:comment "Voltage, electric potential difference, is the difference in electric potential between two points."@en ;
+      rdfs:label "Volt"@en ;
+      :comparableIPSOObjectId "3316"@en .
+
+
+###  https://w3id.org/rec/core/Voltage
+:Voltage rdf:type owl:NamedIndividual ,
+                  :QuantityKind ;
+         rdfs:label "Voltage"@en ;
+         :comparableCoClass "KOBA"@en ;
+         :comparableHaystack "volt"@en ;
+         :comparableIPSOObjectId "3316"@en .
+
+
+###  https://w3id.org/rec/core/VoltageL1
+:VoltageL1 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "VoltageL1"@en ;
+           :comparableCoClass "KOBA"@en ;
+           :comparableHaystack "volt"@en ;
+           :comparableIPSOObjectId "3316"@en .
+
+
+###  https://w3id.org/rec/core/VoltageL2
+:VoltageL2 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "VoltageL2"@en ;
+           :comparableCoClass "KOBA"@en ;
+           :comparableHaystack "volt"@en ;
+           :comparableIPSOObjectId "3316"@en .
+
+
+###  https://w3id.org/rec/core/VoltageL3
+:VoltageL3 rdf:type owl:NamedIndividual ,
+                    :QuantityKind ;
+           rdfs:label "VoltageL3"@en ;
+           :comparableCoClass "KOBA"@en ;
+           :comparableHaystack "volt"@en ;
+           :comparableIPSOObjectId "3316"@en .
+
+
+###  https://w3id.org/rec/core/Volume
+:Volume rdf:type owl:NamedIndividual ,
+                 :QuantityKind ;
+        rdfs:label "Volume"@en ;
+        :comparableHaystack "volume"@en .
+
+
+###  https://w3id.org/rec/core/Watt
+:Watt rdf:type owl:NamedIndividual ,
+               :MeasurementUnit ;
+      :unitSign "W"@en ;
+      rdfs:comment "This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters."@en ;
+      rdfs:label "Watt"@en .
+
+
+###  https://w3id.org/rec/core/WattHour
+:WattHour rdf:type owl:NamedIndividual ,
+                   :MeasurementUnit ;
+          :unitSign "Wh"@en ;
+          rdfs:comment "Enery. Watthour."@en ;
+          rdfs:label "WattHour"@en .
+
+
+###  https://w3id.org/rec/core/WattPerSquareMeter
+:WattPerSquareMeter rdf:type owl:NamedIndividual ,
+                             :QuantityKind ;
+                    rdfs:label "WattPerSquareMeter"@en ;
+                    rdfs:seeAlso "https://www.rapidtables.com/calc/light/how-watt-to-lux.html"@en .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
