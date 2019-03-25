@@ -5,3 +5,4 @@
 * [Core](core/)
 * [Agents](agents/)
 * [Building](building/)
+* [Device](device/)

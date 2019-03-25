@@ -1,0 +1,1137 @@
+@prefix : <https://w3id.org/rec/device/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/rec/device/> .
+
+<https://w3id.org/rec/device/> rdf:type owl:Ontology ;
+                                owl:versionIRI <https://w3id.org/rec/device/3.0-beta1/> ;
+                                owl:imports <https://w3id.org/rec/core/3.0-beta1/> ;
+                                <http://purl.org/dc/elements/1.1/contributor> "Karl Hammar" ;
+                                <http://purl.org/dc/elements/1.1/creator> "Erik Wallin" ;
+                                <http://purl.org/dc/elements/1.1/description> "This REC module covers device types (sensors and actuators), device configuration, device actuation, etc."@en ;
+                                <http://purl.org/dc/elements/1.1/publisher> "RealEstateCore Consortium" ;
+                                <http://purl.org/dc/elements/1.1/title> "RealEstateCore Device Module" ;
+                                <http://purl.org/dc/terms/modified> "2019-03-25" ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "device" ;
+                                <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rec/device/3.0-beta1/" ;
+                                rdfs:seeAlso <https://w3id.org/rec/> ;
+                                owl:versionInfo "3.0-beta1" ;
+                                <https://creativecommons.org/ns#license> <https://opensource.org/licenses/MIT> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/rec/device/comparableBIPTypeId
+:comparableBIPTypeId rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/device/comparableBelok
+:comparableBelok rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rec/device/comparableHaystack
+:comparableHaystack rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/rec/device/devicePlacementContext
+:devicePlacementContext rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasPlacementContext ;
+                        rdfs:domain <https://w3id.org/rec/core/Device> ;
+                        rdfs:range :PlacementContext .
+
+
+###  https://w3id.org/rec/device/eventPlacementContext
+:eventPlacementContext rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasPlacementContext ;
+                       rdfs:domain <https://w3id.org/rec/core/Event> ;
+                       rdfs:range :PlacementContext .
+
+
+###  https://w3id.org/rec/device/hasActuationInterface
+:hasActuationInterface rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Actuator ;
+                       rdfs:range :ActuationInterface .
+
+
+###  https://w3id.org/rec/device/hasDeviceCommunication
+:hasDeviceCommunication rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/rec/core/Device> ;
+                        rdfs:range :DeviceCommunication ;
+                        rdfs:comment "hasDeviceCommunication" .
+
+
+###  https://w3id.org/rec/device/hasDeviceFunctionType
+:hasDeviceFunctionType rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://w3id.org/rec/core/Device> ;
+                       rdfs:range :DeviceFunctionType ;
+                       rdfs:label "hasDeviceFunction"@en .
+
+
+###  https://w3id.org/rec/device/hasKNXConfiguration
+:hasKNXConfiguration rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasKNXDataPointType
+:hasKNXDataPointType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasKNXConfiguration ;
+                     rdfs:domain <https://w3id.org/rec/core/Device> ;
+                     rdfs:range :KNXDataPointType ;
+                     rdfs:label "hsKNXDataPointType"@en .
+
+
+###  https://w3id.org/rec/device/hasModbusConfiguration
+:hasModbusConfiguration rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasModbusDataType
+:hasModbusDataType rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasModbusConfiguration ;
+                   rdfs:domain <https://w3id.org/rec/core/Device> ;
+                   rdfs:range :ModbusDataType ;
+                   rdfs:label "hasModbusDataType"@en .
+
+
+###  https://w3id.org/rec/device/hasModbusFunctionCode
+:hasModbusFunctionCode rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasModbusConfiguration ;
+                       rdfs:domain <https://w3id.org/rec/core/Device> ;
+                       rdfs:range :ModbusFunctionCode ;
+                       rdfs:label "hasModbusFunctionCode"@en .
+
+
+###  https://w3id.org/rec/device/hasPlacementContext
+:hasPlacementContext rdf:type owl:ObjectProperty ;
+                     rdfs:label "Placement context"@en .
+
+
+###  https://w3id.org/rec/device/makesActuation
+:makesActuation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <https://w3id.org/rec/core/generatesEvent> ;
+                rdfs:domain :Actuator ;
+                rdfs:range :Actuation .
+
+
+###  https://w3id.org/rec/device/makesException
+:makesException rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <https://w3id.org/rec/core/generatesEvent> ;
+                rdfs:domain :Sensor ;
+                rdfs:range :Exception .
+
+
+###  https://w3id.org/rec/device/makesObservation
+:makesObservation rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <https://w3id.org/rec/core/generatesEvent> ;
+                  rdfs:domain :Sensor ;
+                  rdfs:range :Observation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/rec/device/actuationCommand
+:actuationCommand rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Actuation ;
+                  rdfs:comment "actuationCommand is the event of the system [e.g. a digital twin] responsible for sending the actuation to the actuator"@en ;
+                  rdfs:label "actuationCommand"@en .
+
+
+###  https://w3id.org/rec/device/actuationRequest
+:actuationRequest rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Actuation ;
+                  rdfs:comment "actuationRequest is the incoming request to perform an actuation [to the digital twin]"@en ;
+                  rdfs:label "actuationRequest"@en .
+
+
+###  https://w3id.org/rec/device/actuationResponse
+:actuationResponse rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Actuation ;
+                   rdfs:comment "actuationResponse is the value returned from an actuation as a reponse"@en ;
+                   rdfs:label "actuationResponse"@en .
+
+
+###  https://w3id.org/rec/device/hasActuationCommandTime
+:hasActuationCommandTime rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasTime ;
+                         rdfs:domain :Actuation ;
+                         rdfs:comment "The time stamp for the event of the underlying system intiating the actuation command."@en ;
+                         rdfs:label "hasActuationCommandTime"@en .
+
+
+###  https://w3id.org/rec/device/hasActuationRequestTime
+:hasActuationRequestTime rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasTime ;
+                         rdfs:domain :Actuation ;
+                         rdfs:comment "The time stamp for when a request for an actuation arrived."@en ;
+                         rdfs:label "hasActuationRequestTime"@en .
+
+
+###  https://w3id.org/rec/device/hasActuationResponseTime
+:hasActuationResponseTime rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasTime ;
+                          rdfs:domain :Actuation ;
+                          rdfs:comment "The time stamp for a possible response from actuation process."@en ;
+                          rdfs:label "hasActuationResponseTime"@en .
+
+
+###  https://w3id.org/rec/device/hasGeneralCommunicationConfiguration
+:hasGeneralCommunicationConfiguration rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/rec/core/Device> ;
+                                      rdfs:comment "Cognitive clustering for humans."@en ;
+                                      rdfs:label "hasGeneralCommunicationConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/hasIPAddress
+:hasIPAddress rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasGeneralCommunicationConfiguration ;
+              rdfs:domain <https://w3id.org/rec/core/Device> ;
+              rdfs:label "hasIPAddress"@en .
+
+
+###  https://w3id.org/rec/device/hasIPAddressPort
+:hasIPAddressPort rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasGeneralCommunicationConfiguration ;
+                  rdfs:domain <https://w3id.org/rec/core/Device> ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "hasIPAddressPort"@en .
+
+
+###  https://w3id.org/rec/device/hasKNXAttribute
+:hasKNXAttribute rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasKNXDeviceId
+:hasKNXDeviceId rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasKNXAttribute ;
+                rdfs:domain <https://w3id.org/rec/core/Device> ;
+                rdfs:range xsd:string .
+
+
+###  https://w3id.org/rec/device/hasKNXDevicePort
+:hasKNXDevicePort rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasKNXAttribute ;
+                  rdfs:domain <https://w3id.org/rec/core/Device> ;
+                  rdfs:range xsd:integer .
+
+
+###  https://w3id.org/rec/device/hasKNXGroupAddress
+:hasKNXGroupAddress rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasKNXAttribute ;
+                    rdfs:label "hasKNXGroupAddress"@en .
+
+
+###  https://w3id.org/rec/device/hasLocalEndpointId
+:hasLocalEndpointId rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasGeneralCommunicationConfiguration ;
+                    rdfs:domain <https://w3id.org/rec/core/Device> ;
+                    rdfs:label "hasLocalEndpointId"@en .
+
+
+###  https://w3id.org/rec/device/hasLoraConfiguration
+:hasLoraConfiguration rdf:type owl:DatatypeProperty ;
+                      rdfs:domain <https://w3id.org/rec/core/Device> ;
+                      rdfs:comment "Cognitive clustering for humans."@en ;
+                      rdfs:label "hasLoraConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/hasLoraDevEUI
+:hasLoraDevEUI rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasLoraConfiguration ;
+               rdfs:domain <https://w3id.org/rec/core/Device> ;
+               rdfs:range xsd:integer ;
+               rdfs:label "hasLoraDevEUI"@en .
+
+
+###  https://w3id.org/rec/device/hasModbusAttribute
+:hasModbusAttribute rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasModbusNodeId
+:hasModbusNodeId rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasModbusAttribute ;
+                 rdfs:domain <https://w3id.org/rec/core/Device> ;
+                 rdfs:range xsd:integer .
+
+
+###  https://w3id.org/rec/device/hasModbusRegister
+:hasModbusRegister rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasModbusAttribute ;
+                   rdfs:domain <https://w3id.org/rec/core/Device> ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/rec/device/hasModbusRegisterLength
+:hasModbusRegisterLength rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasModbusAttribute ;
+                         rdfs:domain <https://w3id.org/rec/core/Device> .
+
+
+###  https://w3id.org/rec/device/hasOffset
+:hasOffset rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasGeneralCommunicationConfiguration ;
+           rdfs:domain <https://w3id.org/rec/core/Device> ;
+           rdfs:range xsd:double ;
+           rdfs:label "hasOffset"@en .
+
+
+###  https://w3id.org/rec/device/hasProcessedTime
+:hasProcessedTime rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf <https://w3id.org/rec/core/hasTime> ;
+                  rdfs:domain :Observation ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "Time when an object or result was processed in a system."@en ;
+                  rdfs:label "hasProcessedTime"@en .
+
+
+###  https://w3id.org/rec/device/hasScaleFactor
+:hasScaleFactor rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasGeneralCommunicationConfiguration ;
+                rdfs:domain <https://w3id.org/rec/core/Device> ;
+                rdfs:range xsd:double ;
+                rdfs:label "hasScaleFactor"@en .
+
+
+###  https://w3id.org/rec/device/hasTime
+:hasTime rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/rec/device/Actuation
+:Actuation rdf:type owl:Class ;
+           rdfs:subClassOf :DeviceEvents ;
+           rdfs:comment "The act of changing the state of something."@en ;
+           rdfs:label "Actuation"@en .
+
+
+###  https://w3id.org/rec/device/ActuationInterface
+:ActuationInterface rdf:type owl:Class ;
+                    rdfs:comment "A description of what kind of input the Actuator accepts."@en ;
+                    rdfs:label "Actuation interface"@en .
+
+
+###  https://w3id.org/rec/device/Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/rec/core/Device> ;
+          rdfs:comment "An actuator is a component that is responsible for moving and controlling a mechanism or system."@en ;
+          rdfs:label "Actuator"@en .
+
+
+###  https://w3id.org/rec/device/BACnetConfiguration
+:BACnetConfiguration rdf:type owl:Class ;
+                     rdfs:subClassOf :CommunicationConfiguration ;
+                     rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                     rdfs:label "BACnetConfiguration" .
+
+
+###  https://w3id.org/rec/device/CommunicationConfiguration
+:CommunicationConfiguration rdf:type owl:Class ;
+                            rdfs:label "CommunicationConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/DeviceCommunication
+:DeviceCommunication rdf:type owl:Class ;
+                     rdfs:comment "Type of communiaction bus for the Device."@en ;
+                     rdfs:label "DeviceCommunication"@en .
+
+
+###  https://w3id.org/rec/device/DeviceEvents
+:DeviceEvents rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/rec/core/Event> .
+
+
+###  https://w3id.org/rec/device/DeviceFunctionType
+:DeviceFunctionType rdf:type owl:Class ;
+                    rdfs:comment "The main function or purpose of a Device."@en ;
+                    rdfs:label "Device function type"@en .
+
+
+###  https://w3id.org/rec/device/Exception
+:Exception rdf:type owl:Class ;
+           rdfs:subClassOf :DeviceEvents ;
+           rdfs:comment "Failed attempt or unexpected result when tried to do something (e.g. read a Sensor)."@en ;
+           rdfs:label "Exception"@en .
+
+
+###  https://w3id.org/rec/device/KNXConfiguration
+:KNXConfiguration rdf:type owl:Class ;
+                  rdfs:subClassOf :CommunicationConfiguration ;
+                  rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                  rdfs:label "KNXConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/KNXDataPointType
+:KNXDataPointType rdf:type owl:Class ;
+                  rdfs:subClassOf :KNXConfiguration ;
+                  rdfs:label "KNXDataPointType"@en .
+
+
+###  https://w3id.org/rec/device/LoRaConfiguration
+:LoRaConfiguration rdf:type owl:Class ;
+                   rdfs:subClassOf :CommunicationConfiguration ;
+                   rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                   rdfs:label "LoRaConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/MBusConfiguration
+:MBusConfiguration rdf:type owl:Class ;
+                   rdfs:subClassOf :CommunicationConfiguration ;
+                   rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                   rdfs:label "MBusConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/ModbusConfiguration
+:ModbusConfiguration rdf:type owl:Class ;
+                     rdfs:subClassOf :CommunicationConfiguration ;
+                     rdfs:label "ModbusConfiguration"@en ;
+                     rdfs:seeAlso "https://en.wikipedia.org/wiki/Modbus"@en .
+
+
+###  https://w3id.org/rec/device/ModbusDataType
+:ModbusDataType rdf:type owl:Class ;
+                rdfs:subClassOf :ModbusConfiguration ;
+                rdfs:label "ModbusDataType"@en .
+
+
+###  https://w3id.org/rec/device/ModbusFunctionCode
+:ModbusFunctionCode rdf:type owl:Class ;
+                    rdfs:subClassOf :ModbusConfiguration ;
+                    rdfs:label "ModbusTCPFunctionCode"@en .
+
+
+###  https://w3id.org/rec/device/ModbusRTUConfiguration
+:ModbusRTUConfiguration rdf:type owl:Class ;
+                        rdfs:subClassOf :CommunicationConfiguration ;
+                        rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                        rdfs:label "ModbusRTUConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/ModbusTCPConfiguration
+:ModbusTCPConfiguration rdf:type owl:Class ;
+                        rdfs:subClassOf :CommunicationConfiguration ;
+                        rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                        rdfs:label "ModbusTCPConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/OPC-DAConfiguration
+:OPC-DAConfiguration rdf:type owl:Class ;
+                     rdfs:subClassOf :CommunicationConfiguration ;
+                     rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                     rdfs:label "OPC-DAConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/OPC-UAConfiguration
+:OPC-UAConfiguration rdf:type owl:Class ;
+                     rdfs:subClassOf :CommunicationConfiguration ;
+                     rdfs:comment "Specific classes and properties to be extended in upcoming version."@en ;
+                     rdfs:label "OPC-UAConfiguration"@en .
+
+
+###  https://w3id.org/rec/device/Observation
+:Observation rdf:type owl:Class ;
+             rdfs:subClassOf :DeviceEvents ;
+             rdfs:comment "Observation of a phenomena. Made by a Sensor. Used with hasValue."@en ;
+             rdfs:label "Observation"@en .
+
+
+###  https://w3id.org/rec/device/PlacementContext
+:PlacementContext rdf:type owl:Class ;
+                  rdfs:comment "Description of the context or media that a sensor or actuator is operating within."@en ;
+                  rdfs:label "Placement context"@en .
+
+
+###  https://w3id.org/rec/device/PowerSource
+:PowerSource rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/rec/core/Device> ;
+             rdfs:comment "The power source for the device."@en ;
+             rdfs:label "Power source"@en .
+
+
+###  https://w3id.org/rec/device/Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/rec/core/Device> ;
+        rdfs:comment "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."@en ;
+        rdfs:label "Sensor"@en ;
+        <https://w3id.org/rec/core/comparableHaystack> "sensor"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/rec/device/AirDiffuser
+:AirDiffuser rdf:type owl:NamedIndividual ,
+                      :DeviceFunctionType ;
+             rdfs:label "AirDiffuser"@en .
+
+
+###  https://w3id.org/rec/device/AirHandlingUnit
+:AirHandlingUnit rdf:type owl:NamedIndividual ,
+                          :DeviceFunctionType ;
+                 rdfs:label "AirHandlingUnit"@en ;
+                 :comparableHaystack "ahu,air"@en .
+
+
+###  https://w3id.org/rec/device/BACnet
+:BACnet rdf:type owl:NamedIndividual ,
+                 :DeviceCommunication ;
+        rdfs:label "BACnet"@en .
+
+
+###  https://w3id.org/rec/device/Battery
+:Battery rdf:type owl:NamedIndividual ,
+                  :PowerSource .
+
+
+###  https://w3id.org/rec/device/Boiler
+:Boiler rdf:type owl:NamedIndividual ,
+                 :DeviceFunctionType ;
+        rdfs:label "Boiler"@en .
+
+
+###  https://w3id.org/rec/device/Chiller
+:Chiller rdf:type owl:NamedIndividual ,
+                  :DeviceFunctionType ;
+         rdfs:label "Chiller"@en ;
+         :comparableHaystack "chiller"@en .
+
+
+###  https://w3id.org/rec/device/CirculationAir
+:CirculationAir rdf:type owl:NamedIndividual ,
+                         :PlacementContext ;
+                rdfs:label "CirculationAir"@en .
+
+
+###  https://w3id.org/rec/device/Coil
+:Coil rdf:type owl:NamedIndividual ,
+               :DeviceFunctionType ;
+      rdfs:label "Coil"@en .
+
+
+###  https://w3id.org/rec/device/ColdWaterFlow
+:ColdWaterFlow rdf:type owl:NamedIndividual ,
+                        :PlacementContext ;
+               rdfs:label "ColdWaterFlow"@en ;
+               :comparableBIPTypeId "MT2xx, PPA2xx, SHG2xx, RT2xx"@en ;
+               :comparableBelok "--------53"@en ;
+               :comparableHaystack "domestic,water"@en .
+
+
+###  https://w3id.org/rec/device/ColdWaterReturn
+:ColdWaterReturn rdf:type owl:NamedIndividual ,
+                          :PlacementContext ;
+                 rdfs:label "ColdWaterReturn"@en ;
+                 :comparableBIPTypeId "MT2xx, PPA2xx"@en ;
+                 :comparableBelok "--------54"@en ;
+                 :comparableHaystack "domestic,water,leaving"@en ,
+                                     "leaving"@en .
+
+
+###  https://w3id.org/rec/device/CommunicationBusPowerSource
+:CommunicationBusPowerSource rdf:type owl:NamedIndividual ,
+                                      :PowerSource .
+
+
+###  https://w3id.org/rec/device/Compressor
+:Compressor rdf:type owl:NamedIndividual ,
+                     :DeviceFunctionType ;
+            rdfs:label "Compressor"@en .
+
+
+###  https://w3id.org/rec/device/Condenser
+:Condenser rdf:type owl:NamedIndividual ,
+                    :DeviceFunctionType ;
+           rdfs:label "Condenser"@en ;
+           :comparableHaystack "condenser"@en .
+
+
+###  https://w3id.org/rec/device/Control
+:Control rdf:type owl:NamedIndividual ,
+                  :DeviceFunctionType ;
+         rdfs:comment "Device that controls Actuators (can also collect data)."@en ;
+         rdfs:label "Control"@en .
+
+
+###  https://w3id.org/rec/device/Damper
+:Damper rdf:type owl:NamedIndividual ,
+                 :DeviceFunctionType ;
+        rdfs:label "Damper"@en ;
+        :comparableHaystack "damper"@en .
+
+
+###  https://w3id.org/rec/device/DataAcquisition
+:DataAcquisition rdf:type owl:NamedIndividual ,
+                          :DeviceFunctionType ;
+                 rdfs:comment "Device that collects data"@en ;
+                 rdfs:label "DataAcquisition"@en .
+
+
+###  https://w3id.org/rec/device/DataCommunicationGateway
+:DataCommunicationGateway rdf:type owl:NamedIndividual ,
+                                   :DeviceFunctionType ;
+                          rdfs:comment "Device that acts as a broker (could be a switch or gateway)"@en ;
+                          rdfs:label "DataCommunicationGateway"@en .
+
+
+###  https://w3id.org/rec/device/DistrictCoolingFlow
+:DistrictCoolingFlow rdf:type owl:NamedIndividual ,
+                              :PlacementContext ;
+                     rdfs:label "DistrictCoolingFlow"@en ;
+                     :comparableBIPTypeId "MAN5xx"@en ;
+                     :comparableBelok "--------31"@en .
+
+
+###  https://w3id.org/rec/device/DistrictCoolingReturn
+:DistrictCoolingReturn rdf:type owl:NamedIndividual ,
+                                :PlacementContext ;
+                       rdfs:label "DistrictCoolingReturn"@en ;
+                       :comparableBIPTypeId "MAN5xx"@en ;
+                       :comparableBelok "--------32"@en ;
+                       :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/DistrictHeatingFlow
+:DistrictHeatingFlow rdf:type owl:NamedIndividual ,
+                              :PlacementContext ;
+                     rdfs:label "DistrictHeatingFlow"@en ;
+                     :comparableBIPTypeId "MAN6xx, PV6xx"@en ;
+                     :comparableBelok "--------21"@en .
+
+
+###  https://w3id.org/rec/device/DistrictHeatingReturn
+:DistrictHeatingReturn rdf:type owl:NamedIndividual ,
+                                :PlacementContext ;
+                       rdfs:label "DistrictHeatingReturn"@en ;
+                       :comparableBIPTypeId "MAN6xx, PV6xx"@en ;
+                       :comparableBelok "--------22"@en ;
+                       :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridIntake
+:ElectricalGridIntake rdf:type owl:NamedIndividual ,
+                               :PlacementContext ;
+                      rdfs:label "ElectricalGridIntake"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridInternal
+:ElectricalGridInternal rdf:type owl:NamedIndividual ,
+                                 :PlacementContext ;
+                        rdfs:label "ElectricalGridInternal"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridLocalProduction
+:ElectricalGridLocalProduction rdf:type owl:NamedIndividual ,
+                                        :PlacementContext ;
+                               rdfs:label "ElectricalGridLocalProduction"@en .
+
+
+###  https://w3id.org/rec/device/ElectricalGridTenant
+:ElectricalGridTenant rdf:type owl:NamedIndividual ,
+                               :PlacementContext ;
+                      rdfs:label "ElectricalGridTenant"@en .
+
+
+###  https://w3id.org/rec/device/Elevator
+:Elevator rdf:type owl:NamedIndividual ,
+                   :DeviceFunctionType ;
+          rdfs:label "Elevator"@en .
+
+
+###  https://w3id.org/rec/device/Escalator
+:Escalator rdf:type owl:NamedIndividual ,
+                    :DeviceFunctionType ;
+           rdfs:label "Escalator"@en .
+
+
+###  https://w3id.org/rec/device/ExhaustAir
+:ExhaustAir rdf:type owl:NamedIndividual ,
+                     :PlacementContext ;
+            rdfs:label "ExhaustAir"@en ;
+            :comparableBIPTypeId "FF"@en ;
+            :comparableBelok "--------03"@en .
+
+
+###  https://w3id.org/rec/device/ExtractAir
+:ExtractAir rdf:type owl:NamedIndividual ,
+                     :PlacementContext ;
+            rdfs:label "ExtractAir"@en ;
+            :comparableBIPTypeId "OF"@en ;
+            :comparableBelok "--------05"@en .
+
+
+###  https://w3id.org/rec/device/Fan
+:Fan rdf:type owl:NamedIndividual ,
+              :DeviceFunctionType ;
+     rdfs:label "Fan"@en ;
+     :comparableHaystack "fan"@en .
+
+
+###  https://w3id.org/rec/device/Filter
+:Filter rdf:type owl:NamedIndividual ,
+                 :DeviceFunctionType ;
+        rdfs:label "Filter"@en ;
+        :comparableHaystack "filter"@en .
+
+
+###  https://w3id.org/rec/device/Fixed_length_string
+:Fixed_length_string rdf:type owl:NamedIndividual ,
+                              :ModbusDataType ;
+                     rdfs:label "Fixed length string"@en .
+
+
+###  https://w3id.org/rec/device/Heater
+:Heater rdf:type owl:NamedIndividual ,
+                 :DeviceFunctionType ;
+        rdfs:label "Heater"@en ;
+        :comparableHaystack "heater"@en .
+
+
+###  https://w3id.org/rec/device/HotWaterFlow
+:HotWaterFlow rdf:type owl:NamedIndividual ,
+                       :PlacementContext ;
+              rdfs:label "HotWaterFlow"@en ;
+              :comparableBelok "--------51"@en .
+
+
+###  https://w3id.org/rec/device/HotWaterReturn
+:HotWaterReturn rdf:type owl:NamedIndividual ,
+                         :PlacementContext ;
+                rdfs:label "HotWaterReturn"@en ;
+                :comparableBelok "--------52"@en ;
+                :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/Hwrc
+:Hwrc rdf:type owl:NamedIndividual ,
+               :PlacementContext ;
+      rdfs:label "Hwrc"@en ;
+      :comparableBIPTypeId "PCV6xx"@en ;
+      :comparableBelok "--------55"@en .
+
+
+###  https://w3id.org/rec/device/IP
+:IP rdf:type owl:NamedIndividual ,
+             :DeviceCommunication ;
+    rdfs:label "IP"@en .
+
+
+###  https://w3id.org/rec/device/IndoorAir
+:IndoorAir rdf:type owl:NamedIndividual ,
+                    :PlacementContext ;
+           rdfs:label "IndoorAir"@en .
+
+
+###  https://w3id.org/rec/device/KNX
+:KNX rdf:type owl:NamedIndividual ,
+              :DeviceCommunication ;
+     rdfs:label "KNX"@en .
+
+
+###  https://w3id.org/rec/device/LoRa
+:LoRa rdf:type owl:NamedIndividual ,
+               :DeviceCommunication ;
+      rdfs:label "LoRa"@en .
+
+
+###  https://w3id.org/rec/device/MBus
+:MBus rdf:type owl:NamedIndividual ,
+               :DeviceCommunication ;
+      rdfs:label "MBus"@en .
+
+
+###  https://w3id.org/rec/device/ModbusRTU
+:ModbusRTU rdf:type owl:NamedIndividual ,
+                    :DeviceCommunication ;
+           rdfs:label "ModbusRTU"@en .
+
+
+###  https://w3id.org/rec/device/ModbusTCP
+:ModbusTCP rdf:type owl:NamedIndividual ,
+                    :DeviceCommunication ;
+           rdfs:label "ModbusTCP"@en .
+
+
+###  https://w3id.org/rec/device/OPC-DA
+:OPC-DA rdf:type owl:NamedIndividual ,
+                 :DeviceCommunication ;
+        rdfs:label "OPC-DA"@en .
+
+
+###  https://w3id.org/rec/device/OPC-UA
+:OPC-UA rdf:type owl:NamedIndividual ,
+                 :DeviceCommunication ;
+        rdfs:label "OPC-UA"@en .
+
+
+###  https://w3id.org/rec/device/OutdoorAir
+:OutdoorAir rdf:type owl:NamedIndividual ,
+                     :PlacementContext ;
+            rdfs:label "OutdoorAir"@en ;
+            :comparableBIPTypeId "AF"@en ;
+            :comparableBelok "--------01"@en ;
+            :comparableHaystack "outside"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryCoolingFlow
+:PrimaryCoolingFlow rdf:type owl:NamedIndividual ,
+                             :PlacementContext ;
+                    rdfs:label "PrimaryCoolingFlow"@en ;
+                    :comparableBIPTypeId "MAN5xx, RDV5xx, SHG5xx"@en ;
+                    :comparableBelok "--------33"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryCoolingReturn
+:PrimaryCoolingReturn rdf:type owl:NamedIndividual ,
+                               :PlacementContext ;
+                      rdfs:label "PrimaryCoolingReturn"@en ;
+                      :comparableBIPTypeId "MAN5xx"@en ;
+                      :comparableBelok "--------34"@en ;
+                      :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryHeatingFlow
+:PrimaryHeatingFlow rdf:type owl:NamedIndividual ,
+                             :PlacementContext ;
+                    rdfs:label "PrimaryHeatingFlow"@en ;
+                    :comparableBIPTypeId "MAN6xx, PV6xx, SHG6xx"@en ;
+                    :comparableBelok "--------23"@en .
+
+
+###  https://w3id.org/rec/device/PrimaryHeatingReturn
+:PrimaryHeatingReturn rdf:type owl:NamedIndividual ,
+                               :PlacementContext ;
+                      rdfs:label "PrimaryHeatingReturn"@en ;
+                      :comparableBIPTypeId "MAN6xx, PV6xx"@en ;
+                      :comparableBelok "--------24"@en ;
+                      :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/Pump
+:Pump rdf:type owl:NamedIndividual ,
+               :DeviceFunctionType ;
+      rdfs:label "Pump"@en ;
+      :comparableHaystack "pump"@en .
+
+
+###  https://w3id.org/rec/device/RecyclingEnergyFlow
+:RecyclingEnergyFlow rdf:type owl:NamedIndividual ,
+                              :PlacementContext ;
+                     rdfs:label "RecyclingEnergyFlow"@en ;
+                     :comparableBIPTypeId "PVA5xx"@en ;
+                     :comparableBelok "--------41"@en ;
+                     :comparableHaystack "circ"@en .
+
+
+###  https://w3id.org/rec/device/RecyclingEnergyReturn
+:RecyclingEnergyReturn rdf:type owl:NamedIndividual ,
+                                :PlacementContext ;
+                       rdfs:label "RecyclingEnergyReturn"@en ;
+                       :comparableBIPTypeId "PVA5xx"@en ;
+                       :comparableBelok "--------42"@en ;
+                       :comparableHaystack "circ,leaving"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryCoolingFlow
+:SecondaryCoolingFlow rdf:type owl:NamedIndividual ,
+                               :PlacementContext ;
+                      rdfs:label "SecondaryCoolingFlow"@en ;
+                      :comparableBIPTypeId "MAN5xx, SHG5xx, RDV7xx"@en ;
+                      :comparableBelok "--------35"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryCoolingReturn
+:SecondaryCoolingReturn rdf:type owl:NamedIndividual ,
+                                 :PlacementContext ;
+                        rdfs:label "SecondaryCoolingReturn"@en ;
+                        :comparableBIPTypeId "MAN5xx"@en ;
+                        :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryHeatingFlow
+:SecondaryHeatingFlow rdf:type owl:NamedIndividual ,
+                               :PlacementContext ;
+                      rdfs:label "SecondaryHeatingFlow"@en ;
+                      :comparableBIPTypeId "MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx"@en ;
+                      :comparableBelok "--------25"@en .
+
+
+###  https://w3id.org/rec/device/SecondaryHeatingReturn
+:SecondaryHeatingReturn rdf:type owl:NamedIndividual ,
+                                 :PlacementContext ;
+                        rdfs:label "SecondaryHeatingReturn"@en ;
+                        :comparableBIPTypeId "MAN6xx, PV6xx"@en ;
+                        :comparableBelok "--------26"@en ;
+                        :comparableHaystack "leaving"@en .
+
+
+###  https://w3id.org/rec/device/SteamFlow
+:SteamFlow rdf:type owl:NamedIndividual ,
+                    :PlacementContext ;
+           rdfs:label "SteamFlow"@en ;
+           :comparableBIPTypeId "MT2xx"@en ;
+           :comparableBelok "--------71"@en .
+
+
+###  https://w3id.org/rec/device/SteamReturn
+:SteamReturn rdf:type owl:NamedIndividual ,
+                      :PlacementContext ;
+             rdfs:label "SteamReturn"@en ;
+             :comparableBIPTypeId "MT2xx"@en ;
+             :comparableBelok "--------72"@en .
+
+
+###  https://w3id.org/rec/device/SupplyAir
+:SupplyAir rdf:type owl:NamedIndividual ,
+                    :PlacementContext ;
+           rdfs:label "SupplyAir"@en ;
+           :comparableBIPTypeId "TF"@en ;
+           :comparableBelok "--------02"@en .
+
+
+###  https://w3id.org/rec/device/Thermostat
+:Thermostat rdf:type owl:NamedIndividual ,
+                     :DeviceFunctionType ;
+            rdfs:label "Thermostat"@en .
+
+
+###  https://w3id.org/rec/device/Valve
+:Valve rdf:type owl:NamedIndividual ,
+                :DeviceFunctionType ;
+       rdfs:label "Valve"@en ;
+       :comparableHaystack "valve"@en .
+
+
+###  https://w3id.org/rec/device/Variable_length_string
+:Variable_length_string rdf:type owl:NamedIndividual ,
+                                 :ModbusDataType ;
+                        rdfs:label "Variable length string"@en .
+
+
+###  https://w3id.org/rec/device/WasteWater
+:WasteWater rdf:type owl:NamedIndividual ,
+                     :PlacementContext ;
+            rdfs:label "WasteWater"@en ;
+            :comparableBIPTypeId "MT3xx"@en ;
+            :comparableBelok "--------81"@en .
+
+
+###  https://w3id.org/rec/device/1
+<https://w3id.org/rec/device/1> rdf:type owl:NamedIndividual ,
+                                         :ModbusFunctionCode ;
+                                rdfs:comment "Read coil"@en ;
+                                rdfs:label "1"@en .
+
+
+###  https://w3id.org/rec/device/1_byte
+<https://w3id.org/rec/device/1_byte> rdf:type owl:NamedIndividual ;
+                                     rdfs:label "1 byte"@en .
+
+
+###  https://w3id.org/rec/device/1.yyy
+<https://w3id.org/rec/device/1.yyy> rdf:type owl:NamedIndividual ,
+                                             :KNXDataPointType ;
+                                    rdfs:comment "Boolean, like switching, move up/down, step"@en ;
+                                    rdfs:label "1.yyy"@en .
+
+
+###  https://w3id.org/rec/device/15
+<https://w3id.org/rec/device/15> rdf:type owl:NamedIndividual ,
+                                          :ModbusFunctionCode ;
+                                 rdfs:comment "Write Multiple Coils"@en ;
+                                 rdfs:label "15"@en .
+
+
+###  https://w3id.org/rec/device/16
+<https://w3id.org/rec/device/16> rdf:type owl:NamedIndividual ,
+                                          :ModbusFunctionCode ;
+                                 rdfs:comment "Write Multiple Holding Registers"@en ;
+                                 rdfs:label "16"@en .
+
+
+###  https://w3id.org/rec/device/2
+<https://w3id.org/rec/device/2> rdf:type owl:NamedIndividual ,
+                                         :ModbusFunctionCode ;
+                                rdfs:comment "Read Discrete Input"@en ;
+                                rdfs:label "2"@en .
+
+
+###  https://w3id.org/rec/device/2_byte
+<https://w3id.org/rec/device/2_byte> rdf:type owl:NamedIndividual ;
+                                     rdfs:label "2 byte"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_BCD
+<https://w3id.org/rec/device/2_byte_BCD> rdf:type owl:NamedIndividual ,
+                                                  :ModbusDataType ;
+                                         rdfs:label "2 byte BCD"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_signed_integer
+<https://w3id.org/rec/device/2_byte_signed_integer> rdf:type owl:NamedIndividual ,
+                                                             :ModbusDataType ;
+                                                    rdfs:label "2 byte signed integer"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_signed_integer_swapped
+<https://w3id.org/rec/device/2_byte_signed_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                     :ModbusDataType ;
+                                                            rdfs:label "2 byte signed integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_unsigned_integer
+<https://w3id.org/rec/device/2_byte_unsigned_integer> rdf:type owl:NamedIndividual ,
+                                                               :ModbusDataType ;
+                                                      rdfs:label "2 byte unsigned integer"@en .
+
+
+###  https://w3id.org/rec/device/2_byte_unsigned_integer_swapped
+<https://w3id.org/rec/device/2_byte_unsigned_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                       :ModbusDataType ;
+                                                              rdfs:label "2 byte unsigned integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/3
+<https://w3id.org/rec/device/3> rdf:type owl:NamedIndividual ,
+                                         :ModbusFunctionCode ;
+                                rdfs:comment "Read Holding Registers"@en ;
+                                rdfs:label "3"@en .
+
+
+###  https://w3id.org/rec/device/4
+<https://w3id.org/rec/device/4> rdf:type owl:NamedIndividual ,
+                                         :ModbusFunctionCode ;
+                                rdfs:comment "Read Input Registers"@en ;
+                                rdfs:label "4"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_BCD
+<https://w3id.org/rec/device/4_byte_BCD> rdf:type owl:NamedIndividual ,
+                                                  :ModbusDataType ;
+                                         rdfs:label "4 byte BCD"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_BCD_swapped
+<https://w3id.org/rec/device/4_byte_BCD_swapped> rdf:type owl:NamedIndividual ,
+                                                          :ModbusDataType ;
+                                                 rdfs:label "4 byte BCD swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_float
+<https://w3id.org/rec/device/4_byte_float> rdf:type owl:NamedIndividual ,
+                                                    :ModbusDataType ;
+                                           rdfs:label "4 byte float"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_float_BCD
+<https://w3id.org/rec/device/4_byte_float_BCD> rdf:type owl:NamedIndividual ,
+                                                        :ModbusDataType ;
+                                               rdfs:label "4 byte float BCD"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_float_swapped
+<https://w3id.org/rec/device/4_byte_float_swapped> rdf:type owl:NamedIndividual ,
+                                                            :ModbusDataType ;
+                                                   rdfs:label "4 byte float swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_signed_integer
+<https://w3id.org/rec/device/4_byte_signed_integer> rdf:type owl:NamedIndividual ,
+                                                             :ModbusDataType ;
+                                                    rdfs:label "4 byte signed integer"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_signed_integer_swapped
+<https://w3id.org/rec/device/4_byte_signed_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                     :ModbusDataType ;
+                                                            rdfs:label "4 byte signed integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words
+<https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words> rdf:type owl:NamedIndividual ,
+                                                                                     :ModbusDataType ;
+                                                                            rdfs:label "4 byte signed integer swapped bytes and words"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_unsigned_integer
+<https://w3id.org/rec/device/4_byte_unsigned_integer> rdf:type owl:NamedIndividual ,
+                                                               :ModbusDataType ;
+                                                      rdfs:label "4 byte unsigned integer"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_unsigned_integer_swapped
+<https://w3id.org/rec/device/4_byte_unsigned_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                       :ModbusDataType ;
+                                                              rdfs:label "4 byte unsigned integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words
+<https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words> rdf:type owl:NamedIndividual ,
+                                                                                       :ModbusDataType ;
+                                                                              rdfs:label "4 byte unsigned integer swapped bytes and words"@en .
+
+
+###  https://w3id.org/rec/device/5
+<https://w3id.org/rec/device/5> rdf:type owl:NamedIndividual ,
+                                         :ModbusFunctionCode ;
+                                rdfs:comment "Write Single Coil"@en ;
+                                rdfs:label "5"@en .
+
+
+###  https://w3id.org/rec/device/6
+<https://w3id.org/rec/device/6> rdf:type owl:NamedIndividual ,
+                                         :ModbusFunctionCode ;
+                                rdfs:comment "Write Single Holding Register"@en ;
+                                rdfs:label "6"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_float
+<https://w3id.org/rec/device/8_byte_float> rdf:type owl:NamedIndividual ,
+                                                    :ModbusDataType ;
+                                           rdfs:label "8 byte float"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_float_swapped
+<https://w3id.org/rec/device/8_byte_float_swapped> rdf:type owl:NamedIndividual ,
+                                                            :ModbusDataType ;
+                                                   rdfs:label "8 byte float swapped"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_signed_integer
+<https://w3id.org/rec/device/8_byte_signed_integer> rdf:type owl:NamedIndividual ,
+                                                             :ModbusDataType ;
+                                                    rdfs:label "8 byte signed integer"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_signed_integer_swapped
+<https://w3id.org/rec/device/8_byte_signed_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                     :ModbusDataType ;
+                                                            rdfs:label "8 byte signed integer swapped"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_unsigned_integer
+<https://w3id.org/rec/device/8_byte_unsigned_integer> rdf:type owl:NamedIndividual ,
+                                                               :ModbusDataType ;
+                                                      rdfs:label "8 byte unsigned integer"@en .
+
+
+###  https://w3id.org/rec/device/8_byte_unsigned_integer_swapped
+<https://w3id.org/rec/device/8_byte_unsigned_integer_swapped> rdf:type owl:NamedIndividual ,
+                                                                       :ModbusDataType ;
+                                                              rdfs:label "8 byte unsigned integer swapped"@en .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1829 @@
+[ {
+  "@id" : "https://w3id.org/rec/device/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@value" : "Karl Hammar"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Erik Wallin"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "This REC module covers device types (sensors and actuators), device configuration, device actuation, etc."
+  } ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@value" : "RealEstateCore Consortium"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "RealEstateCore Device Module"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2019-03-25"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "device"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/rec/device/3.0-beta1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/rec/"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/rec/core/3.0-beta1/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/rec/device/3.0-beta1/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0-beta1"
+  } ],
+  "https://creativecommons.org/ns#license" : [ {
+    "@id" : "https://opensource.org/licenses/MIT"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Read coil"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/1.yyy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/KNXDataPointType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Boolean, like switching, move up/down, step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1.yyy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Write Multiple Coils"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "15"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Write Multiple Holding Registers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "16"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/1_byte",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1 byte"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Read Discrete Input"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2_byte",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2 byte"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2_byte_BCD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2 byte BCD"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2_byte_signed_integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2 byte signed integer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2_byte_signed_integer_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2 byte signed integer swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2_byte_unsigned_integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2 byte unsigned integer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/2_byte_unsigned_integer_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2 byte unsigned integer swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Read Holding Registers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Read Input Registers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_BCD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte BCD"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_BCD_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte BCD swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_float",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte float"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_float_BCD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte float BCD"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_float_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte float swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_signed_integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte signed integer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_signed_integer_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte signed integer swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte signed integer swapped bytes and words"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_unsigned_integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte unsigned integer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_unsigned_integer_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte unsigned integer swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4 byte unsigned integer swapped bytes and words"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Write Single Coil"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusFunctionCode" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Write Single Holding Register"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "6"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/8_byte_float",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "8 byte float"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/8_byte_float_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "8 byte float swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/8_byte_signed_integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "8 byte signed integer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/8_byte_signed_integer_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "8 byte signed integer swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/8_byte_unsigned_integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "8 byte unsigned integer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/8_byte_unsigned_integer_swapped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "8 byte unsigned integer swapped"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Actuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The act of changing the state of something."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/DeviceEvents"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ActuationInterface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A description of what kind of input the Actuator accepts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Actuation interface"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Actuator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An actuator is a component that is responsible for moving and controlling a mechanism or system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Actuator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/AirDiffuser",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AirDiffuser"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/AirHandlingUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AirHandlingUnit"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "ahu,air"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/BACnet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BACnet"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/BACnetConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BACnetConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Battery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PowerSource" ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Boiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boiler"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Chiller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Chiller"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "chiller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/CirculationAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CirculationAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Coil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Coil"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ColdWaterFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ColdWaterFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MT2xx, PPA2xx, SHG2xx, RT2xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------53"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "domestic,water"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ColdWaterReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ColdWaterReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MT2xx, PPA2xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------54"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "domestic,water,leaving"
+  }, {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/CommunicationBusPowerSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PowerSource" ]
+}, {
+  "@id" : "https://w3id.org/rec/device/CommunicationConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Compressor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Compressor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Condenser",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Condenser"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "condenser"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Control",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Device that controls Actuators (can also collect data)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Control"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Damper",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Damper"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "damper"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DataAcquisition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Device that collects data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DataAcquisition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DataCommunicationGateway",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Device that acts as a broker (could be a switch or gateway)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DataCommunicationGateway"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DeviceCommunication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of communiaction bus for the Device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DeviceCommunication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DeviceEvents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/core/Event"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DeviceFunctionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The main function or purpose of a Device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Device function type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DistrictCoolingFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DistrictCoolingFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------31"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DistrictCoolingReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DistrictCoolingReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------32"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DistrictHeatingFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DistrictHeatingFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN6xx, PV6xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------21"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/DistrictHeatingReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DistrictHeatingReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN6xx, PV6xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------22"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ElectricalGridIntake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ElectricalGridIntake"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ElectricalGridInternal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ElectricalGridInternal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ElectricalGridLocalProduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ElectricalGridLocalProduction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ElectricalGridTenant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ElectricalGridTenant"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Elevator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Elevator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Escalator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Escalator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Exception",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Failed attempt or unexpected result when tried to do something (e.g. read a Sensor)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Exception"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/DeviceEvents"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ExhaustAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ExhaustAir"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "FF"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------03"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ExtractAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ExtractAir"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "OF"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------05"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Fan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fan"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "fan"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Filter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Filter"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "filter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Fixed_length_string",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fixed length string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Heater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heater"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "heater"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/HotWaterFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "HotWaterFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------51"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/HotWaterReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "HotWaterReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------52"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Hwrc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hwrc"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "PCV6xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------55"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/IP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "IP"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/IndoorAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "IndoorAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/KNX",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KNX"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/KNXConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KNXConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/KNXDataPointType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KNXDataPointType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/KNXConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/LoRa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "LoRa"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/LoRaConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "LoRaConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/MBus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MBus"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/MBusConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MBusConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "https://en.wikipedia.org/wiki/Modbus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusDataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/ModbusConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusFunctionCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusTCPFunctionCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/ModbusConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusRTU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusRTU"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusRTUConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusRTUConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusTCP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusTCP"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/ModbusTCPConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModbusTCPConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/OPC-DA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OPC-DA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/OPC-DAConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OPC-DAConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/OPC-UA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceCommunication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OPC-UA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/OPC-UAConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific classes and properties to be extended in upcoming version."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OPC-UAConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/CommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Observation of a phenomena. Made by a Sensor. Used with hasValue."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/device/DeviceEvents"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/OutdoorAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OutdoorAir"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "AF"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------01"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "outside"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/PlacementContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Description of the context or media that a sensor or actuator is operating within."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Placement context"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/PowerSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The power source for the device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Power source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/PrimaryCoolingFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PrimaryCoolingFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN5xx, RDV5xx, SHG5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------33"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/PrimaryCoolingReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PrimaryCoolingReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------34"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/PrimaryHeatingFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PrimaryHeatingFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN6xx, PV6xx, SHG6xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------23"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/PrimaryHeatingReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PrimaryHeatingReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN6xx, PV6xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------24"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Pump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pump"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "pump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/RecyclingEnergyFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RecyclingEnergyFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "PVA5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------41"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "circ"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/RecyclingEnergyReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RecyclingEnergyReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "PVA5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------42"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "circ,leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SecondaryCoolingFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SecondaryCoolingFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN5xx, SHG5xx, RDV7xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------35"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SecondaryCoolingReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SecondaryCoolingReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN5xx"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SecondaryHeatingFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SecondaryHeatingFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN6xx, PV6xx, RDV6xx, SHG6xx, RDV8xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------25"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SecondaryHeatingReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SecondaryHeatingReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MAN6xx, PV6xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------26"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "leaving"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "https://w3id.org/rec/core/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SteamFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SteamFlow"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MT2xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------71"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SteamReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SteamReturn"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MT2xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------72"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/SupplyAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SupplyAir"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "TF"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------02"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Thermostat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Thermostat"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Valve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/DeviceFunctionType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Valve"
+  } ],
+  "https://w3id.org/rec/device/comparableHaystack" : [ {
+    "@language" : "en",
+    "@value" : "valve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/Variable_length_string",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/ModbusDataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Variable length string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/WasteWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/rec/device/PlacementContext" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "WasteWater"
+  } ],
+  "https://w3id.org/rec/device/comparableBIPTypeId" : [ {
+    "@language" : "en",
+    "@value" : "MT3xx"
+  } ],
+  "https://w3id.org/rec/device/comparableBelok" : [ {
+    "@language" : "en",
+    "@value" : "--------81"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/actuationCommand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "actuationCommand is the event of the system [e.g. a digital twin] responsible for sending the actuation to the actuator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "actuationCommand"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/actuationRequest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "actuationRequest is the incoming request to perform an actuation [to the digital twin]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "actuationRequest"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/actuationResponse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "actuationResponse is the value returned from an actuation as a reponse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "actuationResponse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/comparableBIPTypeId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/rec/device/comparableBelok",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/rec/device/comparableHaystack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/rec/device/devicePlacementContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/PlacementContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasPlacementContext"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/eventPlacementContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/PlacementContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasPlacementContext"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasActuationCommandTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The time stamp for the event of the underlying system intiating the actuation command."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasActuationCommandTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasActuationInterface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/ActuationInterface"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasActuationRequestTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The time stamp for when a request for an actuation arrived."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasActuationRequestTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasActuationResponseTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The time stamp for a possible response from actuation process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasActuationResponseTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasDeviceCommunication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "hasDeviceCommunication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/DeviceCommunication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasDeviceFunctionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasDeviceFunction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/DeviceFunctionType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasGeneralCommunicationConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Cognitive clustering for humans."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasGeneralCommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasIPAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasIPAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasGeneralCommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasIPAddressPort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasIPAddressPort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasGeneralCommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasKNXAttribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasKNXConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasKNXDataPointType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hsKNXDataPointType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/KNXDataPointType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasKNXConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasKNXDeviceId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasKNXAttribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasKNXDevicePort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasKNXAttribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasKNXGroupAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasKNXGroupAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasKNXAttribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasLocalEndpointId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasLocalEndpointId"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasGeneralCommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasLoraConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Cognitive clustering for humans."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasLoraConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasLoraDevEUI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasLoraDevEUI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasLoraConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusAttribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasModbusDataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/ModbusDataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasModbusConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusFunctionCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasModbusFunctionCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/ModbusFunctionCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasModbusConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusNodeId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasModbusAttribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusRegister",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasModbusAttribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasModbusRegisterLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasModbusAttribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasOffset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasGeneralCommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasPlacementContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Placement context"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasProcessedTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Time when an object or result was processed in a system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasProcessedTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/core/hasTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasScaleFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/core/Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasScaleFactor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/device/hasGeneralCommunicationConfiguration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/hasTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/rec/device/makesActuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/core/generatesEvent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/makesException",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/Exception"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/core/generatesEvent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rec/device/makesObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/rec/device/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/rec/device/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/rec/core/generatesEvent"
+  } ]
+} ]
