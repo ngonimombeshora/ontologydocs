@@ -16,17 +16,12 @@
       "coversRequirements" : [ {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "What does electricity meter 3 measure? In what units?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
         "value" : "Where is the real estate Ulvsnaes 1:7 located?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
@@ -41,12 +36,17 @@
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
+        "value" : "Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
         "value" : "Where in Building 1 (i.e., in which rooms) are there devices mounted?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What does electricity meter 3 measure? In what units?",
         "type" : "label"
       } ],
       "license" : [ {
@@ -72,28 +72,28 @@
         "value" : "core",
         "type" : "label"
       } ],
-      "publisher" : [ {
-        "identifier" : "publisher",
-        "language" : "undefined",
-        "value" : "RealEstateCore Consortium",
-        "type" : "label"
-      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2019-04-04",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
+      "publisher" : [ {
+        "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "https://w3id.org/rec/core/3.0/",
+        "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "3.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/core/3.0/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -302,13 +302,6 @@
         "en" : "Kilogram"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/RevolutionsPerMinute",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "RevolutionsPerMinute",
-        "en" : "RevoultionsPerMinute"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/MillimeterPerHour",
       "baseIri" : "https://w3id.org/rec/core",
       "comment" : {
@@ -317,6 +310,13 @@
       "labels" : {
         "IRI-based" : "MillimeterPerHour",
         "en" : "MillimeterPerHour"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/RevolutionsPerMinute",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "RevolutionsPerMinute",
+        "en" : "RevoultionsPerMinute"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/Ampere",
@@ -349,16 +349,6 @@
         "en" : "Celsius"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/Fahrenheit",
-      "baseIri" : "https://w3id.org/rec/core",
-      "comment" : {
-        "en" : "Temperature in Fahrenheit degress."
-      },
-      "labels" : {
-        "IRI-based" : "Fahrenheit",
-        "en" : "Fahrenheit"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/SquareMeter",
       "baseIri" : "https://w3id.org/rec/core",
       "comment" : {
@@ -367,6 +357,16 @@
       "labels" : {
         "IRI-based" : "SquareMeter",
         "en" : "SquareMeter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Fahrenheit",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Temperature in Fahrenheit degress."
+      },
+      "labels" : {
+        "IRI-based" : "Fahrenheit",
+        "en" : "Fahrenheit"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/MeterPerSecond",
@@ -1017,18 +1017,18 @@
         "en" : "EnergyTotal"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/CO",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "CO",
-        "en" : "CO"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/ActiveEnergyTotal",
       "baseIri" : "https://w3id.org/rec/core",
       "labels" : {
         "IRI-based" : "ActiveEnergyTotal",
         "en" : "ActiveEnergyTotal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CO",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CO",
+        "en" : "CO"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/Temperature",
@@ -1211,31 +1211,31 @@
         "en" : "Efficiency"
       }
     }, {
+      "iri" : "https://w3id.org/rec/core/ReactivePowerL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ReactivePowerL1",
+        "en" : "reactive,power"
+      }
+    }, {
       "iri" : "https://w3id.org/rec/core/Pressure",
       "baseIri" : "https://w3id.org/rec/core",
       "annotations" : {
         "seeAlso" : [ {
           "identifier" : "seeAlso",
-          "language" : "se",
-          "value" : "Tryck",
+          "language" : "en",
+          "value" : "Pressure",
           "type" : "label"
         }, {
           "identifier" : "seeAlso",
-          "language" : "en",
-          "value" : "Pressure",
+          "language" : "se",
+          "value" : "Tryck",
           "type" : "label"
         } ]
       },
       "labels" : {
         "IRI-based" : "Pressure",
         "en" : "Pressure"
-      }
-    }, {
-      "iri" : "https://w3id.org/rec/core/ReactivePowerL1",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "ReactivePowerL1",
-        "en" : "ReactivePowerL1"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/Voltage",
@@ -2149,23 +2149,9 @@
     "attributes" : [ "external", "object" ],
     "id" : "91"
   }, {
-    "iri" : "https://w3id.org/rec/core/unitSign",
-    "baseIri" : "https://w3id.org/rec/core",
-    "range" : "39",
-    "label" : {
-      "IRI-based" : "unitSign",
-      "en" : "unit sign"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "The syntactical representation of a unit, e.g., m^3 for cubic meter, etc."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "92"
-  }, {
     "iri" : "https://w3id.org/rec/core/hasPostalAddress",
     "baseIri" : "https://w3id.org/rec/core",
-    "range" : "33",
+    "range" : "39",
     "label" : {
       "IRI-based" : "hasPostalAddress",
       "en" : "has postal address"
@@ -2173,6 +2159,20 @@
     "domain" : "17",
     "comment" : {
       "en" : "Address used for postal delivery."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/rec/core/unitSign",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "unitSign",
+      "en" : "unit sign"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "The syntactical representation of a unit, e.g., m^3 for cubic meter, etc."
     },
     "attributes" : [ "datatype" ],
     "id" : "93"
