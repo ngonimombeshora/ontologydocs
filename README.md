@@ -4,4 +4,4 @@ This site contains [WIDOCO](https://github.com/dgarijo/Widoco)-generated documen
 
 * [v2.2](2.2/)
 * [v2.3](2.3/)
-* [v3.0-beta1](3.0-beta1/)
+* [v3.0](3.0/)
