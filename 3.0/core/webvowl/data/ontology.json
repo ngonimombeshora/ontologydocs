@@ -1,0 +1,2508 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "se", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/core", "http://www.opengis.net/ont/geosparql" ],
+    "title" : {
+      "undefined" : "RealEstateCore Core Module"
+    },
+    "iri" : "https://w3id.org/rec/core/",
+    "version" : "3.0",
+    "author" : [ "Karl Hammar", "Erik Wallin" ],
+    "description" : {
+      "en" : "The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.\n\nNote that this module reuses certain classes, properties, and named individuals from other vocabularies, e.g., GeoSPARQL; the copyright conditions on those reused entities are stated in their respective rdfs:comments annotations."
+    },
+    "other" : {
+      "coversRequirements" : [ {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What does electricity meter 3 measure? In what units?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Where is the real estate Ulvsnaes 1:7 located?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Where is Building 1 located?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "How many rooms are there in Building 1?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Where in Building 1 (i.e., in which rooms) are there devices mounted?",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Erik Wallin",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "core",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-04-04",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/core/3.0/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Core Module",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://realestatecore.io",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 13,
+    "objectPropertyCount" : 27,
+    "datatypePropertyCount" : 32,
+    "individualCount" : 84
+  },
+  "class" : [ {
+    "id" : "3",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "49",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "82",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/MeasurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "https://www.qudt.org/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MeasurementUnit",
+      "en" : "Measurement unit"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/core/Kilogram",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Mass."
+      },
+      "labels" : {
+        "IRI-based" : "Kilogram",
+        "en" : "Kilogram"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/RevolutionsPerMinute",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "RevolutionsPerMinute",
+        "en" : "RevoultionsPerMinute"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/MillimeterPerHour",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "For measuring Precipation"
+      },
+      "labels" : {
+        "IRI-based" : "MillimeterPerHour",
+        "en" : "MillimeterPerHour"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Ampere",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Ampere. Current in a circuit."
+      },
+      "labels" : {
+        "IRI-based" : "Ampere",
+        "en" : "Ampere"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Hertz",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "One cycle per second."
+      },
+      "labels" : {
+        "IRI-based" : "Hertz",
+        "en" : "Hertz"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Celsius",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Temperature in Celsius degress. Note that correct SI Unit is Kelvin."
+      },
+      "labels" : {
+        "IRI-based" : "Celsius",
+        "en" : "Celsius"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Fahrenheit",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Temperature in Fahrenheit degress."
+      },
+      "labels" : {
+        "IRI-based" : "Fahrenheit",
+        "en" : "Fahrenheit"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/SquareMeter",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Area unit. It is the area of a square whose sides measure exactly one metre."
+      },
+      "labels" : {
+        "IRI-based" : "SquareMeter",
+        "en" : "SquareMeter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/MeterPerSecond",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "MeterPerSecond",
+        "en" : "MeterPerSecond"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/LiterPerSecond",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Flow"
+      },
+      "labels" : {
+        "IRI-based" : "LiterPerSecond",
+        "en" : "LiterPerSecond"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Decibel",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Sound level"
+      },
+      "labels" : {
+        "IRI-based" : "Decibel",
+        "en" : "Decibel"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/PowerFactor",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "The power factor of an AC electrical power system is defined as the ratio of the real power flowing to the load to the apparent power in the circuit, and is a dimensionless number in the closed interval of −1 to 1."
+      },
+      "labels" : {
+        "IRI-based" : "PowerFactor",
+        "en" : "PowerFactor"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Volt",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Voltage, electric potential difference, is the difference in electric potential between two points."
+      },
+      "labels" : {
+        "IRI-based" : "Volt",
+        "en" : "Volt"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Meter",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Lenght."
+      },
+      "labels" : {
+        "IRI-based" : "Meter",
+        "en" : "Meter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Second",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "The second is the duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom."
+      },
+      "labels" : {
+        "IRI-based" : "Second",
+        "en" : "Second"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Watt",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "This unit is typically used to express the momentaneous output power of engines and the power of electric motors, tools, machines, and heaters."
+      },
+      "labels" : {
+        "IRI-based" : "Watt",
+        "en" : "Watt"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CubicMeter",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains. Volume is often quantified numerically using the cubic metre (m3)."
+      },
+      "labels" : {
+        "IRI-based" : "CubicMeter",
+        "en" : "CubicMeter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Pascal",
+      "baseIri" : "https://w3id.org/rec/core",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "In Haystack: barometric is described as \"Defines the mean atmospheric pressure at sea level measured in millibar or in Hg.\"",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The pascal is the SI derived unit of pressure used to quantify internal pressure, stress. It is defined as one newton per square metre."
+      },
+      "labels" : {
+        "IRI-based" : "Pascal",
+        "en" : "Pascal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Kelvin",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Temperature in Kelvin degrees"
+      },
+      "labels" : {
+        "IRI-based" : "Kelvin",
+        "en" : "Kelvin"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Lux",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Light intensity in a specific area."
+      },
+      "labels" : {
+        "IRI-based" : "Lux",
+        "en" : "Lux"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CosPhi",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "The angle between two electrical phases."
+      },
+      "labels" : {
+        "IRI-based" : "CosPhi",
+        "en" : "CosPhi"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Lumen",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Lumen",
+        "en" : "Lumen"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Degrees",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Degrees",
+        "en" : "Degrees"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/WattHour",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Enery. Watthour."
+      },
+      "labels" : {
+        "IRI-based" : "WattHour",
+        "en" : "WattHour"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/PartsPerMillion",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Measurement for concentration"
+      },
+      "labels" : {
+        "IRI-based" : "PartsPerMillion",
+        "en" : "PartsPerMillion"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/RelativeHumidity",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Relative Humidity. The amount of water vapour present in air expressed as a percentage of the amount needed for saturation at the same temperature."
+      },
+      "labels" : {
+        "IRI-based" : "RelativeHumidity",
+        "en" : "RelativeHumidity"
+      }
+    } ],
+    "comment" : {
+      "en" : "The measurment units that are used in RealEstateCore. Use SI-units in general. Store values without prefixes.\n\nExceptions to SI:\nExpress temperature in Celsius,\nEnergy in Watt hour (Wh),\nAngle i degrees (360 degress = 1 revolution)\nMillimeterPerHour for Precipation"
+    },
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "49",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/Building",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Building",
+      "en" : "Building"
+    },
+    "comment" : {
+      "en" : "A confined building structure."
+    },
+    "id" : "47",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/RealEstateComponent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RealEstateComponent",
+      "en" : "Real estate component"
+    },
+    "subClasses" : [ "60", "47" ],
+    "comment" : {
+      "en" : "Types of objects that can make up a piece of real estate, e.g., land and buildings."
+    },
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Agent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "en" : "Agent"
+    },
+    "comment" : {
+      "en" : "The human or machine that consumes or acts upon an object or data."
+    },
+    "id" : "69"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "70",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "82",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/Device",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device"
+    },
+    "comment" : {
+      "en" : "A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor,  Actuator, etc."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/rec/core/QuantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/QuantityKind",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "QuantityKind",
+      "en" : "Quantity kind"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/core/WattPerSquareMeter",
+      "baseIri" : "https://w3id.org/rec/core",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "https://www.rapidtables.com/calc/light/how-watt-to-lux.html",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "WattPerSquareMeter",
+        "en" : "WattPerSquareMeter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/PowerFrequency",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "PowerFrequency",
+        "en" : "PowerFrequency"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/SunshineTimePerHour",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "SunshineTimePerHour",
+        "en" : "SunshineTimePerHour"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Illuminance",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Illuminance",
+        "en" : "Illuminance"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Level",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Level",
+        "en" : "Level"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Lenght",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Lenght",
+        "en" : "Lenght"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActiveEnergyL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActiveEnergyL1",
+        "en" : "ActiveEnergyL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActiveEnergyL2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActiveEnergyL2",
+        "en" : "ActiveEnergyL2"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActiveEnergyL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActiveEnergyL3",
+        "en" : "ActiveEnergyL3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Area",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Area",
+        "en" : "Area"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Precipation",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Measured in MillimeterPerHour"
+      },
+      "labels" : {
+        "IRI-based" : "Precipation",
+        "en" : "Precipation"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Volume",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Volume",
+        "en" : "Volume"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/AlarmMinor",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Notifications"
+      },
+      "labels" : {
+        "IRI-based" : "AlarmMinor",
+        "en" : "AlarmMinor"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/AgentInteraction",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "When a human interacts with a system. E.g. pushes a button to turn on/off a light, force ventilation."
+      },
+      "labels" : {
+        "IRI-based" : "AgentInteraction",
+        "en" : "AgentInteraction"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActivePowerL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActivePowerL1",
+        "en" : "ActivePowerL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActivePowerL2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActivePowerL2",
+        "en" : "ActivePowerL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/TVOC",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "TVOC",
+        "en" : "TVOC"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActivePowerL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActivePowerL3",
+        "en" : "ActivePowerL3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Angle",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Angle",
+        "en" : "Angle"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/RotationSpeed",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "RotationSpeed",
+        "en" : "RotationSpeed"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/VoltageL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "VoltageL1",
+        "en" : "VoltageL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/VoltageL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "VoltageL3",
+        "en" : "VoltageL3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/VoltageL2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "VoltageL2",
+        "en" : "VoltageL2"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Flow",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Flow",
+        "en" : "Flow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Concentration",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Concentration",
+        "en" : "Concentration"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Speed",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Speed",
+        "en" : "Speed"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ReactivePowerTotal",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ReactivePowerTotal",
+        "en" : "ReactivePowerTotal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/EnergyTotal",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Total energy (not specified as Active or Reactive, used for e.g. district heating)."
+      },
+      "labels" : {
+        "IRI-based" : "EnergyTotal",
+        "en" : "EnergyTotal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CO",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CO",
+        "en" : "CO"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActiveEnergyTotal",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActiveEnergyTotal",
+        "en" : "ActiveEnergyTotal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Temperature",
+      "baseIri" : "https://w3id.org/rec/core",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "Temperature",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Temperature",
+        "en" : "Temperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Presence",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Presence equivivalent"
+      },
+      "labels" : {
+        "IRI-based" : "Presence",
+        "en" : "Presence"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CurrentL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CurrentL3",
+        "en" : "CurrentL3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CurrentL2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CurrentL2",
+        "en" : "CurrentL2"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CurrentL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CurrentL1",
+        "en" : "CurrentL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/AlarmSevere",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Danger for life and property"
+      },
+      "labels" : {
+        "IRI-based" : "AlarmSevere",
+        "en" : "AlarmSevere"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/GlobalIrradiance",
+      "baseIri" : "https://w3id.org/rec/core",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "https://en.wikipedia.org/wiki/Solar_irradiance",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GlobalIrradiance",
+        "en" : "GlobalIrradiance"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Humidity",
+      "baseIri" : "https://w3id.org/rec/core",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "Humidity",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Humidity",
+        "en" : "Humidity"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/PowerFactorL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "PowerFactorL1",
+        "en" : "PowerFactorL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActivePowerTotal",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActivePowerTotal",
+        "en" : "ActivePowerTotal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Velocity",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Velocity",
+        "en" : "Velocity"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/AlarmMajor",
+      "baseIri" : "https://w3id.org/rec/core",
+      "comment" : {
+        "en" : "Danger for property"
+      },
+      "labels" : {
+        "IRI-based" : "AlarmMajor",
+        "en" : "AlarmMajor"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CO2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CO2",
+        "en" : "CO2"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/PowerFactorL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "PowerFactorL3",
+        "en" : "PowerFactorL3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/PowerFactorL2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "PowerFactorL2",
+        "en" : "PowerFactorL2"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Radiation",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Radiation",
+        "en" : "Radiation"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ReactivePowerL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ReactivePowerL3",
+        "en" : "ReactivePowerL3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ReactivePowerL2",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ReactivePowerL2",
+        "en" : "ReactivePowerL2"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Current",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Current",
+        "en" : "Current"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Sound",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Sound",
+        "en" : "Sound"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Efficiency",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Efficiency",
+        "en" : "Efficiency"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Pressure",
+      "baseIri" : "https://w3id.org/rec/core",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "se",
+          "value" : "Tryck",
+          "type" : "label"
+        }, {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "Pressure",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Pressure",
+        "en" : "Pressure"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ReactivePowerL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ReactivePowerL1",
+        "en" : "ReactivePowerL1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/Voltage",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Voltage",
+        "en" : "Voltage"
+      }
+    } ],
+    "comment" : {
+      "en" : "Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT."
+    },
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Event",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "comment" : {
+      "en" : "A spatiotemporally indexed entity with participants (e.g., something which occurs somewhere, and that has or takes some time). We do not on this top level define the particulars of how to model space or time; that is left to the implementing subclasses. Thus, in a sense, this is just a cognitive clustering for human consumers of the ontology, a root class from which all different types of events derive."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/rec/core/RealEstate",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RealEstate",
+      "en" : "Real estate"
+    },
+    "comment" : {
+      "en" : "The legal/administrative representation of some lands and/or buildings."
+    },
+    "id" : "58"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Geometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Geometry",
+      "en" : "Geometry"
+    },
+    "subClasses" : [ "25" ],
+    "comment" : {
+      "en" : "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+    },
+    "attributes" : [ "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/rec/core/BuildingComponent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildingComponent",
+      "en" : "Building component"
+    },
+    "subClasses" : [ "62" ],
+    "comment" : {
+      "en" : "The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc."
+    },
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Room",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Room",
+      "en" : "Room"
+    },
+    "comment" : {
+      "en" : "Base class for all more specific room types."
+    },
+    "id" : "62",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#gmlLiteral",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "gmlLiteral",
+      "en" : "GML Literal"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "wktLiteral",
+      "en" : "Well-known Text Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/GeoReferenceOrigo",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeoReferenceOrigo",
+      "en" : "Geo-reference origo"
+    },
+    "comment" : {
+      "en" : "A fixed point for e.g. a building structure. Commonly refered to as \"insertion point\" in CAD-programs. Used as origo for LocalCoordinates."
+    },
+    "id" : "25",
+    "superClasses" : [ "68" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Land",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Land",
+      "en" : "Land"
+    },
+    "comment" : {
+      "en" : "A piece of land upon which one or more buildings may be situated."
+    },
+    "id" : "60",
+    "superClasses" : [ "50" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/rec/core/hasValue",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasValue",
+      "en" : "has value"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An event may be associated with a value. This is a rather generic property which can be reused or extended by sub-classes to indicate, e.g., measurement values, actuation values, etc."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasCreatedTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasCreatedTime",
+      "en" : "has created time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit",
+      "en" : "has measurement unit"
+    },
+    "domain" : "7",
+    "subproperty" : [ "9", "10", "11" ],
+    "comment" : {
+      "en" : "The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasStopTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasStopTime",
+      "en" : "has stop time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/rec/core/associatedWithEvent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "associatedWithEvent",
+      "en" : "associated with event"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links a Device of some sort to an Event generated by, detected through, or targetting that Device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasPart",
+    "inverse" : "18",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "en" : "has part"
+    },
+    "domain" : "17",
+    "subproperty" : [ "19", "20", "21", "22", "23" ],
+    "comment" : {
+      "en" : "Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasGeoReferenceBearing",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasGeoReferenceBearing",
+      "en" : "has geo reference bearing"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "The angle between one of the axis of a local coordinate system within e.g. a building and a north-south meridian. The angle is measured between the meridian and the local coordinate axis and counted as positive to the east side of the meridan (neagtive to the west side).\n\nBearings are never greater than 90°.\nBearings are based on true north."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isPartOf",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "is part of"
+    },
+    "domain" : "17",
+    "subproperty" : [ "34", "35", "36", "37", "38" ],
+    "comment" : {
+      "en" : "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."
+    },
+    "attributes" : [ "transitive", "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasSuperBuildingComponent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasSuperBuildingComponent",
+      "en" : "has super-BuildingComponent"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "41",
+    "comment" : {
+      "en" : "Property to model nesting of building components, e.g., rooms within apartments or walls within stairwells, etc."
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasDeletedTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "hasDeletedTime",
+      "en" : "has deleted time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasPopularName",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasPopularName",
+      "en" : "has popular name"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Human-readable-friendly name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isPartOfBuilding",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "isPartOfBuilding",
+      "en" : "is part of building"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "41",
+    "comment" : {
+      "en" : "Indicates which Building a certain Building Component is part of."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasRegion",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasRegion",
+      "en" : "has region"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates a region that a certain Geometry is part of."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/rec/core/containsMountedDevice",
+    "inverse" : "34",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "containsMountedDevice",
+      "en" : "contains mounted device"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "41",
+    "comment" : {
+      "en" : "Parthood traversal property linking BuildingComponents to Devices mounted within them."
+    },
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/rec/core/deviceMeasurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "deviceMeasurementUnit",
+      "en" : "device measurement unit"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "The measurement unit used by some Device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasLocationAttribute",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "hasLocationAttribute",
+      "en" : "has location attribute"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This property is a cognitive clustering for human consumption, grouping sub-properties that assign labels (e.g., place names, addresses, etc.) to Geometry entities. This branch of the property hierarchy may need some further development and cleaning up in future versions."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasCountry",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasCountry",
+      "en" : "has country"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates a country that a certain Geometry is part of."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasSource",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasSource",
+      "en" : "has source"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Used for information about a source system or data."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isPartOfRealEstate",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "isPartOfRealEstate"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "50",
+    "comment" : {
+      "en" : "Indicates that a Building or a piece of Land belongs to / is part of a given Real Estate."
+    },
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasLittera",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasLittera",
+      "en" : "has littera"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Designation or enumeration commenly found on blueprints for an object. E.g. text designating a Device or a Room."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/rec/core/eventMeasurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "eventMeasurementUnit",
+      "en" : "event measurement unit"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "A unit used to measure some aspect of some Event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "range" : "41",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasGeoReferenceOrigo",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasGeoReferenceOrigo",
+      "en" : "has geo-reference origo"
+    },
+    "superproperty" : [ "64" ],
+    "domain" : "47",
+    "comment" : {
+      "en" : "Associates a building with a point in some coordinate reference system which can be used to resolve local (building-specific) coordinates against this outer coordinate reference system."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasVistingAddress",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "hasVistingAddress",
+      "en" : "has visting address"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "An address for visiting the Geometry. If a Geometry has multiple visiting addresses, then just add as many hasVistingAddress as needed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasSubBuildingComponent",
+    "inverse" : "38",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasSubBuildingComponent",
+      "en" : "has sub-BuildingComponent"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "41",
+    "comment" : {
+      "en" : "Parthood traversal property linking BuildingComponents to their constituent sub-components."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "range" : "68",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasCity",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasCity",
+      "en" : "has city"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates a city that a certain Geometry is part of."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "71"
+  }, {
+    "range" : "50",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasAuxiliaryData",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "hasAuxiliaryData",
+      "en" : "has auxiliary data"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "This parent property groups a number of sub-properties that provide additional richness to building or device model and that are often used in practice in various systems, but which have not yet (REC 3.0) been fully modelled their respecive REC modules."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasQuantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "hasQuantityKind",
+      "en" : "has quantity kind"
+    },
+    "domain" : "70",
+    "subproperty" : [ "78", "79" ],
+    "comment" : {
+      "en" : "Links entities that are measurable to the Quantity Kind that they measure, e.g., Temperature, Pressure, etc."
+    },
+    "attributes" : [ "object" ],
+    "id" : "76"
+  }, {
+    "range" : "50",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasRealEstateComponent",
+    "inverse" : "35",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasRealEstateComponent",
+      "en" : "has real estate component"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "58",
+    "comment" : {
+      "en" : "Parthood traversal property linking a piece of RealEstate to its constituent components (i.e., Buildings and Land)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasComment",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasComment",
+      "en" : "has comment"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Extra information about an object that is of a more exceptional character. E.g. \"This Device needs to be replaced no later than 2020\", \"Note: Black color is used to mark warmwater inlet\""
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasReadTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasReadTime",
+      "en" : "has read time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isLocatedAtLocalCoordinates",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "isLocatedAtLocalCoordinates",
+      "en" : "is located at local coordinates"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Expressed as a string adhering to the notation \"(x,y,z)\", where x, y, and z ar whole or decimal numbers indicating the position in the local building coordinate system, measured in meters. This relates to the outside world coordinate refence system via the values expressed by GeoReferenceOrigo."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasObservationTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "hasObservationTime",
+      "en" : "has observation time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#hasSerialization",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "90",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSerialization",
+      "en" : "has serialization"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "Connects a geometry object with its text-based serialization.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "68",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasGeometry",
+      "en" : "hasGeometry"
+    },
+    "domain" : "49",
+    "subproperty" : [ "63", "91" ],
+    "comment" : {
+      "en" : "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#defaultGeometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "68",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "defaultGeometry",
+      "en" : "defaultGeometry"
+    },
+    "superproperty" : [ "64" ],
+    "domain" : "49",
+    "comment" : {
+      "en" : "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/rec/core/unitSign",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "unitSign",
+      "en" : "unit sign"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "The syntactical representation of a unit, e.g., m^3 for cubic meter, etc."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasPostalAddress",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasPostalAddress",
+      "en" : "has postal address"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Address used for postal delivery."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasDuration",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "hasDuration",
+      "en" : "has duration"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Measured in ms (milliseconds). Duration is defined as the length of time that something lasts."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasBuildingComponent",
+    "inverse" : "36",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasBuildingComponent",
+      "en" : "has building component"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "47",
+    "comment" : {
+      "en" : "Parthood traversal property linking Buildings to the Building Components that they are made up of."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/rec/core/deviceQuantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "deviceQuantityKind",
+      "en" : "device quantity kind"
+    },
+    "superproperty" : [ "76" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "The Quantity Kind that a device measures or affects."
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasSustainabilityCertification",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasSustainabilityCertification",
+      "en" : "has sustainability certification"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates any sustainability certifications that a Building or piece of Real Estate has achieved. This is a stub for now and will likely be more expressively modelled as classes and properties in future REC releases."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/rec/core/servesDevice",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "servesDevice",
+      "en" : "serves device"
+    },
+    "superproperty" : [ "98" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Indicates how a Device serves another Device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasGeonamesId",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasGeonamesId",
+      "en" : "has geonames ID"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Linking to https://www.geonames.org\n\nE.g. for Stockholm (Sweden):\nLocationUUID#1 hasGenonames http://www.geonames.org/2673730/stockholm.html"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasSuperDevice",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasSuperDevice",
+      "en" : "has super-Device"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "A property that allows for nesting of devices within devices."
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasSubDevice",
+    "inverse" : "37",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasSubDevice",
+      "en" : "has sub-device"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Parthood traversal property linking a Device to any sub-Devices that it contains."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/rec/core/qkMeasurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "qkMeasurementUnit",
+      "en" : "quantity kind measurement unit"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "77",
+    "comment" : {
+      "en" : "A unit used to specificy some Quantity Kind, such as temperature, pressure, etc."
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isMountedInBuildingComponent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "isMountedInBuildingComponent",
+      "en" : "is mounted in Building Component"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Property describing in which Building Component (most typically a Room) that a Device is mounted."
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasAliasID",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasAliasID",
+      "en" : "has alias ID"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Used to map an Id in an external system to an instance (e.g. an UUID)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasZipCode",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasZipCode",
+      "en" : "has zip code"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates a certain Geometry's zip code."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/rec/core/serves",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "serves",
+      "en" : "serves"
+    },
+    "domain" : "15",
+    "subproperty" : [ "105", "97", "106" ],
+    "comment" : {
+      "en" : "The coverage or impact area of a given device or sensor. For example: an air-treatment Device might serve several Rooms or a full Building. Note that devices can also service one another, e.g., an air-treatment Device might serve an air diffuser Device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#asWKT",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "103",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asWKT",
+      "undefined" : "asWKT"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "hasTime",
+      "en" : "has time"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Cognitive clustering of time-related properties that can apply to time-indexed objects (i.e., events of various sorts).\n\nCertain time properties are given using xsd:DateTime, i.e., ISO8601 (see below), whereas others are given as ints or floats, depending on use case.\n\nTime format ISO8601:\n\nComplete date, hour, minutes, seconds, and decimal fraction of second\n\n      YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)\n\nWhere:\n     YYYY = 4 numbers for year.\n     MM = 2 numbers for month (01=January, etc.)\n     DD = 2 numbers for day of month (01 till 31)\n     hh = 2 numbers for hour (00 till 23) (am/pm not allowed)\n     mm = 2 numbers for minutes (00 till 59)\n     ss = 2 numbers for second (00 till 59)\n     s = 1 or more numbers represent a decimal fraction of second\n\nTZD  = time zone designator (Z or +hh:mm or -hh:mm)\nTime is expressed in UTC (Coordinated Universal Time), with designated UTC  (\"Z\") for GMT."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasPointInTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "hasPointInTime",
+      "en" : "has point in time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://w3id.org/rec/core/servesBuilding",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "servesBuilding",
+      "en" : "serves building"
+    },
+    "superproperty" : [ "98" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Indicates how a Device serves an entire Building."
+    },
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#asGML",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "101",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGML",
+      "undefined" : "asGML"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/rec/core/eventQuantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "eventQuantityKind",
+      "en" : "event quantity kind"
+    },
+    "superproperty" : [ "76" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The Quantity Kind that an event measures or affects."
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasUpdatedTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasUpdatedTime",
+      "en" : "has updated time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasStartTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "hasStartTime",
+      "en" : "has start time"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "112"
+  }, {
+    "iri" : "https://w3id.org/rec/core/servesBuildingComponent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "servesBuildingComponent",
+      "en" : "serves building component"
+    },
+    "superproperty" : [ "98" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Indicates how a Device serves a particular Building Component (e.g., a Room)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "106"
+  } ]
+}
