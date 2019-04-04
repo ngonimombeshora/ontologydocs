@@ -1,0 +1,543 @@
+<html><h2 id="overv" class="list">RealEstateCore Device Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#Actuation" title="https://w3id.org/rec/device/Actuation">Actuation</a>
+   </li>
+   <li>
+      <a href="#ActuationInterface" title="https://w3id.org/rec/device/ActuationInterface">Actuation interface</a>
+   </li>
+   <li>
+      <a href="#Actuator" title="https://w3id.org/rec/device/Actuator">Actuator</a>
+   </li>
+   <li>
+      <a href="#BACnetConfiguration" title="https://w3id.org/rec/device/BACnetConfiguration">BACnetConfiguration</a>
+   </li>
+   <li>
+      <a href="#CommunicationConfiguration"
+         title="https://w3id.org/rec/device/CommunicationConfiguration">Communication configuration</a>
+   </li>
+   <li>
+      <a href="#CommunicationsBus" title="https://w3id.org/rec/device/CommunicationsBus">Communications bus</a>
+   </li>
+   <li>
+      <a href="#DeviceEvents" title="https://w3id.org/rec/device/DeviceEvents">Device events</a>
+   </li>
+   <li>
+      <a href="#DeviceFunctionType" title="https://w3id.org/rec/device/DeviceFunctionType">Device function type</a>
+   </li>
+   <li>
+      <a href="#Exception" title="https://w3id.org/rec/device/Exception">Exception</a>
+   </li>
+   <li>
+      <a href="#KNXConfiguration" title="https://w3id.org/rec/device/KNXConfiguration">KNXConfiguration</a>
+   </li>
+   <li>
+      <a href="#KNXDataPointType" title="https://w3id.org/rec/device/KNXDataPointType">KNXDataPointType</a>
+   </li>
+   <li>
+      <a href="#LoRaConfiguration" title="https://w3id.org/rec/device/LoRaConfiguration">LoRaConfiguration</a>
+   </li>
+   <li>
+      <a href="#MBusConfiguration" title="https://w3id.org/rec/device/MBusConfiguration">MBusConfiguration</a>
+   </li>
+   <li>
+      <a href="#ModbusConfiguration" title="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a>
+   </li>
+   <li>
+      <a href="#ModbusDataType" title="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a>
+   </li>
+   <li>
+      <a href="#ModbusRTUConfiguration"
+         title="https://w3id.org/rec/device/ModbusRTUConfiguration">ModbusRTUConfiguration</a>
+   </li>
+   <li>
+      <a href="#ModbusTCPConfiguration"
+         title="https://w3id.org/rec/device/ModbusTCPConfiguration">ModbusTCPConfiguration</a>
+   </li>
+   <li>
+      <a href="#ModbusFunctionCode" title="https://w3id.org/rec/device/ModbusFunctionCode">ModbusTCPFunctionCode</a>
+   </li>
+   <li>
+      <a href="#Observation" title="https://w3id.org/rec/device/Observation">Observation</a>
+   </li>
+   <li>
+      <a href="#OPC-DAConfiguration" title="https://w3id.org/rec/device/OPC-DAConfiguration">OPC-DAConfiguration</a>
+   </li>
+   <li>
+      <a href="#OPC-UAConfiguration" title="https://w3id.org/rec/device/OPC-UAConfiguration">OPC-UAConfiguration</a>
+   </li>
+   <li>
+      <a href="#PlacementContext" title="https://w3id.org/rec/device/PlacementContext">Placement context</a>
+   </li>
+   <li>
+      <a href="#PowerSource" title="https://w3id.org/rec/device/PowerSource">Power source</a>
+   </li>
+   <li>
+      <a href="#Sensor" title="https://w3id.org/rec/device/Sensor">Sensor</a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#devicePlacementContext"
+         title="https://w3id.org/rec/device/devicePlacementContext">device placement context</a>
+   </li>
+   <li>
+      <a href="#eventPlacementContext"
+         title="https://w3id.org/rec/device/eventPlacementContext">event placement context</a>
+   </li>
+   <li>
+      <a href="#executesActuation" title="https://w3id.org/rec/device/executesActuation">executes actuation</a>
+   </li>
+   <li>
+      <a href="#generatedException" title="https://w3id.org/rec/device/generatedException">generated exception</a>
+   </li>
+   <li>
+      <a href="#generatedObservation" title="https://w3id.org/rec/device/generatedObservation">generated observation</a>
+   </li>
+   <li>
+      <a href="#hasActuationInterface"
+         title="https://w3id.org/rec/device/hasActuationInterface">has actuation interface</a>
+   </li>
+   <li>
+      <a href="#hasCommunicationConfiguration"
+         title="https://w3id.org/rec/device/hasCommunicationConfiguration">has communication configuration</a>
+   </li>
+   <li>
+      <a href="#hasCommunicationsBus" title="https://w3id.org/rec/device/hasCommunicationsBus">
+         <span>has communications bus</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasDeviceFunctionType"
+         title="https://w3id.org/rec/device/hasDeviceFunctionType">has device function type</a>
+   </li>
+   <li>
+      <a href="#hasKNXConfiguration" title="https://w3id.org/rec/device/hasKNXConfiguration">
+         <span>has k n x configuration</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasModbusConfiguration"
+         title="https://w3id.org/rec/device/hasModbusConfiguration">
+         <span>has modbus configuration</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasPlacementContext" title="https://w3id.org/rec/device/hasPlacementContext">has placement context</a>
+   </li>
+   <li>
+      <a href="#hasModbusDataType" title="https://w3id.org/rec/device/hasModbusDataType">hasModbusDataType</a>
+   </li>
+   <li>
+      <a href="#hasModbusFunctionCode"
+         title="https://w3id.org/rec/device/hasModbusFunctionCode">hasModbusFunctionCode</a>
+   </li>
+   <li>
+      <a href="#hasKNXDataPointType" title="https://w3id.org/rec/device/hasKNXDataPointType">hsKNXDataPointType</a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#actuationCommand" title="https://w3id.org/rec/device/actuationCommand">actuation command</a>
+   </li>
+   <li>
+      <a href="#actuationRequest" title="https://w3id.org/rec/device/actuationRequest">actuation request</a>
+   </li>
+   <li>
+      <a href="#actuationResponse" title="https://w3id.org/rec/device/actuationResponse">actuation response</a>
+   </li>
+   <li>
+      <a href="#hasActuationCommandTime"
+         title="https://w3id.org/rec/device/hasActuationCommandTime">has actuation command time</a>
+   </li>
+   <li>
+      <a href="#hasActuationRequestTime"
+         title="https://w3id.org/rec/device/hasActuationRequestTime">has actuation request time</a>
+   </li>
+   <li>
+      <a href="#hasActuationResponseTime"
+         title="https://w3id.org/rec/device/hasActuationResponseTime">has actuation response time</a>
+   </li>
+   <li>
+      <a href="#hasCommunicationAttribute"
+         title="https://w3id.org/rec/device/hasCommunicationAttribute">has communication attribute</a>
+   </li>
+   <li>
+      <a href="#hasIPAddress" title="https://w3id.org/rec/device/hasIPAddress">has IP address</a>
+   </li>
+   <li>
+      <a href="#hasIPAddressPort" title="https://w3id.org/rec/device/hasIPAddressPort">has IP address port</a>
+   </li>
+   <li>
+      <a href="#hasKNXAttribute" title="https://w3id.org/rec/device/hasKNXAttribute">has KNX attribute</a>
+   </li>
+   <li>
+      <a href="#hasKNXDeviceId" title="https://w3id.org/rec/device/hasKNXDeviceId">has KNX device ID</a>
+   </li>
+   <li>
+      <a href="#hasKNXDevicePort" title="https://w3id.org/rec/device/hasKNXDevicePort">has KNX device port</a>
+   </li>
+   <li>
+      <a href="#hasKNXGroupAddress" title="https://w3id.org/rec/device/hasKNXGroupAddress">has KNX group address</a>
+   </li>
+   <li>
+      <a href="#hasLocalEndpointId" title="https://w3id.org/rec/device/hasLocalEndpointId">has local endpoint ID</a>
+   </li>
+   <li>
+      <a href="#hasLoraAttribute" title="https://w3id.org/rec/device/hasLoraAttribute">has Lora attribute</a>
+   </li>
+   <li>
+      <a href="#hasLoraDevEUI" title="https://w3id.org/rec/device/hasLoraDevEUI">has Lora DevEUI</a>
+   </li>
+   <li>
+      <a href="#hasModbusAttribute" title="https://w3id.org/rec/device/hasModbusAttribute">has Modbus attribute</a>
+   </li>
+   <li>
+      <a href="#hasModbusNodeId" title="https://w3id.org/rec/device/hasModbusNodeId">has Modbus node ID</a>
+   </li>
+   <li>
+      <a href="#hasModbusRegister" title="https://w3id.org/rec/device/hasModbusRegister">has Modbus register</a>
+   </li>
+   <li>
+      <a href="#hasModbusRegisterLength"
+         title="https://w3id.org/rec/device/hasModbusRegisterLength">has Modbus register length</a>
+   </li>
+   <li>
+      <a href="#hasOffset" title="https://w3id.org/rec/device/hasOffset">has offset</a>
+   </li>
+   <li>
+      <a href="#hasProcessedTime" title="https://w3id.org/rec/device/hasProcessedTime">has processed time</a>
+   </li>
+   <li>
+      <a href="#hasScaleFactor" title="https://w3id.org/rec/device/hasScaleFactor">has scale factor</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#1" title="https://w3id.org/rec/device/1">1</a>
+   </li>
+   <li>
+      <a href="#1_byte" title="https://w3id.org/rec/device/1_byte">1 byte</a>
+   </li>
+   <li>
+      <a href="#1.yyy" title="https://w3id.org/rec/device/1.yyy">1.yyy</a>
+   </li>
+   <li>
+      <a href="#15" title="https://w3id.org/rec/device/15">15</a>
+   </li>
+   <li>
+      <a href="#16" title="https://w3id.org/rec/device/16">16</a>
+   </li>
+   <li>
+      <a href="#2" title="https://w3id.org/rec/device/2">2</a>
+   </li>
+   <li>
+      <a href="#2_byte" title="https://w3id.org/rec/device/2_byte">2 byte</a>
+   </li>
+   <li>
+      <a href="#2_byte_BCD" title="https://w3id.org/rec/device/2_byte_BCD">2 byte BCD</a>
+   </li>
+   <li>
+      <a href="#2_byte_signed_integer"
+         title="https://w3id.org/rec/device/2_byte_signed_integer">2 byte signed integer</a>
+   </li>
+   <li>
+      <a href="#2_byte_signed_integer_swapped"
+         title="https://w3id.org/rec/device/2_byte_signed_integer_swapped">2 byte signed integer swapped</a>
+   </li>
+   <li>
+      <a href="#2_byte_unsigned_integer"
+         title="https://w3id.org/rec/device/2_byte_unsigned_integer">2 byte unsigned integer</a>
+   </li>
+   <li>
+      <a href="#2_byte_unsigned_integer_swapped"
+         title="https://w3id.org/rec/device/2_byte_unsigned_integer_swapped">2 byte unsigned integer swapped</a>
+   </li>
+   <li>
+      <a href="#3" title="https://w3id.org/rec/device/3">3</a>
+   </li>
+   <li>
+      <a href="#4" title="https://w3id.org/rec/device/4">4</a>
+   </li>
+   <li>
+      <a href="#4_byte_BCD" title="https://w3id.org/rec/device/4_byte_BCD">4 byte BCD</a>
+   </li>
+   <li>
+      <a href="#4_byte_BCD_swapped" title="https://w3id.org/rec/device/4_byte_BCD_swapped">4 byte BCD swapped</a>
+   </li>
+   <li>
+      <a href="#4_byte_float" title="https://w3id.org/rec/device/4_byte_float">4 byte float</a>
+   </li>
+   <li>
+      <a href="#4_byte_float_BCD" title="https://w3id.org/rec/device/4_byte_float_BCD">4 byte float BCD</a>
+   </li>
+   <li>
+      <a href="#4_byte_float_swapped"
+         title="https://w3id.org/rec/device/4_byte_float_swapped">4 byte float swapped</a>
+   </li>
+   <li>
+      <a href="#4_byte_signed_integer"
+         title="https://w3id.org/rec/device/4_byte_signed_integer">4 byte signed integer</a>
+   </li>
+   <li>
+      <a href="#4_byte_signed_integer_swapped"
+         title="https://w3id.org/rec/device/4_byte_signed_integer_swapped">4 byte signed integer swapped</a>
+   </li>
+   <li>
+      <a href="#4_byte_signed_integer_swapped_bytes_and_words"
+         title="https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words">4 byte signed integer swapped bytes and words</a>
+   </li>
+   <li>
+      <a href="#4_byte_unsigned_integer"
+         title="https://w3id.org/rec/device/4_byte_unsigned_integer">4 byte unsigned integer</a>
+   </li>
+   <li>
+      <a href="#4_byte_unsigned_integer_swapped"
+         title="https://w3id.org/rec/device/4_byte_unsigned_integer_swapped">4 byte unsigned integer swapped</a>
+   </li>
+   <li>
+      <a href="#4_byte_unsigned_integer_swapped_bytes_and_words"
+         title="https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words">4 byte unsigned integer swapped bytes and words</a>
+   </li>
+   <li>
+      <a href="#5" title="https://w3id.org/rec/device/5">5</a>
+   </li>
+   <li>
+      <a href="#6" title="https://w3id.org/rec/device/6">6</a>
+   </li>
+   <li>
+      <a href="#8_byte_float" title="https://w3id.org/rec/device/8_byte_float">8 byte float</a>
+   </li>
+   <li>
+      <a href="#8_byte_float_swapped"
+         title="https://w3id.org/rec/device/8_byte_float_swapped">8 byte float swapped</a>
+   </li>
+   <li>
+      <a href="#8_byte_signed_integer"
+         title="https://w3id.org/rec/device/8_byte_signed_integer">8 byte signed integer</a>
+   </li>
+   <li>
+      <a href="#8_byte_signed_integer_swapped"
+         title="https://w3id.org/rec/device/8_byte_signed_integer_swapped">8 byte signed integer swapped</a>
+   </li>
+   <li>
+      <a href="#8_byte_unsigned_integer"
+         title="https://w3id.org/rec/device/8_byte_unsigned_integer">8 byte unsigned integer</a>
+   </li>
+   <li>
+      <a href="#8_byte_unsigned_integer_swapped"
+         title="https://w3id.org/rec/device/8_byte_unsigned_integer_swapped">8 byte unsigned integer swapped</a>
+   </li>
+   <li>
+      <a href="#AirDiffuser" title="https://w3id.org/rec/device/AirDiffuser">AirDiffuser</a>
+   </li>
+   <li>
+      <a href="#AirHandlingUnit" title="https://w3id.org/rec/device/AirHandlingUnit">AirHandlingUnit</a>
+   </li>
+   <li>
+      <a href="#BACnet" title="https://w3id.org/rec/device/BACnet">BACnet</a>
+   </li>
+   <li>
+      <a href="#Battery" title="https://w3id.org/rec/device/Battery">
+         <span>battery</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Boiler" title="https://w3id.org/rec/device/Boiler">Boiler</a>
+   </li>
+   <li>
+      <a href="#Chiller" title="https://w3id.org/rec/device/Chiller">Chiller</a>
+   </li>
+   <li>
+      <a href="#CirculationAir" title="https://w3id.org/rec/device/CirculationAir">CirculationAir</a>
+   </li>
+   <li>
+      <a href="#Coil" title="https://w3id.org/rec/device/Coil">Coil</a>
+   </li>
+   <li>
+      <a href="#ColdWaterFlow" title="https://w3id.org/rec/device/ColdWaterFlow">ColdWaterFlow</a>
+   </li>
+   <li>
+      <a href="#ColdWaterReturn" title="https://w3id.org/rec/device/ColdWaterReturn">ColdWaterReturn</a>
+   </li>
+   <li>
+      <a href="#CommunicationBusPowerSource"
+         title="https://w3id.org/rec/device/CommunicationBusPowerSource">
+         <span>communication bus power source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Compressor" title="https://w3id.org/rec/device/Compressor">Compressor</a>
+   </li>
+   <li>
+      <a href="#Condenser" title="https://w3id.org/rec/device/Condenser">Condenser</a>
+   </li>
+   <li>
+      <a href="#Control" title="https://w3id.org/rec/device/Control">Control</a>
+   </li>
+   <li>
+      <a href="#Damper" title="https://w3id.org/rec/device/Damper">Damper</a>
+   </li>
+   <li>
+      <a href="#DataAcquisition" title="https://w3id.org/rec/device/DataAcquisition">DataAcquisition</a>
+   </li>
+   <li>
+      <a href="#DataCommunicationGateway"
+         title="https://w3id.org/rec/device/DataCommunicationGateway">DataCommunicationGateway</a>
+   </li>
+   <li>
+      <a href="#DistrictCoolingFlow" title="https://w3id.org/rec/device/DistrictCoolingFlow">DistrictCoolingFlow</a>
+   </li>
+   <li>
+      <a href="#DistrictCoolingReturn"
+         title="https://w3id.org/rec/device/DistrictCoolingReturn">DistrictCoolingReturn</a>
+   </li>
+   <li>
+      <a href="#DistrictHeatingFlow" title="https://w3id.org/rec/device/DistrictHeatingFlow">DistrictHeatingFlow</a>
+   </li>
+   <li>
+      <a href="#DistrictHeatingReturn"
+         title="https://w3id.org/rec/device/DistrictHeatingReturn">DistrictHeatingReturn</a>
+   </li>
+   <li>
+      <a href="#ElectricalGridIntake"
+         title="https://w3id.org/rec/device/ElectricalGridIntake">ElectricalGridIntake</a>
+   </li>
+   <li>
+      <a href="#ElectricalGridInternal"
+         title="https://w3id.org/rec/device/ElectricalGridInternal">ElectricalGridInternal</a>
+   </li>
+   <li>
+      <a href="#ElectricalGridLocalProduction"
+         title="https://w3id.org/rec/device/ElectricalGridLocalProduction">ElectricalGridLocalProduction</a>
+   </li>
+   <li>
+      <a href="#ElectricalGridTenant"
+         title="https://w3id.org/rec/device/ElectricalGridTenant">ElectricalGridTenant</a>
+   </li>
+   <li>
+      <a href="#Elevator" title="https://w3id.org/rec/device/Elevator">Elevator</a>
+   </li>
+   <li>
+      <a href="#Escalator" title="https://w3id.org/rec/device/Escalator">Escalator</a>
+   </li>
+   <li>
+      <a href="#ExhaustAir" title="https://w3id.org/rec/device/ExhaustAir">ExhaustAir</a>
+   </li>
+   <li>
+      <a href="#ExtractAir" title="https://w3id.org/rec/device/ExtractAir">ExtractAir</a>
+   </li>
+   <li>
+      <a href="#Fan" title="https://w3id.org/rec/device/Fan">Fan</a>
+   </li>
+   <li>
+      <a href="#Filter" title="https://w3id.org/rec/device/Filter">Filter</a>
+   </li>
+   <li>
+      <a href="#Fixed_length_string" title="https://w3id.org/rec/device/Fixed_length_string">Fixed length string</a>
+   </li>
+   <li>
+      <a href="#Heater" title="https://w3id.org/rec/device/Heater">Heater</a>
+   </li>
+   <li>
+      <a href="#HotWaterFlow" title="https://w3id.org/rec/device/HotWaterFlow">HotWaterFlow</a>
+   </li>
+   <li>
+      <a href="#HotWaterReturn" title="https://w3id.org/rec/device/HotWaterReturn">HotWaterReturn</a>
+   </li>
+   <li>
+      <a href="#Hwrc" title="https://w3id.org/rec/device/Hwrc">Hwrc</a>
+   </li>
+   <li>
+      <a href="#IndoorAir" title="https://w3id.org/rec/device/IndoorAir">IndoorAir</a>
+   </li>
+   <li>
+      <a href="#IP" title="https://w3id.org/rec/device/IP">IP</a>
+   </li>
+   <li>
+      <a href="#KNX" title="https://w3id.org/rec/device/KNX">KNX</a>
+   </li>
+   <li>
+      <a href="#LoRa" title="https://w3id.org/rec/device/LoRa">LoRa</a>
+   </li>
+   <li>
+      <a href="#MBus" title="https://w3id.org/rec/device/MBus">MBus</a>
+   </li>
+   <li>
+      <a href="#ModbusRTU" title="https://w3id.org/rec/device/ModbusRTU">ModbusRTU</a>
+   </li>
+   <li>
+      <a href="#ModbusTCP" title="https://w3id.org/rec/device/ModbusTCP">ModbusTCP</a>
+   </li>
+   <li>
+      <a href="#OPC-DA" title="https://w3id.org/rec/device/OPC-DA">OPC-DA</a>
+   </li>
+   <li>
+      <a href="#OPC-UA" title="https://w3id.org/rec/device/OPC-UA">OPC-UA</a>
+   </li>
+   <li>
+      <a href="#OutdoorAir" title="https://w3id.org/rec/device/OutdoorAir">OutdoorAir</a>
+   </li>
+   <li>
+      <a href="#PrimaryCoolingFlow" title="https://w3id.org/rec/device/PrimaryCoolingFlow">PrimaryCoolingFlow</a>
+   </li>
+   <li>
+      <a href="#PrimaryCoolingReturn"
+         title="https://w3id.org/rec/device/PrimaryCoolingReturn">PrimaryCoolingReturn</a>
+   </li>
+   <li>
+      <a href="#PrimaryHeatingFlow" title="https://w3id.org/rec/device/PrimaryHeatingFlow">PrimaryHeatingFlow</a>
+   </li>
+   <li>
+      <a href="#PrimaryHeatingReturn"
+         title="https://w3id.org/rec/device/PrimaryHeatingReturn">PrimaryHeatingReturn</a>
+   </li>
+   <li>
+      <a href="#Pump" title="https://w3id.org/rec/device/Pump">Pump</a>
+   </li>
+   <li>
+      <a href="#RecyclingEnergyFlow" title="https://w3id.org/rec/device/RecyclingEnergyFlow">RecyclingEnergyFlow</a>
+   </li>
+   <li>
+      <a href="#RecyclingEnergyReturn"
+         title="https://w3id.org/rec/device/RecyclingEnergyReturn">RecyclingEnergyReturn</a>
+   </li>
+   <li>
+      <a href="#SecondaryCoolingFlow"
+         title="https://w3id.org/rec/device/SecondaryCoolingFlow">SecondaryCoolingFlow</a>
+   </li>
+   <li>
+      <a href="#SecondaryCoolingReturn"
+         title="https://w3id.org/rec/device/SecondaryCoolingReturn">SecondaryCoolingReturn</a>
+   </li>
+   <li>
+      <a href="#SecondaryHeatingFlow"
+         title="https://w3id.org/rec/device/SecondaryHeatingFlow">SecondaryHeatingFlow</a>
+   </li>
+   <li>
+      <a href="#SecondaryHeatingReturn"
+         title="https://w3id.org/rec/device/SecondaryHeatingReturn">SecondaryHeatingReturn</a>
+   </li>
+   <li>
+      <a href="#SteamFlow" title="https://w3id.org/rec/device/SteamFlow">SteamFlow</a>
+   </li>
+   <li>
+      <a href="#SteamReturn" title="https://w3id.org/rec/device/SteamReturn">SteamReturn</a>
+   </li>
+   <li>
+      <a href="#SupplyAir" title="https://w3id.org/rec/device/SupplyAir">SupplyAir</a>
+   </li>
+   <li>
+      <a href="#Thermostat" title="https://w3id.org/rec/device/Thermostat">Thermostat</a>
+   </li>
+   <li>
+      <a href="#Valve" title="https://w3id.org/rec/device/Valve">Valve</a>
+   </li>
+   <li>
+      <a href="#Variable_length_string"
+         title="https://w3id.org/rec/device/Variable_length_string">Variable length string</a>
+   </li>
+   <li>
+      <a href="#WasteWater" title="https://w3id.org/rec/device/WasteWater">WasteWater</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html#"></iframe> </html>
