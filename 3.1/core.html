@@ -19,8 +19,8 @@
         </dd>
         <dt>Creator(s)</dt>
         <dd>
-            Karl Hammar<br/>
             Erik Wallin<br/>
+            Karl Hammar<br/>
         </dd>
         <dt>Modified</dt>
         <dd>2019-11-07</dd>
@@ -53,7 +53,8 @@
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <div style="width:500px; height:500px; background-color: black;">&nbsp;</div>
+        <iframe src="webvowl/index.html#core" width="100%" height="800">
+        </iframe>
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
@@ -108,8 +109,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#defaultGeometry">geo:defaultGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#defaultGeometry">geo:defaultGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -158,8 +159,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/servesBuilding">servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/isPartOfBuilding">isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/servesBuilding">servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -193,20 +194,20 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/containsMountedDevice">containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/isPartOfBuilding">isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasSubBuildingComponent">hasSubBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/isPartOfBuilding">isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/containsMountedDevice">containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasSubBuildingComponent">hasSubBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/servesBuildingComponent">servesBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSubBuildingComponent">hasSubBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasBuildingComponent">hasBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/servesBuildingComponent">servesBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -227,33 +228,33 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/core/hasSuperDevice">hasSuperDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/rec/core/servesBuilding">servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/associatedWithEvent">associatedWithEvent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/servesDevice">servesDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/serves">serves</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasSuperDevice">hasSuperDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSubDevice">hasSubDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/servesBuilding">servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/servesBuildingComponent">servesBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/deviceQuantityKind">deviceQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasSuperDevice">hasSuperDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/serves">serves</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/servesBuildingComponent">servesBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="https://w3id.org/rec/core/hasSuperDevice">hasSuperDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/servesDevice">servesDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/containsMountedDevice">containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSubDevice">hasSubDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/associatedWithDevice">associatedWithDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/containsMountedDevice">containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/servesDevice">servesDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -276,18 +277,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
                 <td>
                     <a href="https://w3id.org/rec/core/hasDeletedTime">hasDeletedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasStopTime">hasStopTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasTime">hasTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/associatedWithDevice">associatedWithDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasValue">hasValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/eventQuantityKind">eventQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasObservationTime">hasObservationTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasStartTime">hasStartTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasPointInTime">hasPointInTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasCreatedTime">hasCreatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasDuration">hasDuration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasUpdatedTime">hasUpdatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasCreatedTime">hasCreatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasReadTime">hasReadTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasObservationTime">hasObservationTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasTime">hasTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasValue">hasValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasDuration">hasDuration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/eventMeasurementUnit">eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/eventQuantityKind">eventQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasPointInTime">hasPointInTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasStartTime">hasStartTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/associatedWithDevice">associatedWithDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -395,10 +396,10 @@ MillimeterPerHour for Precipation
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="https://w3id.org/rec/core/hasMeasurementUnit">hasMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/eventMeasurementUnit">eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/qkMeasurementUnit">qkMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasMeasurementUnit">hasMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -481,8 +482,8 @@ MillimeterPerHour for Precipation
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/Building">Building</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/core/Land">Land</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/core/Building">Building</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>

@@ -52,7 +52,8 @@
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <div style="width:500px; height:500px; background-color: black;">&nbsp;</div>
+        <iframe src="webvowl/index.html#agents" width="100%" height="800">
+        </iframe>
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
@@ -139,12 +140,12 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/agents/gender">gender</a><sup class="sup-fp" title="functional property">fp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/lastName">lastName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/givenName">givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/firstName">firstName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/image">image</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/agents/familyName">familyName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/firstName">firstName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/givenName">givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/lastName">lastName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/image">image</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/agents/gender">gender</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -378,7 +379,7 @@
             <tr>
                 <th>Description</th>
                 <td>
-                    A person's last name (if they have one; this varies across cultural contexts).
+                    http://xmlns.com/foaf/0.1/lastName
                 </td>
             </tr>
             <tr>
@@ -405,7 +406,7 @@
             <tr>
                 <th>Description</th>
                 <td>
-                    http://xmlns.com/foaf/0.1/name
+                    A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents).
                 </td>
             </tr>
             <tr>

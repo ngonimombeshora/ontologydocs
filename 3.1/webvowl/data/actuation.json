@@ -72,19 +72,19 @@
           "type": "label"
         }
       ],
-      "publisher": [
-        {
-          "identifier": "publisher",
-          "language": "undefined",
-          "value": "RealEstateCore Consortium",
-          "type": "label"
-        }
-      ],
       "modified": [
         {
           "identifier": "modified",
           "language": "undefined",
           "value": "2019-11-07",
+          "type": "label"
+        }
+      ],
+      "publisher": [
+        {
+          "identifier": "publisher",
+          "language": "undefined",
+          "value": "RealEstateCore Consortium",
           "type": "label"
         }
       ],
@@ -117,10 +117,10 @@
   "namespace": [],
   "settings": {
     "global": {
-      "zoom": "0.63",
+      "zoom": "0.56",
       "translation": [
-        399.5,
-        310.73
+        320.19,
+        233.36
       ],
       "paused": false
     },
@@ -306,8 +306,8 @@
         "datatype"
       ],
       "pos": [
-        1202.84,
-        1342.01
+        828.6,
+        -282.9
       ]
     },
     {
@@ -322,8 +322,8 @@
         "en": "Message returned to a client or component, reporting that actuation commands have been passed to one or more actuators or systems, and reporting the response status of those actuators or systems.\n\nNote that positive responses from actuators/systems do not imply that the real-world actuations have been fully carried out -- certain devices have a very long response time, dependent on physical processes, bus saturations, etc. To record the real-world state of such devices, use a sensor device instead."
       },
       "pos": [
-        385.52,
-        307.82
+        729.16,
+        1185.91
       ]
     },
     {
@@ -337,8 +337,8 @@
         "external"
       ],
       "pos": [
-        1187.47,
-        98.82
+        1539.82,
+        719.76
       ]
     },
     {
@@ -349,8 +349,8 @@
         "datatype"
       ],
       "pos": [
-        1885.67,
-        1211.01
+        1580.12,
+        -100.46
       ]
     },
     {
@@ -364,8 +364,8 @@
         "datatype"
       ],
       "pos": [
-        139.55,
-        428.2
+        468,
+        1172.54
       ]
     },
     {
@@ -380,8 +380,8 @@
         "en": "Return message from a specific actuator or system to a a REC platform, indicating whether an actuation has been accepted by that actuator/system. Note that a positive response does not imply that the real-world actuation has been fully carried out -- certain devices have a very long response time, dependent on physical processes, bus saturations, etc. To record the real-world state of such devices, use a sensor device instead."
       },
       "pos": [
-        777.82,
-        667.02
+        909.04,
+        923.33
       ]
     },
     {
@@ -392,8 +392,8 @@
         "datatype"
       ],
       "pos": [
-        1960.35,
-        982.2
+        1450.66,
+        -247.95
       ]
     },
     {
@@ -425,8 +425,8 @@
         "datatype"
       ],
       "pos": [
-        955.44,
-        1196.62
+        1026.6,
+        -346.54
       ]
     },
     {
@@ -441,8 +441,8 @@
         "en": "Message from a REC platform to a specific actuator or system, requesting that an actuation be carried out."
       },
       "pos": [
-        816.4,
-        302.8
+        1370.9,
+        1146.9
       ]
     },
     {
@@ -456,8 +456,8 @@
         "datatype"
       ],
       "pos": [
-        1447.53,
-        630.93
+        328.01,
+        594.71
       ]
     },
     {
@@ -471,8 +471,8 @@
         "datatype"
       ],
       "pos": [
-        1515.18,
-        750.99
+        359.68,
+        413.34
       ]
     },
     {
@@ -486,8 +486,8 @@
         "datatype"
       ],
       "pos": [
-        1048.54,
-        1307.5
+        752.29,
+        -130.19
       ]
     },
     {
@@ -501,8 +501,8 @@
         "datatype"
       ],
       "pos": [
-        1886.72,
-        806.13
+        1592.06,
+        69.42
       ]
     },
     {
@@ -517,8 +517,8 @@
         "en": "The response code, as reported by an actuator or subsystem, to an actuation command. Typically packaged within an ActuationResponse message."
       },
       "pos": [
-        1254.94,
-        846.13
+        596.96,
+        558.23
       ]
     },
     {
@@ -543,8 +543,8 @@
         ]
       },
       "pos": [
-        490.47,
-        558.61
+        1051.44,
+        1304.59
       ]
     },
     {
@@ -559,8 +559,8 @@
         "en": "Defines allowable or required structures for key-value lists. Used in interface definitions."
       },
       "pos": [
-        1200.61,
-        1038.32
+        1019.46,
+        -70.03
       ]
     },
     {
@@ -574,8 +574,8 @@
         "datatype"
       ],
       "pos": [
-        927.29,
-        9.08
+        1545.13,
+        1359.82
       ]
     },
     {
@@ -604,8 +604,8 @@
         "en": "An incoming request from a client or other component, for an actuation to be carried out on one or many actuators or systems."
       },
       "pos": [
-        769.22,
-        90.2
+        1182.07,
+        883.97
       ]
     },
     {
@@ -619,8 +619,8 @@
         "external"
       ],
       "pos": [
-        927.15,
-        758.88
+        962.15,
+        388.25
       ]
     },
     {
@@ -634,8 +634,8 @@
         "external"
       ],
       "pos": [
-        257.46,
-        876.35
+        952.75,
+        1663.08
       ]
     },
     {
@@ -649,8 +649,8 @@
         "datatype"
       ],
       "pos": [
-        761.35,
-        -203.47
+        990.66,
+        726.12
       ]
     },
     {
@@ -664,8 +664,8 @@
         "external"
       ],
       "pos": [
-        1452.15,
-        1254.41
+        879.56,
+        220.31
       ]
     },
     {
@@ -680,8 +680,8 @@
         "en": "An interface describing the expected payload structure for one or more actuators."
       },
       "pos": [
-        1166.97,
-        449.15
+        1318.59,
+        414.32
       ]
     },
     {
@@ -696,8 +696,8 @@
         "en": "Defines constraints on values in key-value lists, e.g., for defining interfaces."
       },
       "pos": [
-        1700.01,
-        1018.79
+        1330.74,
+        -0.18
       ]
     },
     {
@@ -711,8 +711,8 @@
         "external"
       ],
       "pos": [
-        478.86,
-        -9.3
+        1622.21,
+        934.16
       ]
     },
     {
@@ -726,8 +726,8 @@
         "external"
       ],
       "pos": [
-        12.8,
-        236.31
+        372.91,
+        1342.06
       ]
     }
   ],
@@ -977,8 +977,8 @@
       "domain": "7",
       "range": "8",
       "pos": [
-        1363.44,
-        724.9
+        449.96,
+        578.17
       ]
     },
     {
@@ -998,8 +998,8 @@
       "range": "11",
       "inverse": "68",
       "pos": [
-        577.37,
-        199.01
+        955.62,
+        1034.94
       ]
     },
     {
@@ -1012,8 +1012,8 @@
       "domain": "13",
       "range": "14",
       "pos": [
-        1576.08,
-        1136.6
+        1105.15,
+        110.06
       ]
     },
     {
@@ -1026,8 +1026,8 @@
       "domain": "16",
       "range": "14",
       "pos": [
-        1326.38,
-        1146.36
+        949.51,
+        75.14
       ]
     },
     {
@@ -1040,8 +1040,8 @@
       "domain": "18",
       "range": "19",
       "pos": [
-        1047.06,
-        604.02
+        1140.37,
+        401.29
       ]
     },
     {
@@ -1054,8 +1054,8 @@
       "domain": "10",
       "range": "21",
       "pos": [
-        437.99,
-        433.21
+        890.3,
+        1245.25
       ]
     },
     {
@@ -1068,8 +1068,8 @@
       "domain": "7",
       "range": "14",
       "pos": [
-        1353.55,
-        1050.27
+        738.26,
+        389.27
       ]
     },
     {
@@ -1106,8 +1106,8 @@
       "range": "27",
       "inverse": "28",
       "pos": [
-        792.81,
-        196.5
+        1276.48,
+        1015.43
       ]
     },
     {
@@ -1120,8 +1120,8 @@
       "domain": "21",
       "range": "30",
       "pos": [
-        373.97,
-        717.48
+        1002.09,
+        1483.84
       ]
     },
     {
@@ -1134,8 +1134,8 @@
       "domain": "11",
       "range": "21",
       "pos": [
-        629.84,
-        324.4
+        1116.75,
+        1094.28
       ]
     },
     {
@@ -1148,8 +1148,8 @@
       "domain": "27",
       "range": "21",
       "pos": [
-        653.43,
-        430.71
+        1211.17,
+        1225.74
       ]
     },
     {
@@ -1162,8 +1162,8 @@
       "domain": "35",
       "range": "21",
       "pos": [
-        634.15,
-        612.81
+        980.24,
+        1113.96
       ]
     },
     {
@@ -1181,8 +1181,8 @@
       "domain": "16",
       "range": "37",
       "pos": [
-        1064.77,
-        1126.03
+        1023.55,
+        -228.28
       ]
     },
     {
@@ -1202,8 +1202,8 @@
       "range": "35",
       "inverse": "39",
       "pos": [
-        797.11,
-        484.91
+        1139.97,
+        1035.11
       ]
     },
     {
@@ -1221,8 +1221,8 @@
       "domain": "35",
       "range": "7",
       "pos": [
-        1016.38,
-        756.57
+        753,
+        740.78
       ]
     },
     {
@@ -1242,8 +1242,8 @@
       "domain": "10",
       "range": "42",
       "pos": [
-        199.16,
-        272.06
+        551.04,
+        1263.99
       ]
     },
     {
@@ -1264,8 +1264,8 @@
       ],
       "inverse": "53",
       "pos": [
-        1290.48,
-        269.3
+        1508.38,
+        515.14
       ]
     },
     {
@@ -1282,8 +1282,8 @@
       "domain": "13",
       "range": "49",
       "pos": [
-        1805.47,
-        898.67
+        1474.81,
+        38.19
       ]
     },
     {
@@ -1300,8 +1300,8 @@
       "domain": "13",
       "range": "47",
       "pos": [
-        1841.69,
-        998.87
+        1399.17,
+        -141.57
       ]
     },
     {
@@ -1340,8 +1340,8 @@
       "domain": "11",
       "range": "25",
       "pos": [
-        624.04,
-        40.45
+        1402.14,
+        909.06
       ]
     },
     {
@@ -1359,8 +1359,8 @@
       "domain": "11",
       "range": "2",
       "pos": [
-        978.34,
-        94.51
+        1360.95,
+        801.87
       ]
     },
     {
@@ -1377,8 +1377,8 @@
       "domain": "7",
       "range": "51",
       "pos": [
-        1400.29,
-        792.99
+        465.17,
+        477.76
       ]
     },
     {
@@ -1399,8 +1399,8 @@
       "domain": "27",
       "range": "59",
       "pos": [
-        878.79,
-        137.55
+        1469.76,
+        1267.71
       ]
     },
     {
@@ -1418,8 +1418,8 @@
       "domain": "27",
       "range": "2",
       "pos": [
-        1001.93,
-        200.81
+        1455.36,
+        933.33
       ]
     },
     {
@@ -1440,8 +1440,8 @@
       "domain": "27",
       "range": "25",
       "pos": [
-        647.63,
-        146.75
+        1496.56,
+        1040.53
       ]
     },
     {
@@ -1460,8 +1460,8 @@
       "domain": "16",
       "range": "13",
       "pos": [
-        1450.31,
-        1028.55
+        1175.1,
+        -35.1
       ]
     },
     {
@@ -1497,8 +1497,8 @@
       "domain": "11",
       "range": "18",
       "pos": [
-        968.09,
-        269.67
+        1250.33,
+        649.14
       ]
     },
     {
@@ -1519,8 +1519,8 @@
       "domain": "11",
       "range": "65",
       "pos": [
-        764.75,
-        -76.63
+        1073.14,
+        794.14
       ]
     },
     {
@@ -1542,8 +1542,8 @@
       ],
       "inverse": "54",
       "pos": [
-        1239.91,
-        268.98
+        1461.74,
+        547.13
       ]
     },
     {
@@ -1564,8 +1564,8 @@
       "domain": "10",
       "range": "35",
       "pos": [
-        581.67,
-        487.42
+        819.1,
+        1054.62
       ]
     },
     {
@@ -1602,8 +1602,8 @@
       "domain": "16",
       "range": "52",
       "pos": [
-        1115.1,
-        1189.68
+        873.74,
+        -102.84
       ]
     },
     {
@@ -1636,8 +1636,8 @@
       "domain": "13",
       "range": "43",
       "pos": [
-        1805.38,
-        1127.88
+        1466.19,
+        -54.65
       ]
     },
     {
@@ -1654,8 +1654,8 @@
       "domain": "10",
       "range": "44",
       "pos": [
-        250.29,
-        374
+        589.36,
+        1178.76
       ]
     },
     {
@@ -1673,8 +1673,8 @@
       "domain": "18",
       "range": "16",
       "pos": [
-        1183.79,
-        743.73
+        1169.03,
+        172.14
       ]
     },
     {
@@ -1692,8 +1692,8 @@
       "domain": "16",
       "range": "32",
       "pos": [
-        1201.87,
-        1210.17
+        911.82,
+        -190.08
       ]
     },
     {

@@ -1,0 +1,1612 @@
+{
+  "_comment": "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org [Additional Information added by WebVOWL Exporter Version: 1.1.5]",
+  "header": {
+    "languages": [
+      "undefined",
+      "en"
+    ],
+    "baseIris": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+      "http://www.w3.org/2000/01/rdf-schema",
+      "https://w3id.org/rec/lease",
+      "http://www.w3.org/2001/XMLSchema",
+      "https://w3id.org/rec/core"
+    ],
+    "prefixList": {
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "vann": "http://purl.org/vocab/vann/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "cpannotationschema": "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "": "https://w3id.org/rec/lease/",
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "cc": "http://creativecommons.org/ns#",
+      "xml": "http://www.w3.org/XML/1998/namespace",
+      "core": "https://w3id.org/rec/core/",
+      "o2o": "https://karlhammar.com/owl2oas/o2o.owl#"
+    },
+    "title": {
+      "undefined": "RealEstateCore Lease Module"
+    },
+    "iri": "https://w3id.org/rec/lease/",
+    "version": "3.1",
+    "author": [
+      "Karl Hammar",
+      "Erik Wallin"
+    ],
+    "description": {
+      "en": "This REC module covers leases, leased, lease contracts, premise types, etc."
+    },
+    "comments": {
+      "en": "The LeaseContract class is as of yet underdefined -- we need to liaise with legal expertise to define the requirements here. Also, lease remuneration needs to be modelled. The base case, monthly rent, is easy -- but more complex and forward-looking payment models are likely to be relevant in some use cases also."
+    },
+    "other": {
+      "coversRequirements": [
+        {
+          "identifier": "coversRequirements",
+          "language": "en",
+          "value": "Who owns Building 7?",
+          "type": "label"
+        },
+        {
+          "identifier": "coversRequirements",
+          "language": "en",
+          "value": "Who is leasing Building 7?",
+          "type": "label"
+        },
+        {
+          "identifier": "coversRequirements",
+          "language": "en",
+          "value": "When does the lease on Building 7 run out?",
+          "type": "label"
+        },
+        {
+          "identifier": "coversRequirements",
+          "language": "en",
+          "value": "What purpose is Building 7 leased for?",
+          "type": "label"
+        },
+        {
+          "identifier": "coversRequirements",
+          "language": "en",
+          "value": "What contract governs the lease of building 7?",
+          "type": "label"
+        }
+      ],
+      "license": [
+        {
+          "identifier": "license",
+          "language": "undefined",
+          "value": "https://opensource.org/licenses/MIT",
+          "type": "iri"
+        }
+      ],
+      "creator": [
+        {
+          "identifier": "creator",
+          "language": "undefined",
+          "value": "Karl Hammar",
+          "type": "label"
+        },
+        {
+          "identifier": "creator",
+          "language": "undefined",
+          "value": "Erik Wallin",
+          "type": "label"
+        }
+      ],
+      "preferredNamespacePrefix": [
+        {
+          "identifier": "preferredNamespacePrefix",
+          "language": "undefined",
+          "value": "lease",
+          "type": "label"
+        }
+      ],
+      "publisher": [
+        {
+          "identifier": "publisher",
+          "language": "undefined",
+          "value": "RealEstateCore Consortium",
+          "type": "label"
+        }
+      ],
+      "modified": [
+        {
+          "identifier": "modified",
+          "language": "undefined",
+          "value": "2019-11-07",
+          "type": "label"
+        }
+      ],
+      "preferredNamespaceUri": [
+        {
+          "identifier": "preferredNamespaceUri",
+          "language": "undefined",
+          "value": "https://w3id.org/rec/lease/3.1/",
+          "type": "label"
+        }
+      ],
+      "versionInfo": [
+        {
+          "identifier": "versionInfo",
+          "language": "undefined",
+          "value": "3.1",
+          "type": "label"
+        }
+      ],
+      "title": [
+        {
+          "identifier": "title",
+          "language": "undefined",
+          "value": "RealEstateCore Lease Module",
+          "type": "label"
+        }
+      ],
+      "seeAlso": [
+        {
+          "identifier": "seeAlso",
+          "language": "undefined",
+          "value": "https://w3id.org/rec/",
+          "type": "iri"
+        }
+      ]
+    }
+  },
+  "namespace": [],
+  "settings": {
+    "global": {
+      "zoom": "0.71",
+      "translation": [
+        412.28,
+        21.37
+      ],
+      "paused": false
+    },
+    "gravity": {
+      "classDistance": 200,
+      "datatypeDistance": 120
+    },
+    "filter": {
+      "checkBox": [
+        {
+          "id": "datatypeFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "objectPropertyFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "subclassFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "disjointFilterCheckbox",
+          "checked": true
+        },
+        {
+          "id": "setoperatorFilterCheckbox",
+          "checked": true
+        }
+      ],
+      "degreeSliderValue": "0"
+    },
+    "modes": {
+      "checkBox": [
+        {
+          "id": "pickandpinModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "nodescalingModuleCheckbox",
+          "checked": true
+        },
+        {
+          "id": "compactnotationModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "colorexternalsModuleCheckbox",
+          "checked": true
+        }
+      ],
+      "colorSwitchState": false
+    }
+  },
+  "class": [
+    {
+      "id": "12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "15",
+      "type": "owl:Class"
+    },
+    {
+      "id": "20",
+      "type": "owl:Class"
+    },
+    {
+      "id": "28",
+      "type": "owl:Class"
+    },
+    {
+      "id": "36",
+      "type": "owl:Class"
+    },
+    {
+      "id": "37",
+      "type": "owl:Class"
+    },
+    {
+      "id": "5",
+      "type": "owl:Class"
+    },
+    {
+      "id": "24",
+      "type": "owl:Class"
+    },
+    {
+      "id": "38",
+      "type": "owl:Class"
+    },
+    {
+      "id": "40",
+      "type": "owl:Class"
+    },
+    {
+      "id": "2",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "43",
+      "type": "owl:Class"
+    },
+    {
+      "id": "1",
+      "type": "owl:Thing"
+    },
+    {
+      "id": "44",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "14",
+      "type": "owl:Class"
+    },
+    {
+      "id": "45",
+      "type": "owl:Thing"
+    },
+    {
+      "id": "22",
+      "type": "owl:Class"
+    },
+    {
+      "id": "17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "35",
+      "type": "owl:Class"
+    },
+    {
+      "id": "4",
+      "type": "owl:Class"
+    },
+    {
+      "id": "19",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "11",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "26",
+      "type": "owl:Class"
+    },
+    {
+      "id": "30",
+      "type": "owl:Class"
+    },
+    {
+      "id": "48",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "12",
+      "iri": "https://w3id.org/rec/lease/HotelPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "HotelPremises",
+        "en": "HotelPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1716.38,
+        587.71
+      ]
+    },
+    {
+      "id": "15",
+      "iri": "https://w3id.org/rec/lease/StoragePremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "StoragePremises",
+        "en": "StoragePremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1668.76,
+        534.6
+      ]
+    },
+    {
+      "id": "20",
+      "iri": "https://w3id.org/rec/lease/ResidentialPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "ResidentialPremises",
+        "en": "ResidentialPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        952.28,
+        439.73
+      ]
+    },
+    {
+      "id": "28",
+      "iri": "https://w3id.org/rec/lease/CoffeePremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "CoffeePremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        969.83,
+        332.91
+      ]
+    },
+    {
+      "id": "36",
+      "iri": "https://w3id.org/rec/lease/LeaseContract",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "LeaseContract",
+        "en": "Lease contract"
+      },
+      "comment": {
+        "en": "Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement."
+      },
+      "pos": [
+        132.82,
+        842.43
+      ]
+    },
+    {
+      "id": "37",
+      "iri": "https://w3id.org/rec/core/Event",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "Event"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        431.08,
+        1514.23
+      ]
+    },
+    {
+      "id": "5",
+      "iri": "https://w3id.org/rec/lease/Premises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "Premises",
+        "en": "Premises"
+      },
+      "comment": {
+        "en": "Premises are a set of buildings or rooms that are leased out to tenants, typically for a defined purpose."
+      },
+      "pos": [
+        1283.62,
+        721.17
+      ]
+    },
+    {
+      "id": "24",
+      "iri": "https://w3id.org/rec/lease/LaboratoryPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "LaboratoryPremises",
+        "en": "LaboratoryPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1075.64,
+        195.77
+      ]
+    },
+    {
+      "id": "38",
+      "iri": "https://w3id.org/rec/lease/OfficePremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "OfficePremises",
+        "en": "OfficePremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1702.44,
+        379.45
+      ]
+    },
+    {
+      "id": "40",
+      "iri": "https://w3id.org/rec/lease/PremisesType",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "PremisesType",
+        "en": "Premises type"
+      },
+      "pos": [
+        1388.02,
+        267.37
+      ]
+    },
+    {
+      "id": "2",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        141.28,
+        -223.82
+      ]
+    },
+    {
+      "id": "43",
+      "iri": "https://w3id.org/rec/core/Building",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "Building"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        1125.37,
+        1100.78
+      ]
+    },
+    {
+      "id": "1",
+      "iri": "http://www.w3.org/2002/07/owl#Thing",
+      "baseIri": "http://owl2vowl.de",
+      "label": {
+        "undefined": "Thing"
+      },
+      "pos": [
+        360.04,
+        -207.37
+      ]
+    },
+    {
+      "id": "44",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        196.5,
+        -24.01
+      ]
+    },
+    {
+      "id": "14",
+      "iri": "https://w3id.org/rec/lease/Leasable",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "Leasable",
+        "en": "Leasable"
+      },
+      "comment": {
+        "en": "Things that can be leased (e.g., buildings, rooms, equipment, etc.)."
+      },
+      "annotations": {
+        "readonly": [
+          {
+            "identifier": "readonly",
+            "language": "undefined",
+            "value": "true",
+            "type": "label"
+          }
+        ]
+      },
+      "pos": [
+        809.89,
+        971.59
+      ]
+    },
+    {
+      "id": "45",
+      "iri": "http://www.w3.org/2002/07/owl#Thing",
+      "baseIri": "http://owl2vowl.de",
+      "label": {
+        "undefined": "Thing"
+      },
+      "pos": [
+        1531.2,
+        1039.51
+      ]
+    },
+    {
+      "id": "22",
+      "iri": "https://w3id.org/rec/lease/RetailPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "RetailPremises",
+        "en": "RetailPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1027.72,
+        274.79
+      ]
+    },
+    {
+      "id": "17",
+      "iri": "https://w3id.org/rec/lease/EducationalPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "EducationalPremises",
+        "en": "EducationalPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        962.77,
+        521.75
+      ]
+    },
+    {
+      "id": "10",
+      "iri": "https://w3id.org/rec/lease/Lease",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "Lease"
+      },
+      "pos": [
+        373.03,
+        1134.74
+      ]
+    },
+    {
+      "id": "35",
+      "iri": "https://w3id.org/rec/lease/RestaurantPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "RestaurantPremises",
+        "en": "RestaurantPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1667.86,
+        659.63
+      ]
+    },
+    {
+      "id": "4",
+      "iri": "https://w3id.org/rec/core/Room",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "Room"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        1342.11,
+        1138.72
+      ]
+    },
+    {
+      "id": "19",
+      "iri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "dateTime"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        205.24,
+        1339.06
+      ]
+    },
+    {
+      "id": "11",
+      "iri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "dateTime"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        537.02,
+        1342.28
+      ]
+    },
+    {
+      "id": "26",
+      "iri": "https://w3id.org/rec/lease/LightIndustryPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "LightIndustryPremises",
+        "en": "LightIndustryPremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1014.43,
+        393.26
+      ]
+    },
+    {
+      "id": "30",
+      "iri": "https://w3id.org/rec/lease/GaragePremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "GaragePremises",
+        "en": "GaragePremises"
+      },
+      "attributes": [
+        "deprecated"
+      ],
+      "pos": [
+        1721.87,
+        470.83
+      ]
+    },
+    {
+      "id": "48",
+      "iri": "https://w3id.org/rec/core/Agent",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "Agent"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        11.98,
+        1083.13
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "13",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "16",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "18",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "21",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "23",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "25",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "27",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "29",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "31",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "32",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "33",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "34",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "39",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "41",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "42",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "46",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "47",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "49",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "50",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "51",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "52",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "53",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "54",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "55",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "56",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "57",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "58",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "59",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "61",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "62",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "63",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "60",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "64",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "65",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "66",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "0",
+      "iri": "https://w3id.org/rec/core/hasStopTime",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "hasStopTime"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "domain": "1",
+      "range": "2",
+      "pos": [
+        248.95,
+        -215.72
+      ]
+    },
+    {
+      "id": "3",
+      "iri": "https://w3id.org/rec/lease/roomIsPartOfPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "roomIsPartOfPremises",
+        "en": "room is part of premises"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "4",
+      "range": "5",
+      "superproperty": [
+        "6"
+      ],
+      "pos": [
+        1283.34,
+        944.4
+      ]
+    },
+    {
+      "id": "7",
+      "iri": "https://w3id.org/rec/core/hasPart",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "hasPart"
+      },
+      "attributes": [
+        "external",
+        "object"
+      ],
+      "domain": "1",
+      "range": "1",
+      "subproperty": [
+        "8"
+      ],
+      "pos": [
+        410.36,
+        -60.95
+      ]
+    },
+    {
+      "id": "9",
+      "iri": "https://w3id.org/rec/lease/leaseStart",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "leaseStart",
+        "en": "lease start"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "comment": {
+        "en": "Time at which a lease arrangement begins."
+      },
+      "domain": "10",
+      "range": "11",
+      "pos": [
+        466.57,
+        1253.13
+      ]
+    },
+    {
+      "id": "13",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "5",
+      "range": "14",
+      "pos": [
+        1046.75,
+        846.38
+      ]
+    },
+    {
+      "id": "16",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "17",
+      "range": "5",
+      "pos": [
+        1123.2,
+        621.46
+      ]
+    },
+    {
+      "id": "18",
+      "iri": "https://w3id.org/rec/lease/leaseEnd",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "leaseEnd",
+        "en": "lease end"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "comment": {
+        "en": "Time at which a lease arrangement ends."
+      },
+      "domain": "10",
+      "range": "19",
+      "pos": [
+        277.37,
+        1251.22
+      ]
+    },
+    {
+      "id": "21",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "22",
+      "range": "5",
+      "pos": [
+        1155.67,
+        497.98
+      ]
+    },
+    {
+      "id": "23",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "24",
+      "range": "5",
+      "pos": [
+        1179.63,
+        458.47
+      ]
+    },
+    {
+      "id": "25",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "26",
+      "range": "5",
+      "pos": [
+        1149.02,
+        557.21
+      ]
+    },
+    {
+      "id": "27",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "28",
+      "range": "5",
+      "pos": [
+        1126.73,
+        527.04
+      ]
+    },
+    {
+      "id": "29",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "30",
+      "range": "5",
+      "pos": [
+        1502.75,
+        596
+      ]
+    },
+    {
+      "id": "31",
+      "iri": "https://w3id.org/rec/core/isPartOf",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "isPartOf"
+      },
+      "attributes": [
+        "external",
+        "object"
+      ],
+      "domain": "1",
+      "range": "1",
+      "subproperty": [
+        "6"
+      ],
+      "pos": [
+        410.2,
+        -355.63
+      ]
+    },
+    {
+      "id": "32",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "15",
+      "range": "5",
+      "pos": [
+        1476.19,
+        627.88
+      ]
+    },
+    {
+      "id": "33",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "20",
+      "range": "5",
+      "pos": [
+        1117.95,
+        580.45
+      ]
+    },
+    {
+      "id": "34",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "35",
+      "range": "5",
+      "pos": [
+        1475.74,
+        690.4
+      ]
+    },
+    {
+      "id": "39",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "12",
+      "range": "5",
+      "pos": [
+        1500,
+        654.44
+      ]
+    },
+    {
+      "id": "41",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "10",
+      "range": "37",
+      "pos": [
+        402.05,
+        1324.48
+      ]
+    },
+    {
+      "id": "42",
+      "label": "Subclass of",
+      "attributes": [
+        "anonymous",
+        "object"
+      ],
+      "domain": "38",
+      "range": "5",
+      "pos": [
+        1493.03,
+        550.31
+      ]
+    },
+    {
+      "id": "46",
+      "label": {
+        "IRI-based": "10",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "28",
+      "pos": [
+        1178.93,
+        300.14
+      ]
+    },
+    {
+      "id": "47",
+      "iri": "https://w3id.org/rec/lease/leasor",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "leasor",
+        "en": "leasor"
+      },
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "en": "The agent (organization or person) leasing out some leasable object, i.e., the owner of the asset."
+      },
+      "domain": "10",
+      "range": "48",
+      "pos": [
+        180.86,
+        1150.38
+      ]
+    },
+    {
+      "id": "49",
+      "label": {
+        "IRI-based": "12",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "20",
+      "pos": [
+        1170.15,
+        353.55
+      ]
+    },
+    {
+      "id": "50",
+      "iri": "https://w3id.org/rec/lease/premisesIncludesRoom",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "premisesIncludesRoom",
+        "en": "premises includes room"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "5",
+      "range": "4",
+      "superproperty": [
+        "8"
+      ],
+      "pos": [
+        1333.92,
+        937.02
+      ]
+    },
+    {
+      "id": "51",
+      "label": {
+        "IRI-based": "11",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "26",
+      "pos": [
+        1201.23,
+        330.31
+      ]
+    },
+    {
+      "id": "52",
+      "iri": "https://w3id.org/rec/lease/premisesIncludesBuilding",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "premisesIncludesBuilding",
+        "en": "premises includes building"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "5",
+      "range": "43",
+      "superproperty": [
+        "8"
+      ],
+      "pos": [
+        1161.03,
+        900.94
+      ]
+    },
+    {
+      "id": "53",
+      "iri": "https://w3id.org/rec/lease/premisesType",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "premisesType",
+        "en": "premises type"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "5",
+      "range": "40",
+      "pos": [
+        1335.82,
+        494.27
+      ]
+    },
+    {
+      "id": "54",
+      "label": {
+        "IRI-based": "2",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "15",
+      "pos": [
+        1528.39,
+        400.98
+      ]
+    },
+    {
+      "id": "8",
+      "iri": "https://w3id.org/rec/lease/premisesIncludes",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "premisesIncludes",
+        "en": "premises includes"
+      },
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "en": "Parthood traversal property linking Premises to their constituent Buildings or Rooms."
+      },
+      "domain": "5",
+      "range": "45",
+      "subproperty": [
+        "52",
+        "50"
+      ],
+      "superproperty": [
+        "7"
+      ],
+      "pos": [
+        1443.68,
+        877.16
+      ]
+    },
+    {
+      "id": "55",
+      "label": {
+        "IRI-based": "3",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "12",
+      "pos": [
+        1552.2,
+        427.54
+      ]
+    },
+    {
+      "id": "56",
+      "label": {
+        "IRI-based": "4",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "38",
+      "pos": [
+        1545.23,
+        323.41
+      ]
+    },
+    {
+      "id": "57",
+      "label": {
+        "IRI-based": "5",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "35",
+      "pos": [
+        1527.94,
+        463.5
+      ]
+    },
+    {
+      "id": "58",
+      "label": {
+        "IRI-based": "6",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "22",
+      "pos": [
+        1207.87,
+        271.08
+      ]
+    },
+    {
+      "id": "59",
+      "label": {
+        "IRI-based": "7",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "24",
+      "pos": [
+        1231.83,
+        231.57
+      ]
+    },
+    {
+      "id": "6",
+      "iri": "https://w3id.org/rec/lease/isPartOfPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "isPartOfPremises",
+        "en": "is part of premises"
+      },
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "en": "Property that models Premises (leasable parts of real estate) parthood, i.e., that certain buildings and/or rooms are part of a defined Premise (which can in turn by governed by a Lease through a LeaseContract)"
+      },
+      "domain": "45",
+      "range": "5",
+      "subproperty": [
+        "3",
+        "60"
+      ],
+      "superproperty": [
+        "31"
+      ],
+      "pos": [
+        1402,
+        910.36
+      ]
+    },
+    {
+      "id": "61",
+      "label": {
+        "IRI-based": "8",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "30",
+      "pos": [
+        1554.95,
+        369.1
+      ]
+    },
+    {
+      "id": "62",
+      "label": {
+        "IRI-based": "9",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "40",
+      "range": "17",
+      "pos": [
+        1175.4,
+        394.56
+      ]
+    },
+    {
+      "id": "63",
+      "iri": "https://w3id.org/rec/lease/regulatedBy",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "regulatedBy",
+        "en": "regulated by"
+      },
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "en": "A lease is regulated by some contract entered into by the leasor and leasees."
+      },
+      "domain": "10",
+      "range": "36",
+      "pos": [
+        252.92,
+        988.58
+      ]
+    },
+    {
+      "id": "60",
+      "iri": "https://w3id.org/rec/lease/buildingIsPartOfPremises",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "buildingIsPartOfPremises",
+        "en": "building is part of premises"
+      },
+      "attributes": [
+        "object"
+      ],
+      "domain": "43",
+      "range": "5",
+      "superproperty": [
+        "6"
+      ],
+      "pos": [
+        1211.16,
+        924.69
+      ]
+    },
+    {
+      "id": "64",
+      "iri": "https://w3id.org/rec/lease/leasee",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "leasee",
+        "en": "leasee"
+      },
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "en": "The agent (organization or person) leasing some leasable object, i.e., the user of the asset."
+      },
+      "domain": "10",
+      "range": "48",
+      "pos": [
+        192.93,
+        1068.14
+      ]
+    },
+    {
+      "id": "65",
+      "iri": "https://w3id.org/rec/core/hasStartTime",
+      "baseIri": "https://w3id.org/rec/core",
+      "label": {
+        "IRI-based": "hasStartTime"
+      },
+      "attributes": [
+        "external",
+        "datatype"
+      ],
+      "domain": "1",
+      "range": "44",
+      "pos": [
+        272.74,
+        -109.5
+      ]
+    },
+    {
+      "id": "66",
+      "iri": "https://w3id.org/rec/lease/leaseOf",
+      "baseIri": "https://w3id.org/rec/lease",
+      "label": {
+        "IRI-based": "leaseOf",
+        "en": "lease of"
+      },
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "en": "The Leasable object (e.g., property, equipment, etc) that this a lease of."
+      },
+      "domain": "10",
+      "range": "14",
+      "pos": [
+        591.46,
+        1053.16
+      ]
+    }
+  ]
+}
