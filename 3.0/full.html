@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RealEstateCore Full</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
+<h1>RealEstateCore Full</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://w3id.org/rec/full/</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            RealEstateCore Consortium<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Karl Hammar<br/>
+            Erik Wallin<br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            Per Karlberg<br/>
+            Håkan Eriksson<br/>
+            Joakim Eriksson<br/>
+        </dd>
+        <dt>Modified</dt>
+        <dd>2019-04-04</dd>
+        <dt>Version Information</dt>
+        <dd>3.0</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="https://w3id.org/rec/full/3.0/">https://w3id.org/rec/full/3.0/</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="https://w3id.org/rec/agents/3.0/">https://w3id.org/rec/agents/3.0/</a><br/>
+            <a href="https://w3id.org/rec/metadata/3.0/">https://w3id.org/rec/metadata/3.0/</a><br/>
+            <a href="https://w3id.org/rec/core/3.0/">https://w3id.org/rec/core/3.0/</a><br/>
+            <a href="https://w3id.org/rec/lease/3.0/">https://w3id.org/rec/lease/3.0/</a><br/>
+            <a href="https://w3id.org/rec/building/3.0/">https://w3id.org/rec/building/3.0/</a><br/>
+            <a href="https://w3id.org/rec/device/3.0/">https://w3id.org/rec/device/3.0/</a><br/>
+        </dd>
+        <dt>Ontology Source</dt>
+        <dd><a href="full.rdf">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>Version 3.0 is a major and compatibility-breaking refactoring of REC:</p>
+<ul>
+<li>Properties have been defined as being (at-most) single-domain and single-range, supporting usability and visualization.</li>
+<li>Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties.
+** This has required refactoring of the relations Building &lt;-&gt; BuildingComponent and Device &lt;-&gt; DeviceComponent (the latter is removed).</li>
+<li>Class naming has been simplified (BuildingStructure -&gt; Building, BuildingStructureComponent -&gt; BuildingComponent, etc).</li>
+<li>A (minimal) representation of GeoSPARQL has been integrated, to allow for standardized geospatial representations and querying. REC home-made geospatial/location vocabulary is phased out as a consequence.</li>
+<li>Alignments against other ontologies or standards (BIP, Belok, IPSO, Haystack, fi2xml, IFC) have been broken out into separate alignment files </li>
+<li>Module boundaries have been clarified and three new modules (Lease, Metadata, Agents) have been added, in preparation of anticipated modelling work.</li>
+<li>All entities have been assigned rdfs:labels and the large majority rdfs:comments.</li>
+<li>The modules have been documented with metadata using DC, CC, VANN, cpannotationschema, etc.</li>
+<li>All IRI:s are now HTTPS</li>
+</ul>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#namespaces">Namespaces</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:500px; background-color: black;">&nbsp;</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+<section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+</section>
+<section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt><em>default (:)</em></dt>
+        <dd><code>https://w3id.org/rec/full/3.0/</code></dd>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/rec/full/</code></dd>
+        <dt>agents</dt>
+        <dd><code>https://w3id.org/rec/agents/</code></dd>
+        <dt>building</dt>
+        <dd><code>https://w3id.org/rec/building/</code></dd>
+        <dt>cc</dt>
+        <dd><code>http://creativecommons.org/ns#</code></dd>
+        <dt>core</dt>
+        <dd><code>https://w3id.org/rec/core/</code></dd>
+        <dt>cpannotationschema</dt>
+        <dd><code>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>device</dt>
+        <dd><code>https://w3id.org/rec/device/</code></dd>
+        <dt>lease</dt>
+        <dd><code>https://w3id.org/rec/lease/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
+</body>
+</html>
