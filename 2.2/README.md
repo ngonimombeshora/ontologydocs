@@ -2,5 +2,5 @@
 
 **Modules:**
 * [Core](core.html)
-* [Building](building/)
-* [Device](device/)
+* [Building](building.html)
+* [Device](device.html)

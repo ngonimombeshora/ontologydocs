@@ -1,6 +1,6 @@
 # RealEstateCore v2.3
 
 **Modules:**
-* [Core](core/)
-* [Building](building/)
-* [Device](device/)
+* [Core](core.html)
+* [Building](building.html)
+* [Device](device.html)
