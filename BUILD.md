@@ -191,3 +191,7 @@ just as [described above](#grafting-vowl-visualizations-onto-the-pylode-document
 For final touches, create a README.md file in your target directory, which 
 provides navigation links to the ontology modules and Full ontology. For 
 convencience, start by copying this file from an earlier version.
+
+Don't forget to update the parent-level README.md-file, so that users 
+navigating directly via https://doc.realestatecore.io can traverse the entire 
+documentation structure.
