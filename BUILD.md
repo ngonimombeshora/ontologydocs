@@ -29,7 +29,7 @@ of the ontology.
 
 WebVOWL uses a custom JSON format to represent the ontology visualization. 
 The initial JSON file for each ontology module is generated using the OWL2VOWL 
-program linked above. This file can then be uploaded into a WebVOWL instance 
+program linked below. This file can then be uploaded into a WebVOWL instance 
 (either your own, or the public one provided by its developers, hosted at 
 http://visualdataweb.de/webvowl), where it can be manipulated as needed (i.e., 
 the options for which constructs are displayed and how can be changed), and 
@@ -56,7 +56,9 @@ Otherwise, ensure that you have a working Maven installation:
 Download a release of OWL2VOWL, step into it, and build:
 
 `git clone https://github.com/VisualDataWeb/OWL2VOWL`
+
 `cd OWL2VOWL`
+
 `mvn package -Denv=standalone -DskipTests`
 
 Note that tests are skipped because the OWL2VOWL repository seems to contain 
@@ -106,11 +108,11 @@ created earlier, and "MODULE_NAME" by the name of the ontology module (e.g.,
 
 For each module, execute OWL2VOWL to generate the JSON-format visualizations.
 
-Note that since the OWl2VOWL generator will resolve imported ontologies 
-automatically from the internet. Since we in fact do _not_ want each generated 
-visualization to include the entirety of the REC ontology, you, prior to 
-running the below, need to make sure that these imports do not resolve. This 
-can achieved in one of two ways:
+Note that the OWl2VOWL generator will resolve imported ontologies automatically 
+from the internet. Since we in fact do _not_ want each generated visualization 
+to include the entirety of the REC ontology, you, prior to running the below,
+need to make sure that these imports do not resolve. This can achieved in one 
+of two ways:
 
 1. You are documenting a new and never before published version, ontology, 
 i.e., the target version directory with the RDF files in it has not yet 
@@ -155,7 +157,7 @@ Such an RDF file can be generated using Protégé, as described below.
 visualization generator to resolve all the imports; so we need to ensure that 
 the RDF files are accessible on the web before running it. The easiest way 
 to achieve this is to simply push the documentaion repo (including the RDF 
-files there were copied into it in the [preparations](#preparations step, and 
+files there were copied into it in the [preparations](#preparations) step, and 
 which you have been working with) up to GitHub prior to proceeding.
 
 ### Generating a merged REC Full RDF file
