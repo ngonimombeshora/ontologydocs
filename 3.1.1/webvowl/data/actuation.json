@@ -1,0 +1,1061 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/rec/actuation", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/device", "https://w3id.org/rec/core" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "terms" : "http://purl.org/dc/terms/",
+      "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+      "actuation" : "https://w3id.org/rec/actuation/",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "skos" : "http://www.w3.org/2004/02/skos/core#",
+      "" : "https://w3id.org/rec/actuation/",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "cc" : "http://creativecommons.org/ns#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#"
+    },
+    "title" : {
+      "undefined" : "RealEstateCore Actuation Module"
+    },
+    "iri" : "https://w3id.org/rec/actuation/",
+    "version" : "3.1.1",
+    "author" : [ "Karl Hammar", "Per Karlberg" ],
+    "description" : {
+      "en" : "This REC module covers the actuation model, i.e., south- and northbound message syntaxes for requesting and enacting actuation on building systems of various types, and the interfaces/payload schemas associated with such systems."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Per Karlberg",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "actuation",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-11-07",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "3.1.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/actuation/3.1.1/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Actuation Module",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "1",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationRequestResponse",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationRequestResponse",
+      "en" : "Actuation request response"
+    },
+    "comment" : {
+      "en" : "Message returned to a client or component, reporting that actuation commands have been passed to one or more actuators or systems, and reporting the response status of those actuators or systems.\n\nNote that positive responses from actuators/systems do not imply that the real-world actuations have been fully carried out -- certain devices have a very long response time, dependent on physical processes, bus saturations, etc. To record the real-world state of such devices, use a sensor device instead."
+    },
+    "id" : "10",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/Actuator",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actuator"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationCommandResponse",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationCommandResponse",
+      "en" : "Actuation command response"
+    },
+    "comment" : {
+      "en" : "Return message from a specific actuator or system to a a REC platform, indicating whether an actuation has been accepted by that actuator/system. Note that a positive response does not imply that the real-world actuation has been fully carried out -- certain devices have a very long response time, dependent on physical processes, bus saturations, etc. To record the real-world state of such devices, use a sensor device instead."
+    },
+    "id" : "35",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationCommand",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationCommand",
+      "en" : "Actuation command"
+    },
+    "comment" : {
+      "en" : "Message from a REC platform to a specific actuator or system, requesting that an actuation be carried out."
+    },
+    "id" : "27",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ResponseCode",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResponseCode",
+      "en" : "Response code"
+    },
+    "comment" : {
+      "en" : "The response code, as reported by an actuator or subsystem, to an actuation command. Typically packaged within an ActuationResponse message."
+    },
+    "id" : "7",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationEvent",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationEvent",
+      "en" : "Actuation event"
+    },
+    "subClasses" : [ "11", "35", "27", "10" ],
+    "comment" : {
+      "en" : "This class is a simple cognitive clustering of various types of events/messages that make up the REC actuation model, to group them in ontology editing tools and visualizations. The class should in most cases not be used as typing for any individuals."
+    },
+    "id" : "21",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/KeyValueDefinition",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KeyValueDefinition",
+      "en" : "Key-Value definition"
+    },
+    "comment" : {
+      "en" : "Defines allowable or required structures for key-value lists. Used in interface definitions."
+    },
+    "id" : "16",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "24"
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "27" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationRequest",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationRequest",
+      "en" : "Actuation request"
+    },
+    "comment" : {
+      "en" : "An incoming request from a client or other component, for an actuation to be carried out on one or many actuators or systems."
+    },
+    "id" : "11",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Software",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Software"
+    },
+    "subClasses" : [ "18" ],
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/rec/device/DeviceEvents",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceEvents"
+    },
+    "subClasses" : [ "21" ],
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/Information",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Information"
+    },
+    "subClasses" : [ "7", "16", "13" ],
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationInterface",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "annotations" : {
+      "endpoint" : [ {
+        "identifier" : "endpoint",
+        "language" : "undefined",
+        "value" : "actuation-interfaces",
+        "type" : "label"
+      } ],
+      "included" : [ {
+        "identifier" : "included",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ActuationInterface",
+      "en" : "Actuation interface"
+    },
+    "comment" : {
+      "en" : "An interface describing the expected payload structure for one or more actuators."
+    },
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ValueRestriction",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ValueRestriction",
+      "en" : "Value restriction"
+    },
+    "comment" : {
+      "en" : "Defines constraints on values in key-value lists, e.g., for defining interfaces."
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Agent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/rec/device/Sensor",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "56",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "60",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "61",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/rec/actuation/targetActuator",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "targetActuator",
+      "en" : "target actuator"
+    },
+    "minCardinality" : "1",
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/actuationPayload",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "actuationPayload",
+      "en" : "actuation payload"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "en" : "The payload to be passed on to some actuation interface and finally actuator."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/responseCodeString",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "responseCodeString",
+      "en" : "response code as string"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/responseToRequest",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "responseToRequest",
+      "en" : "response to request"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "attributes" : [ "functional", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "14",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "21",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "14",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/requestingAgent",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "requestingAgent",
+      "en" : "requesting agent"
+    },
+    "cardinality" : "1",
+    "domain" : "24",
+    "comment" : {
+      "en" : "The agent that initiated actuation, i.e., that created an actuation request (and consequently, was the original source also of subsequent generated actuation commands)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/generatedCommand",
+    "inverse" : "28",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "generatedCommand",
+      "en" : "generated command"
+    },
+    "domain" : "11",
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "30",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "21",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "21",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "21",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/keyMandatory",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "keyMandatory"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/hasCommandResponse",
+    "inverse" : "39",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasCommandResponse",
+      "en" : "has command response"
+    },
+    "maxCardinality" : "1",
+    "domain" : "27",
+    "attributes" : [ "functional", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/responseCode",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "responseCode",
+      "en" : "response code"
+    },
+    "cardinality" : "1",
+    "domain" : "35",
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/actuationObservedBy",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "actuationObservedBy",
+      "en" : "actuation observed by"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "(Optional) reference to any sensors that are configured/designed to observe the actuators that were acted upon by the execution of the actuation request."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/isActuationInterfaceOf",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isActuationInterfaceOf",
+      "en" : "is actuation interface of"
+    },
+    "domain" : "18",
+    "subproperty" : [ "46" ],
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/valueRestrictionResolution",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "valueRestrictionResolution"
+    },
+    "domain" : "13",
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/valueRestrictionType",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "valueRestrictionType"
+    },
+    "domain" : "13",
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/hasActuationInterface",
+    "inverse" : "45",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasActuationInterface",
+      "en" : "has actuation interface"
+    },
+    "domain" : "2",
+    "subproperty" : [ "54" ],
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/requestingAgent",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "requestingAgent",
+      "en" : "requesting agent"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The agent that initiated actuation, i.e., that created an actuation request (and consequently, was the original source also of subsequent generated actuation commands)."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/targetActuator",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "targetActuator",
+      "en" : "target actuator"
+    },
+    "domain" : "11",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/responseCodeInteger",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "responseCodeInteger",
+      "en" : "response code as integer"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/actuationPayload",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "actuationPayload",
+      "en" : "actuation payload"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The payload to be passed on to some actuation interface and finally actuator."
+    },
+    "attributes" : [ "allValues", "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/targetActuator",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "targetActuator",
+      "en" : "target actuator"
+    },
+    "domain" : "27",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/requestingAgent",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "requestingAgent",
+      "en" : "requesting agent"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The agent that initiated actuation, i.e., that created an actuation request (and consequently, was the original source also of subsequent generated actuation commands)."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/valueRestriction",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "valueRestriction",
+      "en" : "value restriction"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "functional", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/responseToCommand",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "responseToCommand",
+      "en" : "response to command"
+    },
+    "cardinality" : "1",
+    "domain" : "35",
+    "attributes" : [ "functional", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/targetInterface",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "targetInterface",
+      "en" : "target interface"
+    },
+    "maxCardinality" : "1",
+    "domain" : "11",
+    "attributes" : [ "functional", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/actuationPayload",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "actuationPayload",
+      "en" : "actuation payload"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The payload to be passed on to some actuation interface and finally actuator."
+    },
+    "attributes" : [ "allValues", "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/isDefaultActuationInterfaceOf",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isDefaultActuationInterfaceOf",
+      "en" : "is default actuation interface of"
+    },
+    "superproperty" : [ "45" ],
+    "domain" : "18",
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/generatedCommandResponse",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "generatedCommandResponse",
+      "en" : "generated command response"
+    },
+    "minCardinality" : "1",
+    "domain" : "10",
+    "comment" : {
+      "en" : "Reference to the response(s) to the subsystem commands that were generated by the platform to execute this actuation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/hasDefaultActuationInterface",
+    "inverse" : "46",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasDefaultActuationInterface",
+      "en" : "has default actuation interface"
+    },
+    "superproperty" : [ "53" ],
+    "domain" : "2",
+    "attributes" : [ "functional", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/keyString",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "keyString"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/hasRequestResponse",
+    "inverse" : "9",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasRequestResponse",
+      "en" : "has request response"
+    },
+    "maxCardinality" : "1",
+    "domain" : "11",
+    "attributes" : [ "functional", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/valueRestrictionValues",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "valueRestrictionValues"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/requestAccepted",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "requestAccepted"
+    },
+    "cardinality" : "1",
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/payloadKeyValueDefinition",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "payloadKeyValueDefinition",
+      "en" : "payload Key-Value definition"
+    },
+    "minCardinality" : "1",
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/valueDatatype",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "valueDatatype"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/wasGeneratedFromRequest",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "wasGeneratedFromRequest",
+      "en" : "was generated from request"
+    },
+    "cardinality" : "1",
+    "domain" : "27",
+    "attributes" : [ "functional", "object" ],
+    "id" : "28"
+  } ]
+}

@@ -1,0 +1,547 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/rec/agents", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/core" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "skos" : "http://www.w3.org/2004/02/skos/core#",
+      "" : "https://w3id.org/rec/agents/",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "cc" : "http://creativecommons.org/ns#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "core" : "https://w3id.org/rec/core/",
+      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#"
+    },
+    "title" : {
+      "undefined" : "RealEstateCore Agents Module"
+    },
+    "iri" : "https://w3id.org/rec/agents/",
+    "version" : "3.1",
+    "author" : [ "Karl Hammar" ],
+    "description" : {
+      "en" : "This REC model covers basic types of agents (people, organizations, groups), structurally mostly aligned with FOAF -- divergences are noted in the respective propertys' documentation."
+    },
+    "comments" : {
+      "en" : "The Agents module is work-in-progress; requirements are rather unclear as of yet."
+    },
+    "other" : {
+      "coversRequirements" : [ {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is the RealEstateCore organizational GitHub account ID?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Who are the members of the RealEstateCore release engineering team?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is Karl Hammar's GitHub account ID?",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "agents",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-11-07",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/agents/3.1.1/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Agents Module",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "13",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/agents/Person",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/Person",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "comment" : {
+      "en" : "A natural person (i.e., an individual human being)."
+    },
+    "id" : "1",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/agents/Group",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/Group",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Group",
+      "en" : "Group"
+    },
+    "comment" : {
+      "en" : "A collection of individual Agents (included in the Group via the object property hasMember)."
+    },
+    "id" : "9",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "13",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/agents/Organization",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/Organization",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization"
+    },
+    "comment" : {
+      "en" : "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)"
+    },
+    "id" : "12",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Agent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "subClasses" : [ "12", "1", "9" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/rec/agents/familyName",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "2",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/familyName",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "familyName",
+      "en" : "family name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A person's family name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/firstName",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "4",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/firstName",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "firstName",
+      "en" : "first name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A person's first name (if they have one; this varies across cultural contexts)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/logo",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "13",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/logo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "logo",
+      "en" : "logo"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Links an Organization to an image/logo that represents them. This is stricter than FOAF, in which logo has domain \"Thing\"; but it works for our domain."
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "range" : "6",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/lastName",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "lastName",
+      "en" : "last name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A person's last name (if they have one; this varies across cultural contexts).",
+      "undefined" : "http://xmlns.com/foaf/0.1/lastName"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/hasMember",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "6",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/member",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMember",
+      "en" : "has member"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Indicates the member Agents that are part of a certain Group."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/image",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "8",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/img",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "image",
+      "en" : "image"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Property that links a Person to an image that represents them."
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/gender",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "10",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/gender",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "gender",
+      "en" : "gender"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A gender designation for a Person. Stricter than FOAF, which allows all Agents to have gender."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/givenName",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "19",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/givenName",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "givenName",
+      "en" : "given name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A person's personal, individual name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/account",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "7",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/account",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "account",
+      "en" : "account"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "An online account that an Agent holds."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/rec/agents/name",
+    "baseIri" : "https://w3id.org/rec/agents",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents).",
+      "undefined" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "range" : "6",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "6",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  } ]
+}
