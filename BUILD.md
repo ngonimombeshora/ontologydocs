@@ -6,12 +6,15 @@
     * [Prerequisites](#prerequisites)
     * [Install OWL2VOWL](#install-owl2vowl)
     * [Install PyLODE](#install-pylode)
-* Building Module Documentations
-    * Preparations 
-    * Building PyLODE module documentation
-    * Generating VOWL module visualizations
-    * Grafting VOWL visualisations onto the PyLODE documentation
-* Building REC Full Documentation
+* [Building Module Documentations](#building-module-documentations)
+    * [Preparations](#preparations)
+    * [Building PyLODE module documentation](#building-pylode-module-documentation)
+    * [Generating VOWL module visualizations](#generating-vowl-module-visualizations)
+    * [Grafting VOWL visualizations onto the PyLODE documentation](#grafting-vowl-visualizations-onto-the-pylode-documentation)
+* [Building REC Full Documentation](#building-rec-full-documentation)
+    * [Generating a merged REC Full RDF file](#generating-a-merged-rec-full-rdf-file)
+    * [Generating REC Full HTML and VOWL](#generating-rec-full-html-and-vowl)
+* [Adding Index files](#adding-index-files)
 
 ## Overview
 
@@ -127,7 +130,7 @@ take a first look. If needed for clarity, modify the visualization and filters
 as needed, and export the JSON from WebVOWL and back to the same path on disk 
 as you started with. 
 
-### Grafting VOWL visualisations onto the PyLODE documentation
+### Grafting VOWL visualizations onto the PyLODE documentation
 
 For each module (except the metadata module which has no graphical 
 representation), replace the following documentation:
@@ -142,4 +145,49 @@ Replace MODULE_NAME by the name of the module.
 
 ## Building REC Full Documentation
 
-In progress..
+Documentation for the REC full ontology (including all the modules) is crafted 
+in much the same way as described above, but with two very crucial differences:
+
+1. The pyLODE documentation generator, which does not resolve imports, needs 
+to operate on an RDF file that contains the entirety of the REC ontology suite.
+Such an RDF file can be generated using Protégé, as described below.
+2. Unlike for the modules, for the Full ontology we actually want the OWL2VOWL 
+visualization generator to resolve all the imports; so we need to ensure that 
+the RDF files are accessible on the web before running it. The easiest way 
+to achieve this is to simply push the documentaion repo (including the RDF 
+files there were copied into it in the [preparations](#preparations step, and 
+which you have been working with) up to GitHub prior to proceeding.
+
+### Generating a merged REC Full RDF file
+
+In the Protégé tool, load the REC Full ontology, making sure that all the 
+imports resolve and are loaded. Then use the menu option `Refactor/Merge ontologies..`.
+On the first screen of the wizard, select to merge all of the loaded 
+ontologies _except_ Full. In the second step of the wizard select to merge 
+into an _existing_ ontology. In the third step, select Full as the target 
+ontology for the merge. Now use the menu option `File/Save as..` to save 
+the merged file into a suitable temporary path on disk, NOT inside the target
+documentation directory (e.g., your desktop folder). Use the RDF/XML 
+serialization format. 
+
+### Generating REC Full HTML and VOWL
+
+You can now use the temporary merged Full file to generate pyLODE documentation 
+as follows: 
+
+`./pylode -i /TEMPORARY_PATH/full.rdf -o full.html`
+
+Copy the full.html file into the documentation target directory alongside 
+the other HTML documentation; then generate VOWL visualization using OWL2VOWL 
+as you did for the modules:
+
+`java -jar owl2vowl.jar -file /TARGET_DIRECTORY/full.rdf  -output  TARGET_DIRECTORY/webvowl/data/full.json`
+
+Finally, graft on the VOWL visualization for the Full ontology documentation, 
+just as [described above](#grafting-vowl-visualizations-onto-the-pylode-documentation).
+
+## Adding Index files
+
+For final touches, create a README.md file in your target directory, which 
+provides navigation links to the ontology modules and Full ontology. For 
+convencience, start by copying this file from an earlier version.
