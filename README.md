@@ -6,3 +6,4 @@ This site contains [WIDOCO](https://github.com/dgarijo/Widoco)- and [pyLODE](htt
 * [v2.3](2.3/)
 * [v3.0](3.0/)
 * [v3.1](3.1/)
+* [v3.1.1](3.1.1/)
