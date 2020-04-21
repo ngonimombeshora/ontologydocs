@@ -5,20 +5,17 @@
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/core", "http://www.opengis.net/ont/geosparql" ],
     "prefixList" : {
       "wgs" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
-      "dcam" : "http://purl.org/dc/dcam/",
       "owl" : "http://www.w3.org/2002/07/owl#",
       "vann" : "http://purl.org/vocab/vann/",
       "dcterms" : "http://purl.org/dc/terms/",
       "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
       "xsd" : "http://www.w3.org/2001/XMLSchema#",
-      "metadata" : "https://w3id.org/rec/metadata/",
       "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
       "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "skos" : "http://www.w3.org/2004/02/skos/core#",
       "geo" : "http://www.opengis.net/ont/geosparql#",
-      "" : "https://w3id.org/rec/metadata/",
+      "" : "https://w3id.org/rec/core/",
       "dc" : "http://purl.org/dc/elements/1.1/",
-      "dcmitype" : "http://purl.org/dc/dcmitype/",
       "cc" : "http://creativecommons.org/ns#",
       "xml" : "http://www.w3.org/XML/1998/namespace",
       "core" : "https://w3id.org/rec/core/",
@@ -37,12 +34,7 @@
       "coversRequirements" : [ {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "What does electricity meter 3 measure? In what units?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?",
+        "value" : "Where in Building 1 (i.e., in which rooms) are there devices mounted?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
@@ -52,22 +44,27 @@
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
+        "value" : "What does electricity meter 3 measure? In what units?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
         "value" : "Where is Building 1 located?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "Where in Building 1 (i.e., in which rooms) are there devices mounted?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
+        "value" : "Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
         "value" : "Where is the real estate Ulvsnaes 1:7 located?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
         "type" : "label"
       } ],
       "license" : [ {
@@ -105,16 +102,16 @@
         "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/rec/core/3.1.1/",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "3.1.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/core/3.1.1/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -1835,7 +1832,7 @@
     "comment" : {
       "en" : "Inverse properties of the isPartOf property tree, used for top-down traversal of the parthood hierarchy."
     },
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/rec/core/hasGeoReferenceBearing",
@@ -1864,7 +1861,7 @@
     "comment" : {
       "en" : "A generic clustering of meronomy (parthood) relations, allowing for the traversal of the parthood taxonomy of a real estate. Note that this is a transitive property."
     },
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "18"
   }, {
     "iri" : "https://w3id.org/rec/core/hasSuperBuildingComponent",
@@ -2057,7 +2054,7 @@
   }, {
     "range" : "41",
     "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "62"
   }, {
     "iri" : "https://w3id.org/rec/core/hasGeoReferenceOrigo",
@@ -2107,7 +2104,7 @@
   }, {
     "range" : "69",
     "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "68"
   }, {
     "iri" : "https://w3id.org/rec/core/hasCity",
@@ -2126,7 +2123,7 @@
   }, {
     "range" : "50",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "75"
   }, {
     "iri" : "https://w3id.org/rec/core/hasQuantityKind",
@@ -2160,7 +2157,7 @@
   }, {
     "range" : "50",
     "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "81"
   }, {
     "iri" : "https://w3id.org/rec/core/hasRealEstateComponent",
@@ -2248,7 +2245,7 @@
     "comment" : {
       "en" : "Connects a geometry object with its text-based serialization.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "90"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -2487,7 +2484,7 @@
     "comment" : {
       "en" : "Was originally intented to map an Id in an external system to an instance (e.g. an UUID).\n\nAfter discussion in REC technical committee, an approach based on owl:sameAs and/or rdfs:seeAlso (depending on the needed semantics) is recommended instead. This property will therefore be removed in future versions."
     },
-    "attributes" : [ "deprecated", "datatype" ],
+    "attributes" : [ "datatype", "deprecated" ],
     "id" : "105"
   }, {
     "iri" : "https://w3id.org/rec/core/hasZipCode",
@@ -2538,7 +2535,7 @@
     "comment" : {
       "en" : "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "109"
   }, {
     "iri" : "https://w3id.org/rec/core/associatedWithDevice",
@@ -2615,7 +2612,7 @@
     "comment" : {
       "en" : "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "113"
   }, {
     "iri" : "https://w3id.org/rec/core/eventQuantityKind",
