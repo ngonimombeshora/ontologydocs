@@ -20,14 +20,14 @@
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.1.1/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.1.1/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
+        <dc:creator>Erik Wallin</dc:creator>
+        <dc:creator>Karl Hammar</dc:creator>
         <dc:description xml:lang="en">The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.
 
 Note that this module reuses certain classes, properties, and named individuals from other vocabularies, e.g., GeoSPARQL; the copyright conditions on those reused entities are stated in their respective rdfs:comments annotations.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Core Module</dc:title>
-        <dcterms:modified>2019-11-07</dcterms:modified>
+        <dcterms:modified>2020-04-21</dcterms:modified>
         <vann:preferredNamespacePrefix>core</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/core/3.1.1/</vann:preferredNamespaceUri>
         <cpannotationschema:coversRequirements xml:lang="en">How many rooms are there in Building 1?</cpannotationschema:coversRequirements>
@@ -38,7 +38,7 @@ Note that this module reuses certain classes, properties, and named individuals 
         <cpannotationschema:coversRequirements xml:lang="en">Which buildings and land make up the real estate Ulvsnaes 1:7?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">Which parts of Building 1 (e.g., rooms, wings, etc) are covered by electricity meter 3?</cpannotationschema:coversRequirements>
         <rdfs:seeAlso rdf:resource="https://realestatecore.io"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.1</owl:versionInfo>
+        <owl:versionInfo>3.1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -864,7 +864,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The parts that makes up a building structure (Building). E.g., Room, Facade, RoofInner, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Building component</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building-components</o2o:endpoint>
+        <o2o:endpoint>buildingcomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -887,7 +887,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor,  Actuator, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Device</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">devices</o2o:endpoint>
+        <o2o:endpoint>device</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -943,7 +943,7 @@ Angle i degrees (360 degress = 1 revolution)
 MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement unit</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://www.qudt.org/</rdfs:seeAlso>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measurement-units</o2o:endpoint>
+        <o2o:endpoint>measurementunit</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -955,7 +955,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:comment xml:lang="en">Describes the type of values that can be observed by sensors or set by actuators. Inspired by QUDT.</rdfs:comment>
         <rdfs:label xml:lang="en">Quantity kind</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantity-kinds</o2o:endpoint>
+        <o2o:endpoint>quantitykind</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -966,7 +966,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/rec/core/RealEstate">
         <rdfs:comment xml:lang="en">The legal/administrative representation of some lands and/or buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-estates</o2o:endpoint>
+        <o2o:endpoint>realestate</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -983,7 +983,7 @@ MillimeterPerHour for Precipation</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Types of objects that can make up a piece of real estate, e.g., land and buildings.</rdfs:comment>
         <rdfs:label xml:lang="en">Real estate component</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">real-estate-components</o2o:endpoint>
+        <o2o:endpoint>realestatecomponent</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     

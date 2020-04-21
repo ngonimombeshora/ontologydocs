@@ -18,12 +18,11 @@
         <owl:versionIRI rdf:resource="https://w3id.org/rec/building/3.1.1/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/core/3.1.1/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:contributor>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
+        <dc:creator>Erik Wallin</dc:creator>
         <dc:description xml:lang="en">This REC module covers different types of building components and rooms.</dc:description>
         <dc:publisher>RealEstateCore Consortium</dc:publisher>
         <dc:title>RealEstateCore Building Module</dc:title>
-        <dcterms:modified>2019-11-07</dcterms:modified>
+        <dcterms:modified>2020-04-21</dcterms:modified>
         <vann:preferredNamespacePrefix>building</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/rec/building/3.1.1/</vann:preferredNamespaceUri>
         <cpannotationschema:coversRequirements xml:lang="en">Are there any labs in Building 7?</cpannotationschema:coversRequirements>
@@ -32,7 +31,7 @@
         <cpannotationschema:coversRequirements xml:lang="en">What equipment is mounted in server rooms in Building 7?</cpannotationschema:coversRequirements>
         <cpannotationschema:coversRequirements xml:lang="en">Which facade- or roof-mounted sensors are installed in Building 7?</cpannotationschema:coversRequirements>
         <rdfs:seeAlso rdf:resource="https://w3id.org/rec/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.1.1</owl:versionInfo>
+        <owl:versionInfo>3.1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -558,7 +557,7 @@
 
     <owl:Class rdf:about="https://w3id.org/rec/building/RoomType">
         <rdfs:label xml:lang="en">Room type</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room-types</o2o:endpoint>
+        <o2o:endpoint>roomtype</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -667,7 +666,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
         <rdfs:comment xml:lang="en">The level of storey, a.k.a. floorplan</rdfs:comment>
         <rdfs:label xml:lang="en">Storey</rdfs:label>
-        <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storeys</o2o:endpoint>
+        <o2o:endpoint>storey</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
     </owl:Class>
     
@@ -1496,8 +1495,8 @@
     <rdf:Description rdf:about="https://w3id.org/rec/building/DisabledToilet">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <rdfs:seeAlso xml:lang="en">RWC</rdfs:seeAlso>
-        <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
         <rdfs:seeAlso xml:lang="en">HWC</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">DisabledToilet</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/DishingRoom">
         <rdfs:label xml:lang="en">DishingRoom</rdfs:label>
@@ -1536,8 +1535,8 @@
         <rdfs:label xml:lang="en">ExhibitionRoom</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/FittingRoom">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <rdfs:label xml:lang="en">FittingRoom</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/FoodHandlingRoom">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -1651,8 +1650,8 @@
         <rdfs:label xml:lang="en">ServiceShaft</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/Shelter">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <rdfs:label xml:lang="en">Shelter</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/rec/building/ShelterGasLock">
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
