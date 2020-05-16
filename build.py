@@ -2,7 +2,7 @@
 
 import sys
 import subprocess
-from os import listdir, remove
+from os import listdir, remove, rename
 from os.path import isfile, join, splitext, isdir
 from shutil import copytree
 from rdflib import Graph
@@ -69,9 +69,11 @@ print("Please reconnect network and press any key.")
 input()
 
 # 4. Export unioned full ontology to temp file, run pylode, kill temp file
-unionedOntology.serialize(destination=f"{ontologyPath}/fullTemp.ttl", format="turtle")
-subprocess.run([pylodePath, "-i", f"{ontologyPath}/fullTemp.ttl", "-o", f"{ontologyPath}/full.html"])
-remove(f"{ontologyPath}/fullTemp.ttl")
+rename(f"{ontologyPath}/full.rdf", f"{ontologyPath}/fullTemp.rdf")
+unionedOntology.serialize(destination=f"{ontologyPath}/full.rdf", format="rdfxml")
+subprocess.run([pylodePath, "-i", f"{ontologyPath}/full.rdf", "-o", f"{ontologyPath}/full.html"])
+remove(f"{ontologyPath}/full.rdf")
+rename(f"{ontologyPath}/fullTemp.rdf", f"{ontologyPath}/full.rdf")
 
 # 5. Generate WebVOWL visualization on full file and graft it
 subprocess.run(["java", "-jar", owl2vowlPath, "-file", f"{ontologyPath}/full.rdf", "-output", f"{ontologyPath}/webvowl/data/full.json"])
