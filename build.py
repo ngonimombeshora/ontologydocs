@@ -8,7 +8,8 @@ from shutil import copytree
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF
 
-pylodePath = "bin/pyLODE-2.3/pylode/bin/pylode.sh"
+# GitHub Pages blows up if PyLODE is included in the repo, strangely
+pylodePath = "/Applications/pyLODE-2.3/pylode/bin/pylode.sh"
 owl2vowlPath = "bin/owl2vowl.jar"
 
 ontologyFileEndings = ["owl", "rdf", "ttl", "nq"]
@@ -70,7 +71,7 @@ input()
 
 # 4. Export unioned full ontology to temp file, run pylode, kill temp file
 rename(f"{ontologyPath}/full.rdf", f"{ontologyPath}/fullTemp.rdf")
-unionedOntology.serialize(destination=f"{ontologyPath}/full.rdf", format="rdfxml")
+unionedOntology.serialize(destination=f"{ontologyPath}/full.rdf", format="xml")
 subprocess.run([pylodePath, "-i", f"{ontologyPath}/full.rdf", "-o", f"{ontologyPath}/full.html"])
 remove(f"{ontologyPath}/full.rdf")
 rename(f"{ontologyPath}/fullTemp.rdf", f"{ontologyPath}/full.rdf")
