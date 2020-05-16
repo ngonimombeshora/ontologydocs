@@ -1,0 +1,4033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RealEstateCore Device Module</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 80px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/rec/device/",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This REC module covers device types (sensors and actuators), device configuration, device actuation, etc.</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "RealEstateCore Device Module"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE"><span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a></div>
+<h1>RealEstateCore Device Module</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://w3id.org/rec/device/</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            RealEstateCore Consortium<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Erik Wallin<br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            Karl Hammar<br/>
+        </dd>
+        <dt>Modified</dt>
+        <dd>2020-05-15</dd>
+        <dt>Version Information</dt>
+        <dd>3.1.3</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="https://w3id.org/rec/device/3.1.3/">https://w3id.org/rec/device/3.1.3/</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="https://w3id.org/rec/core/3.1.3/">https://w3id.org/rec/core/3.1.3/</a><br/>
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="device.rdf">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This REC module covers device types (sensors and actuators), device configuration, device actuation, etc.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: black;">&nbsp;</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+<section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Actuation">Actuation</a></li>
+        <li><a href="#Actuationinterface">Actuation interface</a></li>
+        <li><a href="#Actuator">Actuator</a></li>
+        <li><a href="#BACnetConfiguration">BACnetConfiguration</a></li>
+        <li><a href="#Communicationconfiguration">Communication configuration</a></li>
+        <li><a href="#Communicationsbus">Communications bus</a></li>
+        <li><a href="#Deviceevents">Device events</a></li>
+        <li><a href="#Devicefunctiontype">Device function type</a></li>
+        <li><a href="#Exception">Exception</a></li>
+        <li><a href="#KNXConfiguration">KNXConfiguration</a></li>
+        <li><a href="#KNXDataPointType">KNXDataPointType</a></li>
+        <li><a href="#LoRaConfiguration">LoRaConfiguration</a></li>
+        <li><a href="#MBusConfiguration">MBusConfiguration</a></li>
+        <li><a href="#ModbusConfiguration">ModbusConfiguration</a></li>
+        <li><a href="#ModbusDataType">ModbusDataType</a></li>
+        <li><a href="#ModbusRTUConfiguration">ModbusRTUConfiguration</a></li>
+        <li><a href="#ModbusTCPConfiguration">ModbusTCPConfiguration</a></li>
+        <li><a href="#ModbusTCPFunctionCode">ModbusTCPFunctionCode</a></li>
+        <li><a href="#OPC-DAConfiguration">OPC-DAConfiguration</a></li>
+        <li><a href="#OPC-UAConfiguration">OPC-UAConfiguration</a></li>
+        <li><a href="#Observation">Observation</a></li>
+        <li><a href="#Placementcontext">Placement context</a></li>
+        <li><a href="#Powersource">Power source</a></li>
+        <li><a href="#Sensor">Sensor</a></li>
+    </ul>
+    <div class="entity class" id="Actuation">
+        <h3>Actuation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/Actuation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The act of changing the state of something.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/DeviceEvents">DeviceEvents</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/actuationResponse">actuationResponse</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationCommand">actuationCommand</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationCommandTime">hasActuationCommandTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationRequest">actuationRequest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationResponseTime">hasActuationResponseTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/executesActuation">executesActuation</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Actuationinterface">
+        <h3>Actuation interface<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/ActuationInterface</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A description of what kind of input the Actuator accepts.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasActuationInterface">hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Actuator">
+        <h3>Actuator<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/Actuator</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An actuator is a component that is responsible for moving and controlling a mechanism or system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/observedBy">observedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/executesActuation">executesActuation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationInterface">hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BACnetConfiguration">
+        <h3>BACnetConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/BACnetConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Communicationconfiguration">
+        <h3>Communication configuration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/CommunicationConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Instances of this class and its subclasses represent configuration fields and values in the various old-world non-IoT building system standards.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/LoRaConfiguration">LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/KNXConfiguration">KNXConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusTCPConfiguration">ModbusTCPConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/MBusConfiguration">MBusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/OPC-UAConfiguration">OPC-UAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/BACnetConfiguration">BACnetConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusRTUConfiguration">ModbusRTUConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/OPC-DAConfiguration">OPC-DAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Communicationsbus">
+        <h3>Communications bus<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/CommunicationsBus</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Type of communications bus for the Device.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationsBus">hasCommunicationsBus</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Deviceevents">
+        <h3>Device events<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/DeviceEvents</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Events that are relevant in a Device context; initially observations, actuations, and exceptions.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Event">core:Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/eventPlacementContext">eventPlacementContext</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/Exception">Exception</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Devicefunctiontype">
+        <h3>Device function type<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/DeviceFunctionType</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The main function or purpose of a Device.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Type">core:Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasDeviceFunctionType">hasDeviceFunctionType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Exception">
+        <h3>Exception<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/Exception</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Failed attempt or unexpected result when tried to do something (e.g. read a Sensor).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/DeviceEvents">DeviceEvents</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/exceptionGeneratedBy">exceptionGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/generatedException">generatedException</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="KNXConfiguration">
+        <h3>KNXConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/KNXConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/KNXDataPointType">KNXDataPointType</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="KNXDataPointType">
+        <h3>KNXDataPointType<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/KNXDataPointType</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/KNXConfiguration">KNXConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasKNXDataPointType">hasKNXDataPointType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="LoRaConfiguration">
+        <h3>LoRaConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/LoRaConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MBusConfiguration">
+        <h3>MBusConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/MBusConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ModbusConfiguration">
+        <h3>ModbusConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/ModbusConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ModbusDataType">
+        <h3>ModbusDataType<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/ModbusDataType</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusDataType">hasModbusDataType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ModbusTCPFunctionCode">
+        <h3>ModbusTCPFunctionCode<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/ModbusFunctionCode</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusFunctionCode">hasModbusFunctionCode</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ModbusRTUConfiguration">
+        <h3>ModbusRTUConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/ModbusRTUConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ModbusTCPConfiguration">
+        <h3>ModbusTCPConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/ModbusTCPConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OPC-DAConfiguration">
+        <h3>OPC-DAConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/OPC-DAConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OPC-UAConfiguration">
+        <h3>OPC-UAConfiguration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/OPC-UAConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Specific classes and properties to be extended in upcoming version.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationConfiguration">CommunicationConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Observation">
+        <h3>Observation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/Observation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Observation of a phenomena. Made by a Sensor. Used with hasValue.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/DeviceEvents">DeviceEvents</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/eventQuantityKind">core:eventQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasProcessedTime">hasProcessedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/observationGeneratedBy">observationGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/generatedObservation">generatedObservation</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Placementcontext">
+        <h3>Placement context<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/PlacementContext</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Description of the context or media that a sensor or actuator is operating within.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/devicePlacementContext">devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasPlacementContext">hasPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/eventPlacementContext">eventPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Powersource">
+        <h3>Power source<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/PowerSource</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The power source for the device.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sensor">
+        <h3>Sensor<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/Sensor</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/generatedObservation">generatedObservation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/generatedException">generatedException</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/observes">observes</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/observationGeneratedBy">observationGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/exceptionGeneratedBy">exceptionGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/observedBy">observedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#actuationexecutedby">actuation executed by</a></li>
+        <li><a href="#deviceplacementcontext">device placement context</a></li>
+        <li><a href="#eventplacementcontext">event placement context</a></li>
+        <li><a href="#exceptiongeneratedby">exception generated by</a></li>
+        <li><a href="#executesactuation">executes actuation</a></li>
+        <li><a href="#generatedexception">generated exception</a></li>
+        <li><a href="#generatedobservation">generated observation</a></li>
+        <li><a href="#hasactuationinterface">has actuation interface</a></li>
+        <li><a href="#hascommunicationconfiguration">has communication configuration</a></li>
+        <li><a href="#hasCommunicationsBus">hasCommunicationsBus</a></li>
+        <li><a href="#hasdevicefunctiontype">has device function type</a></li>
+        <li><a href="#hasKNXConfiguration">hasKNXConfiguration</a></li>
+        <li><a href="#hsKNXDataPointType">hsKNXDataPointType</a></li>
+        <li><a href="#hasModbusConfiguration">hasModbusConfiguration</a></li>
+        <li><a href="#hasModbusDataType">hasModbusDataType</a></li>
+        <li><a href="#hasModbusFunctionCode">hasModbusFunctionCode</a></li>
+        <li><a href="#hasplacementcontext">has placement context</a></li>
+        <li><a href="#observationgeneratedby">observation generated by</a></li>
+        <li><a href="#observedby">observed by</a></li>
+        <li><a href="#observes">observes</a></li>
+        <li><a href="#observesactuator">observes actuator</a></li>
+    </ul>
+    <div class="entity property" id="actuationexecutedby">
+        <h3>actuation executed by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/actuationExecutedBy</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/associatedWithDevice">core:associatedWithDevice</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/executesActuation">executesActuation</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="deviceplacementcontext">
+        <h3>device placement context<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/devicePlacementContext</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasPlacementContext">hasPlacementContext</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="eventplacementcontext">
+        <h3>event placement context<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/eventPlacementContext</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasPlacementContext">hasPlacementContext</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Event">core:Event</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exceptiongeneratedby">
+        <h3>exception generated by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/exceptionGeneratedBy</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/associatedWithDevice">core:associatedWithDevice</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/generatedException">generatedException</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Exception">Exception</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="executesactuation">
+        <h3>executes actuation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/executesActuation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/associatedWithEvent">core:associatedWithEvent</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generatedexception">
+        <h3>generated exception<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/generatedException</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/associatedWithEvent">core:associatedWithEvent</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Exception">Exception</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generatedobservation">
+        <h3>generated observation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/generatedObservation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/associatedWithEvent">core:associatedWithEvent</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/observationGeneratedBy">observationGeneratedBy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasactuationinterface">
+        <h3>has actuation interface<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasActuationInterface</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/ActuationInterface">ActuationInterface</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hascommunicationconfiguration">
+        <h3>has communication configuration<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasCommunicationConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Groups the subset of device configuration settings that are expressed using named individuals (for configuration attributes that are modelled with datatype properties, see datatype hasCommunicationAttribute).
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasCommunicationsBus">
+        <h3>hasCommunicationsBus<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasCommunicationsBus</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    has communications bus
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasdevicefunctiontype">
+        <h3>has device function type<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasDeviceFunctionType</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasKNXConfiguration">
+        <h3>hasKNXConfiguration<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasKNXConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationConfiguration">hasCommunicationConfiguration</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hsKNXDataPointType">
+        <h3>hsKNXDataPointType<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasKNXDataPointType</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasKNXConfiguration">hasKNXConfiguration</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/KNXDataPointType">KNXDataPointType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusConfiguration">
+        <h3>hasModbusConfiguration<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationConfiguration">hasCommunicationConfiguration</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusDataType">
+        <h3>hasModbusDataType<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusDataType</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusConfiguration">hasModbusConfiguration</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusFunctionCode">
+        <h3>hasModbusFunctionCode<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusFunctionCode</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusConfiguration">hasModbusConfiguration</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasplacementcontext">
+        <h3>has placement context<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasPlacementContext</code></td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="observationgeneratedby">
+        <h3>observation generated by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/observationGeneratedBy</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/associatedWithDevice">core:associatedWithDevice</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="observedby">
+        <h3>observed by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/observedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc.
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="observes">
+        <h3>observes<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/observes</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="observesactuator">
+        <h3>observes actuator<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/observesActuator</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The actuator that a sensor is configured or designed to observe.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/observes">observes</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#actuationcommand">actuation command</a></li>
+        <li><a href="#actuationrequest">actuation request</a></li>
+        <li><a href="#actuationresponse">actuation response</a></li>
+        <li><a href="#hasactuationcommandtime">has actuation command time</a></li>
+        <li><a href="#hasactuationrequesttime">has actuation request time</a></li>
+        <li><a href="#hasactuationresponsetime">has actuation response time</a></li>
+        <li><a href="#hascommunicationattribute">has communication attribute</a></li>
+        <li><a href="#hasIPaddress">has IP address</a></li>
+        <li><a href="#hasIPaddressport">has IP address port</a></li>
+        <li><a href="#hasKNXattribute">has KNX attribute</a></li>
+        <li><a href="#hasKNXdeviceID">has KNX device ID</a></li>
+        <li><a href="#hasKNXdeviceport">has KNX device port</a></li>
+        <li><a href="#hasKNXgroupaddress">has KNX group address</a></li>
+        <li><a href="#haslocalendpointID">has local endpoint ID</a></li>
+        <li><a href="#hasLoraattribute">has Lora attribute</a></li>
+        <li><a href="#hasLoraDevEUI">has Lora DevEUI</a></li>
+        <li><a href="#hasModbusattribute">has Modbus attribute</a></li>
+        <li><a href="#hasModbusnodeID">has Modbus node ID</a></li>
+        <li><a href="#hasModbusregister">has Modbus register</a></li>
+        <li><a href="#hasModbusregisterlength">has Modbus register length</a></li>
+        <li><a href="#hasoffset">has offset</a></li>
+        <li><a href="#hasprocessedtime">has processed time</a></li>
+        <li><a href="#hasscalefactor">has scale factor</a></li>
+    </ul>
+    <div class="entity property" id="actuationcommand">
+        <h3>actuation command<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/actuationCommand</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The payload of a command sent by the building management system to the underlying actuator(s).
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="actuationrequest">
+        <h3>actuation request<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/actuationRequest</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The payload of an incoming request to a building management system that it should perform an actuation; to be sent onward to a given Actuator.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="actuationresponse">
+        <h3>actuation response<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/actuationResponse</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The value returned from an Actuator to the calling party.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasactuationcommandtime">
+        <h3>has actuation command time<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasActuationCommandTime</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The time stamp for the event of the underlying system intiating the actuation command.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasTime">core:hasTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasactuationrequesttime">
+        <h3>has actuation request time<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasActuationRequestTime</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The time stamp for when a request for an actuation arrived.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasTime">core:hasTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasactuationresponsetime">
+        <h3>has actuation response time<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasActuationResponseTime</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The time stamp for a possible response from actuation process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasTime">core:hasTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hascommunicationattribute">
+        <h3>has communication attribute<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasCommunicationAttribute</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Groups the subset of device configuration attributes that are expressed using datatype properties (for configuration attributes that are modelled with named individuals, see object property hasCommunicationConfiguration).
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasIPaddress">
+        <h3>has IP address<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasIPAddress</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasIPaddressport">
+        <h3>has IP address port<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasIPAddressPort</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasKNXattribute">
+        <h3>has KNX attribute<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasKNXAttribute</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasKNXdeviceID">
+        <h3>has KNX device ID<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasKNXDeviceId</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasKNXAttribute">hasKNXAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasKNXdeviceport">
+        <h3>has KNX device port<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasKNXDevicePort</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasKNXAttribute">hasKNXAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasKNXgroupaddress">
+        <h3>has KNX group address<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasKNXGroupAddress</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasKNXAttribute">hasKNXAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="haslocalendpointID">
+        <h3>has local endpoint ID<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasLocalEndpointId</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasLoraattribute">
+        <h3>has Lora attribute<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasLoraAttribute</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasLoraDevEUI">
+        <h3>has Lora DevEUI<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasLoraDevEUI</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasLoraAttribute">hasLoraAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusattribute">
+        <h3>has Modbus attribute<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusAttribute</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusnodeID">
+        <h3>has Modbus node ID<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusNodeId</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusAttribute">hasModbusAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusregister">
+        <h3>has Modbus register<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusRegister</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusAttribute">hasModbusAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasModbusregisterlength">
+        <h3>has Modbus register length<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasModbusRegisterLength</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasModbusAttribute">hasModbusAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasoffset">
+        <h3>has offset<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasOffset</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasprocessedtime">
+        <h3>has processed time<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasProcessedTime</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Time when an object or result was processed in a system.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasTime">core:hasTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasscalefactor">
+        <h3>has scale factor<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/device/hasScaleFactor</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Device">core:Device</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#1">1</a></li>
+        <li><a href="#1byte">1 byte</a></li>
+        <li><a href="#1.yyy">1.yyy</a></li>
+        <li><a href="#15">15</a></li>
+        <li><a href="#16">16</a></li>
+        <li><a href="#2">2</a></li>
+        <li><a href="#2byte">2 byte</a></li>
+        <li><a href="#2byteBCD">2 byte BCD</a></li>
+        <li><a href="#2bytesignedinteger">2 byte signed integer</a></li>
+        <li><a href="#2bytesignedintegerswapped">2 byte signed integer swapped</a></li>
+        <li><a href="#2byteunsignedinteger">2 byte unsigned integer</a></li>
+        <li><a href="#2byteunsignedintegerswapped">2 byte unsigned integer swapped</a></li>
+        <li><a href="#3">3</a></li>
+        <li><a href="#4">4</a></li>
+        <li><a href="#4byteBCD">4 byte BCD</a></li>
+        <li><a href="#4byteBCDswapped">4 byte BCD swapped</a></li>
+        <li><a href="#4bytefloat">4 byte float</a></li>
+        <li><a href="#4bytefloatBCD">4 byte float BCD</a></li>
+        <li><a href="#4bytefloatswapped">4 byte float swapped</a></li>
+        <li><a href="#4bytesignedinteger">4 byte signed integer</a></li>
+        <li><a href="#4bytesignedintegerswapped">4 byte signed integer swapped</a></li>
+        <li><a href="#4bytesignedintegerswappedbytesandwords">4 byte signed integer swapped bytes and words</a></li>
+        <li><a href="#4byteunsignedinteger">4 byte unsigned integer</a></li>
+        <li><a href="#4byteunsignedintegerswapped">4 byte unsigned integer swapped</a></li>
+        <li><a href="#4byteunsignedintegerswappedbytesandwords">4 byte unsigned integer swapped bytes and words</a></li>
+        <li><a href="#5">5</a></li>
+        <li><a href="#6">6</a></li>
+        <li><a href="#8bytefloat">8 byte float</a></li>
+        <li><a href="#8bytefloatswapped">8 byte float swapped</a></li>
+        <li><a href="#8bytesignedinteger">8 byte signed integer</a></li>
+        <li><a href="#8bytesignedintegerswapped">8 byte signed integer swapped</a></li>
+        <li><a href="#8byteunsignedinteger">8 byte unsigned integer</a></li>
+        <li><a href="#8byteunsignedintegerswapped">8 byte unsigned integer swapped</a></li>
+        <li><a href="#AirDiffuser">AirDiffuser</a></li>
+        <li><a href="#AirHandlingUnit">AirHandlingUnit</a></li>
+        <li><a href="#BACnet">BACnet</a></li>
+        <li><a href="#Battery">Battery</a></li>
+        <li><a href="#Boiler">Boiler</a></li>
+        <li><a href="#Chiller">Chiller</a></li>
+        <li><a href="#CirculationAir">CirculationAir</a></li>
+        <li><a href="#Coil">Coil</a></li>
+        <li><a href="#ColdWaterFlow">ColdWaterFlow</a></li>
+        <li><a href="#ColdWaterReturn">ColdWaterReturn</a></li>
+        <li><a href="#CommunicationBusPowerSource">CommunicationBusPowerSource</a></li>
+        <li><a href="#Compressor">Compressor</a></li>
+        <li><a href="#Condenser">Condenser</a></li>
+        <li><a href="#Control">Control</a></li>
+        <li><a href="#Damper">Damper</a></li>
+        <li><a href="#DataAcquisition">DataAcquisition</a></li>
+        <li><a href="#DataCommunicationGateway">DataCommunicationGateway</a></li>
+        <li><a href="#DistrictCoolingFlow">DistrictCoolingFlow</a></li>
+        <li><a href="#DistrictCoolingReturn">DistrictCoolingReturn</a></li>
+        <li><a href="#DistrictHeatingFlow">DistrictHeatingFlow</a></li>
+        <li><a href="#DistrictHeatingReturn">DistrictHeatingReturn</a></li>
+        <li><a href="#ElectricalGridIntake">ElectricalGridIntake</a></li>
+        <li><a href="#ElectricalGridInternal">ElectricalGridInternal</a></li>
+        <li><a href="#ElectricalGridLocalProduction">ElectricalGridLocalProduction</a></li>
+        <li><a href="#ElectricalGridTenant">ElectricalGridTenant</a></li>
+        <li><a href="#Elevator">Elevator</a></li>
+        <li><a href="#Escalator">Escalator</a></li>
+        <li><a href="#ExhaustAir">ExhaustAir</a></li>
+        <li><a href="#ExtractAir">ExtractAir</a></li>
+        <li><a href="#Fan">Fan</a></li>
+        <li><a href="#Filter">Filter</a></li>
+        <li><a href="#Fixedlengthstring">Fixed length string</a></li>
+        <li><a href="#Heater">Heater</a></li>
+        <li><a href="#HotWaterFlow">HotWaterFlow</a></li>
+        <li><a href="#HotWaterReturn">HotWaterReturn</a></li>
+        <li><a href="#Hwrc">Hwrc</a></li>
+        <li><a href="#IP">IP</a></li>
+        <li><a href="#IndoorAir">IndoorAir</a></li>
+        <li><a href="#KNX">KNX</a></li>
+        <li><a href="#LoRa">LoRa</a></li>
+        <li><a href="#MBus">MBus</a></li>
+        <li><a href="#ModbusRTU">ModbusRTU</a></li>
+        <li><a href="#ModbusTCP">ModbusTCP</a></li>
+        <li><a href="#OPC-DA">OPC-DA</a></li>
+        <li><a href="#OPC-UA">OPC-UA</a></li>
+        <li><a href="#OutdoorAir">OutdoorAir</a></li>
+        <li><a href="#PrimaryCoolingFlow">PrimaryCoolingFlow</a></li>
+        <li><a href="#PrimaryCoolingReturn">PrimaryCoolingReturn</a></li>
+        <li><a href="#PrimaryHeatingFlow">PrimaryHeatingFlow</a></li>
+        <li><a href="#PrimaryHeatingReturn">PrimaryHeatingReturn</a></li>
+        <li><a href="#Pump">Pump</a></li>
+        <li><a href="#RecyclingEnergyFlow">RecyclingEnergyFlow</a></li>
+        <li><a href="#RecyclingEnergyReturn">RecyclingEnergyReturn</a></li>
+        <li><a href="#SecondaryCoolingFlow">SecondaryCoolingFlow</a></li>
+        <li><a href="#SecondaryCoolingReturn">SecondaryCoolingReturn</a></li>
+        <li><a href="#SecondaryHeatingFlow">SecondaryHeatingFlow</a></li>
+        <li><a href="#SecondaryHeatingReturn">SecondaryHeatingReturn</a></li>
+        <li><a href="#SteamFlow">SteamFlow</a></li>
+        <li><a href="#SteamReturn">SteamReturn</a></li>
+        <li><a href="#SupplyAir">SupplyAir</a></li>
+        <li><a href="#Thermostat">Thermostat</a></li>
+        <li><a href="#Valve">Valve</a></li>
+        <li><a href="#Variablelengthstring">Variable length string</a></li>
+        <li><a href="#WasteWater">WasteWater</a></li>
+    </ul>
+    <div class="entity named_individual" id="1">
+        <h3>1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/1
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Read coil
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="1.yyy">
+        <h3>1.yyy<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/1.yyy
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/KNXDataPointType">KNXDataPointType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Boolean, like switching, move up/down, step
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="15">
+        <h3>15<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/15
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Write Multiple Coils
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="16">
+        <h3>16<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/16
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Write Multiple Holding Registers
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="1byte">
+        <h3>1 byte<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/1_byte
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2">
+        <h3>2<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Read Discrete Input
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2byte">
+        <h3>2 byte<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2_byte
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2byteBCD">
+        <h3>2 byte BCD<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2_byte_BCD
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2bytesignedinteger">
+        <h3>2 byte signed integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2_byte_signed_integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2bytesignedintegerswapped">
+        <h3>2 byte signed integer swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2_byte_signed_integer_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2byteunsignedinteger">
+        <h3>2 byte unsigned integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2_byte_unsigned_integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="2byteunsignedintegerswapped">
+        <h3>2 byte unsigned integer swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/2_byte_unsigned_integer_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="3">
+        <h3>3<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/3
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Read Holding Registers
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4">
+        <h3>4<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Read Input Registers
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4byteBCD">
+        <h3>4 byte BCD<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_BCD
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4byteBCDswapped">
+        <h3>4 byte BCD swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_BCD_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4bytefloat">
+        <h3>4 byte float<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_float
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4bytefloatBCD">
+        <h3>4 byte float BCD<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_float_BCD
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4bytefloatswapped">
+        <h3>4 byte float swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_float_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4bytesignedinteger">
+        <h3>4 byte signed integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_signed_integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4bytesignedintegerswapped">
+        <h3>4 byte signed integer swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_signed_integer_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4bytesignedintegerswappedbytesandwords">
+        <h3>4 byte signed integer swapped bytes and words<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4byteunsignedinteger">
+        <h3>4 byte unsigned integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_unsigned_integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4byteunsignedintegerswapped">
+        <h3>4 byte unsigned integer swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_unsigned_integer_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="4byteunsignedintegerswappedbytesandwords">
+        <h3>4 byte unsigned integer swapped bytes and words<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="5">
+        <h3>5<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/5
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Write Single Coil
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="6">
+        <h3>6<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/6
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Write Single Holding Register
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="8bytefloat">
+        <h3>8 byte float<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/8_byte_float
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="8bytefloatswapped">
+        <h3>8 byte float swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/8_byte_float_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="8bytesignedinteger">
+        <h3>8 byte signed integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/8_byte_signed_integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="8bytesignedintegerswapped">
+        <h3>8 byte signed integer swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/8_byte_signed_integer_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="8byteunsignedinteger">
+        <h3>8 byte unsigned integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/8_byte_unsigned_integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="8byteunsignedintegerswapped">
+        <h3>8 byte unsigned integer swapped<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/8_byte_unsigned_integer_swapped
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="AirDiffuser">
+        <h3>AirDiffuser<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/AirDiffuser
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="AirHandlingUnit">
+        <h3>AirHandlingUnit<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/AirHandlingUnit
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="BACnet">
+        <h3>BACnet<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/BACnet
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Battery">
+        <h3>Battery<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Battery
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PowerSource">PowerSource</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Boiler">
+        <h3>Boiler<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Boiler
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Chiller">
+        <h3>Chiller<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Chiller
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="CirculationAir">
+        <h3>CirculationAir<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/CirculationAir
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Coil">
+        <h3>Coil<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Coil
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ColdWaterFlow">
+        <h3>ColdWaterFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ColdWaterFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ColdWaterReturn">
+        <h3>ColdWaterReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ColdWaterReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="CommunicationBusPowerSource">
+        <h3>CommunicationBusPowerSource<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/CommunicationBusPowerSource
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PowerSource">PowerSource</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Compressor">
+        <h3>Compressor<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Compressor
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Condenser">
+        <h3>Condenser<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Condenser
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Control">
+        <h3>Control<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Control
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Device that controls Actuators (can also collect data).
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Damper">
+        <h3>Damper<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Damper
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="DataAcquisition">
+        <h3>DataAcquisition<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/DataAcquisition
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Device that collects data
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="DataCommunicationGateway">
+        <h3>DataCommunicationGateway<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/DataCommunicationGateway
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Device that acts as a broker (could be a switch or gateway)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="DistrictCoolingFlow">
+        <h3>DistrictCoolingFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/DistrictCoolingFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="DistrictCoolingReturn">
+        <h3>DistrictCoolingReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/DistrictCoolingReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="DistrictHeatingFlow">
+        <h3>DistrictHeatingFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/DistrictHeatingFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="DistrictHeatingReturn">
+        <h3>DistrictHeatingReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/DistrictHeatingReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ElectricalGridIntake">
+        <h3>ElectricalGridIntake<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ElectricalGridIntake
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ElectricalGridInternal">
+        <h3>ElectricalGridInternal<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ElectricalGridInternal
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ElectricalGridLocalProduction">
+        <h3>ElectricalGridLocalProduction<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ElectricalGridLocalProduction
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ElectricalGridTenant">
+        <h3>ElectricalGridTenant<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ElectricalGridTenant
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Elevator">
+        <h3>Elevator<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Elevator
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Escalator">
+        <h3>Escalator<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Escalator
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ExhaustAir">
+        <h3>ExhaustAir<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ExhaustAir
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ExtractAir">
+        <h3>ExtractAir<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ExtractAir
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Fan">
+        <h3>Fan<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Fan
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Filter">
+        <h3>Filter<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Filter
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Fixedlengthstring">
+        <h3>Fixed length string<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Fixed_length_string
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Heater">
+        <h3>Heater<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Heater
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="HotWaterFlow">
+        <h3>HotWaterFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/HotWaterFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="HotWaterReturn">
+        <h3>HotWaterReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/HotWaterReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Hwrc">
+        <h3>Hwrc<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Hwrc
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="IP">
+        <h3>IP<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/IP
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="IndoorAir">
+        <h3>IndoorAir<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/IndoorAir
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="KNX">
+        <h3>KNX<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/KNX
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="LoRa">
+        <h3>LoRa<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/LoRa
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="MBus">
+        <h3>MBus<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/MBus
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ModbusRTU">
+        <h3>ModbusRTU<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ModbusRTU
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ModbusTCP">
+        <h3>ModbusTCP<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/ModbusTCP
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="OPC-DA">
+        <h3>OPC-DA<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/OPC-DA
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="OPC-UA">
+        <h3>OPC-UA<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/OPC-UA
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/CommunicationsBus">CommunicationsBus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="OutdoorAir">
+        <h3>OutdoorAir<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/OutdoorAir
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="PrimaryCoolingFlow">
+        <h3>PrimaryCoolingFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/PrimaryCoolingFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="PrimaryCoolingReturn">
+        <h3>PrimaryCoolingReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/PrimaryCoolingReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="PrimaryHeatingFlow">
+        <h3>PrimaryHeatingFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/PrimaryHeatingFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="PrimaryHeatingReturn">
+        <h3>PrimaryHeatingReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/PrimaryHeatingReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Pump">
+        <h3>Pump<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Pump
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="RecyclingEnergyFlow">
+        <h3>RecyclingEnergyFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/RecyclingEnergyFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="RecyclingEnergyReturn">
+        <h3>RecyclingEnergyReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/RecyclingEnergyReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SecondaryCoolingFlow">
+        <h3>SecondaryCoolingFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SecondaryCoolingFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SecondaryCoolingReturn">
+        <h3>SecondaryCoolingReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SecondaryCoolingReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SecondaryHeatingFlow">
+        <h3>SecondaryHeatingFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SecondaryHeatingFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SecondaryHeatingReturn">
+        <h3>SecondaryHeatingReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SecondaryHeatingReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SteamFlow">
+        <h3>SteamFlow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SteamFlow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SteamReturn">
+        <h3>SteamReturn<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SteamReturn
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="SupplyAir">
+        <h3>SupplyAir<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/SupplyAir
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Thermostat">
+        <h3>Thermostat<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Thermostat
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Valve">
+        <h3>Valve<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Valve
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/DeviceFunctionType">DeviceFunctionType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Variablelengthstring">
+        <h3>Variable length string<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/Variable_length_string
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="WasteWater">
+        <h3>WasteWater<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/device/WasteWater
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/device/PlacementContext">PlacementContext</a><br/>
+            </dd>
+        </table>
+    </div>
+</section>
+
+<section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/rec/device/</code></dd>
+        <dt>cc</dt>
+        <dd><code>http://creativecommons.org/ns#</code></dd>
+        <dt>core</dt>
+        <dd><code>https://w3id.org/rec/core/</code></dd>
+        <dt>cpannotationschema</dt>
+        <dd><code>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>o2o</dt>
+        <dd><code>https://karlhammar.com/owl2oas/o2o.owl#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
+</body>
+</html>
