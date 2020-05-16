@@ -37,23 +37,33 @@ input()
 # For each ontology except full,:
 for inputFile in ontologyFiles:
     if not inputFile.startswith("full"):
+        inputFilePath = f"{ontologyPath}/{inputFile}"
         # 1. Generate PyLODE docs
-        fEnding = splitext(inputFile)[1]
-        outputFileName = inputFile.replace(fEnding, ".html")
-        subprocess.run([pylodePath, "-i", f"{ontologyPath}/{inputFile}", "-o", f"{ontologyPath}/{outputFileName}"])
+        moduleName, fEnding = splitext(inputFile)
+        outputHtmlFileName = f"{ontologyPath}/{moduleName}.html"
+        subprocess.run([pylodePath, "-i", inputFilePath, "-o", outputHtmlFileName])
 
         # 2. Merge into temp full graph
         moduleGraph = Graph()
-        moduleGraph.parse(f"{ontologyPath}/{inputFile}")
+        moduleGraph.parse(inputFilePath)
         moduleOntologyUris = list(moduleGraph.subjects(RDF.type, OWL.Ontology))
         for (s, p, o) in moduleGraph:
             if not s in moduleOntologyUris:
                 unionedOntology.add((s, p, o))
 
-        # 3. Generate WebVOWL visualization (except for metadata file)
+        # 3. Generate and graft WebVOWL visualization (except for metadata file)
         if not inputFile.startswith("metadata"):
-            outputJsonFileName = outputFileName.replace(".html",".json")
-            subprocess.run(["java", "-jar", owl2vowlPath, "-file", f"{ontologyPath}/{inputFile}", "-output", f"{ontologyPath}/webvowl/data/{outputJsonFileName}"])
+            outputJsonFilePath = f"{ontologyPath}/webvowl/data/{moduleName}.json"
+            subprocess.run(["java", "-jar", owl2vowlPath, "-file", inputFilePath, "-output", outputJsonFilePath])
+
+            # Graft on HTML <iframe>s
+            htmlFile = open(outputHtmlFileName, "rt")
+            htmlContent = htmlFile.read()
+            htmlFile.close()
+            htmlContent = htmlContent.replace('<div style="width:500px; height:50px; background-color: black;">&nbsp;</div>', f'<iframe src="webvowl/index.html#{moduleName}" width="100%" height="800"></iframe>')
+            htmlFile = open(outputHtmlFileName, "wt")
+            htmlFile.write(htmlContent)
+            htmlFile.close()
 
 print("Please reconnect network and press any key.")
 input()
@@ -63,8 +73,12 @@ unionedOntology.serialize(destination=f"{ontologyPath}/fullTemp.ttl", format="tu
 subprocess.run([pylodePath, "-i", f"{ontologyPath}/fullTemp.ttl", "-o", f"{ontologyPath}/full.html"])
 remove(f"{ontologyPath}/fullTemp.ttl")
 
-# 5. Generate WebVOWL visualization on full file
+# 5. Generate WebVOWL visualization on full file and graft it
 subprocess.run(["java", "-jar", owl2vowlPath, "-file", f"{ontologyPath}/full.rdf", "-output", f"{ontologyPath}/webvowl/data/full.json"])
-
-# 6. Graft on HTML <iframe>s
-# TODO
+htmlFile = open(f"{ontologyPath}/full.html", "rt")
+htmlContent = htmlFile.read()
+htmlFile.close()
+htmlContent = htmlContent.replace('<div style="width:500px; height:50px; background-color: black;">&nbsp;</div>', f'<iframe src="webvowl/index.html#full" width="100%" height="800"></iframe>')
+htmlFile = open(f"{ontologyPath}/full.html", "wt")
+htmlFile.write(htmlContent)
+htmlFile.close()

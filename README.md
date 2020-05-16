@@ -8,3 +8,4 @@ This site contains [WIDOCO](https://github.com/dgarijo/Widoco)- and [pyLODE](htt
 * [v3.1](3.1/)
 * [v3.1.1](3.1.1/)
 * [v3.1.2](3.1.2/)
+* [v3.1.3](3.1.3/)

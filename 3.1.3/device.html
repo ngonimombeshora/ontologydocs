@@ -254,7 +254,7 @@
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <div style="width:500px; height:50px; background-color: black;">&nbsp;</div>
+        <iframe src="webvowl/index.html#device" width="100%" height="800"></iframe>
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
@@ -309,11 +309,11 @@
                 <th>In domain of</th>
                 <td>
                     <a href="https://w3id.org/rec/device/actuationResponse">actuationResponse</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/actuationCommand">actuationCommand</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasActuationCommandTime">hasActuationCommandTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationCommand">actuationCommand</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationRequest">actuationRequest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasActuationResponseTime">hasActuationResponseTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
@@ -368,22 +368,22 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/observedBy">observedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/device/observedBy">observedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Sensor">Sensor</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/executesActuation">executesActuation</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasActuationInterface">hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/executesActuation">executesActuation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -425,15 +425,15 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/LoRaConfiguration">LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/KNXConfiguration">KNXConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/ModbusTCPConfiguration">ModbusTCPConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/MBusConfiguration">MBusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/OPC-UAConfiguration">OPC-UAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/BACnetConfiguration">BACnetConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusRTUConfiguration">ModbusRTUConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/LoRaConfiguration">LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/OPC-DAConfiguration">OPC-DAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/OPC-UAConfiguration">OPC-UAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusTCPConfiguration">ModbusTCPConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/MBusConfiguration">MBusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -487,9 +487,9 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Exception">Exception</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -660,8 +660,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -899,26 +899,26 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
                     <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/generatedObservation">generatedObservation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/observes">observes</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/generatedException">generatedException</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/observes">observes</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/generatedObservation">generatedObservation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="https://w3id.org/rec/device/observationGeneratedBy">observationGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/exceptionGeneratedBy">exceptionGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/observedBy">observedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/exceptionGeneratedBy">exceptionGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
