@@ -8,7 +8,8 @@ from shutil import copytree
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF
 
-pylodePath = "/Users/karl/Downloads/pyLODE-2.3/pylode/bin/pylode.sh"
+pylodePath = "bin/pyLODE-2.3/pylode/bin/pylode.sh"
+owl2vowlPath = "bin/owl2vowl.jar"
 
 ontologyFileEndings = ["owl", "rdf", "ttl", "nq"]
 
@@ -52,7 +53,7 @@ for inputFile in ontologyFiles:
         # 3. Generate WebVOWL visualization (except for metadata file)
         if not inputFile.startswith("metadata"):
             outputJsonFileName = outputFileName.replace(".html",".json")
-            subprocess.run(["java", "-jar", "owl2vowl.jar", "-file", f"{ontologyPath}/{inputFile}", "-output", f"{ontologyPath}/webvowl/data/{outputJsonFileName}"])
+            subprocess.run(["java", "-jar", owl2vowlPath, "-file", f"{ontologyPath}/{inputFile}", "-output", f"{ontologyPath}/webvowl/data/{outputJsonFileName}"])
 
 print("Please reconnect network and press any key.")
 input()
@@ -63,7 +64,7 @@ subprocess.run([pylodePath, "-i", f"{ontologyPath}/fullTemp.ttl", "-o", f"{ontol
 remove(f"{ontologyPath}/fullTemp.ttl")
 
 # 5. Generate WebVOWL visualization on full file
-subprocess.run(["java", "-jar", "owl2vowl.jar", "-file", f"{ontologyPath}/full.rdf", "-output", f"{ontologyPath}/webvowl/data/full.json"])
+subprocess.run(["java", "-jar", owl2vowlPath, "-file", f"{ontologyPath}/full.rdf", "-output", f"{ontologyPath}/webvowl/data/full.json"])
 
 # 6. Graft on HTML <iframe>s
 # TODO
