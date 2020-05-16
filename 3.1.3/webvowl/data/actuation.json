@@ -5,19 +5,15 @@
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/rec/actuation", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/device", "https://w3id.org/rec/core" ],
     "prefixList" : {
       "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "vann" : "http://purl.org/vocab/vann/",
       "terms" : "http://purl.org/dc/terms/",
-      "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
       "xsd" : "http://www.w3.org/2001/XMLSchema#",
-      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-      "actuation" : "https://w3id.org/rec/actuation/",
-      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "skos" : "http://www.w3.org/2004/02/skos/core#",
-      "" : "https://w3id.org/rec/actuation/",
       "dc" : "http://purl.org/dc/elements/1.1/",
       "cc" : "http://creativecommons.org/ns#",
       "xml" : "http://www.w3.org/XML/1998/namespace",
-      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#"
+      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
     },
     "title" : {
       "undefined" : "RealEstateCore Actuation Module"
@@ -52,28 +48,28 @@
         "value" : "actuation",
         "type" : "label"
       } ],
-      "publisher" : [ {
-        "identifier" : "publisher",
-        "language" : "undefined",
-        "value" : "RealEstateCore Consortium",
-        "type" : "label"
-      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-05-15",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "en",
-        "value" : "3.1.3",
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/rec/actuation/3.1.3/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "3.1.3",
         "type" : "label"
       } ],
       "title" : [ {
@@ -249,7 +245,7 @@
   }, {
     "instances" : 0,
     "union" : [ "11", "27" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "4"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -349,12 +345,12 @@
   }, {
     "instances" : 0,
     "union" : [ "11", "27" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "24"
   }, {
     "instances" : 0,
     "union" : [ "11", "27" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "1"
   }, {
     "iri" : "https://w3id.org/rec/actuation/ActuationRequest",
@@ -643,32 +639,32 @@
     },
     "cardinality" : "1",
     "domain" : "10",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "9"
   }, {
     "range" : "14",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "12"
   }, {
     "range" : "14",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "15"
   }, {
     "range" : "19",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "21",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "20"
   }, {
     "range" : "14",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "iri" : "https://w3id.org/rec/actuation/requestingAgent",
@@ -695,27 +691,27 @@
       "en" : "generated command"
     },
     "domain" : "11",
-    "attributes" : [ "inverse functional", "object" ],
+    "attributes" : [ "object", "inverse functional" ],
     "id" : "26"
   }, {
     "range" : "30",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
     "range" : "21",
     "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
     "range" : "21",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
     "range" : "21",
     "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "iri" : "https://w3id.org/rec/actuation/keyMandatory",
@@ -726,7 +722,7 @@
     },
     "cardinality" : "1",
     "domain" : "16",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "36"
   }, {
     "iri" : "https://w3id.org/rec/actuation/hasCommandResponse",
@@ -739,7 +735,7 @@
     },
     "maxCardinality" : "1",
     "domain" : "27",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/rec/actuation/responseCode",
@@ -787,7 +783,7 @@
       "IRI-based" : "valueRestrictionResolution"
     },
     "domain" : "13",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/rec/actuation/valueRestrictionType",
@@ -797,7 +793,7 @@
       "IRI-based" : "valueRestrictionType"
     },
     "domain" : "13",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "50"
   }, {
     "iri" : "https://w3id.org/rec/actuation/hasActuationInterface",
@@ -824,7 +820,7 @@
     "comment" : {
       "en" : "The agent that initiated actuation, i.e., that created an actuation request (and consequently, was the original source also of subsequent generated actuation commands)."
     },
-    "attributes" : [ "allValues", "object" ],
+    "attributes" : [ "object", "allValues" ],
     "id" : "55"
   }, {
     "iri" : "https://w3id.org/rec/actuation/targetActuator",
@@ -835,7 +831,7 @@
       "en" : "target actuator"
     },
     "domain" : "11",
-    "attributes" : [ "allValues", "object" ],
+    "attributes" : [ "object", "allValues" ],
     "id" : "56"
   }, {
     "iri" : "https://w3id.org/rec/actuation/responseCodeInteger",
@@ -871,7 +867,7 @@
       "en" : "target actuator"
     },
     "domain" : "27",
-    "attributes" : [ "allValues", "object" ],
+    "attributes" : [ "object", "allValues" ],
     "id" : "60"
   }, {
     "iri" : "https://w3id.org/rec/actuation/requestingAgent",
@@ -885,7 +881,7 @@
     "comment" : {
       "en" : "The agent that initiated actuation, i.e., that created an actuation request (and consequently, was the original source also of subsequent generated actuation commands)."
     },
-    "attributes" : [ "allValues", "object" ],
+    "attributes" : [ "object", "allValues" ],
     "id" : "61"
   }, {
     "iri" : "https://w3id.org/rec/actuation/valueRestriction",
@@ -897,7 +893,7 @@
     },
     "maxCardinality" : "1",
     "domain" : "16",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "62"
   }, {
     "iri" : "https://w3id.org/rec/actuation/responseToCommand",
@@ -909,7 +905,7 @@
     },
     "cardinality" : "1",
     "domain" : "35",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "39"
   }, {
     "iri" : "https://w3id.org/rec/actuation/targetInterface",
@@ -921,7 +917,7 @@
     },
     "maxCardinality" : "1",
     "domain" : "11",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "63"
   }, {
     "iri" : "https://w3id.org/rec/actuation/actuationPayload",
@@ -947,7 +943,7 @@
     },
     "superproperty" : [ "45" ],
     "domain" : "18",
-    "attributes" : [ "inverse functional", "object" ],
+    "attributes" : [ "object", "inverse functional" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/rec/actuation/generatedCommandResponse",
@@ -975,7 +971,7 @@
     },
     "superproperty" : [ "53" ],
     "domain" : "2",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "54"
   }, {
     "iri" : "https://w3id.org/rec/actuation/keyString",
@@ -986,7 +982,7 @@
     },
     "cardinality" : "1",
     "domain" : "16",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "67"
   }, {
     "iri" : "https://w3id.org/rec/actuation/hasRequestResponse",
@@ -999,7 +995,7 @@
     },
     "maxCardinality" : "1",
     "domain" : "11",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "68"
   }, {
     "iri" : "https://w3id.org/rec/actuation/valueRestrictionValues",
@@ -1043,7 +1039,7 @@
     },
     "cardinality" : "1",
     "domain" : "16",
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "72"
   }, {
     "iri" : "https://w3id.org/rec/actuation/wasGeneratedFromRequest",
@@ -1055,7 +1051,7 @@
     },
     "cardinality" : "1",
     "domain" : "27",
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "28"
   } ]
 }

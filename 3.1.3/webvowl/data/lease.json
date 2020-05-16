@@ -5,19 +5,15 @@
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/rec/lease", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/core" ],
     "prefixList" : {
       "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "vann" : "http://purl.org/vocab/vann/",
       "dcterms" : "http://purl.org/dc/terms/",
       "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
       "xsd" : "http://www.w3.org/2001/XMLSchema#",
-      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "skos" : "http://www.w3.org/2004/02/skos/core#",
-      "" : "https://w3id.org/rec/lease/",
       "dc" : "http://purl.org/dc/elements/1.1/",
       "cc" : "http://creativecommons.org/ns#",
       "xml" : "http://www.w3.org/XML/1998/namespace",
-      "core" : "https://w3id.org/rec/core/",
-      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#"
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
     },
     "title" : {
       "undefined" : "RealEstateCore Lease Module"
@@ -35,17 +31,7 @@
       "coversRequirements" : [ {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "Who is leasing Building 7?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
         "value" : "Who owns Building 7?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "What purpose is Building 7 leased for?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
@@ -57,6 +43,16 @@
         "language" : "en",
         "value" : "When does the lease on Building 7 run out?",
         "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What purpose is Building 7 leased for?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Who is leasing Building 7?",
+        "type" : "label"
       } ],
       "license" : [ {
         "identifier" : "license",
@@ -67,12 +63,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Karl Hammar",
+        "value" : "Erik Wallin",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Erik Wallin",
+        "value" : "Karl Hammar",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -81,16 +77,16 @@
         "value" : "lease",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2020-05-15",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-05-15",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -588,7 +584,7 @@
       "IRI-based" : "hasStopTime"
     },
     "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/rec/lease/roomIsPartOfPremises",
@@ -611,7 +607,7 @@
     },
     "domain" : "1",
     "subproperty" : [ "8" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "7"
   }, {
     "iri" : "https://w3id.org/rec/lease/leaseStart",
@@ -685,7 +681,7 @@
     },
     "domain" : "1",
     "subproperty" : [ "6" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "31"
   }, {
     "range" : "5",
@@ -719,7 +715,7 @@
     "id" : "42"
   }, {
     "domain" : "40",
-    "range" : "28",
+    "range" : "20",
     "id" : "46",
     "label" : {
       "IRI-based" : "10",
@@ -741,7 +737,7 @@
     "id" : "47"
   }, {
     "domain" : "40",
-    "range" : "20",
+    "range" : "30",
     "id" : "49",
     "label" : {
       "IRI-based" : "12",
@@ -872,7 +868,7 @@
     "id" : "6"
   }, {
     "domain" : "40",
-    "range" : "30",
+    "range" : "17",
     "id" : "61",
     "label" : {
       "IRI-based" : "8",
@@ -880,7 +876,7 @@
     }
   }, {
     "domain" : "40",
-    "range" : "17",
+    "range" : "28",
     "id" : "62",
     "label" : {
       "IRI-based" : "9",
@@ -934,7 +930,7 @@
       "IRI-based" : "hasStartTime"
     },
     "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "65"
   }, {
     "iri" : "https://w3id.org/rec/lease/leaseOf",

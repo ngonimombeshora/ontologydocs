@@ -222,9 +222,9 @@
         <dt>Contributors(s)</dt>
         <dd>
             Peter Hartlev<br/>
-            Per Karlberg<br/>
             Håkan Eriksson<br/>
             Joakim Eriksson<br/>
+            Per Karlberg<br/>
         </dd>
         <dt>Modified</dt>
         <dd>2020-05-15</dd>
@@ -234,13 +234,13 @@
         <dd><a href="https://w3id.org/rec/full/3.1.3/">https://w3id.org/rec/full/3.1.3/</a></dd>
         <dt>Imports</dt>
         <dd>
-            <a href="https://w3id.org/rec/agents/3.1.3/">https://w3id.org/rec/agents/3.1.3/</a><br/>
-            <a href="https://w3id.org/rec/core/3.1.3/">https://w3id.org/rec/core/3.1.3/</a><br/>
-            <a href="https://w3id.org/rec/lease/3.1.3/">https://w3id.org/rec/lease/3.1.3/</a><br/>
-            <a href="https://w3id.org/rec/metadata/3.1.3/">https://w3id.org/rec/metadata/3.1.3/</a><br/>
-            <a href="https://w3id.org/rec/building/3.1.3/">https://w3id.org/rec/building/3.1.3/</a><br/>
             <a href="https://w3id.org/rec/actuation/3.1.3/">https://w3id.org/rec/actuation/3.1.3/</a><br/>
+            <a href="https://w3id.org/rec/building/3.1.3/">https://w3id.org/rec/building/3.1.3/</a><br/>
+            <a href="https://w3id.org/rec/agents/3.1.3/">https://w3id.org/rec/agents/3.1.3/</a><br/>
+            <a href="https://w3id.org/rec/lease/3.1.3/">https://w3id.org/rec/lease/3.1.3/</a><br/>
+            <a href="https://w3id.org/rec/core/3.1.3/">https://w3id.org/rec/core/3.1.3/</a><br/>
             <a href="https://w3id.org/rec/device/3.1.3/">https://w3id.org/rec/device/3.1.3/</a><br/>
+            <a href="https://w3id.org/rec/metadata/3.1.3/">https://w3id.org/rec/metadata/3.1.3/</a><br/>
         </dd>
         <dt>Ontology RDF</dt>
         <dd><a href="full.rdf">RDF (xml)</a></dd>
@@ -458,16 +458,16 @@
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="http://www.opengis.net/ont/geosparql#asGML">http://www.opengis.net/ont/geosparql#asGML</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#hasSerialization">http://www.opengis.net/ont/geosparql#hasSerialization</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#asWKT">http://www.opengis.net/ont/geosparql#asWKT</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.opengis.net/ont/geosparql#asGML">http://www.opengis.net/ont/geosparql#asGML</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">http://www.opengis.net/ont/geosparql#hasGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#defaultGeometry">http://www.opengis.net/ont/geosparql#defaultGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">http://www.opengis.net/ont/geosparql#hasGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -494,13 +494,13 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">https://w3id.org/rec/actuation/wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Agent">core:Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/targetActuator">https://w3id.org/rec/actuation/targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/hasCommandResponse">https://w3id.org/rec/actuation/hasCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">https://w3id.org/rec/actuation/wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/targetActuator">https://w3id.org/rec/actuation/targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Agent">core:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/hasCommandResponse">https://w3id.org/rec/actuation/hasCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -513,8 +513,8 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/responseToCommand">https://w3id.org/rec/actuation/responseToCommand</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommand">https://w3id.org/rec/actuation/generatedCommand</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/responseToCommand">https://w3id.org/rec/actuation/responseToCommand</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -548,15 +548,15 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/responseCode">https://w3id.org/rec/actuation/responseCode</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/responseToCommand">https://w3id.org/rec/actuation/responseToCommand</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/responseCode">https://w3id.org/rec/actuation/responseCode</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/hasCommandResponse">https://w3id.org/rec/actuation/hasCommandResponse</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommandResponse">https://w3id.org/rec/actuation/generatedCommandResponse</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/hasCommandResponse">https://w3id.org/rec/actuation/hasCommandResponse</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -583,10 +583,10 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="https://w3id.org/rec/actuation/ActuationRequest">https://w3id.org/rec/actuation/ActuationRequest</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ActuationCommandResponse">https://w3id.org/rec/actuation/ActuationCommandResponse</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ActuationCommand">https://w3id.org/rec/actuation/ActuationCommand</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ActuationRequestResponse">https://w3id.org/rec/actuation/ActuationRequestResponse</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/ActuationRequest">https://w3id.org/rec/actuation/ActuationRequest</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -619,16 +619,16 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/isDefaultActuationInterfaceOf">https://w3id.org/rec/actuation/isDefaultActuationInterfaceOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/isActuationInterfaceOf">https://w3id.org/rec/actuation/isActuationInterfaceOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/payloadKeyValueDefinition">https://w3id.org/rec/actuation/payloadKeyValueDefinition</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/isActuationInterfaceOf">https://w3id.org/rec/actuation/isActuationInterfaceOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/isDefaultActuationInterfaceOf">https://w3id.org/rec/actuation/isDefaultActuationInterfaceOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/hasDefaultActuationInterface">https://w3id.org/rec/actuation/hasDefaultActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/targetInterface">https://w3id.org/rec/actuation/targetInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/hasDefaultActuationInterface">https://w3id.org/rec/actuation/hasDefaultActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/hasActuationInterface">https://w3id.org/rec/actuation/hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -656,22 +656,22 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/hasRequestResponse">https://w3id.org/rec/actuation/hasRequestResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/targetActuator">https://w3id.org/rec/actuation/targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/targetInterface">https://w3id.org/rec/actuation/targetInterface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/targetActuator">https://w3id.org/rec/actuation/targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/hasRequestResponse">https://w3id.org/rec/actuation/hasRequestResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/actuationPayload">https://w3id.org/rec/actuation/actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Agent">core:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/targetActuator">https://w3id.org/rec/actuation/targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/targetActuator">https://w3id.org/rec/actuation/targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/hasRequestResponse">https://w3id.org/rec/actuation/hasRequestResponse</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/generatedCommand">https://w3id.org/rec/actuation/generatedCommand</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/targetInterface">https://w3id.org/rec/actuation/targetInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/generatedCommand">https://w3id.org/rec/actuation/generatedCommand</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/hasRequestResponse">https://w3id.org/rec/actuation/hasRequestResponse</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -707,16 +707,16 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="https://w3id.org/rec/actuation/responseToRequest">https://w3id.org/rec/actuation/responseToRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/generatedCommandResponse">https://w3id.org/rec/actuation/generatedCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/requestAccepted">https://w3id.org/rec/actuation/requestAccepted</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/generatedCommandResponse">https://w3id.org/rec/actuation/generatedCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/rec/actuation/responseToRequest">https://w3id.org/rec/actuation/responseToRequest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommandResponse">https://w3id.org/rec/actuation/generatedCommandResponse</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/actuationObservedBy">https://w3id.org/rec/actuation/actuationObservedBy</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/responseToRequest">https://w3id.org/rec/actuation/responseToRequest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/requestAccepted">https://w3id.org/rec/actuation/requestAccepted</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
@@ -750,19 +750,19 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="https://w3id.org/rec/actuation/valueRestriction">https://w3id.org/rec/actuation/valueRestriction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/keyMandatory">https://w3id.org/rec/actuation/keyMandatory</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/valueDatatype">https://w3id.org/rec/actuation/valueDatatype</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/keyString">https://w3id.org/rec/actuation/keyString</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/keyMandatory">https://w3id.org/rec/actuation/keyMandatory</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/valueRestriction">https://w3id.org/rec/actuation/valueRestriction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="https://w3id.org/rec/actuation/keyMandatory">https://w3id.org/rec/actuation/keyMandatory</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/actuation/valueDatatype">https://w3id.org/rec/actuation/valueDatatype</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/actuation/valueRestriction">https://w3id.org/rec/actuation/valueRestriction</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/keyString">https://w3id.org/rec/actuation/keyString</a><sup class="sup-fp" title="functional property">fp</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/keyMandatory">https://w3id.org/rec/actuation/keyMandatory</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -829,8 +829,8 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/valueRestrictionType">https://w3id.org/rec/actuation/valueRestrictionType</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/actuation/valueRestrictionResolution">https://w3id.org/rec/actuation/valueRestrictionResolution</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/valueRestrictionType">https://w3id.org/rec/actuation/valueRestrictionType</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/actuation/valueRestrictionValues">https://w3id.org/rec/actuation/valueRestrictionValues</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
@@ -918,12 +918,12 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/agents/image">https://w3id.org/rec/agents/image</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/agents/lastName">https://w3id.org/rec/agents/lastName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/gender">https://w3id.org/rec/agents/gender</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/agents/familyName">https://w3id.org/rec/agents/familyName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/agents/givenName">https://w3id.org/rec/agents/givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/gender">https://w3id.org/rec/agents/gender</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/agents/firstName">https://w3id.org/rec/agents/firstName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/image">https://w3id.org/rec/agents/image</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1305,8 +1305,8 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://w3id.org/rec/building/GroupRoom">https://w3id.org/rec/building/GroupRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/SmallStudyRoom">https://w3id.org/rec/building/SmallStudyRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Classroom">https://w3id.org/rec/building/Classroom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/SmallStudyRoom">https://w3id.org/rec/building/SmallStudyRoom</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1469,11 +1469,11 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/building/DiningRoom">https://w3id.org/rec/building/DiningRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Pentry">https://w3id.org/rec/building/Pentry</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/CookingRoom">https://w3id.org/rec/building/CookingRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/DiningRoom">https://w3id.org/rec/building/DiningRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/CoffeeRoom">https://w3id.org/rec/building/CoffeeRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/BarRoom">https://w3id.org/rec/building/BarRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Pentry">https://w3id.org/rec/building/Pentry</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/DishingRoom">https://w3id.org/rec/building/DishingRoom</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1496,8 +1496,8 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://w3id.org/rec/building/ParkingSlotWarm">https://w3id.org/rec/building/ParkingSlotWarm</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/BicycleGarage">https://w3id.org/rec/building/BicycleGarage</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/ParkingSlotCold">https://w3id.org/rec/building/ParkingSlotCold</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/BicycleGarage">https://w3id.org/rec/building/BicycleGarage</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1673,8 +1673,8 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://w3id.org/rec/building/OfficeLandscape">https://w3id.org/rec/building/OfficeLandscape</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/PhoneBooth">https://w3id.org/rec/building/PhoneBooth</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/OfficeRoom">https://w3id.org/rec/building/OfficeRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/PhoneBooth">https://w3id.org/rec/building/PhoneBooth</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1770,10 +1770,10 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/building/ShowerRoom">https://w3id.org/rec/building/ShowerRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Sauna">https://w3id.org/rec/building/Sauna</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/DisabledToilet">https://w3id.org/rec/building/DisabledToilet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ShowerRoom">https://w3id.org/rec/building/ShowerRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Toilet">https://w3id.org/rec/building/Toilet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Sauna">https://w3id.org/rec/building/Sauna</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1986,8 +1986,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/building/ShelterGasLock">https://w3id.org/rec/building/ShelterGasLock</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/ShelterRoom">https://w3id.org/rec/building/ShelterRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ShelterGasLock">https://w3id.org/rec/building/ShelterGasLock</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2279,10 +2279,10 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://w3id.org/rec/building/DataServerRoom">https://w3id.org/rec/building/DataServerRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ClimateControlRoom">https://w3id.org/rec/building/ClimateControlRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/TelecommunicationRoom">https://w3id.org/rec/building/TelecommunicationRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ElectricityRoom">https://w3id.org/rec/building/ElectricityRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Cabinet">https://w3id.org/rec/building/Cabinet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/TelecommunicationRoom">https://w3id.org/rec/building/TelecommunicationRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ClimateControlRoom">https://w3id.org/rec/building/ClimateControlRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ElectricityRoom">https://w3id.org/rec/building/ElectricityRoom</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2411,8 +2411,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/agents/Person">https://w3id.org/rec/agents/Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/agents/Group">https://w3id.org/rec/agents/Group</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/agents/Person">https://w3id.org/rec/agents/Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/agents/Organization">https://w3id.org/rec/agents/Organization</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -2426,10 +2426,10 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/lease/leasee">https://w3id.org/rec/lease/leasee</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/leasor">https://w3id.org/rec/lease/leasor</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/agents/hasMember">https://w3id.org/rec/agents/hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/requestingAgent">https://w3id.org/rec/actuation/requestingAgent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leasee">https://w3id.org/rec/lease/leasee</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2470,9 +2470,9 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/isPartOfBuilding">core:isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/lease/premisesIncludesBuilding">https://w3id.org/rec/lease/premisesIncludesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/servesBuilding">core:servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/premisesIncludesBuilding">https://w3id.org/rec/lease/premisesIncludesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/isPartOfBuilding">core:isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2493,44 +2493,44 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">core:hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/core/isPartOfBuilding">core:isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">core:hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/building/RoofInner">https://w3id.org/rec/building/RoofInner</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Floor">https://w3id.org/rec/building/Floor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/RoofOuter">https://w3id.org/rec/building/RoofOuter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Slab">https://w3id.org/rec/building/Slab</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Storey">https://w3id.org/rec/building/Storey</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Balcony">https://w3id.org/rec/building/Balcony</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/core/Room">core:Room</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/StoreyLevel">https://w3id.org/rec/building/StoreyLevel</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Wall">https://w3id.org/rec/building/Wall</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/RoofInner">https://w3id.org/rec/building/RoofInner</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Floor">https://w3id.org/rec/building/Floor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/VirtualBuildingComponent">https://w3id.org/rec/building/VirtualBuildingComponent</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Terrace">https://w3id.org/rec/building/Terrace</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Facade">https://w3id.org/rec/building/Facade</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Balcony">https://w3id.org/rec/building/Balcony</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/VirtualBuildingComponent">https://w3id.org/rec/building/VirtualBuildingComponent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/RoofOuter">https://w3id.org/rec/building/RoofOuter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Storey">https://w3id.org/rec/building/Storey</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/core/Room">core:Room</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Slab">https://w3id.org/rec/building/Slab</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/containsMountedDevice">core:containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasSubBuildingComponent">core:hasSubBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/isPartOfBuilding">core:isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">core:hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/containsMountedDevice">core:containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/isPartOfBuilding">core:isPartOfBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasSubBuildingComponent">core:hasSubBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">core:isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">core:hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasBuildingComponent">core:hasBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSubBuildingComponent">core:hasSubBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/servesBuildingComponent">core:servesBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasSuperBuildingComponent">core:hasSuperBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2551,65 +2551,65 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">core:isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/device/devicePlacementContext">https://w3id.org/rec/device/devicePlacementContext</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">core:isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/core/hasSuperDevice">core:hasSuperDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Sensor">https://w3id.org/rec/device/Sensor</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/PowerSource">https://w3id.org/rec/device/PowerSource</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/hasLocalEndpointId">https://w3id.org/rec/device/hasLocalEndpointId</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasModbusNodeId">https://w3id.org/rec/device/hasModbusNodeId</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/associatedWithEvent">core:associatedWithEvent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasScaleFactor">https://w3id.org/rec/device/hasScaleFactor</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasKNXDevicePort">https://w3id.org/rec/device/hasKNXDevicePort</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasSubDevice">core:hasSubDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasLoraDevEUI">https://w3id.org/rec/device/hasLoraDevEUI</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasKNXDeviceId">https://w3id.org/rec/device/hasKNXDeviceId</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/hasModbusRegister">https://w3id.org/rec/device/hasModbusRegister</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/servesBuilding">core:servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasModbusDataType">https://w3id.org/rec/device/hasModbusDataType</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasModbusFunctionCode">https://w3id.org/rec/device/hasModbusFunctionCode</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasOffset">https://w3id.org/rec/device/hasOffset</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasLoraAttribute">https://w3id.org/rec/device/hasLoraAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasLocalEndpointId">https://w3id.org/rec/device/hasLocalEndpointId</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/serves">core:serves</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSuperDevice">core:hasSuperDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/servesBuilding">core:servesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasKNXDataPointType">https://w3id.org/rec/device/hasKNXDataPointType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasKNXConfiguration">https://w3id.org/rec/device/hasKNXConfiguration</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">https://w3id.org/rec/device/hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasModbusRegisterLength">https://w3id.org/rec/device/hasModbusRegisterLength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/devicePlacementContext">https://w3id.org/rec/device/devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasKNXAttribute">https://w3id.org/rec/device/hasKNXAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasOffset">https://w3id.org/rec/device/hasOffset</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasIPAddress">https://w3id.org/rec/device/hasIPAddress</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/hasCommunicationsBus">https://w3id.org/rec/device/hasCommunicationsBus</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasIPAddressPort">https://w3id.org/rec/device/hasIPAddressPort</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasKNXDataPointType">https://w3id.org/rec/device/hasKNXDataPointType</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasModbusAttribute">https://w3id.org/rec/device/hasModbusAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasIPAddress">https://w3id.org/rec/device/hasIPAddress</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasScaleFactor">https://w3id.org/rec/device/hasScaleFactor</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasKNXConfiguration">https://w3id.org/rec/device/hasKNXConfiguration</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasLoraAttribute">https://w3id.org/rec/device/hasLoraAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasModbusFunctionCode">https://w3id.org/rec/device/hasModbusFunctionCode</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasModbusNodeId">https://w3id.org/rec/device/hasModbusNodeId</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/servesDevice">core:servesDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasSubDevice">core:hasSubDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasModbusAttribute">https://w3id.org/rec/device/hasModbusAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasModbusDataType">https://w3id.org/rec/device/hasModbusDataType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/servesBuildingComponent">core:servesBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/devicePlacementContext">https://w3id.org/rec/device/devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">core:isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasKNXDevicePort">https://w3id.org/rec/device/hasKNXDevicePort</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasLoraDevEUI">https://w3id.org/rec/device/hasLoraDevEUI</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/associatedWithEvent">core:associatedWithEvent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasDeviceFunctionType">https://w3id.org/rec/device/hasDeviceFunctionType</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasCommunicationAttribute">https://w3id.org/rec/device/hasCommunicationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/isMountedInBuildingComponent">core:isMountedInBuildingComponent</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasModbusConfiguration">https://w3id.org/rec/device/hasModbusConfiguration</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/serves">core:serves</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasKNXAttribute">https://w3id.org/rec/device/hasKNXAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasModbusRegisterLength">https://w3id.org/rec/device/hasModbusRegisterLength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasKNXDeviceId">https://w3id.org/rec/device/hasKNXDeviceId</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/servesDevice">core:servesDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasSubDevice">core:hasSubDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/containsMountedDevice">core:containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/associatedWithDevice">core:associatedWithDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasSuperDevice">core:hasSuperDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasSubDevice">core:hasSubDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/servesDevice">core:servesDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/containsMountedDevice">core:containsMountedDevice</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2637,20 +2637,20 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/eventPlacementContext">https://w3id.org/rec/device/eventPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/associatedWithDevice">core:associatedWithDevice</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasDuration">core:hasDuration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasCreatedTime">core:hasCreatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasUpdatedTime">core:hasUpdatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasStartTime">core:hasStartTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasPointInTime">core:hasPointInTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasTime">core:hasTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/eventQuantityKind">core:eventQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasObservationTime">core:hasObservationTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasStopTime">core:hasStopTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasReadTime">core:hasReadTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/core/hasValue">core:hasValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasObservationTime">core:hasObservationTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/core/hasStartTime">core:hasStartTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasCreatedTime">core:hasCreatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/eventPlacementContext">https://w3id.org/rec/device/eventPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasDuration">core:hasDuration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/associatedWithDevice">core:associatedWithDevice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/eventQuantityKind">core:eventQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasTime">core:hasTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasUpdatedTime">core:hasUpdatedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/hasDeletedTime">core:hasDeletedTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
@@ -2711,8 +2711,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/ValueRestriction">https://w3id.org/rec/actuation/ValueRestriction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ResponseCode">https://w3id.org/rec/actuation/ResponseCode</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/ValueRestriction">https://w3id.org/rec/actuation/ValueRestriction</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/KeyValueDefinition">https://w3id.org/rec/actuation/KeyValueDefinition</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -2766,10 +2766,10 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/hasMeasurementUnit">core:hasMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/qkMeasurementUnit">core:qkMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasMeasurementUnit">core:hasMeasurementUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2796,9 +2796,9 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/hasQuantityKind">core:hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/eventQuantityKind">core:eventQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasQuantityKind">core:hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2892,55 +2892,55 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/building/ServiceShaft">https://w3id.org/rec/building/ServiceShaft</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Auditorium">https://w3id.org/rec/building/Auditorium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Atrium">https://w3id.org/rec/building/Atrium</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ElevatorRoom">https://w3id.org/rec/building/ElevatorRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Theater">https://w3id.org/rec/building/Theater</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/TreatmentRoom">https://w3id.org/rec/building/TreatmentRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/BackOffice">https://w3id.org/rec/building/BackOffice</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ElevatorShaft">https://w3id.org/rec/building/ElevatorShaft</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/PersonalHygiene">https://w3id.org/rec/building/PersonalHygiene</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/FoodHandlingRoom">https://w3id.org/rec/building/FoodHandlingRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/CloakRoom">https://w3id.org/rec/building/CloakRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Cinema">https://w3id.org/rec/building/Cinema</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/LaundryRoom">https://w3id.org/rec/building/LaundryRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ConferenceRoom">https://w3id.org/rec/building/ConferenceRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Office">https://w3id.org/rec/building/Office</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/WasteManagementRoom">https://w3id.org/rec/building/WasteManagementRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/RestingRoom">https://w3id.org/rec/building/RestingRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/CleaningRoom">https://w3id.org/rec/building/CleaningRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Garage">https://w3id.org/rec/building/Garage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Bathroom">https://w3id.org/rec/building/Bathroom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/RecreationalRoom">https://w3id.org/rec/building/RecreationalRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Library">https://w3id.org/rec/building/Library</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/RetailRoom">https://w3id.org/rec/building/RetailRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ExhibitionRoom">https://w3id.org/rec/building/ExhibitionRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Shelter">https://w3id.org/rec/building/Shelter</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Workshop">https://w3id.org/rec/building/Workshop</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/StaffRoom">https://w3id.org/rec/building/StaffRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/FoodHandlingRoom">https://w3id.org/rec/building/FoodHandlingRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ServiceShaft">https://w3id.org/rec/building/ServiceShaft</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/BackOffice">https://w3id.org/rec/building/BackOffice</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Library">https://w3id.org/rec/building/Library</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/RecordingRoom">https://w3id.org/rec/building/RecordingRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/CopyingRoom">https://w3id.org/rec/building/CopyingRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Laboratory">https://w3id.org/rec/building/Laboratory</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Storage">https://w3id.org/rec/building/Storage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Bedroom">https://w3id.org/rec/building/Bedroom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/UtilitiesRoom">https://w3id.org/rec/building/UtilitiesRoom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/DressingRoom">https://w3id.org/rec/building/DressingRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/EducationalRoom">https://w3id.org/rec/building/EducationalRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Storage">https://w3id.org/rec/building/Storage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Reception">https://w3id.org/rec/building/Reception</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ExhibitionRoom">https://w3id.org/rec/building/ExhibitionRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Garage">https://w3id.org/rec/building/Garage</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/LivingRoom">https://w3id.org/rec/building/LivingRoom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ConversationRoom">https://w3id.org/rec/building/ConversationRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/CloakRoom">https://w3id.org/rec/building/CloakRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ElevatorShaft">https://w3id.org/rec/building/ElevatorShaft</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/LaundryRoom">https://w3id.org/rec/building/LaundryRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/CleaningRoom">https://w3id.org/rec/building/CleaningRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Auditorium">https://w3id.org/rec/building/Auditorium</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/TreatmentRoom">https://w3id.org/rec/building/TreatmentRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/PersonalHygiene">https://w3id.org/rec/building/PersonalHygiene</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Bathroom">https://w3id.org/rec/building/Bathroom</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Hallway">https://w3id.org/rec/building/Hallway</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/Bedroom">https://w3id.org/rec/building/Bedroom</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/building/ExerciseRoom">https://w3id.org/rec/building/ExerciseRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ConferenceRoom">https://w3id.org/rec/building/ConferenceRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Atrium">https://w3id.org/rec/building/Atrium</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Stairwell">https://w3id.org/rec/building/Stairwell</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/building/Entrance">https://w3id.org/rec/building/Entrance</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Theater">https://w3id.org/rec/building/Theater</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ExerciseRoom">https://w3id.org/rec/building/ExerciseRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Office">https://w3id.org/rec/building/Office</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/EducationalRoom">https://w3id.org/rec/building/EducationalRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Workshop">https://w3id.org/rec/building/Workshop</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ElevatorRoom">https://w3id.org/rec/building/ElevatorRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Laboratory">https://w3id.org/rec/building/Laboratory</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/ConversationRoom">https://w3id.org/rec/building/ConversationRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Reception">https://w3id.org/rec/building/Reception</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/RecreationalRoom">https://w3id.org/rec/building/RecreationalRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/RetailRoom">https://w3id.org/rec/building/RetailRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/CopyingRoom">https://w3id.org/rec/building/CopyingRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/Cinema">https://w3id.org/rec/building/Cinema</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/StaffRoom">https://w3id.org/rec/building/StaffRoom</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/building/WasteManagementRoom">https://w3id.org/rec/building/WasteManagementRoom</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/building/roomType">https://w3id.org/rec/building/roomType</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/roomIsPartOfPremises">https://w3id.org/rec/lease/roomIsPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/building/roomType">https://w3id.org/rec/building/roomType</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2996,11 +2996,11 @@ MillimeterPerHour for Precipation</p>
                 <td>
                     <a href="https://w3id.org/rec/device/actuationExecutedBy">https://w3id.org/rec/device/actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationCommand">https://w3id.org/rec/device/actuationCommand</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasActuationCommandTime">https://w3id.org/rec/device/hasActuationCommandTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">https://w3id.org/rec/device/hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasActuationResponseTime">https://w3id.org/rec/device/hasActuationResponseTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationResponse">https://w3id.org/rec/device/actuationResponse</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">https://w3id.org/rec/device/hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationRequest">https://w3id.org/rec/device/actuationRequest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationResponseTime">https://w3id.org/rec/device/hasActuationResponseTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationCommandTime">https://w3id.org/rec/device/hasActuationCommandTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3061,10 +3061,10 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/hasActuationInterface">https://w3id.org/rec/device/hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/hasActuationInterface">https://w3id.org/rec/actuation/hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/executesActuation">https://w3id.org/rec/device/executesActuation</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/hasDefaultActuationInterface">https://w3id.org/rec/actuation/hasDefaultActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/hasActuationInterface">https://w3id.org/rec/actuation/hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationInterface">https://w3id.org/rec/device/hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/executesActuation">https://w3id.org/rec/device/executesActuation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3116,15 +3116,15 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/ModbusConfiguration">https://w3id.org/rec/device/ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/MBusConfiguration">https://w3id.org/rec/device/MBusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/OPC-UAConfiguration">https://w3id.org/rec/device/OPC-UAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/BACnetConfiguration">https://w3id.org/rec/device/BACnetConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusRTUConfiguration">https://w3id.org/rec/device/ModbusRTUConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/LoRaConfiguration">https://w3id.org/rec/device/LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/KNXConfiguration">https://w3id.org/rec/device/KNXConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/OPC-DAConfiguration">https://w3id.org/rec/device/OPC-DAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/BACnetConfiguration">https://w3id.org/rec/device/BACnetConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/OPC-UAConfiguration">https://w3id.org/rec/device/OPC-UAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/LoRaConfiguration">https://w3id.org/rec/device/LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusConfiguration">https://w3id.org/rec/device/ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusTCPConfiguration">https://w3id.org/rec/device/ModbusTCPConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/KNXConfiguration">https://w3id.org/rec/device/KNXConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/MBusConfiguration">https://w3id.org/rec/device/MBusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3178,9 +3178,9 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/Actuation">https://w3id.org/rec/device/Actuation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ActuationEvent">https://w3id.org/rec/actuation/ActuationEvent</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Exception">https://w3id.org/rec/device/Exception</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/Actuation">https://w3id.org/rec/device/Actuation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Observation">https://w3id.org/rec/device/Observation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -3506,8 +3506,8 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="https://w3id.org/rec/core/eventQuantityKind">core:eventQuantityKind</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -3541,9 +3541,9 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/devicePlacementContext">https://w3id.org/rec/device/devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/eventPlacementContext">https://w3id.org/rec/device/eventPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasPlacementContext">https://w3id.org/rec/device/hasPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/eventPlacementContext">https://w3id.org/rec/device/eventPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/devicePlacementContext">https://w3id.org/rec/device/devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3591,26 +3591,26 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/observesActuator">https://w3id.org/rec/device/observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/core/deviceMeasurementUnit">core:deviceMeasurementUnit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/device/observesActuator">https://w3id.org/rec/device/observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/generatedObservation">https://w3id.org/rec/device/generatedObservation</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/device/observes">https://w3id.org/rec/device/observes</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/observesActuator">https://w3id.org/rec/device/observesActuator</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/generatedException">https://w3id.org/rec/device/generatedException</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/observes">https://w3id.org/rec/device/observes</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/generatedObservation">https://w3id.org/rec/device/generatedObservation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/actuationObservedBy">https://w3id.org/rec/actuation/actuationObservedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/exceptionGeneratedBy">https://w3id.org/rec/device/exceptionGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/observedBy">https://w3id.org/rec/device/observedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/actuationObservedBy">https://w3id.org/rec/actuation/actuationObservedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/observationGeneratedBy">https://w3id.org/rec/device/observationGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -3735,11 +3735,11 @@ MillimeterPerHour for Precipation</p>
                 <th>In domain of</th>
                 <td>
                     <a href="https://w3id.org/rec/lease/leaseOf">https://w3id.org/rec/lease/leaseOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leasee">https://w3id.org/rec/lease/leasee</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/leaseStart">https://w3id.org/rec/lease/leaseStart</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leasor">https://w3id.org/rec/lease/leasor</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/regulatedBy">https://w3id.org/rec/lease/regulatedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/leaseEnd">https://w3id.org/rec/lease/leaseEnd</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/lease/leasee">https://w3id.org/rec/lease/leasee</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/lease/leasor">https://w3id.org/rec/lease/leasor</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3817,33 +3817,33 @@ MillimeterPerHour for Precipation</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/lease/GaragePremises">https://w3id.org/rec/lease/GaragePremises</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/lease/RetailPremises">https://w3id.org/rec/lease/RetailPremises</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/lease/RestaurantPremises">https://w3id.org/rec/lease/RestaurantPremises</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/lease/CoffeePremises">https://w3id.org/rec/lease/CoffeePremises</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/lease/StoragePremises">https://w3id.org/rec/lease/StoragePremises</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/lease/LaboratoryPremises">https://w3id.org/rec/lease/LaboratoryPremises</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/lease/HotelPremises">https://w3id.org/rec/lease/HotelPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/CoffeePremises">https://w3id.org/rec/lease/CoffeePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/LaboratoryPremises">https://w3id.org/rec/lease/LaboratoryPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/RestaurantPremises">https://w3id.org/rec/lease/RestaurantPremises</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/lease/OfficePremises">https://w3id.org/rec/lease/OfficePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/RetailPremises">https://w3id.org/rec/lease/RetailPremises</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/lease/EducationalPremises">https://w3id.org/rec/lease/EducationalPremises</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/lease/ResidentialPremises">https://w3id.org/rec/lease/ResidentialPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/GaragePremises">https://w3id.org/rec/lease/GaragePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/StoragePremises">https://w3id.org/rec/lease/StoragePremises</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/lease/LightIndustryPremises">https://w3id.org/rec/lease/LightIndustryPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/ResidentialPremises">https://w3id.org/rec/lease/ResidentialPremises</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/lease/premisesIncludes">https://w3id.org/rec/lease/premisesIncludes</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/premisesType">https://w3id.org/rec/lease/premisesType</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/premisesIncludesRoom">https://w3id.org/rec/lease/premisesIncludesRoom</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/premisesIncludesBuilding">https://w3id.org/rec/lease/premisesIncludesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/premisesIncludes">https://w3id.org/rec/lease/premisesIncludes</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/lease/buildingIsPartOfPremises">https://w3id.org/rec/lease/buildingIsPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/roomIsPartOfPremises">https://w3id.org/rec/lease/roomIsPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/buildingIsPartOfPremises">https://w3id.org/rec/lease/buildingIsPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/lease/isPartOfPremises">https://w3id.org/rec/lease/isPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -6775,7 +6775,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <tr>
                 <th>Description</th>
                 <td>
-                    A person's last name (if they have one; this varies across cultural contexts).
+                    http://xmlns.com/foaf/0.1/lastName
                 </td>
             </tr>
             <tr>
@@ -6802,7 +6802,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <tr>
                 <th>Description</th>
                 <td>
-                    http://xmlns.com/foaf/0.1/name
+                    A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents).
                 </td>
             </tr>
             <tr>
@@ -8967,8 +8967,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -8987,8 +8987,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9007,8 +9007,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9027,8 +9027,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9047,8 +9047,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9067,8 +9067,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9087,8 +9087,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9107,8 +9107,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9127,8 +9127,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9147,8 +9147,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9167,8 +9167,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9187,8 +9187,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9207,8 +9207,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9227,8 +9227,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9247,8 +9247,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9267,8 +9267,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9287,8 +9287,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9307,8 +9307,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9327,8 +9327,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9347,8 +9347,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9367,8 +9367,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>See Also</th>
@@ -9393,8 +9393,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9413,8 +9413,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9433,8 +9433,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9453,8 +9453,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9473,8 +9473,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9493,8 +9493,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9513,8 +9513,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9533,8 +9533,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9553,8 +9553,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9573,8 +9573,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9593,8 +9593,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9613,8 +9613,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9633,8 +9633,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9653,8 +9653,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9673,8 +9673,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9693,8 +9693,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>Description</th>
@@ -9719,8 +9719,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>Description</th>
@@ -9745,8 +9745,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9765,8 +9765,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9785,8 +9785,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9805,8 +9805,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9825,8 +9825,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9845,8 +9845,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9865,8 +9865,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9885,8 +9885,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9905,8 +9905,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9925,8 +9925,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9945,8 +9945,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9965,8 +9965,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -9985,8 +9985,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10005,8 +10005,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>Description</th>
@@ -10031,8 +10031,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10051,8 +10051,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10071,8 +10071,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10091,8 +10091,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10111,8 +10111,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10131,8 +10131,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10151,8 +10151,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10171,8 +10171,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10191,8 +10191,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10211,8 +10211,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10231,8 +10231,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10251,8 +10251,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>Description</th>
@@ -10277,8 +10277,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10297,8 +10297,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10317,8 +10317,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10337,8 +10337,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10357,8 +10357,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10377,8 +10377,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>Description</th>
@@ -10403,8 +10403,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10423,8 +10423,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -10443,8 +10443,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
             <tr>
                 <th>See Also</th>
@@ -10469,8 +10469,8 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <dt>Classes(s)</dt>
             <dd>
                 <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
-                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
                 <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/building/RoomType">https://w3id.org/rec/building/RoomType</a><br/>
             </dd>
         </table>
     </div>
@@ -11719,7 +11719,7 @@ Time is expressed in UTC (Coordinated Universal Time), with designated UTC  ("Z"
             <tr>
                 <th>See Also</th>
                 <td>
-                    <a href="Tryck">Tryck</a>
+                    <a href="Pressure">Pressure</a>
                 </td>
             </tr>
         </table>

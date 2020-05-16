@@ -31,10 +31,6 @@ if not isdir(f"{ontologyPath}/webvowl"):
 unionedOntology = Graph()
 unionedOntology.parse(f"{ontologyPath}/full.rdf")
 
-# The below is run offline in order for owl2vowl to not resolve URIs online and build a huge graph for every module
-print("Please disconnect network and press any key.")
-input()
-
 # For each ontology except full,:
 for inputFile in ontologyFiles:
     if not inputFile.startswith("full"):
@@ -54,8 +50,14 @@ for inputFile in ontologyFiles:
 
         # 3. Generate and graft WebVOWL visualization (except for metadata file)
         if not inputFile.startswith("metadata"):
+
+            # This is to prevent the visualization from including the imports closure
+            tempOntologyFilePath = inputFilePath + "-TEMP"
+            moduleGraph.remove((None, OWL.imports, None))
+            moduleGraph.serialize(destination=tempOntologyFilePath, format="xml")
             outputJsonFilePath = f"{ontologyPath}/webvowl/data/{moduleName}.json"
-            subprocess.run(["java", "-jar", owl2vowlPath, "-file", inputFilePath, "-output", outputJsonFilePath])
+            subprocess.run(["java", "-jar", owl2vowlPath, "-file", tempOntologyFilePath, "-output", outputJsonFilePath])
+            remove(tempOntologyFilePath)
 
             # Graft on HTML <iframe>s
             htmlFile = open(outputHtmlFileName, "rt")
@@ -65,9 +67,6 @@ for inputFile in ontologyFiles:
             htmlFile = open(outputHtmlFileName, "wt")
             htmlFile.write(htmlContent)
             htmlFile.close()
-
-print("Please reconnect network and press any key.")
-input()
 
 # 4. Export unioned full ontology to temp file, run pylode, kill temp file
 rename(f"{ontologyPath}/full.rdf", f"{ontologyPath}/fullTemp.rdf")
