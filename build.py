@@ -40,13 +40,14 @@ for inputFile in ontologyFiles:
         outputHtmlFileName = f"{ontologyPath}/{moduleName}.html"
         subprocess.run([pylodePath, "-i", inputFilePath, "-o", outputHtmlFileName])
 
-        # 2. Merge into temp full graph
+        # 2. Merge into temp full graph (excluding lantmäteriet module)
         moduleGraph = Graph()
         moduleGraph.parse(inputFilePath)
         moduleOntologyUris = list(moduleGraph.subjects(RDF.type, OWL.Ontology))
-        for (s, p, o) in moduleGraph:
-            if not s in moduleOntologyUris:
-                unionedOntology.add((s, p, o))
+        if not inputFile.startswith("lantmäteriet"):
+            for (s, p, o) in moduleGraph:
+                if not s in moduleOntologyUris:
+                    unionedOntology.add((s, p, o))
 
         # 3. Generate and graft WebVOWL visualization (except for metadata file)
         if not inputFile.startswith("metadata"):
