@@ -9,7 +9,7 @@ from rdflib import Graph
 from rdflib.namespace import OWL, RDF
 
 # GitHub Pages blows up if PyLODE is included in the repo, strangely
-pylodePath = "/Applications/pyLODE-2.3/pylode/bin/pylode.sh"
+pylodePath = "/Applications/pyLODE-2.5/pylode/bin/pylode.sh"
 owl2vowlPath = "bin/owl2vowl.jar"
 
 ontologyFileEndings = ["owl", "rdf", "ttl", "nq"]
@@ -63,7 +63,7 @@ for inputFile in ontologyFiles:
             htmlFile = open(outputHtmlFileName, "rt")
             htmlContent = htmlFile.read()
             htmlFile.close()
-            htmlContent = htmlContent.replace('<div style="width:500px; height:50px; background-color: black;">&nbsp;</div>', f'<iframe src="webvowl/index.html#{moduleName}" width="100%" height="800"></iframe>')
+            htmlContent = htmlContent.replace('<div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>', f'<iframe src="webvowl/index.html#{moduleName}" width="100%" height="800"></iframe>')
             htmlFile = open(outputHtmlFileName, "wt")
             htmlFile.write(htmlContent)
             htmlFile.close()
@@ -80,7 +80,7 @@ subprocess.run(["java", "-jar", owl2vowlPath, "-file", f"{ontologyPath}/full.rdf
 htmlFile = open(f"{ontologyPath}/full.html", "rt")
 htmlContent = htmlFile.read()
 htmlFile.close()
-htmlContent = htmlContent.replace('<div style="width:500px; height:50px; background-color: black;">&nbsp;</div>', f'<iframe src="webvowl/index.html#full" width="100%" height="800"></iframe>')
+htmlContent = htmlContent.replace('<div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>', f'<iframe src="webvowl/index.html#full" width="100%" height="800"></iframe>')
 htmlFile = open(f"{ontologyPath}/full.html", "wt")
 htmlFile.write(htmlContent)
 htmlFile.close()
