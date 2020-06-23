@@ -1,4 +1,4 @@
-# RealEstateCore v3.1.3
+# RealEstateCore v3.2
 
 **Modules:**
 * [Metadata](metadata.html) -- Various annotation properties used to document the entire ontology suite.
