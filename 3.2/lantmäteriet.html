@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RealEstateCore Lantmäteriet Module</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/rec/lfr/",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This REC module covers the data model used by government agency Lantmäteriet, the Swedish National Land Survey, in its Fastighetsregister, Swedish Real Property Register (SRPR)</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "RealEstateCore Lantmäteriet Module"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.5</span>
+  </div>
+  <h1>RealEstateCore Lantmäteriet Module</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://w3id.org/rec/lfr/</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            RealEstateCore Consortium<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Peter Hartlev<br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            Karl Hammar<br/>
+        </dd>
+        <dt>Modified</dt>
+        <dd>2020-06-23</dd>
+        <dt>Version Information</dt>
+        <dd>3.2</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="https://w3id.org/rec/lfr/3.2/">https://w3id.org/rec/lfr/3.2/</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="https://w3id.org/rec/core/3.2/">https://w3id.org/rec/core/3.2/</a><br/>
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="lantmäteriet.rdf">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This REC module covers the data model used by government agency Lantmäteriet, the Swedish National Land Survey, in its Fastighetsregister, Swedish Real Property Register (SRPR)</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <iframe src="webvowl/index.html#lantmäteriet" width="100%" height="800"></iframe>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Adressplats">Adressplats</a></li>
+        <li><a href="#Apartment">Apartment</a></li>
+        <li><a href="#Cityaddresslocation">City address location</a></li>
+        <li><a href="#Entrance">Entrance</a></li>
+        <li><a href="#Entretyp">Entretyp</a></li>
+        <li><a href="#Gatuadressplats">Gatuadressplats</a></li>
+        <li><a href="#Metricaladdresslocation">Metrical address location</a></li>
+    </ul>
+    <div class="entity class" id="Adressplats">
+        <h3>Adressplats<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrAddressLocation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The address location is an abstract class. Should not be instantiated. Use the sub classes instead.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Geometry">http://www.opengis.net/ont/geosparql#Geometry</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrCityAddressLocation">LfrCityAddressLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lfr/LfrMetricalAddressLocation">LfrMetricalAddressLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lfr/LfrStreetAddressLocation">LfrStreetAddressLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocation">hasLfrAddressLocation</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Apartment">
+        <h3>Apartment<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrApartment</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An apartment. Only a subset of available properties are modelled.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Apartment">https://w3id.org/rec/core/Apartment</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrEntrance">hasLfrEntrance</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lfr/lfrApartmentArea">lfrApartmentArea</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/lfr/lfrApartmentNumber">lfrApartmentNumber</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Cityaddresslocation">
+        <h3>City address location<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrCityAddressLocation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrAddressLocation">LfrAddressLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrCityName">hasLfrCityName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Entrance">
+        <h3>Entrance<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrEntrance</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An entrance. Only a subset of available properties are modelled.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/BuildingComponent">https://w3id.org/rec/core/BuildingComponent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocation">hasLfrAddressLocation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lfr/lfrEntranceType">lfrEntranceType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrEntrance">hasLfrEntrance</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Entretyp">
+        <h3>Entretyp<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrEntranceType</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Representation of the type of entrance (entre). The possible types are modelled as named individuals.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Type">https://w3id.org/rec/core/Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/lfrEntranceType">lfrEntranceType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Metricaladdresslocation">
+        <h3>Metrical address location<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrMetricalAddressLocation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrAddressLocation">LfrAddressLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrMetricalAddressName">hasLfrMetricalAddressName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Gatuadressplats">
+        <h3>Gatuadressplats<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/LfrStreetAddressLocation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrAddressLocation">LfrAddressLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrStreetName">hasLfrStreetName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasaddresslocation">has address location</a></li>
+        <li><a href="#harentre">har entre</a></li>
+        <li><a href="#entrancetype">entrance type</a></li>
+        <li><a href="#adressplatsfrentre">adressplats för entre</a></li>
+        <li><a href="#addresslocationofrealestate">address location of real estate</a></li>
+    </ul>
+    <div class="entity property" id="hasaddresslocation">
+        <h3>has address location<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrAddressLocation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Association between an entrance (entre) and its address location (adressplats).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">http://www.opengis.net/ont/geosparql#hasGeometry</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/locationOfLfrEntrance">locationOfLfrEntrance</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrEntrance">LfrEntrance</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrAddressLocation">LfrAddressLocation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="harentre">
+        <h3>har entre<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrEntrance</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Association between an apartment (lägenhet) and an entrance (entre).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrApartment">LfrApartment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrEntrance">LfrEntrance</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="entrancetype">
+        <h3>entrance type<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/lfrEntranceType</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Representation of the type of entrance (entre). The possible entrance types are modelled as named individuals.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrEntrance">LfrEntrance</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="adressplatsfrentre">
+        <h3>adressplats för entre<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/locationOfLfrEntrance</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Association between an address location (adressplats) and its entrance (entre). Inverse to hasLfrAddressLocation and not part of the formal LFR specification.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="addresslocationofrealestate">
+        <h3>address location of real estate<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/locationOfRealEstate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Association between an address location (adressplats) and a real estate (fastighet).
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#addresslocationattributes">address location attributes</a></li>
+        <li><a href="#bynamn">bynamn</a></li>
+        <li><a href="#lnskod">länskod</a></li>
+        <li><a href="#eastcoordinate">east coordinate</a></li>
+        <li><a href="#metricaladdressname">metrical address name</a></li>
+        <li><a href="#municipalitycode">municipality code</a></li>
+        <li><a href="#municipalitypart">municipality part</a></li>
+        <li><a href="#nord-koordinat">nord-koordinat</a></li>
+        <li><a href="#postnummer">postnummer</a></li>
+        <li><a href="#postallocation">postal location</a></li>
+        <li><a href="#streetname">street name</a></li>
+        <li><a href="#bostadsarea">bostads area</a></li>
+        <li><a href="#apartmentnumber">apartment number</a></li>
+        <li><a href="#buildingnumber">building number</a></li>
+        <li><a href="#totalbostadsarea">total bostadsarea</a></li>
+        <li><a href="#realpropertyregisteruniversaluniqueidentity">real property register universal unique identity</a></li>
+    </ul>
+    <div class="entity property" id="addresslocationattributes">
+        <h3>address location attributes<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A number of attributes (fields) related to address location. Together they represent a minimum implementation of the standardized address location (adressplats).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.opengis.net/ont/geosparql#hasSerialization">http://www.opengis.net/ont/geosparql#hasSerialization</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrAddressLocation">LfrAddressLocation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="bynamn">
+        <h3>bynamn<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrCityName</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    City name.
+
+Note that object type 90A field 15 ("ADRTYP") holds the key to interpretation of this field; value = 3 (~byadressområde) implies a city name (bynamn).
+
+Also note that city name may be different to the postal location.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrCityAddressLocation">LfrCityAddressLocation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="lnskod">
+        <h3>länskod<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrCountyCode</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="eastcoordinate">
+        <h3>east coordinate<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrEastCoordinate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    East-west directional coordinate in meters according to SWEREF 99 TM.
+
+Comprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN]).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="metricaladdressname">
+        <h3>metrical address name<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrMetricalAddressName</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Metrical address name.
+
+Note that object type 90A field 15 ("ADRTYP") holds the key to interpretation of this field; value = 2 (~metertalsadressområde) implies a metrical address name.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrMetricalAddressLocation">LfrMetricalAddressLocation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="municipalitycode">
+        <h3>municipality code<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrMunicipalityCode</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="municipalitypart">
+        <h3>municipality part<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrMunicipalityPart</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="nord-koordinat">
+        <h3>nord-koordinat<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrNorthCoordinate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    North-south directional coordinate in meters according to SWEREF 99 TM.
+
+Comprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN]).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="postnummer">
+        <h3>postnummer<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrPostalCode</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="postallocation">
+        <h3>postal location<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrPostalLocation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="streetname">
+        <h3>street name<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/hasLfrStreetName</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Street name.
+
+Note that object type 90A field 15 ("ADRTYP") holds the key to interpretation of this field; value = 1 (~gatuadressområde) implies a street name.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute">hasLfrAddressLocationAttribute</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrStreetAddressLocation">LfrStreetAddressLocation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="bostadsarea">
+        <h3>bostads area<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/lfrApartmentArea</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The area in square meters (m2) of an apartment (lägenhet).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrApartment">LfrApartment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="apartmentnumber">
+        <h3>apartment number<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/lfrApartmentNumber</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lfr/LfrApartment">LfrApartment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="buildingnumber">
+        <h3>building number<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/lfrBuildingNumber</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The serial number for all buildings on a property.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Building">https://w3id.org/rec/core/Building</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="totalbostadsarea">
+        <h3>total bostadsarea<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/lfrTotalResidenceArea</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The total area in square meters (m2) of all residences (apartments) in a building.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Building">https://w3id.org/rec/core/Building</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="realpropertyregisteruniversaluniqueidentity">
+        <h3>real property register universal unique identity<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lfr/lfrUUID</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    All objects in the SRPR (Lantmäteriets Fastighetsregister, LFR) has unique identifiers, UUIDs.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://w3id.org/rec/core/Building">https://w3id.org/rec/core/Building</a><sup class="sup-c" title="class">c</sup> or <a href="https://w3id.org/rec/core/RealEstate">https://w3id.org/rec/core/RealEstate</a><sup class="sup-c" title="class">c</sup> or <a href="https://w3id.org/rec/lfr/LfrApartment">LfrApartment</a><sup class="sup-c" title="class">c</sup> or <a href="https://w3id.org/rec/lfr/LfrEntrance">LfrEntrance</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#besksadress">besöksadress</a></li>
+        <li><a href="#bostadsadressmedregistreradlgenhet">bostadsadress med registrerad lägenhet</a></li>
+        <li><a href="#leveransadress">leveransadress</a></li>
+        <li><a href="#residenceaddress">residence address</a></li>
+        <li><a href="#shopaddress">shop address</a></li>
+        <li><a href="#uppgiftsaknas">uppgift saknas</a></li>
+    </ul>
+    <div class="entity named_individual" id="leveransadress">
+        <h3>leveransadress<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lfr/LfrDeliveryAddress
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    One of the entrance types.
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 5.">SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 5.</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="uppgiftsaknas">
+        <h3>uppgift saknas<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lfr/LfrMissingInformation
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    One of the entrance types.
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 9.">SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 9.</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="residenceaddress">
+        <h3>residence address<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lfr/LfrResidenceAddress
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    One of the entrance types.
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 1.">SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 1.</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="bostadsadressmedregistreradlgenhet">
+        <h3>bostadsadress med registrerad lägenhet<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lfr/LfrResidenceAddressRegisteredApartment
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    One of the entrance types.
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 2.">SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 2.</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="shopaddress">
+        <h3>shop address<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lfr/LfrShopAddress
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    One of the entrance types.
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 3.">SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 3.</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="besksadress">
+        <h3>besöksadress<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lfr/LfrVisitingAddress
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lfr/LfrEntranceType">LfrEntranceType</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    One of the entrance types.
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 4.">SRPR version 11.40, object type 55A field 13 ("ENTRETYP") value 4.</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/rec/lfr/</code></dd>
+        <dt>cc</dt>
+        <dd><code>http://creativecommons.org/ns#</code></dd>
+        <dt>cpannotationschema</dt>
+        <dd><code>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>o2o</dt>
+        <dd><code>https://karlhammar.com/owl2oas/o2o.owl#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>

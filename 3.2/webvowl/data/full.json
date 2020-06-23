@@ -1,0 +1,120 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "lease" : "https://w3id.org/rec/lease/",
+      "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+      "agents" : "https://w3id.org/rec/agents/",
+      "building" : "https://w3id.org/rec/building/",
+      "actuation" : "https://w3id.org/rec/actuation/",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "skos" : "http://www.w3.org/2004/02/skos/core#",
+      "" : "https://w3id.org/rec/full/",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "cc" : "http://creativecommons.org/ns#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "core" : "https://w3id.org/rec/core/",
+      "device" : "https://w3id.org/rec/device/",
+      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#"
+    },
+    "title" : {
+      "undefined" : "RealEstateCore Full"
+    },
+    "iri" : "https://w3id.org/rec/full/",
+    "version" : "3.2",
+    "author" : [ "Karl Hammar", "Erik Wallin" ],
+    "description" : {
+      "en" : "This ontology imports all RealEstateCore (REC) modules and thus gives the fullest expressivity that REC allows. You can use this ontology as-is, or you can construct your own ontology by importing individual REC modules."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Erik Wallin",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Joakim Eriksson",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Håkan Eriksson",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Peter Hartlev",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Per Karlberg",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "rec",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-06-23",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "3.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/full/3.2/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Full",
+        "type" : "label"
+      } ],
+      "historyNote" : [ {
+        "identifier" : "historyNote",
+        "language" : "en",
+        "value" : "Version 3.2 is a feature release that contains:\n\n* The new Analytics module, providing a vocabulary for describing prognoses and aggregates, and the processes used to generate these. This vocabulary is rather generic; we would like to get feedback on it and in particular solicit recommendations on how to model/document anlysis procedures/workflows.\n* The new DataSchema module, allowing for much richer description of data schemas on sensor and actuator interfaces, including primitive schemas, object schemas, and array schemas.\n* A new SensorInterface class, mirroring the design of the ActuatorInterface class from REC 3.1. This allows you to represent shared aspects of a set of identical sensors (e.g., their data schemas) in a single place, reducing duplication across the knowledge graph. It also simplifies translation of REC graphs into, e.g., MS DTDL or WoT TD.\n* The new Lantmäteriet module, representing the Swedish Real Property Register (Fastighetsregister). This module, intended for the Swedish market, is optional and thus not loaded in REC Full by default.\n* A new Collections class, intended to represent generic administrative collections of things.\n* A new o2o:listProperty annotation, intended to indicate that an OWL object or data property shall be treated as an rdf:List in implementing systems.\n* Additional Quantity Kind and Measurement Unit individuals supporting waste management and presence detection use cases.\n* New core:timeInterval data property, indicating an ISO 8601 time interval relevant to some entity or event.\n* New device:hasSerialNumber and device:hasMACAddress data properties.\n* Documentation on our use of OWL punning and ontology design patterns used.\n* An official alignment to BOT (Building Topology Ontology).\n\nVersion 3.1.3 is a hotfix release that addresses bugs arising from version management in release 3.1.1 and 3.1.2. Several classes and properties from the 3.2 development branch were mistakenly implemented prematurely in 3.1.1 and 3.1.2, causing subtle inconsistencies in the model. Version 3.1.3 reverts all ontology entities to those from version 3.1, while maintaining the REST API specification and edge message examples that were updated since then.\n\nWe apologize for providing an inconsistent ontology, and are implementing testing and version management procedures to ensure this does not occur again.\n        \nVersion 3.1.2 is a bug fix release that addresses two issues in the REST API specification, and one in the edge message format:\n\n* The REC REST API specification (api/REST/rec-full-v3.1.2.yaml) now specifies that the payload for POST, PUT, and PATCH operations should be carried in the HTTP request body.        \n* The REC REST API specification now uses the updated MIME type for JSON-LD: application/ld+json\n* The Edge message examples mistakenly carried REC 2 semantics due to previous Git mishap; that is now addressed and the examples are up-to-date\n\nNote that this hotfix does not affect the ontology semantics; aside from version and release node annotations, REC 3.1.2 is identical to REC 3.1.2.\n\nVersion 3.1.1 is a minor release of REC that contains:\n\n* The official REC REST API (see the api/REST subdirectory)\n* O2O annotations used by the OWL2OAS generator when building that API.\n* Spelling fixes.        \n        \nVersion 3.1 is a feature release of REC that contains:\n\n* The new Actuation module, with north- and southbound message semantics for enacting actuations on systems.\n* Deprecation of the Room (Building module) and Premises (Lease module) type hierarchies, in favour of the RoomType and PremisesType classes, respectively. Named individuals of these classes are punned to the same IRIs as the now-deprecated classes, the latter of which will be removed in an upcoming 4.0 release.\n* Documentation on REC recommendations for alignments with owl:sameAs and owl:equivalentClass (outside of ontology, see GitHub repo).\n* Initial OWL2OAS annotations (work in progress, see https://github.com/hammar/owl2oas) governing how an OAS API will be generated from the REC OWL files. Will be fully functional by release 3.2.\n\nVersion 3.0 is a major and compatibility-breaking refactoring of REC:\n\n* Properties have been defined as being (at-most) single-domain and single-range, supporting usability and visualization.\n* Meronomy properties have been refactored to allow transitive traversal of the parthood hierarchy from RealEstate all the way down to individual devices using the isPartOf and hasPart superproperties.\n** This has required refactoring of the relations Building <-> BuildingComponent and Device <-> DeviceComponent (the latter is removed).\n* Class naming has been simplified (BuildingStructure -> Building, BuildingStructureComponent -> BuildingComponent, etc).\n* A (minimal) representation of GeoSPARQL has been integrated, to allow for standardized geospatial representations and querying. REC home-made geospatial/location vocabulary is phased out as a consequence.\n* Alignments against other ontologies or standards (BIP, Belok, IPSO, Haystack, fi2xml, IFC) have been broken out into separate alignment files\n* Module boundaries have been clarified and three new modules (Lease, Metadata, Agents) have been added, in preparation of anticipated modelling work.\n* All entities have been assigned rdfs:labels and the large majority rdfs:comments.\n* The modules have been documented with metadata using DC, CC, VANN, cpannotationschema, etc.\n* All IRI:s are now HTTPS",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ]
+}

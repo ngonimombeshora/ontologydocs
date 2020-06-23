@@ -1,0 +1,1245 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "sv", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/rec/lfr", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/core", "http://www.opengis.net/ont/geosparql" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "cc" : "http://creativecommons.org/ns#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title" : {
+      "undefined" : "RealEstateCore Lantmäteriet Module"
+    },
+    "iri" : "https://w3id.org/rec/lfr/",
+    "version" : "3.2",
+    "author" : [ "Peter Hartlev" ],
+    "description" : {
+      "en" : "This REC module covers the data model used by government agency Lantmäteriet, the Swedish National Land Survey, in its Fastighetsregister, Swedish Real Property Register (SRPR)"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Peter Hartlev",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "lfr",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-06-23",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/lfr/3.2/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Lantmäteriet Module",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/rec/lfr/LfrStreetAddressLocation",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LfrStreetAddressLocation",
+      "sv" : "Gatuadressplats",
+      "en" : "Street address location"
+    },
+    "id" : "15",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Type",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Type"
+    },
+    "subClasses" : [ "29" ],
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/LfrAddressLocation",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LfrAddressLocation",
+      "sv" : "Adressplats",
+      "en" : "Address location"
+    },
+    "subClasses" : [ "25", "15", "34" ],
+    "comment" : {
+      "en" : "The address location is an abstract class. Should not be instantiated. Use the sub classes instead."
+    },
+    "id" : "5",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/RealEstate",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RealEstate"
+    },
+    "attributes" : [ "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Geometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Geometry"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/Building",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Building"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "instances" : 0,
+    "union" : [ "48", "13", "10", "4" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/BuildingComponent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildingComponent"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/LfrMetricalAddressLocation",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LfrMetricalAddressLocation",
+      "sv" : "Metertalsadressplats",
+      "en" : "Metrical address location"
+    },
+    "id" : "25",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Apartment",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Apartment"
+    },
+    "subClasses" : [ "13" ],
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/LfrApartment",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 55B.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LfrApartment",
+      "sv" : "Lägenhet",
+      "en" : "Apartment"
+    },
+    "comment" : {
+      "en" : "An apartment. Only a subset of available properties are modelled."
+    },
+    "id" : "13",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/LfrEntrance",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 55A",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LfrEntrance",
+      "sv" : "Entre",
+      "en" : "Entrance"
+    },
+    "comment" : {
+      "en" : "An entrance. Only a subset of available properties are modelled."
+    },
+    "id" : "4",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/LfrEntranceType",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\")",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LfrEntranceType",
+      "sv" : "Entretyp",
+      "en" : "Entrance type"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/lfr/LfrVisitingAddress",
+      "baseIri" : "https://w3id.org/rec/lfr",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\") value 4.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "One of the entrance types."
+      },
+      "labels" : {
+        "IRI-based" : "LfrVisitingAddress",
+        "sv" : "besöksadress",
+        "en" : "visiting address"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/lfr/LfrShopAddress",
+      "baseIri" : "https://w3id.org/rec/lfr",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\") value 3.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "One of the entrance types."
+      },
+      "labels" : {
+        "IRI-based" : "LfrShopAddress",
+        "sv" : "butiksadress",
+        "en" : "shop address"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/lfr/LfrResidenceAddressRegisteredApartment",
+      "baseIri" : "https://w3id.org/rec/lfr",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\") value 2.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "One of the entrance types."
+      },
+      "labels" : {
+        "IRI-based" : "LfrResidenceAddressRegisteredApartment",
+        "sv" : "bostadsadress med registrerad lägenhet",
+        "en" : "residence address with registered apartment"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/lfr/LfrDeliveryAddress",
+      "baseIri" : "https://w3id.org/rec/lfr",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\") value 5.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "One of the entrance types."
+      },
+      "labels" : {
+        "IRI-based" : "LfrDeliveryAddress",
+        "sv" : "leveransadress",
+        "en" : "delivery address"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/lfr/LfrMissingInformation",
+      "baseIri" : "https://w3id.org/rec/lfr",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\") value 9.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "One of the entrance types."
+      },
+      "labels" : {
+        "IRI-based" : "LfrMissingInformation",
+        "sv" : "uppgift saknas",
+        "en" : "missing information"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/lfr/LfrResidenceAddress",
+      "baseIri" : "https://w3id.org/rec/lfr",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "en",
+          "value" : "SRPR version 11.40, object type 55A field 13 (\"ENTRETYP\") value 1.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "One of the entrance types."
+      },
+      "labels" : {
+        "IRI-based" : "LfrResidenceAddress",
+        "sv" : "bostadsadress",
+        "en" : "residence address"
+      }
+    } ],
+    "comment" : {
+      "en" : "Representation of the type of entrance (entre). The possible types are modelled as named individuals."
+    },
+    "id" : "29",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/LfrCityAddressLocation",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LfrCityAddressLocation",
+      "sv" : "Byadressplats",
+      "en" : "City address location"
+    },
+    "id" : "34",
+    "superClasses" : [ "5" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrPostalCode",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "2",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 19 (\"POSTNR\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrPostalCode",
+      "sv" : "postnummer",
+      "en" : "postal code"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrAddressLocation",
+    "inverse" : "6",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "5",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, foreign key in object type 55B field 25 (\"UUIDADRPL\") and object type 90A field 68 (\"UUID\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrAddressLocation",
+      "sv" : "har adressplats",
+      "en" : "has address location"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Association between an entrance (entre) and its address location (adressplats)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrPostalLocation",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "8",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 24 (\"POSTORT\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrPostalLocation",
+      "sv" : "postort",
+      "en" : "postal location"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/lfrTotalResidenceArea",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "11",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 50A field 50 (\"TOTBOAREA\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lfrTotalResidenceArea",
+      "sv" : "total bostadsarea",
+      "en" : "total residence area"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "The total area in square meters (m2) of all residences (apartments) in a building."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/lfrApartmentArea",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "14",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 55B field 18 (\"BOAREA\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lfrApartmentArea",
+      "sv" : "bostads area",
+      "en" : "apartment area"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The area in square meters (m2) of an apartment (lägenhet)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "1",
+    "subproperty" : [ "17" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "19",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "21",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "23",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "5",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#hasSerialization",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasSerialization"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "26"
+  }, {
+    "range" : "30",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrEastCoordinate",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "32",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 36 (\"YKOORD\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrEastCoordinate",
+      "sv" : "öst-koordinat",
+      "en" : "east coordinate"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "East-west directional coordinate in meters according to SWEREF 99 TM.\n\nComprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN])."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "31"
+  }, {
+    "range" : "5",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "5",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrEntrance",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "4",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, foreign key in object type 55B field 43 (\"UUIDENTRE\") and object type 55A field 21 (\"UUID\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrEntrance",
+      "sv" : "har entre",
+      "en" : "has entrance"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "13",
+    "comment" : {
+      "en" : "Association between an apartment (lägenhet) and an entrance (entre)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isPartOfBuilding",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isPartOfBuilding"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/lfrApartmentNumber",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "38",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 55B field 10 (\"LGHNR\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lfrApartmentNumber",
+      "sv" : "lägenhetsnummer",
+      "en" : "apartment number"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/locationOfRealEstate",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "1",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, foreign key in object type 90A field 71 (\"UUIDREGENH\") and object type 01 field 40 (\"UUID\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "locationOfRealEstate",
+      "sv" : "adressplats för fastighet",
+      "en" : "address location of real estate"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Association between an address location (adressplats) and a real estate (fastighet)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrNorthCoordinate",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "41",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 35 (\"XKOORD\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrNorthCoordinate",
+      "sv" : "nord-koordinat",
+      "en" : "north coordinate"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "North-south directional coordinate in meters according to SWEREF 99 TM.\n\nComprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN])."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrCityName",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "43",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 16 (\"ADROMRADE\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrCityName",
+      "sv" : "bynamn",
+      "en" : "city name"
+    },
+    "domain" : "34",
+    "comment" : {
+      "en" : "City name.\n\nNote that object type 90A field 15 (\"ADRTYP\") holds the key to interpretation of this field; value = 3 (~byadressområde) implies a city name (bynamn).\n\nAlso note that city name may be different to the postal location."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrMunicipalityPart",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "45",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 18 (\"KOMDELLAGE\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrMunicipalityPart",
+      "sv" : "kommundel",
+      "en" : "municipality part"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrMunicipalityCode",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "47",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 13 (\"KOMKOD\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrMunicipalityCode",
+      "sv" : "kommunkod",
+      "en" : "municipality code"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrMetricalAddressName",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "50",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 16 (\"ADROMRADE\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrMetricalAddressName",
+      "sv" : "metertalsadressområdesnamn",
+      "en" : "metrical address name"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Metrical address name.\n\nNote that object type 90A field 15 (\"ADRTYP\") holds the key to interpretation of this field; value = 2 (~metertalsadressområde) implies a metrical address name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/lfrBuildingNumber",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "53",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 50A field 7 (\"HUSNR\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "lfrBuildingNumber",
+      "sv" : "husnummer",
+      "en" : "building number"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "The serial number for all buildings on a property."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrCountyCode",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "57",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 12 (\"LANKOD\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrCountyCode",
+      "sv" : "länskod",
+      "en" : "county code"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrStreetName",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "60",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A field 16 (\"ADROMRADE\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrStreetName",
+      "sv" : "gatunamn",
+      "en" : "street name"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Street name.\n\nNote that object type 90A field 15 (\"ADRTYP\") holds the key to interpretation of this field; value = 1 (~gatuadressområde) implies a street name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/rec/core/isPartOfRealEstate",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isPartOfRealEstate"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/lfrUUID",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "lfrUUID",
+      "sv" : "lantmäteriets fastighets register universal unik identitet",
+      "en" : "real property register universal unique identity"
+    },
+    "domain" : "55",
+    "comment" : {
+      "en" : "All objects in the SRPR (Lantmäteriets Fastighetsregister, LFR) has unique identifiers, UUIDs."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/lfrEntranceType",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "lfrEntranceType",
+      "en" : "entrance type"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Representation of the type of entrance (entre). The possible entrance types are modelled as named individuals."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/locationOfLfrEntrance",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "locationOfLfrEntrance",
+      "sv" : "adressplats för entre",
+      "en" : "address location of entrance"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Association between an address location (adressplats) and its entrance (entre). Inverse to hasLfrAddressLocation and not part of the formal LFR specification."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "54",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, object type 90A.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLfrAddressLocationAttribute",
+      "sv" : "adressplatsattribut",
+      "en" : "address location attributes"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "A number of attributes (fields) related to address location. Together they represent a minimum implementation of the standardized address location (adressplats)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  } ]
+}

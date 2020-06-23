@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RealEstateCore Lease Module</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/rec/lease/",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This REC module covers leases, leased, lease contracts, premise types, etc.</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "RealEstateCore Lease Module"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.5</span>
+  </div>
+  <h1>RealEstateCore Lease Module</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://w3id.org/rec/lease/</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            RealEstateCore Consortium<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Erik Wallin<br/>
+            Karl Hammar<br/>
+        </dd>
+        <dt>Modified</dt>
+        <dd>2020-06-23</dd>
+        <dt>Version Information</dt>
+        <dd>3.2</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="https://w3id.org/rec/lease/3.2/">https://w3id.org/rec/lease/3.2/</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="https://w3id.org/rec/core/3.2/">https://w3id.org/rec/core/3.2/</a><br/>
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="lease.rdf">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This REC module covers leases, leased, lease contracts, premise types, etc.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <iframe src="webvowl/index.html#lease" width="100%" height="800"></iframe>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#CoffeePremises">CoffeePremises</a></li>
+        <li><a href="#EducationalPremises">EducationalPremises</a></li>
+        <li><a href="#GaragePremises">GaragePremises</a></li>
+        <li><a href="#HotelPremises">HotelPremises</a></li>
+        <li><a href="#LaboratoryPremises">LaboratoryPremises</a></li>
+        <li><a href="#Leasable">Leasable</a></li>
+        <li><a href="#Lease">Lease</a></li>
+        <li><a href="#Leasecontract">Lease contract</a></li>
+        <li><a href="#LightIndustryPremises">LightIndustryPremises</a></li>
+        <li><a href="#OfficePremises">OfficePremises</a></li>
+        <li><a href="#Premises">Premises</a></li>
+        <li><a href="#Premisestype">Premises type</a></li>
+        <li><a href="#ResidentialPremises">ResidentialPremises</a></li>
+        <li><a href="#RestaurantPremises">RestaurantPremises</a></li>
+        <li><a href="#RetailPremises">RetailPremises</a></li>
+        <li><a href="#StoragePremises">StoragePremises</a></li>
+    </ul>
+    <div class="entity class" id="CoffeePremises">
+        <h3>CoffeePremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/CoffeePremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="EducationalPremises">
+        <h3>EducationalPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/EducationalPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="GaragePremises">
+        <h3>GaragePremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/GaragePremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="HotelPremises">
+        <h3>HotelPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/HotelPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="LaboratoryPremises">
+        <h3>LaboratoryPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/LaboratoryPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Leasable">
+        <h3>Leasable<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/Leasable</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Things that can be leased (e.g., buildings, rooms, equipment, etc.).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Lease">
+        <h3>Lease<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/Lease</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Event">core:Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/leasee">leasee</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/regulatedBy">regulatedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leasor">leasor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leaseEnd">leaseEnd</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leaseStart">leaseStart</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/lease/leaseOf">leaseOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Leasecontract">
+        <h3>Lease contract<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/LeaseContract</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Formal document that identifies the Tenant and the leased asset or property; states lease term and fee (rent), and detailed terms and conditions of the lease agreement.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/regulatedBy">regulatedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="LightIndustryPremises">
+        <h3>LightIndustryPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/LightIndustryPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="OfficePremises">
+        <h3>OfficePremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/OfficePremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Premises">
+        <h3>Premises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/Premises</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Premises are a set of buildings or rooms that are leased out to tenants, typically for a defined purpose.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Leasable">Leasable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/GaragePremises">GaragePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/RestaurantPremises">RestaurantPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/RetailPremises">RetailPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/CoffeePremises">CoffeePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/LaboratoryPremises">LaboratoryPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/OfficePremises">OfficePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/StoragePremises">StoragePremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/LightIndustryPremises">LightIndustryPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/EducationalPremises">EducationalPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/ResidentialPremises">ResidentialPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/lease/HotelPremises">HotelPremises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/premisesIncludesBuilding">premisesIncludesBuilding</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/premisesIncludesRoom">premisesIncludesRoom</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/premisesType">premisesType</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/premisesIncludes">premisesIncludes</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/buildingIsPartOfPremises">buildingIsPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/isPartOfPremises">isPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/lease/roomIsPartOfPremises">roomIsPartOfPremises</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Premisestype">
+        <h3>Premises type<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/PremisesType</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/premisesType">premisesType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ResidentialPremises">
+        <h3>ResidentialPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/ResidentialPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RestaurantPremises">
+        <h3>RestaurantPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/RestaurantPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RetailPremises">
+        <h3>RetailPremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/RetailPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="StoragePremises">
+        <h3>StoragePremises<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/StoragePremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#buildingispartofpremises">building is part of premises</a></li>
+        <li><a href="#ispartofpremises">is part of premises</a></li>
+        <li><a href="#leaseof">lease of</a></li>
+        <li><a href="#leasee">leasee</a></li>
+        <li><a href="#leasor">leasor</a></li>
+        <li><a href="#premisesincludes">premises includes</a></li>
+        <li><a href="#premisesincludesbuilding">premises includes building</a></li>
+        <li><a href="#premisesincludesroom">premises includes room</a></li>
+        <li><a href="#premisestype">premises type</a></li>
+        <li><a href="#regulatedby">regulated by</a></li>
+        <li><a href="#roomispartofpremises">room is part of premises</a></li>
+    </ul>
+    <div class="entity property" id="buildingispartofpremises">
+        <h3>building is part of premises<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/buildingIsPartOfPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/isPartOfPremises">isPartOfPremises</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Building">core:Building</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="ispartofpremises">
+        <h3>is part of premises<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/isPartOfPremises</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Property that models Premises (leasable parts of real estate) parthood, i.e., that certain buildings and/or rooms are part of a defined Premise (which can in turn by governed by a Lease through a LeaseContract)
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/isPartOf">core:isPartOf</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="leaseof">
+        <h3>lease of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/leaseOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The object (e.g., property, equipment, etc) that this a lease of.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Lease">Lease</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="leasee">
+        <h3>leasee<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/leasee</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The agent (organization or person) leasing some leasable object, i.e., the user of the asset.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Lease">Lease</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Agent">core:Agent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="leasor">
+        <h3>leasor<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/leasor</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The agent (organization or person) leasing out some leasable object, i.e., the owner of the asset.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Lease">Lease</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Agent">core:Agent</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="premisesincludes">
+        <h3>premises includes<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/premisesIncludes</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Parthood traversal property linking Premises to their constituent Buildings or Rooms.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasPart">core:hasPart</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="premisesincludesbuilding">
+        <h3>premises includes building<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/premisesIncludesBuilding</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/premisesIncludes">premisesIncludes</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Building">core:Building</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="premisesincludesroom">
+        <h3>premises includes room<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/premisesIncludesRoom</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/premisesIncludes">premisesIncludes</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Room">core:Room</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="premisestype">
+        <h3>premises type<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/premisesType</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="regulatedby">
+        <h3>regulated by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/regulatedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A lease is regulated by some contract entered into by the leasor and leasees.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Lease">Lease</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/LeaseContract">LeaseContract</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="roomispartofpremises">
+        <h3>room is part of premises<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/roomIsPartOfPremises</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/isPartOfPremises">isPartOfPremises</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Room">core:Room</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Premises">Premises</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#leaseend">lease end</a></li>
+        <li><a href="#leasestart">lease start</a></li>
+    </ul>
+    <div class="entity property" id="leaseend">
+        <h3>lease end<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/leaseEnd</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Time at which a lease arrangement ends.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasStopTime">core:hasStopTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Lease">Lease</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="leasestart">
+        <h3>lease start<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/lease/leaseStart</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Time at which a lease arrangement begins.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/hasStartTime">core:hasStartTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/lease/Lease">Lease</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#CoffeePremises">CoffeePremises</a></li>
+        <li><a href="#EducationalPremises">EducationalPremises</a></li>
+        <li><a href="#GaragePremises">GaragePremises</a></li>
+        <li><a href="#HotelPremises">HotelPremises</a></li>
+        <li><a href="#LaboratoryPremises">LaboratoryPremises</a></li>
+        <li><a href="#LightIndustryPremises">LightIndustryPremises</a></li>
+        <li><a href="#OfficePremises">OfficePremises</a></li>
+        <li><a href="#ResidentialPremises">ResidentialPremises</a></li>
+        <li><a href="#RestaurantPremises">RestaurantPremises</a></li>
+        <li><a href="#RetailPremises">RetailPremises</a></li>
+        <li><a href="#StoragePremises">StoragePremises</a></li>
+    </ul>
+    <div class="entity named_individual" id="CoffeePremises">
+        <h3>CoffeePremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/CoffeePremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="EducationalPremises">
+        <h3>EducationalPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/EducationalPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="GaragePremises">
+        <h3>GaragePremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/GaragePremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="HotelPremises">
+        <h3>HotelPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/HotelPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="LaboratoryPremises">
+        <h3>LaboratoryPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/LaboratoryPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="LightIndustryPremises">
+        <h3>LightIndustryPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/LightIndustryPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="OfficePremises">
+        <h3>OfficePremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/OfficePremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="ResidentialPremises">
+        <h3>ResidentialPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/ResidentialPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="RestaurantPremises">
+        <h3>RestaurantPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/RestaurantPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="RetailPremises">
+        <h3>RetailPremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/RetailPremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="StoragePremises">
+        <h3>StoragePremises<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://w3id.org/rec/lease/StoragePremises
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+                <a href="https://w3id.org/rec/lease/PremisesType">PremisesType</a><br/>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+            </dd>
+        </table>
+    </div>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/rec/lease/</code></dd>
+        <dt>cc</dt>
+        <dd><code>http://creativecommons.org/ns#</code></dd>
+        <dt>core</dt>
+        <dd><code>https://w3id.org/rec/core/</code></dd>
+        <dt>cpannotationschema</dt>
+        <dd><code>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>o2o</dt>
+        <dd><code>https://karlhammar.com/owl2oas/o2o.owl#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>

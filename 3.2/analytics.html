@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RealEstateCore Analytics Module</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/rec/analytics/",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This RealEstateCore module provides a vocabulary for describing prognoses and aggregates, and the processes used to generate these. This vocabulary is rather generic; we would like to get feedback on it and in particular solicit recommendations on how to model/document anlysis procedures/workflows.</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "RealEstateCore Analytics Module"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.5</span>
+  </div>
+  <h1>RealEstateCore Analytics Module</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://w3id.org/rec/analytics/</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            RealEstateCore Consortium<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Erik Wallin<br/>
+            Joakim Eriksson<br/>
+            Karl Hammar<br/>
+            Per Karlberg<br/>
+            Peter Hartlev<br/>
+        </dd>
+        <dt>Modified</dt>
+        <dd>2020-06-23</dd>
+        <dt>Version Information</dt>
+        <dd>3.2</dd>
+        <dt>Version IRI</dt>
+        <dd><a href="https://w3id.org/rec/analytics/3.2/">https://w3id.org/rec/analytics/3.2/</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="https://w3id.org/rec/core/3.2/">https://w3id.org/rec/core/3.2/</a><br/>
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="analytics.rdf">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This RealEstateCore module provides a vocabulary for describing prognoses and aggregates, and the processes used to generate these. This vocabulary is rather generic; we would like to get feedback on it and in particular solicit recommendations on how to model/document anlysis procedures/workflows.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <iframe src="webvowl/index.html#analytics" width="100%" height="800"></iframe>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Aggregate">Aggregate</a></li>
+        <li><a href="#Analysisconfiguration">Analysis configuration</a></li>
+        <li><a href="#Analysisprocess">Analysis process</a></li>
+        <li><a href="#Dataseries">Data series</a></li>
+        <li><a href="#Prediction">Prediction</a></li>
+    </ul>
+    <div class="entity class" id="Aggregate">
+        <h3>Aggregate<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/Aggregate</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Observation">core:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/generatedBy">generatedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/analytics/AnalysisProcess">AnalysisProcess</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Analysisconfiguration">
+        <h3>Analysis configuration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/AnalysisConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Information">core:Information</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/analysisConfiguration">analysisConfiguration</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Analysisprocess">
+        <h3>Analysis process<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/AnalysisProcess</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Some process that generates analysis results, e.g., predictions, aggregates, series, etc. This could be anything from the execution of a machine learning classifier to a simple mathematical averaging operation. The modelling of specific analysis processes and their semantics remains to be done.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/analysisConfiguration">analysisConfiguration</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/generatedBy">generatedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Dataseries">
+        <h3>Data series<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/DataSeries</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A series of somehow related observations.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Information">core:Information</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/generatedBy">generatedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/rec/analytics/AnalysisProcess">AnalysisProcess</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/analytics/seriesMembers">seriesMembers</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="https://w3id.org/rec/core/Observation">core:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/seriesMembers">seriesMembers</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Prediction">
+        <h3>Prediction<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/Prediction</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Observation">core:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/generatedBy">generatedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/analytics/AnalysisProcess">AnalysisProcess</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#analysisconfiguration">analysis configuration</a></li>
+        <li><a href="#generatedby">generated by</a></li>
+        <li><a href="#seriesmembers">series members</a></li>
+    </ul>
+    <div class="entity property" id="analysisconfiguration">
+        <h3>analysis configuration<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/analysisConfiguration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The configuration for a given analysis process. E.g., which model was used for a machine learning classifier, which dataset was that model trained on, which algorithm was used for some prediction or aggregation, etc. The modelling of specific analysis processes and their semantics remains to be done.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/AnalysisProcess">AnalysisProcess</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/AnalysisConfiguration">AnalysisConfiguration</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generatedby">
+        <h3>generated by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/generatedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Links some generated analysis results (predictions, aggregates, series, etc). to the process by which they were created.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/AnalysisProcess">AnalysisProcess</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="seriesmembers">
+        <h3>series members<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/rec/analytics/seriesMembers</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Members of the data series. Carries the o2o:listProperty annotation, so will in API:s be translated into an RDF ordered list, see https://github.com/RealEstateCore/rec/tree/master/docs/RdfLists.md
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/analytics/DataSeries">DataSeries</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/rec/core/Observation">core:Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/rec/analytics/</code></dd>
+        <dt>cc</dt>
+        <dd><code>http://creativecommons.org/ns#</code></dd>
+        <dt>core</dt>
+        <dd><code>https://w3id.org/rec/core/</code></dd>
+        <dt>cpannotationschema</dt>
+        <dd><code>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>o2o</dt>
+        <dd><code>https://karlhammar.com/owl2oas/o2o.owl#</code></dd>
+        <dt>opla-sd</dt>
+        <dd><code>http://ontologydesignpatterns.org/opla-sd#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>

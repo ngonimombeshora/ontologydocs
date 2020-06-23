@@ -1,0 +1,799 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/rec/building", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/rec/actuation", "https://w3id.org/rec/dataschemas", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/device", "https://w3id.org/rec/core" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+      "building" : "https://w3id.org/rec/building/",
+      "actuation" : "https://w3id.org/rec/actuation/",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "cc" : "http://creativecommons.org/ns#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "core" : "https://w3id.org/rec/core/",
+      "device" : "https://w3id.org/rec/device/",
+      "dataschemas" : "https://w3id.org/rec/dataschemas/"
+    },
+    "title" : {
+      "undefined" : "RealEstateCore Example"
+    },
+    "iri" : "https://w3id.org/rec/example/",
+    "author" : [ "Karl Hammar" ],
+    "description" : {
+      "en" : "This is an example REC graph populated with a minimal set of buildings, rooms, and sensors."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "example",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-06-23",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/example/3.2/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Example",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/rec/device/Actuator",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actuator"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/HueKitchenLight",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "isMountedIn" : [ {
+          "identifier" : "isMountedIn",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen",
+          "type" : "iri"
+        } ],
+        "hasActuationInterface" : [ {
+          "identifier" : "hasActuationInterface",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueBulbBrightnessInterface",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasActuationInterface",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueBulbLightColorInterface",
+          "type" : "iri"
+        } ],
+        "hasDefaultActuationInterface" : [ {
+          "identifier" : "hasDefaultActuationInterface",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueBulbBrightnessInterface",
+          "type" : "iri"
+        } ],
+        "hasQuantityKind" : [ {
+          "identifier" : "hasQuantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Illuminance",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueKitchenLight"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Sensor",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensor1_LightMeter",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSuperDevice" : [ {
+          "identifier" : "hasSuperDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1",
+          "type" : "iri"
+        } ],
+        "hasQuantityKind" : [ {
+          "identifier" : "hasQuantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Illuminance",
+          "type" : "iri"
+        } ],
+        "measurementUnit" : [ {
+          "identifier" : "measurementUnit",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Lux",
+          "type" : "iri"
+        } ],
+        "hasMeasurementUnit" : [ {
+          "identifier" : "hasMeasurementUnit",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Lux",
+          "type" : "iri"
+        } ],
+        "sensorInterface" : [ {
+          "identifier" : "sensorInterface",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensorLightMeterInterface",
+          "type" : "iri"
+        } ],
+        "quantityKind" : [ {
+          "identifier" : "quantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Illuminance",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensor1_LightMeter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensor1_Thermometer",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSuperDevice" : [ {
+          "identifier" : "hasSuperDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1",
+          "type" : "iri"
+        } ],
+        "hasQuantityKind" : [ {
+          "identifier" : "hasQuantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Temperature",
+          "type" : "iri"
+        } ],
+        "measurementUnit" : [ {
+          "identifier" : "measurementUnit",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Celsius",
+          "type" : "iri"
+        } ],
+        "hasMeasurementUnit" : [ {
+          "identifier" : "hasMeasurementUnit",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Celsius",
+          "type" : "iri"
+        } ],
+        "sensorInterface" : [ {
+          "identifier" : "sensorInterface",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensorThermometerInterface",
+          "type" : "iri"
+        } ],
+        "quantityKind" : [ {
+          "identifier" : "quantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Temperature",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensor1_Thermometer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensor1_MotionDetector",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSuperDevice" : [ {
+          "identifier" : "hasSuperDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1",
+          "type" : "iri"
+        } ],
+        "hasQuantityKind" : [ {
+          "identifier" : "hasQuantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Presence",
+          "type" : "iri"
+        } ],
+        "hasMeasurementUnit" : [ {
+          "identifier" : "hasMeasurementUnit",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/BooleanDetection",
+          "type" : "iri"
+        } ],
+        "quantityKind" : [ {
+          "identifier" : "quantityKind",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/core/Presence",
+          "type" : "iri"
+        } ],
+        "sensorInterface" : [ {
+          "identifier" : "sensorInterface",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensor1_MotionDetector"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/rec/actuation/ActuationInterface",
+    "baseIri" : "https://w3id.org/rec/actuation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationInterface"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/HueBulbLightColorInterface",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "dataSchema" : [ {
+          "identifier" : "dataSchema",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/LightColorKelvin",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueBulbLightColorInterface"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/HueBulbBrightnessInterface",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "dataSchema" : [ {
+          "identifier" : "dataSchema",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/BrightnessPercentage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueBulbBrightnessInterface"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/rec/dataschemas/FloatSchema",
+    "baseIri" : "https://w3id.org/rec/dataschemas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FloatSchema"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/TemperatureAsFloat",
+      "baseIri" : "https://w3id.org/rec/example",
+      "labels" : {
+        "IRI-based" : "TemperatureAsFloat"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Room",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Room"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSuperBuildingComponent" : [ {
+          "identifier" : "hasSuperBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor",
+          "type" : "iri"
+        } ],
+        "roomType" : [ {
+          "identifier" : "roomType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/building/Bedroom",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_BlueBedroom"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSuperBuildingComponent" : [ {
+          "identifier" : "hasSuperBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor",
+          "type" : "iri"
+        } ],
+        "roomType" : [ {
+          "identifier" : "roomType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/building/OfficeRoom",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_Office"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "containsMountedDevice" : [ {
+          "identifier" : "containsMountedDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueKitchenLight",
+          "type" : "iri"
+        } ],
+        "hasSuperBuildingComponent" : [ {
+          "identifier" : "hasSuperBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor",
+          "type" : "iri"
+        } ],
+        "roomType" : [ {
+          "identifier" : "roomType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/building/FoodHandlingRoom",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_Kitchen"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "containsMountedDevice" : [ {
+          "identifier" : "containsMountedDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1",
+          "type" : "iri"
+        } ],
+        "hasSuperBuildingComponent" : [ {
+          "identifier" : "hasSuperBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor",
+          "type" : "iri"
+        } ],
+        "roomType" : [ {
+          "identifier" : "roomType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/building/Entrance",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_Entrance"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSuperBuildingComponent" : [ {
+          "identifier" : "hasSuperBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor",
+          "type" : "iri"
+        } ],
+        "roomType" : [ {
+          "identifier" : "roomType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/building/DiningRoom",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_DiningRoom"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/rec/dataschemas/BooleanSchema",
+    "baseIri" : "https://w3id.org/rec/dataschemas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BooleanSchema"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/MotionAsBoolean",
+      "baseIri" : "https://w3id.org/rec/example",
+      "labels" : {
+        "IRI-based" : "MotionAsBoolean"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/rec/core/RealEstate",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RealEstate"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasRealEstateComponent" : [ {
+          "identifier" : "hasRealEstateComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasRealEstateComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasRealEstateComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_Garage",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Device",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensor1",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasSubDevice" : [ {
+          "identifier" : "hasSubDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1_LightMeter",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasSubDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1_Thermometer",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasSubDevice",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/HueMotionSensor1_MotionDetector",
+          "type" : "iri"
+        } ],
+        "isMountedIn" : [ {
+          "identifier" : "isMountedIn",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensor1"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/rec/device/SensorInterface",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SensorInterface"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensorThermometerInterface",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "dataSchema" : [ {
+          "identifier" : "dataSchema",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/TemperatureAsFloat",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensorThermometerInterface"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensorLightMeterInterface",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "dataSchema" : [ {
+          "identifier" : "dataSchema",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/LuxAsInteger",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensorLightMeterInterface"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/HueMotionSensorMotionDetectorInterface",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "dataSchema" : [ {
+          "identifier" : "dataSchema",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/MotionAsBoolean",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HueMotionSensorMotionDetectorInterface"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Building",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Building"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_Garage",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "isPartOfRealEstate" : [ {
+          "identifier" : "isPartOfRealEstate",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_Garage"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "hasBuildingComponent" : [ {
+          "identifier" : "hasBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor",
+          "type" : "iri"
+        } ],
+        "isPartOfRealEstate" : [ {
+          "identifier" : "isPartOfRealEstate",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "isPartOfRealEstate" : [ {
+          "identifier" : "isPartOfRealEstate",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_StorageBuilding"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/rec/dataschemas/IntSchema",
+    "baseIri" : "https://w3id.org/rec/dataschemas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntSchema"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/BrightnessPercentage",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "maximum" : [ {
+          "identifier" : "maximum",
+          "language" : "undefined",
+          "value" : "100",
+          "type" : "label"
+        } ],
+        "minimum" : [ {
+          "identifier" : "minimum",
+          "language" : "undefined",
+          "value" : "0",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "BrightnessPercentage"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/LuxAsInteger",
+      "baseIri" : "https://w3id.org/rec/example",
+      "labels" : {
+        "IRI-based" : "LuxAsInteger"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/LightColorKelvin",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "maximum" : [ {
+          "identifier" : "maximum",
+          "language" : "undefined",
+          "value" : "6500",
+          "type" : "label"
+        } ],
+        "minimum" : [ {
+          "identifier" : "minimum",
+          "language" : "undefined",
+          "value" : "2200",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LightColorKelvin"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/rec/building/Storey",
+    "baseIri" : "https://w3id.org/rec/building",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Storey"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_SecondFloor",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "isPartOfBuilding" : [ {
+          "identifier" : "isPartOfBuilding",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse",
+          "type" : "iri"
+        } ],
+        "hasSubBuildingComponent" : [ {
+          "identifier" : "hasSubBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_BlueBedroom",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_SecondFloor"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_GroundFloor",
+      "baseIri" : "https://w3id.org/rec/example",
+      "annotations" : {
+        "isPartOfBuilding" : [ {
+          "identifier" : "isPartOfBuilding",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse",
+          "type" : "iri"
+        } ],
+        "hasSubBuildingComponent" : [ {
+          "identifier" : "hasSubBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasSubBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasSubBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Office",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasSubBuildingComponent",
+          "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Ulvsnaes2_MainHouse_GroundFloor"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  } ]
+}
