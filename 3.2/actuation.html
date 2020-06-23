@@ -293,27 +293,27 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="https://w3id.org/rec/actuation/hasCommandResponse">hasCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/targetActuator">targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/requestingAgent">requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/core/Agent">https://w3id.org/rec/core/Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/actuationPayload">actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/requestingAgent">requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Agent">https://w3id.org/rec/core/Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/hasCommandResponse">hasCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/actuationPayload">actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/requestingAgent">requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Agent">https://w3id.org/rec/core/Agent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/hasCommandResponse">hasCommandResponse</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/responseToCommand">responseToCommand</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommand">generatedCommand</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/responseToCommand">responseToCommand</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -340,8 +340,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/responseCode">responseCode</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/responseToCommand">responseToCommand</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/responseCode">responseCode</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -383,8 +383,8 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://w3id.org/rec/actuation/ActuationCommand">ActuationCommand</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/ActuationCommandResponse">ActuationCommandResponse</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ActuationRequest">ActuationRequest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/ActuationCommandResponse">ActuationCommandResponse</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/ActuationRequestResponse">ActuationRequestResponse</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -412,8 +412,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/dataSchema">https://w3id.org/rec/core/dataSchema</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/core/DataSchema">https://w3id.org/rec/core/DataSchema</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/payloadKeyValueDefinition">payloadKeyValueDefinition</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/dataSchema">https://w3id.org/rec/core/dataSchema</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/core/DataSchema">https://w3id.org/rec/core/DataSchema</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -427,9 +427,9 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/targetInterface">targetInterface</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/hasActuationInterface">hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/hasDefaultActuationInterface">hasDefaultActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/hasActuationInterface">hasActuationInterface</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/targetInterface">targetInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -456,29 +456,29 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="https://w3id.org/rec/actuation/targetActuator">targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/targetActuator">targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/actuationPayload">actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/targetInterface">targetInterface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/actuationPayload">actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/requestingAgent">requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/core/Agent">https://w3id.org/rec/core/Agent</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/actuation/hasRequestResponse">hasRequestResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/requestingAgent">requestingAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Agent">https://w3id.org/rec/core/Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/targetActuator">targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/actuationPayload">actuationPayload</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/targetActuator">targetActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="https://w3id.org/rec/device/Actuator">https://w3id.org/rec/device/Actuator</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/targetInterface">targetInterface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/targetInterface">targetInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/hasRequestResponse">hasRequestResponse</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommand">generatedCommand</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/targetInterface">targetInterface</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/responseToRequest">responseToRequest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/wasGeneratedFromRequest">wasGeneratedFromRequest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/responseToRequest">responseToRequest</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -506,18 +506,18 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/responseToRequest">responseToRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/requestAccepted">requestAccepted</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommandResponse">generatedCommandResponse</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/responseToRequest">responseToRequest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/requestAccepted">requestAccepted</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/actuationObservedBy">actuationObservedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/generatedCommandResponse">generatedCommandResponse</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/responseToRequest">responseToRequest</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/actuationObservedBy">actuationObservedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/requestAccepted">requestAccepted</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -551,10 +551,10 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/actuation/valueDatatype">valueDatatype</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/keyString">keyString</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/keyMandatory">keyMandatory</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/rec/actuation/valueRestriction">valueRestriction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/rec/actuation/keyString">keyString</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/actuation/valueDatatype">valueDatatype</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -562,8 +562,8 @@
                 <td>
                     <a href="https://w3id.org/rec/actuation/keyString">keyString</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/actuation/valueDatatype">valueDatatype</a><sup class="sup-fp" title="functional property">fp</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/valueRestriction">valueRestriction</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/actuation/keyMandatory">keyMandatory</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/valueRestriction">valueRestriction</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -632,8 +632,8 @@
                 <th>In domain of</th>
                 <td>
                     <a href="https://w3id.org/rec/actuation/valueRestrictionResolution">valueRestrictionResolution</a><sup class="sup-fp" title="functional property">fp</sup><br/>
-                    <a href="https://w3id.org/rec/actuation/valueRestrictionType">valueRestrictionType</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                     <a href="https://w3id.org/rec/actuation/valueRestrictionValues">valueRestrictionValues</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/actuation/valueRestrictionType">valueRestrictionType</a><sup class="sup-fp" title="functional property">fp</sup><br/>
                 </td>
             </tr>
             <tr>

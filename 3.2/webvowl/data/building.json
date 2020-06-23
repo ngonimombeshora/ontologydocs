@@ -296,13 +296,13 @@
     "id" : "118",
     "type" : "owl:Class"
   }, {
-    "id" : "163",
-    "type" : "owl:Class"
-  }, {
-    "id" : "96",
+    "id" : "162",
     "type" : "owl:Class"
   }, {
     "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
     "type" : "owl:Class"
   }, {
     "id" : "99",
@@ -314,7 +314,7 @@
     "id" : "131",
     "type" : "owl:Class"
   }, {
-    "id" : "154",
+    "id" : "190",
     "type" : "owl:Class"
   }, {
     "id" : "107",
@@ -326,7 +326,7 @@
     "id" : "151",
     "type" : "owl:Class"
   }, {
-    "id" : "181",
+    "id" : "174",
     "type" : "owl:Class"
   }, {
     "id" : "178",
@@ -1117,18 +1117,7 @@
     },
     "subClasses" : [ "151" ],
     "attributes" : [ "external" ],
-    "id" : "163"
-  }, {
-    "iri" : "https://w3id.org/rec/building/LaundryRoom",
-    "baseIri" : "https://w3id.org/rec/building",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LaundryRoom",
-      "en" : "LaundryRoom"
-    },
-    "attributes" : [ "deprecated" ],
-    "id" : "96",
-    "superClasses" : [ "6" ]
+    "id" : "162"
   }, {
     "iri" : "https://w3id.org/rec/building/Classroom",
     "baseIri" : "https://w3id.org/rec/building",
@@ -1140,6 +1129,17 @@
     "attributes" : [ "deprecated" ],
     "id" : "8",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/rec/building/LaundryRoom",
+    "baseIri" : "https://w3id.org/rec/building",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LaundryRoom",
+      "en" : "LaundryRoom"
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "96",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/rec/building/ConversationRoom",
     "baseIri" : "https://w3id.org/rec/building",
@@ -1181,7 +1181,7 @@
       "en" : "ShelterGasLock"
     },
     "attributes" : [ "deprecated" ],
-    "id" : "154",
+    "id" : "190",
     "superClasses" : [ "82" ]
   }, {
     "iri" : "https://w3id.org/rec/building/Storage",
@@ -1271,7 +1271,7 @@
       }
     } ],
     "id" : "151",
-    "superClasses" : [ "163" ]
+    "superClasses" : [ "162" ]
   }, {
     "iri" : "https://w3id.org/rec/building/DisabledToilet",
     "baseIri" : "https://w3id.org/rec/building",
@@ -1294,7 +1294,7 @@
       "en" : "DisabledToilet"
     },
     "attributes" : [ "deprecated" ],
-    "id" : "181",
+    "id" : "174",
     "superClasses" : [ "55" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -1333,7 +1333,7 @@
       "IRI-based" : "PersonalHygiene",
       "en" : "PersonalHygiene"
     },
-    "subClasses" : [ "207", "181", "54", "146" ],
+    "subClasses" : [ "207", "174", "54", "146" ],
     "attributes" : [ "deprecated" ],
     "id" : "55",
     "superClasses" : [ "6" ]
@@ -1345,7 +1345,7 @@
       "IRI-based" : "Shelter",
       "en" : "Shelter"
     },
-    "subClasses" : [ "81", "154" ],
+    "subClasses" : [ "81", "190" ],
     "attributes" : [ "deprecated" ],
     "id" : "82",
     "superClasses" : [ "6" ]
@@ -1736,6 +1736,9 @@
     "id" : "153",
     "type" : "rdf:Property"
   }, {
+    "id" : "154",
+    "type" : "rdf:Property"
+  }, {
     "id" : "155",
     "type" : "rdf:Property"
   }, {
@@ -1757,7 +1760,7 @@
     "id" : "161",
     "type" : "rdf:Property"
   }, {
-    "id" : "162",
+    "id" : "163",
     "type" : "rdf:Property"
   }, {
     "id" : "164",
@@ -1790,9 +1793,6 @@
     "id" : "173",
     "type" : "rdf:Property"
   }, {
-    "id" : "174",
-    "type" : "rdf:Property"
-  }, {
     "id" : "175",
     "type" : "rdf:Property"
   }, {
@@ -1803,6 +1803,9 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "180",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "181",
     "type" : "rdf:Property"
   }, {
     "id" : "182",
@@ -1827,9 +1830,6 @@
     "type" : "rdf:Property"
   }, {
     "id" : "189",
-    "type" : "rdf:Property"
-  }, {
-    "id" : "190",
     "type" : "rdf:Property"
   }, {
     "id" : "179",
@@ -2347,7 +2347,7 @@
     "id" : "149"
   }, {
     "domain" : "151",
-    "range" : "58",
+    "range" : "47",
     "id" : "150",
     "label" : {
       "IRI-based" : "30",
@@ -2355,7 +2355,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "47",
+    "range" : "62",
     "id" : "152",
     "label" : {
       "IRI-based" : "29",
@@ -2363,7 +2363,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "154",
+    "range" : "107",
     "id" : "153",
     "label" : {
       "IRI-based" : "28",
@@ -2371,130 +2371,138 @@
     }
   }, {
     "domain" : "151",
-    "range" : "52",
-    "id" : "155",
+    "range" : "90",
+    "id" : "154",
     "label" : {
       "IRI-based" : "25",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "51",
-    "id" : "156",
+    "range" : "133",
+    "id" : "155",
     "label" : {
       "IRI-based" : "24",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "99",
-    "id" : "157",
+    "range" : "52",
+    "id" : "156",
     "label" : {
       "IRI-based" : "27",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "107",
-    "id" : "158",
+    "range" : "8",
+    "id" : "157",
     "label" : {
       "IRI-based" : "26",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "66",
-    "id" : "159",
+    "range" : "40",
+    "id" : "158",
     "label" : {
       "IRI-based" : "21",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "40",
-    "id" : "160",
+    "range" : "48",
+    "id" : "159",
     "label" : {
       "IRI-based" : "20",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "90",
-    "id" : "161",
+    "range" : "102",
+    "id" : "160",
     "label" : {
       "IRI-based" : "23",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "92",
-    "id" : "162",
+    "range" : "66",
+    "id" : "161",
     "label" : {
       "IRI-based" : "22",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "76",
-    "id" : "164",
+    "range" : "74",
+    "id" : "163",
     "label" : {
       "IRI-based" : "18",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "74",
-    "id" : "165",
+    "range" : "83",
+    "id" : "164",
     "label" : {
       "IRI-based" : "17",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "48",
-    "id" : "166",
+    "range" : "76",
+    "id" : "165",
     "label" : {
       "IRI-based" : "19",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "129",
-    "id" : "167",
+    "range" : "78",
+    "id" : "166",
     "label" : {
       "IRI-based" : "14",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "78",
-    "id" : "168",
+    "range" : "51",
+    "id" : "167",
     "label" : {
       "IRI-based" : "13",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "83",
-    "id" : "169",
+    "range" : "46",
+    "id" : "168",
     "label" : {
       "IRI-based" : "16",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "93",
-    "id" : "170",
+    "range" : "129",
+    "id" : "169",
     "label" : {
       "IRI-based" : "15",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "77",
-    "id" : "171",
+    "range" : "87",
+    "id" : "170",
     "label" : {
       "IRI-based" : "10",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "151",
+    "range" : "80",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "12",
       "undefined" : "is a"
     }
   }, {
@@ -2502,28 +2510,20 @@
     "range" : "96",
     "id" : "172",
     "label" : {
-      "IRI-based" : "12",
-      "undefined" : "is a"
-    }
-  }, {
-    "domain" : "151",
-    "range" : "80",
-    "id" : "173",
-    "label" : {
       "IRI-based" : "11",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "41",
-    "id" : "174",
+    "range" : "174",
+    "id" : "173",
     "label" : {
       "IRI-based" : "50",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "94",
+    "range" : "65",
     "id" : "175",
     "label" : {
       "IRI-based" : "52",
@@ -2531,7 +2531,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "20",
+    "range" : "69",
     "id" : "176",
     "label" : {
       "IRI-based" : "51",
@@ -2550,7 +2550,7 @@
     "id" : "177"
   }, {
     "domain" : "151",
-    "range" : "181",
+    "range" : "4",
     "id" : "180",
     "label" : {
       "IRI-based" : "47",
@@ -2558,72 +2558,72 @@
     }
   }, {
     "domain" : "151",
-    "range" : "54",
-    "id" : "182",
+    "range" : "71",
+    "id" : "181",
     "label" : {
       "IRI-based" : "46",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "65",
-    "id" : "183",
+    "range" : "54",
+    "id" : "182",
     "label" : {
       "IRI-based" : "49",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "69",
-    "id" : "184",
+    "range" : "130",
+    "id" : "183",
     "label" : {
       "IRI-based" : "48",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "110",
-    "id" : "185",
+    "range" : "60",
+    "id" : "184",
     "label" : {
       "IRI-based" : "43",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "2",
-    "id" : "186",
+    "range" : "118",
+    "id" : "185",
     "label" : {
       "IRI-based" : "42",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "130",
-    "id" : "187",
+    "range" : "110",
+    "id" : "186",
     "label" : {
       "IRI-based" : "45",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "71",
-    "id" : "188",
+    "range" : "2",
+    "id" : "187",
     "label" : {
       "IRI-based" : "44",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "46",
-    "id" : "189",
+    "range" : "68",
+    "id" : "188",
     "label" : {
       "IRI-based" : "41",
       "undefined" : "is a"
     }
   }, {
     "domain" : "151",
-    "range" : "60",
-    "id" : "190",
+    "range" : "131",
+    "id" : "189",
     "label" : {
       "IRI-based" : "40",
       "undefined" : "is a"
@@ -2642,7 +2642,7 @@
     "id" : "179"
   }, {
     "domain" : "151",
-    "range" : "68",
+    "range" : "82",
     "id" : "191",
     "label" : {
       "IRI-based" : "39",
@@ -2650,7 +2650,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "70",
+    "range" : "75",
     "id" : "192",
     "label" : {
       "IRI-based" : "36",
@@ -2658,7 +2658,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "133",
+    "range" : "92",
     "id" : "193",
     "label" : {
       "IRI-based" : "35",
@@ -2671,7 +2671,7 @@
     "id" : "194"
   }, {
     "domain" : "151",
-    "range" : "131",
+    "range" : "70",
     "id" : "195",
     "label" : {
       "IRI-based" : "38",
@@ -2684,7 +2684,7 @@
     "id" : "196"
   }, {
     "domain" : "151",
-    "range" : "82",
+    "range" : "77",
     "id" : "197",
     "label" : {
       "IRI-based" : "37",
@@ -2697,7 +2697,7 @@
     "id" : "198"
   }, {
     "domain" : "151",
-    "range" : "72",
+    "range" : "12",
     "id" : "199",
     "label" : {
       "IRI-based" : "32",
@@ -2705,7 +2705,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "12",
+    "range" : "58",
     "id" : "200",
     "label" : {
       "IRI-based" : "31",
@@ -2713,7 +2713,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "75",
+    "range" : "125",
     "id" : "201",
     "label" : {
       "IRI-based" : "34",
@@ -2721,7 +2721,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "125",
+    "range" : "72",
     "id" : "202",
     "label" : {
       "IRI-based" : "33",
@@ -2729,7 +2729,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "102",
+    "range" : "5",
     "id" : "203",
     "label" : {
       "IRI-based" : "72",
@@ -2761,7 +2761,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "5",
+    "range" : "99",
     "id" : "208",
     "label" : {
       "IRI-based" : "69",
@@ -2769,7 +2769,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "62",
+    "range" : "39",
     "id" : "209",
     "label" : {
       "IRI-based" : "68",
@@ -2777,7 +2777,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "55",
+    "range" : "53",
     "id" : "210",
     "label" : {
       "IRI-based" : "65",
@@ -2785,7 +2785,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "57",
+    "range" : "123",
     "id" : "211",
     "label" : {
       "IRI-based" : "64",
@@ -2793,7 +2793,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "8",
+    "range" : "55",
     "id" : "212",
     "label" : {
       "IRI-based" : "67",
@@ -2801,7 +2801,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "39",
+    "range" : "57",
     "id" : "213",
     "label" : {
       "IRI-based" : "66",
@@ -2809,7 +2809,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "128",
+    "range" : "79",
     "id" : "214",
     "label" : {
       "IRI-based" : "61",
@@ -2817,7 +2817,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "145",
+    "range" : "121",
     "id" : "215",
     "label" : {
       "IRI-based" : "60",
@@ -2825,7 +2825,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "53",
+    "range" : "128",
     "id" : "216",
     "label" : {
       "IRI-based" : "63",
@@ -2833,7 +2833,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "123",
+    "range" : "145",
     "id" : "217",
     "label" : {
       "IRI-based" : "62",
@@ -2841,7 +2841,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "121",
+    "range" : "93",
     "id" : "218",
     "label" : {
       "IRI-based" : "58",
@@ -2849,7 +2849,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "87",
+    "range" : "81",
     "id" : "219",
     "label" : {
       "IRI-based" : "57",
@@ -2857,7 +2857,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "79",
+    "range" : "10",
     "id" : "220",
     "label" : {
       "IRI-based" : "59",
@@ -2865,7 +2865,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "81",
+    "range" : "20",
     "id" : "221",
     "label" : {
       "IRI-based" : "54",
@@ -2873,7 +2873,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "118",
+    "range" : "41",
     "id" : "222",
     "label" : {
       "IRI-based" : "53",
@@ -2881,7 +2881,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "10",
+    "range" : "190",
     "id" : "223",
     "label" : {
       "IRI-based" : "56",
@@ -2889,7 +2889,7 @@
     }
   }, {
     "domain" : "151",
-    "range" : "4",
+    "range" : "94",
     "id" : "224",
     "label" : {
       "IRI-based" : "55",
@@ -2922,7 +2922,7 @@
     "id" : "229"
   }, {
     "range" : "82",
-    "domain" : "154",
+    "domain" : "190",
     "attributes" : [ "object", "anonymous" ],
     "id" : "230"
   }, {
@@ -3027,7 +3027,7 @@
     "id" : "244"
   }, {
     "range" : "55",
-    "domain" : "181",
+    "domain" : "174",
     "attributes" : [ "object", "anonymous" ],
     "id" : "245"
   }, {
@@ -3076,7 +3076,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "254"
   }, {
-    "range" : "163",
+    "range" : "162",
     "domain" : "151",
     "attributes" : [ "object", "anonymous" ],
     "id" : "255"

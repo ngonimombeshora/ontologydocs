@@ -190,7 +190,7 @@
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>This REC model covers basic types of agents (people, organizations, groups), structurally mostly aligned with FOAF -- divergences are noted in the respective propertys' documentation.</p>"
+        "@value": "<p>The Agents module is work-in-progress; requirements are rather unclear as of yet.</p>"
       }
     ],
     "https://schema.org/name": [
@@ -236,7 +236,7 @@
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>This REC model covers basic types of agents (people, organizations, groups), structurally mostly aligned with FOAF -- divergences are noted in the respective propertys' documentation.</p>
+        <p>The Agents module is work-in-progress; requirements are rather unclear as of yet.</p>
     </div>
 </section>
 <section id="toc">
@@ -340,12 +340,12 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/agents/givenName">givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/lastName">lastName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/agents/image">image</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="https://w3id.org/rec/agents/firstName">firstName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/agents/gender">gender</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/givenName">givenName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/agents/familyName">familyName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/firstName">firstName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/agents/image">image</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/agents/lastName">lastName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -606,7 +606,7 @@
             <tr>
                 <th>Description</th>
                 <td>
-                    http://xmlns.com/foaf/0.1/name
+                    A name for some Agent. Stricter than FOAF, we assume that things that have names are Agents, not Things (e.g., other predicates will need be used to described identifiers for non-Agents).
                 </td>
             </tr>
             <tr>

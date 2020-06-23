@@ -48,28 +48,28 @@
         "value" : "lfr",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2020-06-23",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      "modified" : [ {
+        "identifier" : "modified",
         "language" : "undefined",
-        "value" : "3.2",
+        "value" : "2020-06-23",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/rec/lfr/3.2/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.2",
         "type" : "label"
       } ],
       "title" : [ {
@@ -88,103 +88,103 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "48",
+    "id" : "49",
     "type" : "owl:Class"
   }, {
-    "id" : "51",
+    "id" : "52",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "21",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "41",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "54",
+    "id" : "55",
     "type" : "rdfs:Literal"
   }, {
     "id" : "1",
     "type" : "owl:Thing"
   }, {
-    "id" : "10",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "56",
     "type" : "owl:unionOf"
   }, {
-    "id" : "32",
+    "id" : "33",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "27",
+    "id" : "28",
     "type" : "rdfs:Literal"
   }, {
     "id" : "2",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "19",
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "58",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "45",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "11",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "53",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "50",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "8",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "14",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "38",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "47",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "60",
+    "id" : "61",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -196,7 +196,7 @@
       "sv" : "Gatuadressplats",
       "en" : "Street address location"
     },
-    "id" : "15",
+    "id" : "16",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "https://w3id.org/rec/core/Type",
@@ -205,9 +205,9 @@
     "label" : {
       "IRI-based" : "Type"
     },
-    "subClasses" : [ "29" ],
+    "subClasses" : [ "30" ],
     "attributes" : [ "external" ],
-    "id" : "30"
+    "id" : "31"
   }, {
     "iri" : "https://w3id.org/rec/lfr/LfrAddressLocation",
     "baseIri" : "https://w3id.org/rec/lfr",
@@ -217,12 +217,12 @@
       "sv" : "Adressplats",
       "en" : "Address location"
     },
-    "subClasses" : [ "25", "15", "34" ],
+    "subClasses" : [ "26", "16", "35" ],
     "comment" : {
       "en" : "The address location is an abstract class. Should not be instantiated. Use the sub classes instead."
     },
     "id" : "5",
-    "superClasses" : [ "21" ]
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/rec/core/RealEstate",
     "baseIri" : "https://w3id.org/rec/core",
@@ -231,10 +231,10 @@
       "IRI-based" : "RealEstate"
     },
     "attributes" : [ "external" ],
-    "id" : "48"
+    "id" : "49"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "51",
+    "id" : "52",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -248,7 +248,7 @@
     },
     "subClasses" : [ "5" ],
     "attributes" : [ "external" ],
-    "id" : "21"
+    "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "41",
@@ -258,7 +258,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "54",
+    "id" : "55",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -278,22 +278,22 @@
       "IRI-based" : "Building"
     },
     "attributes" : [ "external" ],
-    "id" : "10"
+    "id" : "11"
   }, {
     "instances" : 0,
-    "union" : [ "48", "13", "10", "4" ],
+    "union" : [ "49", "14", "11", "4" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "55"
+    "id" : "56"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "32",
+    "id" : "33",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "27",
+    "id" : "28",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -314,18 +314,18 @@
     },
     "subClasses" : [ "4" ],
     "attributes" : [ "external" ],
-    "id" : "19"
+    "id" : "20"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "58",
+    "id" : "59",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "45",
+    "id" : "46",
     "label" : {
       "IRI-based" : "string"
     }
@@ -338,7 +338,7 @@
       "sv" : "Metertalsadressplats",
       "en" : "Metrical address location"
     },
-    "id" : "25",
+    "id" : "26",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "https://w3id.org/rec/core/Apartment",
@@ -347,62 +347,62 @@
     "label" : {
       "IRI-based" : "Apartment"
     },
-    "subClasses" : [ "13" ],
+    "subClasses" : [ "14" ],
     "attributes" : [ "external" ],
-    "id" : "23"
+    "id" : "24"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "43",
+    "id" : "44",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "11",
+    "id" : "12",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "53",
+    "id" : "54",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
+    "id" : "51",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "8",
+    "id" : "9",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "14",
+    "id" : "15",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "38",
+    "id" : "39",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "47",
+    "id" : "48",
     "label" : {
       "IRI-based" : "string"
     }
@@ -426,19 +426,19 @@
     "comment" : {
       "en" : "An apartment. Only a subset of available properties are modelled."
     },
-    "id" : "13",
-    "superClasses" : [ "23" ]
+    "id" : "14",
+    "superClasses" : [ "24" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "57",
+    "id" : "58",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "60",
+    "id" : "61",
     "label" : {
       "IRI-based" : "string"
     }
@@ -463,7 +463,7 @@
       "en" : "An entrance. Only a subset of available properties are modelled."
     },
     "id" : "4",
-    "superClasses" : [ "19" ]
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "https://w3id.org/rec/lfr/LfrEntranceType",
     "baseIri" : "https://w3id.org/rec/lfr",
@@ -599,8 +599,8 @@
     "comment" : {
       "en" : "Representation of the type of entrance (entre). The possible types are modelled as named individuals."
     },
-    "id" : "29",
-    "superClasses" : [ "30" ]
+    "id" : "30",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "https://w3id.org/rec/lfr/LfrCityAddressLocation",
     "baseIri" : "https://w3id.org/rec/lfr",
@@ -610,7 +610,7 @@
       "sv" : "Byadressplats",
       "en" : "City address location"
     },
-    "id" : "34",
+    "id" : "35",
     "superClasses" : [ "5" ]
   } ],
   "property" : [ {
@@ -620,97 +620,100 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "7",
+    "id" : "8",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "9",
+    "id" : "10",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "16",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "18",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "20",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "22",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "24",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "26",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "28",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "31",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "35",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "17",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
     "type" : "owl:objectProperty"
   }, {
     "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "39",
+    "id" : "7",
     "type" : "owl:objectProperty"
   }, {
     "id" : "40",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "42",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "44",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "46",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "49",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "52",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "56",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "59",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "61",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "62",
+    "id" : "43",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
     "type" : "owl:objectProperty"
   }, {
     "id" : "6",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "64",
+    "id" : "65",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "65",
+    "id" : "66",
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
@@ -751,6 +754,7 @@
       "sv" : "har adressplats",
       "en" : "has address location"
     },
+    "superproperty" : [ "7" ],
     "domain" : "4",
     "comment" : {
       "en" : "Association between an entrance (entre) and its address location (adressplats)."
@@ -760,7 +764,7 @@
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrPostalLocation",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "8",
+    "range" : "9",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -776,11 +780,11 @@
     },
     "domain" : "1",
     "attributes" : [ "datatype" ],
-    "id" : "7"
+    "id" : "8"
   }, {
     "iri" : "https://w3id.org/rec/lfr/lfrTotalResidenceArea",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "11",
+    "range" : "12",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -794,16 +798,16 @@
       "sv" : "total bostadsarea",
       "en" : "total residence area"
     },
-    "domain" : "10",
+    "domain" : "11",
     "comment" : {
       "en" : "The total area in square meters (m2) of all residences (apartments) in a building."
     },
     "attributes" : [ "datatype" ],
-    "id" : "9"
+    "id" : "10"
   }, {
     "iri" : "https://w3id.org/rec/lfr/lfrApartmentArea",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "14",
+    "range" : "15",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -817,12 +821,12 @@
       "sv" : "bostads area",
       "en" : "apartment area"
     },
-    "domain" : "13",
+    "domain" : "14",
     "comment" : {
       "en" : "The area in square meters (m2) of an apartment (lägenhet)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "12"
+    "id" : "13"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -831,48 +835,48 @@
       "IRI-based" : "topObjectProperty"
     },
     "domain" : "1",
-    "subproperty" : [ "17" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "16"
+    "subproperty" : [ "18" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
   }, {
-    "range" : "19",
+    "range" : "20",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "18"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
   }, {
-    "range" : "21",
+    "range" : "22",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "20"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
   }, {
-    "range" : "23",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
+    "range" : "24",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
   }, {
     "range" : "5",
-    "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "24"
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#hasSerialization",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "range" : "27",
+    "range" : "28",
     "label" : {
       "IRI-based" : "hasSerialization"
     },
     "domain" : "1",
     "attributes" : [ "datatype", "external" ],
-    "id" : "26"
+    "id" : "27"
   }, {
-    "range" : "30",
-    "domain" : "29",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "28"
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrEastCoordinate",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "32",
+    "range" : "33",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -891,17 +895,17 @@
       "en" : "East-west directional coordinate in meters according to SWEREF 99 TM.\n\nComprises 7 digits followed by optional decimal point and up to three digits (NNNNNNN[.NNN])."
     },
     "attributes" : [ "datatype" ],
-    "id" : "31"
+    "id" : "32"
   }, {
     "range" : "5",
-    "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
   }, {
     "range" : "5",
-    "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "35"
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrEntrance",
     "baseIri" : "https://w3id.org/rec/lfr",
@@ -919,13 +923,13 @@
       "sv" : "har entre",
       "en" : "has entrance"
     },
-    "superproperty" : [ "16" ],
-    "domain" : "13",
+    "superproperty" : [ "17" ],
+    "domain" : "14",
     "comment" : {
       "en" : "Association between an apartment (lägenhet) and an entrance (entre)."
     },
     "attributes" : [ "object" ],
-    "id" : "17"
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/rec/core/isPartOfBuilding",
     "baseIri" : "https://w3id.org/rec/core",
@@ -934,12 +938,12 @@
       "IRI-based" : "isPartOfBuilding"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "36"
+    "attributes" : [ "object", "external" ],
+    "id" : "37"
   }, {
     "iri" : "https://w3id.org/rec/lfr/lfrApartmentNumber",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "38",
+    "range" : "39",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -953,32 +957,20 @@
       "sv" : "lägenhetsnummer",
       "en" : "apartment number"
     },
-    "domain" : "13",
+    "domain" : "14",
     "attributes" : [ "datatype" ],
-    "id" : "37"
+    "id" : "38"
   }, {
-    "iri" : "https://w3id.org/rec/lfr/locationOfRealEstate",
-    "baseIri" : "https://w3id.org/rec/lfr",
+    "iri" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
     "range" : "1",
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "en",
-        "value" : "SRPR version 11.40, foreign key in object type 90A field 71 (\"UUIDREGENH\") and object type 01 field 40 (\"UUID\").",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "locationOfRealEstate",
-      "sv" : "adressplats för fastighet",
-      "en" : "address location of real estate"
+      "IRI-based" : "hasGeometry"
     },
     "domain" : "1",
-    "comment" : {
-      "en" : "Association between an address location (adressplats) and a real estate (fastighet)."
-    },
-    "attributes" : [ "object" ],
-    "id" : "39"
+    "subproperty" : [ "3" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrNorthCoordinate",
     "baseIri" : "https://w3id.org/rec/lfr",
@@ -1003,9 +995,32 @@
     "attributes" : [ "datatype" ],
     "id" : "40"
   }, {
+    "iri" : "https://w3id.org/rec/lfr/locationOfRealEstate",
+    "baseIri" : "https://w3id.org/rec/lfr",
+    "range" : "1",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "SRPR version 11.40, foreign key in object type 90A field 71 (\"UUIDREGENH\") and object type 01 field 40 (\"UUID\").",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "locationOfRealEstate",
+      "sv" : "adressplats för fastighet",
+      "en" : "address location of real estate"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Association between an address location (adressplats) and a real estate (fastighet)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrCityName",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "43",
+    "range" : "44",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1019,16 +1034,16 @@
       "sv" : "bynamn",
       "en" : "city name"
     },
-    "domain" : "34",
+    "domain" : "35",
     "comment" : {
       "en" : "City name.\n\nNote that object type 90A field 15 (\"ADRTYP\") holds the key to interpretation of this field; value = 3 (~byadressområde) implies a city name (bynamn).\n\nAlso note that city name may be different to the postal location."
     },
     "attributes" : [ "datatype" ],
-    "id" : "42"
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrMunicipalityPart",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "45",
+    "range" : "46",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1044,11 +1059,11 @@
     },
     "domain" : "1",
     "attributes" : [ "datatype" ],
-    "id" : "44"
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrMunicipalityCode",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "47",
+    "range" : "48",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1064,11 +1079,11 @@
     },
     "domain" : "1",
     "attributes" : [ "datatype" ],
-    "id" : "46"
+    "id" : "47"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrMetricalAddressName",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "50",
+    "range" : "51",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1082,16 +1097,16 @@
       "sv" : "metertalsadressområdesnamn",
       "en" : "metrical address name"
     },
-    "domain" : "25",
+    "domain" : "26",
     "comment" : {
       "en" : "Metrical address name.\n\nNote that object type 90A field 15 (\"ADRTYP\") holds the key to interpretation of this field; value = 2 (~metertalsadressområde) implies a metrical address name."
     },
     "attributes" : [ "datatype" ],
-    "id" : "49"
+    "id" : "50"
   }, {
     "iri" : "https://w3id.org/rec/lfr/lfrBuildingNumber",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "53",
+    "range" : "54",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1105,16 +1120,16 @@
       "sv" : "husnummer",
       "en" : "building number"
     },
-    "domain" : "10",
+    "domain" : "11",
     "comment" : {
       "en" : "The serial number for all buildings on a property."
     },
     "attributes" : [ "datatype" ],
-    "id" : "52"
+    "id" : "53"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrCountyCode",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "57",
+    "range" : "58",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1130,11 +1145,11 @@
     },
     "domain" : "1",
     "attributes" : [ "datatype" ],
-    "id" : "56"
+    "id" : "57"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrStreetName",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "60",
+    "range" : "61",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1148,12 +1163,12 @@
       "sv" : "gatunamn",
       "en" : "street name"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "Street name.\n\nNote that object type 90A field 15 (\"ADRTYP\") holds the key to interpretation of this field; value = 1 (~gatuadressområde) implies a street name."
     },
     "attributes" : [ "datatype" ],
-    "id" : "59"
+    "id" : "60"
   }, {
     "iri" : "https://w3id.org/rec/core/isPartOfRealEstate",
     "baseIri" : "https://w3id.org/rec/core",
@@ -1162,27 +1177,27 @@
       "IRI-based" : "isPartOfRealEstate"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "61"
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
   }, {
     "iri" : "https://w3id.org/rec/lfr/lfrUUID",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "58",
+    "range" : "59",
     "label" : {
       "IRI-based" : "lfrUUID",
       "sv" : "lantmäteriets fastighets register universal unik identitet",
       "en" : "real property register universal unique identity"
     },
-    "domain" : "55",
+    "domain" : "56",
     "comment" : {
       "en" : "All objects in the SRPR (Lantmäteriets Fastighetsregister, LFR) has unique identifiers, UUIDs."
     },
     "attributes" : [ "datatype" ],
-    "id" : "62"
+    "id" : "63"
   }, {
     "iri" : "https://w3id.org/rec/lfr/lfrEntranceType",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "29",
+    "range" : "30",
     "label" : {
       "IRI-based" : "lfrEntranceType",
       "en" : "entrance type"
@@ -1192,7 +1207,7 @@
       "en" : "Representation of the type of entrance (entre). The possible entrance types are modelled as named individuals."
     },
     "attributes" : [ "object" ],
-    "id" : "63"
+    "id" : "64"
   }, {
     "iri" : "https://w3id.org/rec/lfr/locationOfLfrEntrance",
     "baseIri" : "https://w3id.org/rec/lfr",
@@ -1211,17 +1226,17 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "51",
+    "range" : "52",
     "label" : {
       "IRI-based" : "topDataProperty"
     },
     "domain" : "1",
     "attributes" : [ "datatype", "external" ],
-    "id" : "64"
+    "id" : "65"
   }, {
     "iri" : "https://w3id.org/rec/lfr/hasLfrAddressLocationAttribute",
     "baseIri" : "https://w3id.org/rec/lfr",
-    "range" : "54",
+    "range" : "55",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1240,6 +1255,6 @@
       "en" : "A number of attributes (fields) related to address location. Together they represent a minimum implementation of the standardized address location (adressplats)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "65"
+    "id" : "66"
   } ]
 }

@@ -499,17 +499,17 @@
         "hasRealEstateComponent" : [ {
           "identifier" : "hasRealEstateComponent",
           "language" : "undefined",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_Garage",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasRealEstateComponent",
+          "language" : "undefined",
           "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse",
           "type" : "iri"
         }, {
           "identifier" : "hasRealEstateComponent",
           "language" : "undefined",
           "value" : "https://w3id.org/rec/example/Ulvsnaes2_StorageBuilding",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasRealEstateComponent",
-          "language" : "undefined",
-          "value" : "https://w3id.org/rec/example/Ulvsnaes2_Garage",
           "type" : "iri"
         } ]
       },
@@ -770,12 +770,12 @@
         "hasSubBuildingComponent" : [ {
           "identifier" : "hasSubBuildingComponent",
           "language" : "undefined",
-          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen",
           "type" : "iri"
         }, {
           "identifier" : "hasSubBuildingComponent",
           "language" : "undefined",
-          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_DiningRoom",
           "type" : "iri"
         }, {
           "identifier" : "hasSubBuildingComponent",
@@ -785,7 +785,7 @@
         }, {
           "identifier" : "hasSubBuildingComponent",
           "language" : "undefined",
-          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Kitchen",
+          "value" : "https://w3id.org/rec/example/Ulvsnaes2_MainHouse_Entrance",
           "type" : "iri"
         } ]
       },

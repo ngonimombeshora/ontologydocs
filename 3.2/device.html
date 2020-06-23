@@ -190,7 +190,7 @@
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>The actuation model is deployed and works in practice with the stakeholders, but we need to update the model to reflect current practice in their systems; e.g., extend the semantics a little and formalize standard state messages, response codes, etc.</p>"
+        "@value": "<p>This REC module covers device types (sensors and actuators), device configuration, device actuation, etc.</p>"
       }
     ],
     "https://schema.org/name": [
@@ -240,7 +240,7 @@
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>The actuation model is deployed and works in practice with the stakeholders, but we need to update the model to reflect current practice in their systems; e.g., extend the semantics a little and formalize standard state messages, response codes, etc.</p>
+        <p>This REC module covers device types (sensors and actuators), device configuration, device actuation, etc.</p>
     </div>
 </section>
 <section id="toc">
@@ -312,13 +312,13 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationResponse">actuationResponse</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationCommandTime">hasActuationCommandTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/hasActuationResponseTime">hasActuationResponseTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationRequest">actuationRequest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://w3id.org/rec/device/hasActuationCommandTime">hasActuationCommandTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="https://w3id.org/rec/device/actuationCommand">actuationCommand</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://w3id.org/rec/device/actuationExecutedBy">actuationExecutedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/hasActuationRequestTime">hasActuationRequestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -372,8 +372,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/core/QuantityKind">core:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/observedBy">observedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/Sensor">core:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/core/deviceQuantityKind">core:deviceQuantityKind</a> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/rec/core/QuantityKind">core:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -429,14 +429,14 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/BACnetConfiguration">BACnetConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/OPC-DAConfiguration">OPC-DAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/KNXConfiguration">KNXConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusRTUConfiguration">ModbusRTUConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/OPC-UAConfiguration">OPC-UAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/LoRaConfiguration">LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/MBusConfiguration">MBusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/ModbusConfiguration">ModbusConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/OPC-DAConfiguration">OPC-DAConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/BACnetConfiguration">BACnetConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/LoRaConfiguration">LoRaConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusTCPConfiguration">ModbusTCPConfiguration</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -491,9 +491,9 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Actuation">Actuation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/Exception">Exception</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/rec/device/Observation">Observation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -664,8 +664,8 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/device/ModbusFunctionCode">ModbusFunctionCode</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/ModbusDataType">ModbusDataType</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -819,8 +819,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
                     <a href="https://w3id.org/rec/core/eventQuantityKind">core:eventQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/eventMeasurementUnit">core:eventMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -854,8 +854,8 @@
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="https://w3id.org/rec/device/devicePlacementContext">devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/hasPlacementContext">hasPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://w3id.org/rec/device/devicePlacementContext">devicePlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="https://w3id.org/rec/device/eventPlacementContext">eventPlacementContext</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -905,11 +905,11 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/rec/core/hasMeasurementUnit">core:hasMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
-                    <a href="https://w3id.org/rec/core/hasQuantityKind">core:hasQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/core/hasQuantityKind">core:hasQuantityKind</a> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/QuantityKind">core:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/rec/core/hasMeasurementUnit">core:hasMeasurementUnit</a> <span class="cardinality">only</span> <a href="https://w3id.org/rec/core/MeasurementUnit">core:MeasurementUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/device/observesActuator">observesActuator</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/rec/device/Actuator">Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/rec/core/hasMeasurementUnit">core:hasMeasurementUnit</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="https://w3id.org/rec/core/hasQuantityKind">core:hasQuantityKind</a> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>

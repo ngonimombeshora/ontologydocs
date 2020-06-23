@@ -54,7 +54,7 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Joakim Eriksson",
+        "value" : "Per Karlberg",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -64,12 +64,12 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Peter Hartlev",
+        "value" : "Joakim Eriksson",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Per Karlberg",
+        "value" : "Peter Hartlev",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -78,16 +78,16 @@
         "value" : "rec",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2020-06-23",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-06-23",
         "type" : "label"
       } ],
       "versionInfo" : [ {

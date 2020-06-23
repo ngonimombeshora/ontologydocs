@@ -30,22 +30,7 @@
       "coversRequirements" : [ {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "What does electricity meter 3 measure? In what units?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
         "value" : "Where is the real estate Ulvsnaes 1:7 located?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "Where is Building 1 located?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
@@ -60,7 +45,22 @@
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
+        "value" : "Where is Building 1 located?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
         "value" : "Where in Building 1 (i.e., in which rooms) are there devices mounted?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which buildings and land make up the real estate Ulvsnaes 1:7?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What does electricity meter 3 measure? In what units?",
         "type" : "label"
       } ],
       "license" : [ {
@@ -86,16 +86,16 @@
         "value" : "core",
         "type" : "label"
       } ],
-      "publisher" : [ {
-        "identifier" : "publisher",
-        "language" : "undefined",
-        "value" : "RealEstateCore Consortium",
-        "type" : "label"
-      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-06-23",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -382,13 +382,6 @@
         "en" : "Kilogram"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/RevolutionsPerMinute",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "RevolutionsPerMinute",
-        "en" : "RevoultionsPerMinute"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/MillimeterPerHour",
       "baseIri" : "https://w3id.org/rec/core",
       "comment" : {
@@ -397,6 +390,13 @@
       "labels" : {
         "IRI-based" : "MillimeterPerHour",
         "en" : "MillimeterPerHour"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/RevolutionsPerMinute",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "RevolutionsPerMinute",
+        "en" : "RevoultionsPerMinute"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/Hertz",
@@ -601,6 +601,13 @@
         "en" : "CosPhi"
       }
     }, {
+      "iri" : "https://w3id.org/rec/core/Lumen",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "Lumen",
+        "en" : "Lumen"
+      }
+    }, {
       "iri" : "https://w3id.org/rec/core/BooleanDetection",
       "baseIri" : "https://w3id.org/rec/core",
       "comment" : {
@@ -609,13 +616,6 @@
       "labels" : {
         "IRI-based" : "BooleanDetection",
         "en" : "BooleanDetection"
-      }
-    }, {
-      "iri" : "https://w3id.org/rec/core/Lumen",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "Lumen",
-        "en" : "Lumen"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/NumPeople",
@@ -1240,18 +1240,18 @@
         "en" : "TVOC"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/ActivePowerL3",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "ActivePowerL3",
-        "en" : "ActivePowerL3"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/Angle",
       "baseIri" : "https://w3id.org/rec/core",
       "labels" : {
         "IRI-based" : "Angle",
         "en" : "Angle"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ActivePowerL3",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ActivePowerL3",
+        "en" : "ActivePowerL3"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/VoltageL1",
@@ -1554,31 +1554,31 @@
         "en" : "Efficiency"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/ReactivePowerL1",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "ReactivePowerL1",
-        "en" : "ReactivePowerL1"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/Pressure",
       "baseIri" : "https://w3id.org/rec/core",
       "annotations" : {
         "seeAlso" : [ {
           "identifier" : "seeAlso",
-          "language" : "en",
-          "value" : "Pressure",
+          "language" : "se",
+          "value" : "Tryck",
           "type" : "label"
         }, {
           "identifier" : "seeAlso",
-          "language" : "se",
-          "value" : "Tryck",
+          "language" : "en",
+          "value" : "Pressure",
           "type" : "label"
         } ]
       },
       "labels" : {
         "IRI-based" : "Pressure",
         "en" : "Pressure"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ReactivePowerL1",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ReactivePowerL1",
+        "en" : "ReactivePowerL1"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/Voltage",
@@ -1783,16 +1783,16 @@
         "IRI-based" : "HotelPremises"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/OfficePremises",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "OfficePremises"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/RetailPremises",
       "baseIri" : "https://w3id.org/rec/core",
       "labels" : {
         "IRI-based" : "RetailPremises"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/OfficePremises",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "OfficePremises"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/RestaurantPremises",
@@ -1801,16 +1801,16 @@
         "IRI-based" : "RestaurantPremises"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/ResidentialPremises",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "ResidentialPremises"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/LaboratoryPremises",
       "baseIri" : "https://w3id.org/rec/core",
       "labels" : {
         "IRI-based" : "LaboratoryPremises"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/ResidentialPremises",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "ResidentialPremises"
       }
     }, {
       "iri" : "https://w3id.org/rec/core/GaragePremises",
@@ -1825,16 +1825,16 @@
         "IRI-based" : "EducationalPremises"
       }
     }, {
-      "iri" : "https://w3id.org/rec/core/CoffeePremises",
-      "baseIri" : "https://w3id.org/rec/core",
-      "labels" : {
-        "IRI-based" : "CoffeePremises"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/core/LightIndustryPremises",
       "baseIri" : "https://w3id.org/rec/core",
       "labels" : {
         "IRI-based" : "LightIndustryPremises"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/core/CoffeePremises",
+      "baseIri" : "https://w3id.org/rec/core",
+      "labels" : {
+        "IRI-based" : "CoffeePremises"
       }
     } ],
     "id" : "50",
@@ -2719,7 +2719,7 @@
     "comment" : {
       "en" : "Connects a geometry object with its text-based serialization.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "113"
   }, {
     "iri" : "https://w3id.org/rec/core/schemaName",
@@ -2752,7 +2752,7 @@
     "comment" : {
       "en" : "A spatial representation for a given feature.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "92"
   }, {
     "iri" : "https://w3id.org/rec/core/hasProcessedTime",
@@ -2789,7 +2789,7 @@
     "comment" : {
       "en" : "The default geometry to be used in spatial calculations. It is Usually the most detailed geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "117"
   }, {
     "range" : "46",
@@ -2913,7 +2913,7 @@
     "comment" : {
       "en" : "REC entities may be associated with values (e.g., observations, actuations, data points, etc)."
     },
-    "attributes" : [ "datatype", "someValues" ],
+    "attributes" : [ "someValues", "datatype" ],
     "id" : "129"
   }, {
     "iri" : "https://w3id.org/rec/core/hasSustainabilityCertification",
@@ -2957,7 +2957,7 @@
     "comment" : {
       "en" : "A unit used to measure some aspect of some Event."
     },
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "133"
   }, {
     "iri" : "https://w3id.org/rec/core/hasGeonamesId",
@@ -2986,7 +2986,7 @@
     "comment" : {
       "en" : "The Quantity Kind that an event measures or affects."
     },
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "135"
   }, {
     "iri" : "https://w3id.org/rec/core/hasSuperDevice",
@@ -3064,7 +3064,7 @@
     "comment" : {
       "en" : "The unit that something (sensor observations, device capabilities, physical measurements, etc) is measured by. This is given as an object property with a corresponding class (rather than a simple datatype property) since one unit may have many serialized representations and may be used for many different types of measurements."
     },
-    "attributes" : [ "allValues", "object" ],
+    "attributes" : [ "object", "allValues" ],
     "id" : "139"
   }, {
     "iri" : "https://w3id.org/rec/core/hasAliasID",
@@ -3078,7 +3078,7 @@
     "comment" : {
       "en" : "Was originally intented to map an Id in an external system to an instance (e.g. an UUID).\n\nAfter discussion in REC technical committee, an approach based on owl:sameAs and/or rdfs:seeAlso (depending on the needed semantics) is recommended instead. This property will therefore be removed in future versions."
     },
-    "attributes" : [ "datatype", "deprecated" ],
+    "attributes" : [ "deprecated", "datatype" ],
     "id" : "140"
   }, {
     "iri" : "https://w3id.org/rec/core/hasMember",
@@ -3093,7 +3093,7 @@
     "comment" : {
       "en" : "has member"
     },
-    "attributes" : [ "allValues", "object" ],
+    "attributes" : [ "object", "allValues" ],
     "id" : "141"
   }, {
     "iri" : "https://w3id.org/rec/core/hasZipCode",
@@ -3144,7 +3144,7 @@
     "comment" : {
       "en" : "The WKT serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "145"
   }, {
     "iri" : "https://w3id.org/rec/core/associatedWithDevice",
@@ -3249,7 +3249,7 @@
     "comment" : {
       "en" : "The GML serialization of a geometry.\n\nGeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Reserved. http://www.opengeospatial.org/ogc/document."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "149"
   }, {
     "iri" : "https://w3id.org/rec/core/timeInterval",

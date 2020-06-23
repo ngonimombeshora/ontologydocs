@@ -32,37 +32,7 @@
       "coversRequirements" : [ {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "What does sensor PID22 measure? Using which units?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "At what time was an actuation received by the building system, and at what time was it executed?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "Which sensor did observation/datapoint OBS-846294-PID22-88 come from?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "What are all the values reported over the past 24 hours from temperature sensors in rooms 2, 4, and 7?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "What is the most recent value reading from sensor TMP223?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "Which actuator/device does a certain actuation/command target?",
-        "type" : "label"
-      }, {
-        "identifier" : "coversRequirements",
-        "language" : "en",
-        "value" : "How is device AHU731 connected to the building infrastructure (comms bus, protocol, protocol version, connection parameters, etc)?",
+        "value" : "What is observation/datapoint OBS-846294-PID22-88 a measurement of?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
@@ -72,17 +42,22 @@
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
+        "value" : "What does sensor PID22 measure? Using which units?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
         "value" : "What kind of device is AHU731?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "What is the measurement unit of observation/datapoint OBS-846294-PID22-88?",
+        "value" : "Which sensor did observation/datapoint OBS-846294-PID22-88 come from?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "What is observation/datapoint OBS-846294-PID22-88 a measurement of?",
+        "value" : "What addressable components (sensors, actuators, etc) make up device AHU731?",
         "type" : "label"
       }, {
         "identifier" : "coversRequirements",
@@ -92,7 +67,32 @@
       }, {
         "identifier" : "coversRequirements",
         "language" : "en",
-        "value" : "What addressable components (sensors, actuators, etc) make up device AHU731?",
+        "value" : "Which actuator/device does a certain actuation/command target?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is the most recent value reading from sensor TMP223?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is the measurement unit of observation/datapoint OBS-846294-PID22-88?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "How is device AHU731 connected to the building infrastructure (comms bus, protocol, protocol version, connection parameters, etc)?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "At what time was an actuation received by the building system, and at what time was it executed?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What are all the values reported over the past 24 hours from temperature sensors in rooms 2, 4, and 7?",
         "type" : "label"
       } ],
       "license" : [ {
@@ -119,28 +119,28 @@
         "value" : "device",
         "type" : "label"
       } ],
-      "publisher" : [ {
-        "identifier" : "publisher",
-        "language" : "undefined",
-        "value" : "RealEstateCore Consortium",
-        "type" : "label"
-      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
         "value" : "2020-06-23",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      "publisher" : [ {
+        "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "3.2",
+        "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/rec/device/3.2/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.2",
         "type" : "label"
       } ],
       "title" : [ {
@@ -772,6 +772,13 @@
         "en" : "SecondaryCoolingReturn"
       }
     }, {
+      "iri" : "https://w3id.org/rec/device/DistrictHeatingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "DistrictHeatingReturn",
+        "en" : "DistrictHeatingReturn"
+      }
+    }, {
       "iri" : "https://w3id.org/rec/device/ElectricalGridEV",
       "baseIri" : "https://w3id.org/rec/device",
       "comment" : {
@@ -780,13 +787,6 @@
       "labels" : {
         "IRI-based" : "ElectricalGridEV",
         "en" : "ElectricalGridEV"
-      }
-    }, {
-      "iri" : "https://w3id.org/rec/device/DistrictHeatingReturn",
-      "baseIri" : "https://w3id.org/rec/device",
-      "labels" : {
-        "IRI-based" : "DistrictHeatingReturn",
-        "en" : "DistrictHeatingReturn"
       }
     }, {
       "iri" : "https://w3id.org/rec/device/PrimaryHeatingFlow",
@@ -998,18 +998,18 @@
         "en" : "IndoorAir"
       }
     }, {
-      "iri" : "https://w3id.org/rec/device/DistrictHeatingFlow",
-      "baseIri" : "https://w3id.org/rec/device",
-      "labels" : {
-        "IRI-based" : "DistrictHeatingFlow",
-        "en" : "DistrictHeatingFlow"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/device/Hwrc",
       "baseIri" : "https://w3id.org/rec/device",
       "labels" : {
         "IRI-based" : "Hwrc",
         "en" : "Hwrc"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DistrictHeatingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "DistrictHeatingFlow",
+        "en" : "DistrictHeatingFlow"
       }
     }, {
       "iri" : "https://w3id.org/rec/device/DirectionInward",
@@ -1075,18 +1075,18 @@
         "en" : "Fixed length string"
       }
     }, {
-      "iri" : "https://w3id.org/rec/device/2_byte_unsigned_integer_swapped",
-      "baseIri" : "https://w3id.org/rec/device",
-      "labels" : {
-        "IRI-based" : "2_byte_unsigned_integer_swapped",
-        "en" : "2 byte unsigned integer swapped"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/device/4_byte_unsigned_integer",
       "baseIri" : "https://w3id.org/rec/device",
       "labels" : {
         "IRI-based" : "4_byte_unsigned_integer",
         "en" : "4 byte unsigned integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2_byte_unsigned_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "2_byte_unsigned_integer_swapped",
+        "en" : "2 byte unsigned integer swapped"
       }
     }, {
       "iri" : "https://w3id.org/rec/device/8_byte_float",
@@ -1215,18 +1215,18 @@
         "en" : "Variable length string"
       }
     }, {
-      "iri" : "https://w3id.org/rec/device/4_byte_signed_integer",
-      "baseIri" : "https://w3id.org/rec/device",
-      "labels" : {
-        "IRI-based" : "4_byte_signed_integer",
-        "en" : "4 byte signed integer"
-      }
-    }, {
       "iri" : "https://w3id.org/rec/device/8_byte_float_swapped",
       "baseIri" : "https://w3id.org/rec/device",
       "labels" : {
         "IRI-based" : "8_byte_float_swapped",
         "en" : "8 byte float swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_signed_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_signed_integer",
+        "en" : "4 byte signed integer"
       }
     }, {
       "iri" : "https://w3id.org/rec/device/8_byte_signed_integer",
@@ -1488,6 +1488,13 @@
         "en" : "Coil"
       }
     }, {
+      "iri" : "https://w3id.org/rec/device/Thermostat",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Thermostat",
+        "en" : "Thermostat"
+      }
+    }, {
       "iri" : "https://w3id.org/rec/device/Control",
       "baseIri" : "https://w3id.org/rec/device",
       "comment" : {
@@ -1496,13 +1503,6 @@
       "labels" : {
         "IRI-based" : "Control",
         "en" : "Control"
-      }
-    }, {
-      "iri" : "https://w3id.org/rec/device/Thermostat",
-      "baseIri" : "https://w3id.org/rec/device",
-      "labels" : {
-        "IRI-based" : "Thermostat",
-        "en" : "Thermostat"
       }
     }, {
       "iri" : "https://w3id.org/rec/device/Pump",
@@ -2097,7 +2097,7 @@
     "comment" : {
       "en" : "Deprecated in favour of core:generatedObservation"
     },
-    "attributes" : [ "object", "deprecated" ],
+    "attributes" : [ "deprecated", "object" ],
     "id" : "5"
   }, {
     "iri" : "https://w3id.org/rec/device/observationGeneratedBy",
@@ -2112,7 +2112,7 @@
     "comment" : {
       "en" : "Deprecated in favour of core:observationGeneratedBy"
     },
-    "attributes" : [ "object", "deprecated" ],
+    "attributes" : [ "deprecated", "object" ],
     "id" : "7"
   }, {
     "iri" : "https://w3id.org/rec/core/associatedWithEvent",
@@ -2123,7 +2123,7 @@
     },
     "domain" : "10",
     "subproperty" : [ "5", "11", "3" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "8"
   }, {
     "iri" : "https://w3id.org/rec/device/hasActuationResponseTime",
@@ -2288,7 +2288,7 @@
     },
     "domain" : "10",
     "subproperty" : [ "79" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "78"
   }, {
     "range" : "52",
@@ -2378,7 +2378,7 @@
     },
     "superproperty" : [ "4" ],
     "domain" : "16",
-    "attributes" : [ "object", "deprecated" ],
+    "attributes" : [ "deprecated", "object" ],
     "id" : "96"
   }, {
     "iri" : "https://w3id.org/rec/device/hasIPAddressPort",
@@ -2443,7 +2443,7 @@
       "IRI-based" : "hasAuxiliaryData"
     },
     "domain" : "10",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "103"
   }, {
     "range" : "13",
@@ -2572,7 +2572,7 @@
     },
     "superproperty" : [ "8" ],
     "domain" : "97",
-    "attributes" : [ "object", "deprecated" ],
+    "attributes" : [ "deprecated", "object" ],
     "id" : "11"
   }, {
     "iri" : "https://w3id.org/rec/device/observesActuator",
@@ -2746,7 +2746,7 @@
       "en" : "has actuation interface"
     },
     "domain" : "97",
-    "attributes" : [ "object", "deprecated" ],
+    "attributes" : [ "deprecated", "object" ],
     "id" : "141"
   }, {
     "iri" : "https://w3id.org/rec/device/actuationCommand",
@@ -2770,7 +2770,7 @@
       "IRI-based" : "hasMeasurementUnit"
     },
     "domain" : "71",
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "144"
   }, {
     "iri" : "https://w3id.org/rec/core/hasQuantityKind",
@@ -2780,7 +2780,7 @@
       "IRI-based" : "hasQuantityKind"
     },
     "domain" : "71",
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "145"
   }, {
     "iri" : "https://w3id.org/rec/device/hasCommunicationConfiguration",
@@ -2806,7 +2806,7 @@
     },
     "domain" : "10",
     "subproperty" : [ "0", "96", "7" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "4"
   }, {
     "iri" : "https://w3id.org/rec/core/hasTime",
@@ -2816,7 +2816,7 @@
       "IRI-based" : "hasTime"
     },
     "domain" : "10",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "146"
   }, {
     "iri" : "https://w3id.org/rec/device/hasModbusRegisterLength",

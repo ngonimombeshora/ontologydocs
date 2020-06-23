@@ -35,28 +35,28 @@
         "value" : "dataschemas",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2020-06-23",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "RealEstateCore Consortium",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      "modified" : [ {
+        "identifier" : "modified",
         "language" : "undefined",
-        "value" : "3.2",
+        "value" : "2020-06-23",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/rec/dataschemas/3.2/",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.2",
         "type" : "label"
       } ],
       "title" : [ {
@@ -457,7 +457,7 @@
     "comment" : {
       "en" : "Defines allowed values for this primitive schema instance."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "12"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/minimum",
@@ -471,7 +471,7 @@
     "comment" : {
       "en" : "The minimum allowed value (inclusive)."
     },
-    "attributes" : [ "allValues", "datatype", "functional" ],
+    "attributes" : [ "datatype", "allValues", "functional" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/resolution",
@@ -485,7 +485,7 @@
     "comment" : {
       "en" : "Defines the valid granularity or \"step size\" for numeric input (i.e., FloatSchemas and IntSchemas). Used in conjunction with maximum and minimum, as an alternative to enumerations: e.g., minimum = 5, resolution = 10, maximum = 50 gives valid values 5, 15, 25, 35, and 45."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "17"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/fieldName",
@@ -541,7 +541,7 @@
     "comment" : {
       "en" : "The maximum allowed value (inclusive)."
     },
-    "attributes" : [ "allValues", "datatype", "functional" ],
+    "attributes" : [ "datatype", "allValues", "functional" ],
     "id" : "23"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/enumerationValues",
@@ -555,7 +555,7 @@
     "comment" : {
       "en" : "Defines allowed values for this primitive schema instance."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "24"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/minimum",
@@ -569,7 +569,7 @@
     "comment" : {
       "en" : "The minimum allowed value (inclusive)."
     },
-    "attributes" : [ "allValues", "datatype", "functional" ],
+    "attributes" : [ "datatype", "allValues", "functional" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/enumerationValues",
@@ -583,7 +583,7 @@
     "comment" : {
       "en" : "Defines allowed values for this primitive schema instance."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "28"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/resolution",
@@ -597,7 +597,7 @@
     "comment" : {
       "en" : "Defines the valid granularity or \"step size\" for numeric input (i.e., FloatSchemas and IntSchemas). Used in conjunction with maximum and minimum, as an alternative to enumerations: e.g., minimum = 5, resolution = 10, maximum = 50 gives valid values 5, 15, 25, 35, and 45."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "31"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/objectFields",
@@ -625,7 +625,7 @@
     "comment" : {
       "en" : "Defines allowed values for this primitive schema instance."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/minimum",
@@ -639,7 +639,7 @@
     "comment" : {
       "en" : "The minimum allowed value (inclusive)."
     },
-    "attributes" : [ "allValues", "datatype", "functional" ],
+    "attributes" : [ "datatype", "allValues", "functional" ],
     "id" : "36"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/maximum",
@@ -653,7 +653,7 @@
     "comment" : {
       "en" : "The maximum allowed value (inclusive)."
     },
-    "attributes" : [ "allValues", "datatype", "functional" ],
+    "attributes" : [ "datatype", "allValues", "functional" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/maximum",
@@ -667,7 +667,7 @@
     "comment" : {
       "en" : "The maximum allowed value (inclusive)."
     },
-    "attributes" : [ "allValues", "datatype", "functional" ],
+    "attributes" : [ "datatype", "allValues", "functional" ],
     "id" : "40"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/enumerationValues",
@@ -681,7 +681,7 @@
     "comment" : {
       "en" : "Defines allowed values for this primitive schema instance."
     },
-    "attributes" : [ "allValues", "datatype" ],
+    "attributes" : [ "datatype", "allValues" ],
     "id" : "41"
   }, {
     "iri" : "https://w3id.org/rec/dataschemas/elementSchema",
