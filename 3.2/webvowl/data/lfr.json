@@ -15,7 +15,7 @@
       "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
     },
     "title" : {
-      "undefined" : "RealEstateCore Lantmäteriet Module"
+      "undefined" : "RealEstateCore LFR Module"
     },
     "iri" : "https://w3id.org/rec/lfr/",
     "version" : "3.2",
@@ -75,7 +75,7 @@
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "RealEstateCore Lantmäteriet Module",
+        "value" : "RealEstateCore LFR Module",
         "type" : "label"
       } ],
       "seeAlso" : [ {
