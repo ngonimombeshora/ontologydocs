@@ -9,7 +9,7 @@
 * [Building](building.html) -- Different types of building components and rooms.
 * [Data schemas](dataschemas.html) -- Primitive and complex (object/array) data schemas for sensors, actuators, services, etc.
 * [Device](device.html) -- Device types (sensors and actuators), device configuration, device actuation, etc.
-* [Lantmäteriet](lantmäteriet.html) -- Optional module covering the data model used by the Swedish National Land Survey, in its database Swedish Real Property Register (not included in the Full ontology below).
+* [LFR](lfr.html) -- Optional module covering the data model used by the Swedish National Land Survey, in its database Swedish Real Property Register (Lantmäteriets Fastighetsregister). Not included in the Full ontology below.
 * [Lease](lease.html) -- Contracts, leasable premises, types of premises, etc.
 
 **Composed Ontology:**
