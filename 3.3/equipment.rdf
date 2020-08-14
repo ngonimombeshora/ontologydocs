@@ -66,15 +66,6 @@
     
 
 
-    <!-- https://w3id.org/rec/equipment/BtuPerHour -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/BtuPerHour">
-        <rdfs:comment xml:lang="en">BTU/hr</rdfs:comment>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
     <!-- https://w3id.org/rec/equipment/EquipmentFeedSubstance -->
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/EquipmentFeedSubstance">
@@ -312,37 +303,10 @@
     
 
 
-    <!-- https://w3id.org/rec/equipment/Gallon -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/Gallon">
-        <rdfs:comment xml:lang="en">gallon</rdfs:comment>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
     <!-- https://w3id.org/rec/equipment/GallonsPerHour -->
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/GallonsPerHour">
         <rdfs:comment xml:lang="en">Gallons/hour</rdfs:comment>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/GallonsPerMinute -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/GallonsPerMinute">
-        <rdfs:comment xml:lang="en">Gallons/minute</rdfs:comment>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdfs:Datatype>
-    
-
-
-    <!-- https://w3id.org/rec/equipment/Kilowatt -->
-
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/Kilowatt">
-        <rdfs:comment xml:lang="en">kilowatt</rdfs:comment>
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </rdfs:Datatype>
     
@@ -361,6 +325,7 @@
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/LitersPerMinute">
         <rdfs:comment xml:lang="en">liters/minute</rdfs:comment>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </rdfs:Datatype>
     
 
@@ -369,6 +334,15 @@
 
     <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/PSI">
         <rdfs:comment xml:lang="en">PSI</rdfs:comment>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/Watt -->
+
+    <rdfs:Datatype rdf:about="https://w3id.org/rec/equipment/Watt">
+        <rdfs:comment xml:lang="en">kilowatt</rdfs:comment>
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </rdfs:Datatype>
     
@@ -455,10 +429,50 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/commissionDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/commissionDate">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">commission date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/expectedEndOfLife -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/expectedEndOfLife">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">expected end-of-life</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/expectedLife -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/expectedLife">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/duration"/>
+        <rdfs:label xml:lang="en">expected life</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/expectedReplacementCost -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/expectedReplacementCost">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">expected replacement cost</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/flowCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/flowCapacity">
-        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/GallonsPerMinute"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/LitersPerMinute"/>
         <rdfs:label xml:lang="en">flow capacity</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -483,6 +497,25 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/initialCost -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/initialCost">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/rec/equipment/installationDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/installationDate">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">installation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/installationType -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/installationType">
@@ -491,17 +524,20 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/maintenanceInterval -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maintenanceInterval">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/duration"/>
+        <rdfs:label xml:lang="en">maintenance interval</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/maxFlowRate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/maxFlowRate">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/GallonsPerMinute"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/LitersPerMinute"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/LitersPerMinute"/>
         <rdfs:label xml:lang="en">maximum flow rate</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -528,14 +564,7 @@
     <!-- https://w3id.org/rec/equipment/powerInput -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/powerInput">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/BtuPerHour"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/Kilowatt"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Watt"/>
         <rdfs:label xml:lang="en">power input</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -544,14 +573,7 @@
     <!-- https://w3id.org/rec/equipment/powerOutput -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/powerOutput">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/BtuPerHour"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/Kilowatt"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Watt"/>
         <rdfs:label xml:lang="en">power output</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -579,6 +601,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/recovery100FRise">
         <rdfs:domain rdf:resource="https://w3id.org/rec/equipment/Boiler"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/equipment/GallonsPerHour"/>
+        <rdfs:comment xml:lang="en">Imperial measure for the recovery rate of a boiler.</rdfs:comment>
         <rdfs:label xml:lang="en">Recovery @ 100F Rise</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -611,6 +634,16 @@
     
 
 
+    <!-- https://w3id.org/rec/equipment/turnoverDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/turnoverDate">
+        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">turnover date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/rec/equipment/type -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/type">
@@ -623,14 +656,7 @@
     <!-- https://w3id.org/rec/equipment/waterPerFlush -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/rec/equipment/waterPerFlush">
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/Gallon"/>
-                    <rdf:Description rdf:about="https://w3id.org/rec/equipment/Liter"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
+        <rdfs:range rdf:resource="https://w3id.org/rec/equipment/Liter"/>
     </owl:DatatypeProperty>
     
 
@@ -675,13 +701,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/BtuPerHour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerOutput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/BtuPerHour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -747,7 +773,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Kilowatt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -761,7 +787,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Kilowatt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -917,7 +943,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Gallon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Liter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Flushometer-Valve</rdfs:label>
@@ -932,7 +958,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/BtuPerHour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -946,7 +972,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/powerInput"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/BtuPerHour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Watt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -984,7 +1010,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/flowCapacity"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/GallonsPerMinute"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/LitersPerMinute"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1162,7 +1188,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Gallon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Liter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1224,7 +1250,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/equipment/waterPerFlush"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Gallon"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/equipment/Liter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Urinal with Flushometer</rdfs:label>
