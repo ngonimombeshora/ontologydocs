@@ -11,14 +11,19 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/rec/core/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:core1="http://www.linkedmodel.org/owl/schema/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:metadata="https://w3id.org/rec/metadata/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/rec/core/">
         <owl:versionIRI rdf:resource="https://w3id.org/rec/core/3.3/"/>
         <owl:imports rdf:resource="https://w3id.org/rec/metadata/3.3/"/>
+        <owl:imports rdf:resource="https://w3id.org/rec/units/3.3/"/>
         <cc:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Wallin</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karl Hammar</dc:creator>
@@ -76,13 +81,9 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/duration -->
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
 
-    <rdfs:Datatype rdf:about="https://w3id.org/rec/core/duration">
-        <rdfs:comment xml:lang="en">A duration in ISO 8601 format.</rdfs:comment>
-        <rdfs:label xml:lang="en">duration</rdfs:label>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </rdfs:Datatype>
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
     
 
 
@@ -500,6 +501,14 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
+    <!-- https://w3id.org/rec/core/sensorInterface -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/sensorInterface">
+        <rdfs:range rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/rec/core/servedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/servedBy">
@@ -557,19 +566,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     
 
 
-    <!-- https://w3id.org/rec/core/subEquipments -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subEquipments">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasPart"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superEquipment"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Equipment"/>
-        <rdfs:comment xml:lang="en">Subordinate equipment entities that are part of this equipment.</rdfs:comment>
-        <rdfs:label xml:lang="en">sub-equipments</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/rec/core/subLocations -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/subLocations">
@@ -577,18 +573,6 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <owl:inverseOf rdf:resource="https://w3id.org/rec/core/superLocation"/>
         <rdfs:domain rdf:resource="https://w3id.org/rec/core/Location"/>
         <rdfs:range rdf:resource="https://w3id.org/rec/core/Location"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/rec/core/superEquipment -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/rec/core/superEquipment">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/isPartOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/rec/core/Equipment"/>
-        <rdfs:range rdf:resource="https://w3id.org/rec/core/Equipment"/>
-        <rdfs:comment xml:lang="en">A super-equipment entity that this equipment is a part of.</rdfs:comment>
-        <rdfs:label xml:lang="en">super-equipment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1185,6 +1169,18 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <owl:Class rdf:about="https://w3id.org/rec/core/Device">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperDevice"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/isMountedInBuildingComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/mountedInEquipment"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Equipment"/>
             </owl:Restriction>
@@ -1192,13 +1188,22 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasSuperDevice"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/Device"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/isMountedInBuildingComponent"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/mountedInEquipment"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/Equipment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A piece of electronic equipment that can sense (Sensor) or interact (Actuator) with its environment. A Device can contain subdevices or be part of superdevices.</rdfs:comment>
@@ -1212,6 +1217,7 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
     <!-- https://w3id.org/rec/core/Equipment -->
 
     <owl:Class rdf:about="https://w3id.org/rec/core/Equipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/locatedIn"/>
@@ -1232,8 +1238,8 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/rec/core/superEquipment"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/Equipment"/>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1326,6 +1332,12 @@ GeoSPARQL is Copyright (c) 2012 Open Geospatial Consortium, Inc. All Rights Rese
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
                 <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1497,6 +1509,12 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/sensorInterface"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/rec/core/SensorInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/rec/core/hasMeasurementUnit"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/rec/core/MeasurementUnit"/>
@@ -1513,6 +1531,21 @@ MillimeterPerHour for Precipation</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <o2o:endpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor</o2o:endpoint>
         <o2o:included rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</o2o:included>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/rec/core/SensorInterface -->
+
+    <owl:Class rdf:about="https://w3id.org/rec/core/SensorInterface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/Software"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/rec/core/dataSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/rec/core/DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
