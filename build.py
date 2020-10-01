@@ -9,7 +9,7 @@ from rdflib import Graph
 from rdflib.namespace import OWL, RDF
 
 # GitHub Pages blows up if PyLODE is included in the repo, strangely
-pylodePath = "/Applications/pyLODE-2.5/pylode/bin/pylode.sh"
+pylodePath = "Applications/pyLODE-2.8.3/pylode/cli.py"
 owl2vowlPath = "bin/owl2vowl.jar"
 
 ontologyFileEndings = ["owl", "rdf", "ttl", "nq"]
