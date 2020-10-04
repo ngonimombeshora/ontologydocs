@@ -1,0 +1,2816 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/rec/device", "http://org.semanticweb.owlapi/error", "https://w3id.org/rec/core" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dcterms" : "http://purl.org/dc/terms/",
+      "cpannotationschema" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "dc" : "http://purl.org/dc/elements/1.1/",
+      "cc" : "http://creativecommons.org/ns#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "o2o" : "https://karlhammar.com/owl2oas/o2o.owl#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "title" : {
+      "undefined" : "RealEstateCore Device Module"
+    },
+    "iri" : "https://w3id.org/rec/device/",
+    "version" : "3.1.2",
+    "author" : [ "Erik Wallin" ],
+    "description" : {
+      "en" : "This REC module covers device types (sensors and actuators), device configuration, device actuation, etc."
+    },
+    "comments" : {
+      "en" : "The actuation model is deployed and works in practice with the stakeholders, but we need to update the model to reflect current practice in their systems; e.g., extend the semantics a little and formalize standard state messages, response codes, etc."
+    },
+    "other" : {
+      "coversRequirements" : [ {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is observation/datapoint OBS-846294-PID22-88 a measurement of?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What kind of device is AHU731?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is the measurement unit of observation/datapoint OBS-846294-PID22-88?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which sensor did observation/datapoint OBS-846294-PID22-88 come from?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What addressable components (sensors, actuators, etc) make up device AHU731?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What is the most recent value reading from sensor TMP223?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Does temperature sensor TMP882 measure inside or outside temperature?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Does water temperature sensor TMP334 measure incoming water temperature, or return water temperature?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "How is device AHU731 connected to the building infrastructure (comms bus, protocol, protocol version, connection parameters, etc)?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What does sensor PID22 measure? Using which units?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "At what time was an actuation received by the building system, and at what time was it executed?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "What are all the values reported over the past 24 hours from temperature sensors in rooms 2, 4, and 7?",
+        "type" : "label"
+      }, {
+        "identifier" : "coversRequirements",
+        "language" : "en",
+        "value" : "Which actuator/device does a certain actuation/command target?",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Erik Wallin",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Karl Hammar",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "device",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "RealEstateCore Consortium",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2020-04-21",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.1.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/device/3.1.2/",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "RealEstateCore Device Module",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/rec/",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "33",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "10",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "70",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "103",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:equivalentClass"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/device/ModbusTCPConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModbusTCPConfiguration",
+      "en" : "ModbusTCPConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/MeasurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeasurementUnit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/rec/device/CommunicationsBus",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CommunicationsBus",
+      "en" : "Communications bus"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/OPC-DA",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "OPC-DA",
+        "en" : "OPC-DA"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/OPC-UA",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "OPC-UA",
+        "en" : "OPC-UA"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/IP",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "IP",
+        "en" : "IP"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/MBus",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "MBus",
+        "en" : "MBus"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/KNX",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "KNX",
+        "en" : "KNX"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/LoRa",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "LoRa",
+        "en" : "LoRa"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ModbusTCP",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ModbusTCP",
+        "en" : "ModbusTCP"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/BACnet",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "BACnet",
+        "en" : "BACnet"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ModbusRTU",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ModbusRTU",
+        "en" : "ModbusRTU"
+      }
+    } ],
+    "comment" : {
+      "en" : "Type of communications bus for the Device."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/device/ModbusConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "https://en.wikipedia.org/wiki/Modbus",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ModbusConfiguration",
+      "en" : "ModbusConfiguration"
+    },
+    "subClasses" : [ "30", "31" ],
+    "id" : "29",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "33",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "39",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/device/CommunicationConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CommunicationConfiguration",
+      "en" : "Communication configuration"
+    },
+    "subClasses" : [ "40", "41", "42", "12", "29", "43", "44", "45", "46" ],
+    "comment" : {
+      "en" : "Instances of this class and its subclasses represent configuration fields and values in the various old-world non-IoT building system standards."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Type",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Type"
+    },
+    "subClasses" : [ "50" ],
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/rec/device/ModbusRTUConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModbusRTUConfiguration",
+      "en" : "ModbusRTUConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "43",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/Actuation",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actuation",
+      "en" : "Actuation"
+    },
+    "comment" : {
+      "en" : "The act of changing the state of something."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "16",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "10",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/core/Observation",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/rec/device/Exception",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Exception",
+      "en" : "Exception"
+    },
+    "comment" : {
+      "en" : "Failed attempt or unexpected result when tried to do something (e.g. read a Sensor)."
+    },
+    "id" : "1",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/PowerSource",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PowerSource",
+      "en" : "Power source"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/Battery",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Battery"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/CommunicationBusPowerSource",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "CommunicationBusPowerSource"
+      }
+    } ],
+    "comment" : {
+      "en" : "The power source for the device."
+    },
+    "id" : "72",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/DeviceEvents",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceEvents",
+      "en" : "Device events"
+    },
+    "subClasses" : [ "1", "6", "16" ],
+    "comment" : {
+      "en" : "Events that are relevant in a Device context; initially observations, actuations, and exceptions."
+    },
+    "id" : "52",
+    "superClasses" : [ "77", "78" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/PlacementContext",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "annotations" : {
+      "endpoint" : [ {
+        "identifier" : "endpoint",
+        "language" : "undefined",
+        "value" : "placementcontext",
+        "type" : "label"
+      } ],
+      "included" : [ {
+        "identifier" : "included",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PlacementContext",
+      "en" : "Placement context"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/SecondaryCoolingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SecondaryCoolingReturn",
+        "en" : "SecondaryCoolingReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DistrictHeatingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "DistrictHeatingReturn",
+        "en" : "DistrictHeatingReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/PrimaryHeatingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "PrimaryHeatingFlow",
+        "en" : "PrimaryHeatingFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/HotWaterReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "HotWaterReturn",
+        "en" : "HotWaterReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/OutdoorAir",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "OutdoorAir",
+        "en" : "OutdoorAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/CirculationAir",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "CirculationAir",
+        "en" : "CirculationAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/PrimaryCoolingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "PrimaryCoolingReturn",
+        "en" : "PrimaryCoolingReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ElectricalGridIntake",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ElectricalGridIntake",
+        "en" : "ElectricalGridIntake"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/SecondaryHeatingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SecondaryHeatingReturn",
+        "en" : "SecondaryHeatingReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/PrimaryCoolingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "PrimaryCoolingFlow",
+        "en" : "PrimaryCoolingFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DistrictCoolingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "DistrictCoolingReturn",
+        "en" : "DistrictCoolingReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/SupplyAir",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SupplyAir",
+        "en" : "SupplyAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ElectricalGridLocalProduction",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ElectricalGridLocalProduction",
+        "en" : "ElectricalGridLocalProduction"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ColdWaterReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ColdWaterReturn",
+        "en" : "ColdWaterReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ColdWaterFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ColdWaterFlow",
+        "en" : "ColdWaterFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/SecondaryCoolingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SecondaryCoolingFlow",
+        "en" : "SecondaryCoolingFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DistrictCoolingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "DistrictCoolingFlow",
+        "en" : "DistrictCoolingFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ExhaustAir",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ExhaustAir",
+        "en" : "ExhaustAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ExtractAir",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ExtractAir",
+        "en" : "ExtractAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/SteamFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SteamFlow",
+        "en" : "SteamFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ElectricalGridInternal",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ElectricalGridInternal",
+        "en" : "ElectricalGridInternal"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/PrimaryHeatingReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "PrimaryHeatingReturn",
+        "en" : "PrimaryHeatingReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/WasteWater",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "WasteWater",
+        "en" : "WasteWater"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/ElectricalGridTenant",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "ElectricalGridTenant",
+        "en" : "ElectricalGridTenant"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/RecyclingEnergyReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "RecyclingEnergyReturn",
+        "en" : "RecyclingEnergyReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/RecyclingEnergyFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "RecyclingEnergyFlow",
+        "en" : "RecyclingEnergyFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/SteamReturn",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SteamReturn",
+        "en" : "SteamReturn"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/HotWaterFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "HotWaterFlow",
+        "en" : "HotWaterFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/IndoorAir",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "IndoorAir",
+        "en" : "IndoorAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DistrictHeatingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "DistrictHeatingFlow",
+        "en" : "DistrictHeatingFlow"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Hwrc",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Hwrc",
+        "en" : "Hwrc"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/SecondaryHeatingFlow",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "SecondaryHeatingFlow",
+        "en" : "SecondaryHeatingFlow"
+      }
+    } ],
+    "comment" : {
+      "en" : "Description of the context or media that a sensor or actuator is operating within."
+    },
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/rec/device/OPC-DAConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OPC-DAConfiguration",
+      "en" : "OPC-DAConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "45",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/LoRaConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LoRaConfiguration",
+      "en" : "LoRaConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "40",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/ModbusDataType",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModbusDataType",
+      "en" : "ModbusDataType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/Fixed_length_string",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Fixed_length_string",
+        "en" : "Fixed length string"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2_byte_unsigned_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "2_byte_unsigned_integer_swapped",
+        "en" : "2 byte unsigned integer swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_unsigned_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_unsigned_integer",
+        "en" : "4 byte unsigned integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/8_byte_float",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "8_byte_float",
+        "en" : "8 byte float"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_unsigned_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_unsigned_integer_swapped",
+        "en" : "4 byte unsigned integer swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_unsigned_integer_swapped_bytes_and_words",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_unsigned_integer_swapped_bytes_and_words",
+        "en" : "4 byte unsigned integer swapped bytes and words"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_float",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_float",
+        "en" : "4 byte float"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2_byte_signed_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "2_byte_signed_integer",
+        "en" : "2 byte signed integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/8_byte_unsigned_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "8_byte_unsigned_integer",
+        "en" : "8 byte unsigned integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_float_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_float_swapped",
+        "en" : "4 byte float swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_signed_integer_swapped_bytes_and_words",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_signed_integer_swapped_bytes_and_words",
+        "en" : "4 byte signed integer swapped bytes and words"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_BCD_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_BCD_swapped",
+        "en" : "4 byte BCD swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_float_BCD",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_float_BCD",
+        "en" : "4 byte float BCD"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/8_byte_signed_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "8_byte_signed_integer_swapped",
+        "en" : "8 byte signed integer swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/8_byte_unsigned_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "8_byte_unsigned_integer_swapped",
+        "en" : "8 byte unsigned integer swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2_byte_unsigned_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "2_byte_unsigned_integer",
+        "en" : "2 byte unsigned integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_signed_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_signed_integer_swapped",
+        "en" : "4 byte signed integer swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2_byte_signed_integer_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "2_byte_signed_integer_swapped",
+        "en" : "2 byte signed integer swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_BCD",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_BCD",
+        "en" : "4 byte BCD"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2_byte_BCD",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "2_byte_BCD",
+        "en" : "2 byte BCD"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Variable_length_string",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Variable_length_string",
+        "en" : "Variable length string"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4_byte_signed_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "4_byte_signed_integer",
+        "en" : "4 byte signed integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/8_byte_float_swapped",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "8_byte_float_swapped",
+        "en" : "8 byte float swapped"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/8_byte_signed_integer",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "8_byte_signed_integer",
+        "en" : "8 byte signed integer"
+      }
+    } ],
+    "id" : "30",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/Observation",
+    "equivalent" : [ "70" ],
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation",
+      "en" : "Observation"
+    },
+    "comment" : {
+      "en" : "Observation of a phenomena. Made by a Sensor. Used with hasValue.\n\nDeprecated in favour of core:Observation."
+    },
+    "attributes" : [ "equivalent", "deprecated" ],
+    "id" : "6",
+    "superClasses" : [ "83", "62", "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "103",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/device/OPC-UAConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OPC-UAConfiguration",
+      "en" : "OPC-UAConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "46",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error4",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error4"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error5",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error5"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error6",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error6"
+    },
+    "subClasses" : [ "68" ],
+    "attributes" : [ "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/rec/core/Device",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device"
+    },
+    "subClasses" : [ "66", "72", "68" ],
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "109" ]
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error7",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error7"
+    },
+    "subClasses" : [ "68" ],
+    "attributes" : [ "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error1",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error1"
+    },
+    "subClasses" : [ "19" ],
+    "attributes" : [ "external" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error2",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error2"
+    },
+    "subClasses" : [ "66" ],
+    "attributes" : [ "external" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://org.semanticweb.owlapi/error#Error3",
+    "baseIri" : "http://org.semanticweb.owlapi/error",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error3"
+    },
+    "subClasses" : [ "52" ],
+    "attributes" : [ "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/rec/core/QuantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantityKind"
+    },
+    "attributes" : [ "external" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://w3id.org/rec/device/Actuator",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "annotations" : {
+      "endpoint" : [ {
+        "identifier" : "endpoint",
+        "language" : "undefined",
+        "value" : "actuator",
+        "type" : "label"
+      } ],
+      "included" : [ {
+        "identifier" : "included",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Actuator",
+      "en" : "Actuator"
+    },
+    "comment" : {
+      "en" : "An actuator is a component that is responsible for moving and controlling a mechanism or system."
+    },
+    "id" : "66",
+    "superClasses" : [ "19", "112" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Event",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "52" ],
+    "attributes" : [ "external" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/rec/device/DeviceFunctionType",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "annotations" : {
+      "endpoint" : [ {
+        "identifier" : "endpoint",
+        "language" : "undefined",
+        "value" : "devicefunctiontype",
+        "type" : "label"
+      } ],
+      "included" : [ {
+        "identifier" : "included",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DeviceFunctionType",
+      "en" : "Device function type"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/Fan",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Fan",
+        "en" : "Fan"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Boiler",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Boiler",
+        "en" : "Boiler"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/AirDiffuser",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "AirDiffuser",
+        "en" : "AirDiffuser"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/AirHandlingUnit",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "AirHandlingUnit",
+        "en" : "AirHandlingUnit"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Condenser",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Condenser",
+        "en" : "Condenser"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Elevator",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Elevator",
+        "en" : "Elevator"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Compressor",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Compressor",
+        "en" : "Compressor"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Coil",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Coil",
+        "en" : "Coil"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Control",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Device that controls Actuators (can also collect data)."
+      },
+      "labels" : {
+        "IRI-based" : "Control",
+        "en" : "Control"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Thermostat",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Thermostat",
+        "en" : "Thermostat"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Pump",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Pump",
+        "en" : "Pump"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DataAcquisition",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Device that collects data"
+      },
+      "labels" : {
+        "IRI-based" : "DataAcquisition",
+        "en" : "DataAcquisition"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Heater",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Heater",
+        "en" : "Heater"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/DataCommunicationGateway",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Device that acts as a broker (could be a switch or gateway)"
+      },
+      "labels" : {
+        "IRI-based" : "DataCommunicationGateway",
+        "en" : "DataCommunicationGateway"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Valve",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Valve",
+        "en" : "Valve"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Chiller",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Chiller",
+        "en" : "Chiller"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Filter",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Filter",
+        "en" : "Filter"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Damper",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Damper",
+        "en" : "Damper"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/Escalator",
+      "baseIri" : "https://w3id.org/rec/device",
+      "labels" : {
+        "IRI-based" : "Escalator",
+        "en" : "Escalator"
+      }
+    } ],
+    "comment" : {
+      "en" : "The main function or purpose of a Device."
+    },
+    "id" : "50",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/KNXDataPointType",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KNXDataPointType",
+      "en" : "KNXDataPointType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/1.yyy",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Boolean, like switching, move up/down, step"
+      },
+      "labels" : {
+        "IRI-based" : "1.yyy",
+        "en" : "1.yyy"
+      }
+    } ],
+    "id" : "20",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/KNXConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KNXConfiguration",
+      "en" : "KNXConfiguration"
+    },
+    "subClasses" : [ "20" ],
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "44",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/ModbusFunctionCode",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModbusFunctionCode",
+      "en" : "ModbusTCPFunctionCode"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/rec/device/16",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Write Multiple Holding Registers"
+      },
+      "labels" : {
+        "IRI-based" : "16",
+        "en" : "16"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/15",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Write Multiple Coils"
+      },
+      "labels" : {
+        "IRI-based" : "15",
+        "en" : "15"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/5",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Write Single Coil"
+      },
+      "labels" : {
+        "IRI-based" : "5",
+        "en" : "5"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/6",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Write Single Holding Register"
+      },
+      "labels" : {
+        "IRI-based" : "6",
+        "en" : "6"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/3",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Read Holding Registers"
+      },
+      "labels" : {
+        "IRI-based" : "3",
+        "en" : "3"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/4",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Read Input Registers"
+      },
+      "labels" : {
+        "IRI-based" : "4",
+        "en" : "4"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/1",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Read coil"
+      },
+      "labels" : {
+        "IRI-based" : "1",
+        "en" : "1"
+      }
+    }, {
+      "iri" : "https://w3id.org/rec/device/2",
+      "baseIri" : "https://w3id.org/rec/device",
+      "comment" : {
+        "en" : "Read Discrete Input"
+      },
+      "labels" : {
+        "IRI-based" : "2",
+        "en" : "2"
+      }
+    } ],
+    "id" : "31",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "114",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "132",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://w3id.org/rec/device/MBusConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MBusConfiguration",
+      "en" : "MBusConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "42",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/core/Sensor",
+    "baseIri" : "https://w3id.org/rec/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/rec/device/BACnetConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BACnetConfiguration",
+      "undefined" : "BACnetConfiguration"
+    },
+    "comment" : {
+      "en" : "Specific classes and properties to be extended in upcoming version."
+    },
+    "id" : "41",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/rec/device/ActuationInterface",
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActuationInterface",
+      "en" : "Actuation interface"
+    },
+    "comment" : {
+      "en" : "A description of what kind of input the Actuator accepts."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/rec/device/Sensor",
+    "equivalent" : [ "2" ],
+    "baseIri" : "https://w3id.org/rec/device",
+    "instances" : 0,
+    "annotations" : {
+      "endpoint" : [ {
+        "identifier" : "endpoint",
+        "language" : "undefined",
+        "value" : "sensor",
+        "type" : "label"
+      } ],
+      "included" : [ {
+        "identifier" : "included",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sensor",
+      "en" : "Sensor"
+    },
+    "comment" : {
+      "en" : "Thing which detects or measures a physical property and records, indicates, or otherwise responds to it.\n\nDeprecated in favour of core:Sensor."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "68",
+    "superClasses" : [ "69", "110", "19" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "134",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "135",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "140",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/rec/device/exceptionGeneratedBy",
+    "inverse" : "3",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "exceptionGeneratedBy",
+      "en" : "exception generated by"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/rec/device/generatedObservation",
+    "inverse" : "7",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "generatedObservation",
+      "en" : "generated observation"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "Deprecated in favour of core:generatedObservation"
+    },
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observationGeneratedBy",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "observationGeneratedBy",
+      "en" : "observation generated by"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "6",
+    "comment" : {
+      "en" : "Deprecated in favour of core:observationGeneratedBy"
+    },
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/rec/core/associatedWithEvent",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "associatedWithEvent"
+    },
+    "domain" : "10",
+    "subproperty" : [ "5", "11", "3" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasActuationResponseTime",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasActuationResponseTime",
+      "en" : "has actuation response time"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The time stamp for a possible response from actuation process."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasKNXDataPointType",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasKNXDataPointType",
+      "en" : "hsKNXDataPointType"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasActuationRequestTime",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasActuationRequestTime",
+      "en" : "has actuation request time"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The time stamp for when a request for an actuation arrived."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/rec/device/actuationResponse",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "actuationResponse",
+      "en" : "actuation response"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The value returned from an Actuator to the calling party."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusFunctionCode",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasModbusFunctionCode",
+      "en" : "hasModbusFunctionCode"
+    },
+    "superproperty" : [ "48" ],
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasCommunicationAttribute",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasCommunicationAttribute",
+      "en" : "has communication attribute"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Groups the subset of device configuration attributes that are expressed using datatype properties (for configuration attributes that are modelled with named individuals, see object property hasCommunicationConfiguration)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasOffset",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasOffset",
+      "en" : "has offset"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasProcessedTime",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasProcessedTime",
+      "en" : "has processed time"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Time when an object or result was processed in a system."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "59"
+  }, {
+    "range" : "62",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasModbusConfiguration"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "19",
+    "subproperty" : [ "64", "47" ],
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "range" : "19",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "69",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasIPAddress",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasIPAddress",
+      "en" : "has IP address"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusRegister",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasModbusRegister",
+      "en" : "has Modbus register"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasType",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "10",
+    "subproperty" : [ "76" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "52",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "range" : "52",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "range" : "83",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "52",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "13",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "13",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "49",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observes",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "observes",
+      "en" : "observes"
+    },
+    "domain" : "2",
+    "subproperty" : [ "89" ],
+    "comment" : {
+      "en" : "Indicates the (optional) entity-of-interest of some sensor, i.e., what it is configured to observe or look for."
+    },
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "range" : "13",
+    "domain" : "46",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/rec/device/devicePlacementContext",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "devicePlacementContext",
+      "en" : "device placement context"
+    },
+    "superproperty" : [ "92" ],
+    "domain" : "19",
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "13",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "13",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/rec/device/actuationExecutedBy",
+    "inverse" : "11",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "actuationExecutedBy",
+      "en" : "actuation executed by"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "16",
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasIPAddressPort",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "hasIPAddressPort",
+      "en" : "has IP address port"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasKNXConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasKNXConfiguration"
+    },
+    "superproperty" : [ "63" ],
+    "domain" : "19",
+    "subproperty" : [ "18" ],
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusDataType",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasModbusDataType",
+      "en" : "hasModbusDataType"
+    },
+    "superproperty" : [ "48" ],
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "range" : "13",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "29",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "13",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "range" : "13",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasActuationCommandTime",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "hasActuationCommandTime",
+      "en" : "has actuation command time"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The time stamp for the event of the underlying system intiating the actuation command."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "105"
+  }, {
+    "range" : "29",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasLocalEndpointId",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasLocalEndpointId",
+      "en" : "has local endpoint ID"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasDeviceFunctionType",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasDeviceFunctionType",
+      "en" : "has device function type"
+    },
+    "superproperty" : [ "75" ],
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasKNXDeviceId",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "hasKNXDeviceId",
+      "en" : "has KNX device ID"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasKNXDevicePort",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "hasKNXDevicePort",
+      "en" : "has KNX device port"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasKNXAttribute",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasKNXAttribute",
+      "en" : "has KNX attribute"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "115"
+  }, {
+    "range" : "44",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusNodeId",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "hasModbusNodeId",
+      "en" : "has Modbus node ID"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://w3id.org/rec/device/executesActuation",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "executesActuation",
+      "en" : "executes actuation"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "66",
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observesActuator",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "observesActuator",
+      "en" : "observes actuator"
+    },
+    "superproperty" : [ "88" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "The actuator that a sensor is configured or designed to observe."
+    },
+    "attributes" : [ "object" ],
+    "id" : "89"
+  }, {
+    "range" : "78",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "112",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "range" : "77",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "19",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "19",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observedBy",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
+    },
+    "attributes" : [ "object" ],
+    "id" : "124"
+  }, {
+    "range" : "109",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "range" : "110",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasKNXGroupAddress",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasKNXGroupAddress",
+      "en" : "has KNX group address"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/rec/device/generatedException",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "generatedException",
+      "en" : "generated exception"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasLoraAttribute",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasLoraAttribute",
+      "en" : "has Lora attribute"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/rec/device/actuationRequest",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "actuationRequest",
+      "en" : "actuation request"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The payload of an incoming request to a building management system that it should perform an actuation; to be sent onward to a given Actuator."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/rec/core/quantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "116",
+    "label" : {
+      "IRI-based" : "quantityKind"
+    },
+    "domain" : "68",
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasScaleFactor",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "hasScaleFactor",
+      "en" : "has scale factor"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/rec/core/quantityKind",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "116",
+    "label" : {
+      "IRI-based" : "quantityKind"
+    },
+    "domain" : "66",
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observedBy",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "domain" : "66",
+    "comment" : {
+      "en" : "Generic property indicating which sensors that are configured or designed to observe some feature, system, phenomenon, etc."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "134"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observesActuator",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "observesActuator",
+      "en" : "observes actuator"
+    },
+    "superproperty" : [ "88" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "The actuator that a sensor is configured or designed to observe."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasActuationInterface",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "hasActuationInterface",
+      "en" : "has actuation interface"
+    },
+    "domain" : "66",
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/rec/device/actuationCommand",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "actuationCommand",
+      "en" : "actuation command"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The payload of a command sent by the building management system to the underlying actuator(s)."
+    },
+    "attributes" : [ "datatype", "deprecated" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://w3id.org/rec/core/measurementUnit",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "measurementUnit"
+    },
+    "domain" : "68",
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/rec/device/observesActuator",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "observesActuator",
+      "en" : "observes actuator"
+    },
+    "superproperty" : [ "88" ],
+    "domain" : "68",
+    "comment" : {
+      "en" : "The actuator that a sensor is configured or designed to observe."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasCommunicationConfiguration",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasCommunicationConfiguration",
+      "en" : "has communication configuration"
+    },
+    "domain" : "10",
+    "subproperty" : [ "48", "21" ],
+    "comment" : {
+      "en" : "Groups the subset of device configuration settings that are expressed using named individuals (for configuration attributes that are modelled with datatype properties, see datatype hasCommunicationAttribute)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/rec/core/associatedWithDevice",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "associatedWithDevice"
+    },
+    "domain" : "10",
+    "subproperty" : [ "0", "95", "7" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/rec/core/hasTime",
+    "baseIri" : "https://w3id.org/rec/core",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasTime"
+    },
+    "domain" : "10",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusRegisterLength",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasModbusRegisterLength",
+      "en" : "has Modbus register length"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "142"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasCommunicationsBus",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasCommunicationsBus"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "has communications bus"
+    },
+    "attributes" : [ "object" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasModbusAttribute",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "hasModbusAttribute",
+      "en" : "has Modbus attribute"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasPlacementContext",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "hasPlacementContext",
+      "en" : "has placement context"
+    },
+    "domain" : "103",
+    "subproperty" : [ "91", "145" ],
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/rec/device/hasLoraDevEUI",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "hasLoraDevEUI",
+      "en" : "has Lora DevEUI"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/rec/device/eventPlacementContext",
+    "baseIri" : "https://w3id.org/rec/device",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "eventPlacementContext",
+      "en" : "event placement context"
+    },
+    "superproperty" : [ "92" ],
+    "domain" : "77",
+    "attributes" : [ "deprecated", "object" ],
+    "id" : "145"
+  } ]
+}
