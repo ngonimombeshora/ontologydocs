@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="https://schema.org/"
+         xmlns:ns1="http://purl.org/vocab/vann/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
+         xmlns:ns2="http://www.w3.org/ns/dx/prof/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns3="https://w3id.org/landrs/def/ontologies/core/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:ns4="http://ontologydesignpatterns.org/opla#">
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+  </owl:Class>
+
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+  </owl:AnnotationProperty>
+
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+  </owl:Class>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla#isNativeTo">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla#reusesPatternAsTemplate">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://schema.org/domainIncludes">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://schema.org/rangeIncludes">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://schema.org/version">
+  </owl:AnnotationProperty>
+
+  <owl:Ontology rdf:about="https://w3id.org/landrs/def/ontologies/core/">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dc:title xml:lang="en">Landrs Core Ontology</dc:title>
+    <dc:description xml:lang="en">This ontology is developed as part of the Sloan Funded LANDRS project to advance UxV data interoperability</dc:description>
+    <dc:rights>Copyright 2020 University of Notre Dame.</dc:rights>
+    <ns0:licnese>https://creativecommons.org/publicdomain/zero/1.0</ns0:licnese>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-08-12</dc:created>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-08-12</dc:modified>
+    <ns0:funder>
+      <ns0:Organization>
+        <ns0:name>Alfred P. Sloan Foundation</ns0:name>
+        <ns0:url>https://sloan.org/</ns0:url>
+      </ns0:Organization>
+    </ns0:funder>
+
+    <ns1:preferredNamespacePrefix>landrs-core</ns1:preferredNamespacePrefix>
+    <ns1:preferredNamespaceUri>https://w3id.org/landrs/ontologies/ns/core/</ns1:preferredNamespaceUri>
+    <owl:versionInfo>0.0.1</owl:versionInfo>
+    <ns0:versionInfo>0.0.1</ns0:versionInfo>
+    <prov:wasGeneratedBy>
+      <doap:Project>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <doap:repository rdf:resource="https://github.com/landrs-toolkit/ontologies"/>
+      </doap:Project>
+    </prov:wasGeneratedBy>
+
+    <dc:creator>
+      <rdf:Description>
+        <ns0:name>Charles F Vardeman II</ns0:name>
+        <ns0:identifier rdf:resource="https://orcid.org/0000-0003-4091-6059"/>
+        <ns0:email rdf:resource="http://njh.me/cvardema@nd.edu"/>
+        <ns0:affiliation>
+          <rdf:Description>
+            <ns0:name>University of Notre Dame, Center for Research Computing</ns0:name>
+            <ns0:url rdf:resource="https://crc.nd.edu"/>
+          </rdf:Description>
+        </ns0:affiliation>
+
+        <ns0:affiliation>
+          <rdf:Description>
+            <ns0:affiliation>LANDRS</ns0:affiliation>
+            <ns0:url rdf:resource="https://landrs.org"/>
+          </rdf:Description>
+        </ns0:affiliation>
+
+      </rdf:Description>
+    </dc:creator>
+
+    <dc:creator>
+      <rdf:Description>
+        <ns0:name>Priscila Moreira </ns0:name>
+        <ns0:affiliation>
+          <rdf:Description>
+            <ns0:name>University of Notre Dame, Center for Research Computing</ns0:name>
+            <ns0:url rdf:resource="https://crc.nd.edu"/>
+          </rdf:Description>
+        </ns0:affiliation>
+
+      </rdf:Description>
+    </dc:creator>
+
+    <ns2:isProfileOf rdf:resource="https://w3id.org/landrs/ns/ontologies/"/>
+    <ns2:hasResource>
+      <ns2:ResourceDescriptor>
+        <rdf:type rdf:resource="https://schema.org/WebAPI"/>
+        <dc:format rdf:resource="https://w3id.org/mediatype/text/turtle"/>
+        <ns0:contentType>text/turtle</ns0:contentType>
+        <ns0:contentType>application/ld+json</ns0:contentType>
+        <ns0:contentType>application/n-triples</ns0:contentType>
+        <ns0:url>https://w3id.org/landrs/ontologies/ns/core</ns0:url>
+        <dc:conformsTo rdf:resource="http://meta.schema.org"/>
+        <ns2:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/vocabulary"/>
+      </ns2:ResourceDescriptor>
+    </ns2:hasResource>
+
+  </owl:Ontology>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Product">
+    <rdfs:label xml:lang="en">Product</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Event">
+    <rdfs:label xml:lang="en">Event</rdfs:label>
+    <rdfs:comment xml:lang="en">An event</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Mission">
+    <rdfs:label>Mission</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Event"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Flight">
+    <rdfs:label xml:lang="en">Flight</rdfs:label>
+    <rdfs:comment xml:lang="en">A flight</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Event"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Deployment">
+    <rdfs:label xml:lang="en">Deployment</rdfs:label>
+    <rdfs:comment xml:lang="en">A deployment for scientifc measurments</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Platform">
+    <rdfs:label xml:lang="en">Platform</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Vehicle">
+    <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Payload">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Payload</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:comment xml:lang="en">Unmanned vehicle payload</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/landrs/def/ontologies/core/"/>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+    <ns3:isPartOf>
+      <ns3:Component>
+        <ns3:hasWhole rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+      </ns3:Component>
+    </ns3:isPartOf>
+
+  </owl:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/AgentRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AgentRole</rdfs:label>
+  </rdfs:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Agent">
+    <rdfs:label>Agent</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Researcher">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AgentRole"/>
+    <rdfs:label>Researcher</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UxVOperator">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AgentRole"/>
+    <rdfs:label>UxVOperator</rdfs:label>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/landrs/def/ontologies/core/providesAgentRole">
+    <rdfs:domains rdf:resource="https://w3id.org/landrs/def/ontologies/core/Flight"/>
+    <rdfs:range rdf:resource="https://w3id.org/landrs/def/ontologies/core/AgentRole"/>
+    <rdfs:label>providesAgentRole</rdfs:label>
+  </owl:ObjectProperty>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Place">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Place"/>
+    <rdfs:label xml:lang="en">Place</rdfs:label>
+  </rdfs:Class>
+
+  <owl:ObjectProperty rdf:about="https://schema.org/location">
+    <rdfs:domain rdf:resource="https://w3id.org/landrs/def/ontologies/core/Event"/>
+    <rdfs:range rdf:resource="https://w3id.org/landrs/def/ontologies/core/Place"/>
+    <rdfs:label>location</rdfs:label>
+  </owl:ObjectProperty>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/AerialVehicle">
+    <rdfs:label xml:lang="en">Aerial Vehicle</rdfs:label>
+    <rdfs:comment>A machine that is able to fly by gaining support from the air other than the reactions of the air against the earth’s surface</rdfs:comment>
+    <rdfs:comment>Synonym with Aircraft</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UnderwaterVehicle">
+    <rdfs:label xml:lang="en">Underwater Vehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle">
+    <rdfs:label xml:lang="en">Surface Vehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle">
+    <rdfs:label xml:lang="en">Motorized Vehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle">
+    <rdfs:label xml:lang="en">Unmotorized Vehicle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Robot">
+    <rdfs:label xml:lang="en">Robot</rdfs:label>
+    <rdfs:comment xml:lang="en">Mechanical or virtual artificial agent carrying out physical activities</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/AutonomousRobot">
+    <rdfs:label xml:lang="en">Autonomous Robot</rdfs:label>
+    <rdfs:comment xml:lang="en">An autonomous robot is a robot that performs behaviors or tasks with a high degree of autonomy (without external influence).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Robot"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/RemotelyPilotedRobot">
+    <rdfs:label xml:lang="en">Remotely Piloted Robot</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Robot"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/AutomatedRobot">
+    <rdfs:label xml:lang="en">Automated Robot</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Robot"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/RoboticVehicle">
+    <rdfs:label xml:lang="en">Robotic Vehicle</rdfs:label>
+    <rdfs:comment xml:lang="en">Robotic vehicles are machines that move autonomously on the ground, in the air, undersea, or in space. Such vehicles are “unmanned,” in the sense that no humans are on board. In general, these vehicles move by themselves, under their own power, with sensors and computational resources onboard to guide their motion.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Robot"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot">
+    <rdfs:label xml:lang="en">Underwater Robot</rdfs:label>
+    <rdfs:comment xml:lang="en">Underwater Robots are vehicles that move autonomously underwater.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/RoboticVehice"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/UnderwaterVehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot">
+    <rdfs:label xml:lang="en">Underwater Robot</rdfs:label>
+    <rdfs:comment xml:lang="en">Surface Robots are vehicles that move autonomously on the water surface.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/RoboticVehicle"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/AerialRobot">
+    <rdfs:label xml:lang="en">Aerial Robot</rdfs:label>
+    <rdfs:comment xml:lang="en">Aerial Robots are vehicles that move autonomously in the air.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/RoboticVehice"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AerialVehicle"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/AUV">
+    <rdfs:label xml:lang="en">Autonomous Underwater Vehicle</rdfs:label>
+    <skos:altLabel xml:lang="en">AUV</skos:altLabel>
+    <rdfs:comment xml:lang="en">An autonomous underwater vehicle (AUV) is a robot that travels underwater without requiring input from an operator.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AutonomousRobot"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/ROV">
+    <rdfs:label xml:lang="en">Remotely Operated Underwater Vehicle</rdfs:label>
+    <skos:altLabel xml:lang="en">ROV</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/UnderwaterRobot"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UnderwaterGlider">
+    <rdfs:label xml:lang="en">Underwater Glider</rdfs:label>
+    <rdfs:comment xml:lang="en">An underwater glider is a type of autonomous underwater vehicle (AUV) that employs variable-buoyancy propulsion instead of traditional propellers or thrusters. It employs variable buoyancy in a similar way to a profiling float, but unlike a float, which can only move up and down, an underwater glider is fitted with hydrofoils (underwater wings) that allow it to glide forward while descending through the water. At a certain depth, the glider switches to positive buoyancy to climb back up, and the cycle is then repeated.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AUV"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/ASV">
+    <rdfs:label xml:lang="en">Autonomous Surface Vehicle</rdfs:label>
+    <skos:altLabel>ASV</skos:altLabel>
+    <rdfs:comment xml:lang="en">Vehicle that operates on the surface of the water without a crew</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AutonomousRobot"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/USV">
+    <rdfs:label xml:lang="en">Unmanned Surface Vehicle</rdfs:label>
+    <skos:altLabel xml:lang="en">USV</skos:altLabel>
+    <rdfs:comment xml:lang="en">Vehicle that operates on the surface of the water without a crew</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/SurfaceRobot"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Vessel">
+    <rdfs:label xml:lang="en">Vessel</rdfs:label>
+    <rdfs:comment xml:lang="en">Vehicle that is a watercraft, boat, or ship. Note: Wikidata definition of vessel includes spaceship this :Vessel is a subClassOf wikidata vessel.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/SurfaceVehicle"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle"/>
+    <ns0:source rdf:resource="https://www.mdpi.com/185614"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Buoy">
+    <rdfs:label xml:lang="en">Buoy</rdfs:label>
+    <rdfs:comment xml:lang="en">A floating device that can be anchored (stationary) or allowed to drift with ocean currents.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/UnmotorizedVehicle"/>
+    <prov:wasDerivedFrom>
+      <prov:Entity>
+        <dc:source rdf:resource="https://www.mdpi.com/185614"/>
+        <ns0:identifier>https://dx.doi.org/10.3390%2Fs17030569</ns0:identifier>
+        <dc:title xml:lang="en">SWARMs Ontology: A Common Information Model for the Cooperation of Underwater Robots</dc:title>
+      </prov:Entity>
+    </prov:wasDerivedFrom>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UxV">
+    <rdfs:label xml:lang="en">Unmanned Vehicle</rdfs:label>
+    <rdfs:comment xml:lang="en">An unmanned vehicle or uncrewed vehicle is a vehicle without a person on board. Uncrewed vehicles can either be remote controlled or remote guided vehicles, or they can be autonomous vehicles which are capable of sensing their environment and navigating on their own.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Unmanned Vehicle</skos:prefLabel>
+    <skos:altLabel xml:lang="en">UxV</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Vehicle"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Agent"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UAV">
+    <rdfs:label xml:lang="en">Unmanned Aerial Vehicle</rdfs:label>
+    <rdfs:comment>An aircraft without a human pilot on board and a type of unmanned vehicle. UAVs are a component of an unmanned aircraft system (UAS); which include a UAV, a ground-based controller, and a system of communications between the two. The flight of UAVs may operate with various degrees of autonomy: either under remote control by a human operator or autonomously by onboard computers.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Unmanned Aerial Vehicle</skos:prefLabel>
+    <skos:altLable xml:lang="en">UAV</skos:altLable>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/UxV"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/AerialRobot"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/MotorizedVehicle"/>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UAS">
+    <rdfs:label xml:lang="en">Unmanned Aircraft System</rdfs:label>
+    <rdfs:comment xml:lang="en">An Unmanned Aerial Vehicle, ground-based controller and communication system.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Unmanned Aircraft System</skos:prefLabel>
+    <skos:altLabel xml:lang="en">UAS</skos:altLabel>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/GroundControlStation">
+    <rdfs:label xml:lang="en">Ground Control Station</rdfs:label>
+    <rdfs:comment xml:lang="en">A ground control station (GCS) is a land- or sea-based control center that provides the facilities for human control of Unmanned Aerial Vehicles (UAVs or drones).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Ground_control_station"/>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+    <ns3:isPartOf>
+      <ns3:Component>
+        <ns3:hasWhole rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+      </ns3:Component>
+    </ns3:isPartOf>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/CommunicationSystem">
+    <rdfs:label xml:lang="en">Communication System</rdfs:label>
+    <rdfs:comment xml:lang="en">Communication System, frequency and protocol by which a UxS communicates. For example Civilian UAV communications systems typically operate on frequencies of 2.4 GHz and 5.8 GHz. UAV communications systems work by using one frequency to control the aerial vehicle from the ground via a remote pilot while the other frequency is used to beam or relay First-Person View (FPV) video. By utilizing high-quality, reliable communications links, civilian UAVs are able to relay aerial visuals and data to those on the ground with ease, while still remaining in flight.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+    <ns3:isPartOf>
+      <ns3:Component>
+        <rdf:type rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAVComponent"/>
+        <ns3:hasWhole rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAS"/>
+      </ns3:Component>
+    </ns3:isPartOf>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Component">
+    <rdfs:label xml:lang="en">Component</rdfs:label>
+    <rdfs:comment xml:lang="en">Winston Part-Whole PO-Component-Type to enumerate composition of a UxV</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <owl:equivalentClass rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#PO-Component-Type"/>
+    <ns4:isNativeTo rdf:resource="https://raw.githubusercontent.com/cogan-shimizu-wsu/ContextualizedWinstonPartWhole/master/ContextualizedWinstonPartWhole.owl"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/UAVComponent">
+    <rdfs:label xml:lang="en">Unmanned Aircraft Component</rdfs:label>
+    <rdfs:comment xml:lang="en">Component of a Unmanned Aerial Vehicle</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Component"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Body">
+    <rdf:type rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAVComponent"/>
+    <rdfs:label xml:lang="en">UxV Body</rdfs:label>
+    <rdfs:comment xml:lang="en">Body of the UxV, for a UAV this would be an airframe</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/UxV"/>
+    <ns3:isPartOf>
+      <ns3:Component>
+        <rdf:type rdf:resource="https://w3id.org/landrs/def/ontologies/core/UAVComponent"/>
+        <ns3:hasWhole rdf:resource="https://w3id.org/landrs/def/ontologies/core/UxV"/>
+      </ns3:Component>
+    </ns3:isPartOf>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Airframe">
+    <rdfs:label xml:lang="en">Airframe</rdfs:label>
+    <rdfs:comment xml:lang="en">The mechanical structure of an aircraft is known as the airframe. This structure is typically considered to include the fuselage, undercarriage, empennage and wings, and exclude the propulsion system.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Body"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/Autopilot">
+    <rdfs:subClassOf rdf:resource="https://schema.org/SoftwareApplicaion"/>
+    <rdfs:label xml:lang="en">Autopilot</rdfs:label>
+    <rdfs:comment xml:lang="en">Software to control and navigate an aircraft</rdfs:comment>
+    <skos:altLabel xml:lang="en">Flight Controller</skos:altLabel>
+    <skos:altLabel xml:lang="en">Flight Controller Board</skos:altLabel>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/FlightControlSystem"/>
+    <ns3:isPartOf>
+      <ns3:Component>
+        <ns3:hasWhole rdf:resource="https://w3id.org/landrs/def/ontologies/core/FlightControlSystem"/>
+      </ns3:Component>
+    </ns3:isPartOf>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/SmartSensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Smart Sensor</rdfs:label>
+    <rdfs:comment xml:lang="en">Smart-Sensor - A SmartSensor is composed of one or more Sensors together with a MicroController that implements different Algorithms, and makes Algorithm Executions on the result of the Observations these Sensors make to output a resulting value for some Indicator. This value may then be communicated by some CommunicatingSystemCommunicatingSystem.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Platform"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/SensorPayload">
+    <rdfs:label xml:lang="en">Sensor Payload</rdfs:label>
+    <rdfs:comment xml:lang="en">Payload that is a instrument platform such as cameras, atmospheric sensors, etc</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/payload"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/CompanionComputer">
+    <rdfs:label xml:lang="en">Companion Computer</rdfs:label>
+    <rdfs:comment>A companion computer is a device that travels on-board the vehicle and controls/communicates with the autopilot over a low-latency link. Apps running on a companion computer can perform computationally intensive or time-sensitive tasks, and add much greater intelligence than is provided by the autopilot alone.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Payload"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/FlightControllerBoard">
+    <rdfs:label xml:lang="en">Flight Controller Board</rdfs:label>
+    <rdfs:comment xml:lang="en">A flight controller (FC) is a small circuit board of varying complexity. Its function is to direct the RPM of each motor in response to input. A command from the pilot for the multi-rotor to move forward is fed into the flight controller, which determines how to manipulate the motors accordingly.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://dronekit-python.readthedocs.io/en/latest/develop/companion-computers.html"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/landrs/def/ontologies/core/Product"/>
+    <ns3:component rdf:resource="https://w3id.org/landrs/def/ontologies/core/FlightControlSystem"/>
+    <ns3:isPartOf>
+      <ns3:Component>
+        <ns3:hasWhole rdf:resource="https://w3id.org/landrs/def/ontologies/core/FlightControlSystem"/>
+      </ns3:Component>
+    </ns3:isPartOf>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="https://w3id.org/landrs/def/ontologies/core/FlightControlSystem">
+    <rdfs:label xml:lang="en">Flight Control System</rdfs:label>
+    <rdfs:comment xml:lang="en">Aircraft system utilized to control flight surfaces</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="https://w3id.org/landrs/def/ontologies/core/bodyType">
+    <rdfs:label xml:lang="en">bodyType</rdfs:label>
+    <dc:source rdf:resource="http://www.w3.org/wiki/Websdos/sdoDotOrgSources#Automotive_Ontology_Working_Group"/>
+    <ns0:domainIncludes rdf:resource="https://schema.org/Vehicle"/>
+    <ns0:isPartOf rdf:resource="http://auto.sdo.org"/>
+    <ns0:rangeIncludes rdf:resource="https://schema.org/QualitativeValue"/>
+    <ns0:rangeIncludes rdf:resource="https://schema.org/Text"/>
+    <ns0:rangeIncludes rdf:resource="https://schema.org/URL"/>
+    <rdfs:comment xml:lang="en">Indicates the design and body style of the vehicle (e.g. quadcopter, glider.</rdfs:comment>
+  </rdf:Property>
+
+</rdf:RDF>
